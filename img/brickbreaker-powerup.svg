@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <filter id="glowPink"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowCyan"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowGold"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowGreen"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f0f23"/><stop offset="100%" stop-color="#141430"/></linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <!-- Stars -->
+  <circle cx="90" cy="40" r="1.5" fill="#aabbcc" opacity="0.7"/>
+  <circle cx="250" cy="65" r="1" fill="#8899bb" opacity="0.5"/>
+  <circle cx="380" cy="25" r="1.5" fill="#aabbcc" opacity="0.6"/>
+  <circle cx="550" cy="50" r="1" fill="#8899bb" opacity="0.5"/>
+  <circle cx="700" cy="35" r="1.5" fill="#aabbcc" opacity="0.4"/>
+
+  <!-- HUD -->
+  <text x="20" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#ffd700" filter="url(#glowGold)">SCORE: 5,820</text>
+  <text x="350" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#ff2d78" filter="url(#glowPink)">♥ ♥</text>
+  <text x="550" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#00d4ff" filter="url(#glowCyan)">LEVEL 8</text>
+
+  <!-- Big Paddle W power-up active indicator -->
+  <text x="680" y="30" font-family="monospace" font-size="14" font-weight="bold" fill="#39ff14" filter="url(#glowGreen)">BIG PADDLE!</text>
+
+  <!-- Remaining bricks (few left) -->
+  <rect x="240" y="80" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
+  <rect x="430" y="80" width="80" height="28" rx="3" fill="#ffd700" opacity="0.9" filter="url(#glowGold)"/>
+  <rect x="145" y="122" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.7" filter="url(#glowCyan)"/>
+  <rect x="525" y="122" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.7" filter="url(#glowPink)"/>
+
+  <!-- Multi-ball: 3 balls in play -->
+  <circle cx="250" cy="380" r="7" fill="#fff" opacity="0.9" filter="url(#glowCyan)"/>
+  <circle cx="420" cy="420" r="7" fill="#fff" opacity="0.9" filter="url(#glowCyan)"/>
+  <circle cx="580" cy="360" r="7" fill="#fff" opacity="0.9" filter="url(#glowCyan)"/>
+
+  <!-- Particle trail on one ball -->
+  <circle cx="235" cy="393" r="3" fill="#00d4ff" opacity="0.4"/>
+  <circle cx="225" cy="400" r="2" fill="#00d4ff" opacity="0.3"/>
+  <circle cx="218" cy="406" r="1.5" fill="#00d4ff" opacity="0.2"/>
+
+  <!-- Big paddle (wide!) -->
+  <rect x="200" y="550" width="400" height="14" rx="7" fill="#39ff14" opacity="0.85" filter="url(#glowGreen)"/>
+  <rect x="205" y="553" width="390" height="8" rx="4" fill="#88ff88" opacity="0.4"/>
+
+  <!-- Falling Extra Life power-up -->
+  <rect x="460" y="330" width="28" height="28" rx="4" fill="#ff2d78" opacity="0.9" filter="url(#glowPink)"/>
+  <text x="468" y="351" font-family="monospace" font-size="22" font-weight="bold" fill="#fff">+</text>
+
+  <!-- Particle burst effect -->
+  <rect x="300" y="105" width="6" height="6" rx="1" fill="#ffd700" opacity="0.7"/>
+  <rect x="315" y="95" width="4" height="4" rx="1" fill="#ffd700" opacity="0.5"/>
+  <rect x="310" y="112" width="3" height="3" rx="1" fill="#ffd700" opacity="0.4"/>
+  <rect x="295" y="98" width="5" height="5" rx="1" fill="#ffd700" opacity="0.6"/>
+  <rect x="320" y="102" width="4" height="4" rx="1" fill="#ffd700" opacity="0.5"/>
+
+  <!-- Scanlines -->
+  <pattern id="scanlines" width="800" height="4" patternUnits="userSpaceOnUse">
+    <rect x="0" y="0" width="800" height="2" fill="rgba(0,0,0,0.04)"/>
+    <rect x="0" y="2" width="800" height="2" fill="transparent"/>
+  </pattern>
+  <rect width="800" height="600" fill="url(#scanlines)" pointer-events="none"/>
+</svg>

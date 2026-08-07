@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <filter id="glowPink"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowCyan"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowGold"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f0f23"/><stop offset="100%" stop-color="#141430"/></linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <!-- Stars -->
+  <circle cx="45" cy="30" r="1" fill="#8899bb" opacity="0.6"/>
+  <circle cx="120" cy="80" r="1.5" fill="#aabbcc" opacity="0.4"/>
+  <circle cx="200" cy="20" r="1" fill="#8899bb" opacity="0.7"/>
+  <circle cx="340" cy="55" r="1" fill="#aabbcc" opacity="0.5"/>
+  <circle cx="500" cy="35" r="1.5" fill="#8899bb" opacity="0.4"/>
+  <circle cx="620" cy="70" r="1" fill="#aabbcc" opacity="0.6"/>
+  <circle cx="750" cy="25" r="1" fill="#8899bb" opacity="0.5"/>
+  <circle cx="80" cy="140" r="1" fill="#aabbcc" opacity="0.3"/>
+  <circle cx="700" cy="150" r="1" fill="#8899bb" opacity="0.4"/>
+
+  <!-- HUD -->
+  <text x="20" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#ffd700" filter="url(#glowGold)">SCORE: 2,450</text>
+  <text x="350" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#ff2d78" filter="url(#glowPink)">♥ ♥ ♥</text>
+  <text x="550" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#00d4ff" filter="url(#glowCyan)">LEVEL 3</text>
+  <text x="700" y="30" font-family="monospace" font-size="16" font-weight="bold" fill="#b44dff">HI: 8,200</text>
+
+  <!-- Brick Grid: Row 1 (gold row) -->
+  <rect x="50" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
+  <rect x="145" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
+  <rect x="240" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
+  <rect x="335" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
+  <rect x="430" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
+  <rect x="525" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
+  <rect x="620" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
+
+  <!-- Row 2: Pink row (some cracked) -->
+  <rect x="50" y="112" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
+  <rect x="145" y="112" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
+  <rect x="240" y="112" width="80" height="28" rx="3" fill="#991133" opacity="0.6"/>
+  <rect x="335" y="112" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
+  <rect x="430" y="112" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
+  <rect x="525" y="112" width="80" height="28" rx="3" fill="#991133" opacity="0.6"/>
+  <rect x="620" y="112" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
+
+  <!-- Row 3: Cyan row -->
+  <rect x="50" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
+  <rect x="145" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
+  <rect x="240" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
+  <rect x="335" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
+  <rect x="430" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
+  <rect x="525" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
+  <rect x="620" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
+
+  <!-- Row 4: Steel (unbreakable) + mixed -->
+  <rect x="50" y="196" width="80" height="28" rx="3" fill="#4a5570" opacity="0.6"/>
+  <rect x="145" y="196" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.7" filter="url(#glowPink)"/>
+  <rect x="240" y="196" width="80" height="28" rx="3" fill="#4a5570" opacity="0.6"/>
+  <rect x="335" y="196" width="80" height="28" rx="3" fill="#4a5570" opacity="0.6"/>
+  <rect x="430" y="196" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.7" filter="url(#glowCyan)"/>
+  <rect x="525" y="196" width="80" height="28" rx="3" fill="#4a5570" opacity="0.6"/>
+  <rect x="620" y="196" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.7" filter="url(#glowPink)"/>
+
+  <!-- Falling power-up -->
+  <circle cx="380" cy="340" r="14" fill="#ffd700" opacity="0.9" filter="url(#glowGold)"/>
+  <text x="374" y="346" font-family="monospace" font-size="18" font-weight="bold" fill="#000">M</text>
+
+  <!-- Ball -->
+  <circle cx="410" cy="480" r="8" fill="#fff" opacity="0.9" filter="url(#glowCyan)"/>
+  <circle cx="410" cy="480" r="5" fill="#fff"/>
+
+  <!-- Paddle -->
+  <rect x="340" y="550" width="130" height="14" rx="7" fill="#00d4ff" opacity="0.85" filter="url(#glowCyan)"/>
+  <rect x="345" y="553" width="120" height="8" rx="4" fill="#88eeff" opacity="0.5"/>
+
+  <!-- Scanlines overlay -->
+  <pattern id="scanlines" width="800" height="4" patternUnits="userSpaceOnUse">
+    <rect x="0" y="0" width="800" height="2" fill="rgba(0,0,0,0.04)"/>
+    <rect x="0" y="2" width="800" height="2" fill="transparent"/>
+  </pattern>
+  <rect width="800" height="600" fill="url(#scanlines)" pointer-events="none"/>
+</svg>

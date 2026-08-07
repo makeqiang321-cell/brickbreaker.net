@@ -1,16 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
    <url>
       <loc>https://brickbreaker.net/</loc>
       <lastmod>2026-08-07</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+      <image:image>
+         <image:loc>https://brickbreaker.net/img/brickbreaker-gameplay.svg</image:loc>
+         <image:caption>Brickbreaker gameplay — neon brick breaker game with gold bricks and power-ups</image:caption>
+      </image:image>
    </url>
    <url>
       <loc>https://brickbreaker.net/game/</loc>
       <lastmod>2026-08-07</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://brickbreaker.net/game/classic/</loc>
+      <lastmod>2026-08-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://brickbreaker.net/game/power-up/</loc>
+      <lastmod>2026-08-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://brickbreaker.net/game/hard/</loc>
+      <lastmod>2026-08-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://brickbreaker.net/game/neon/</loc>
+      <lastmod>2026-08-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://brickbreaker.net/game/precision/</loc>
+      <lastmod>2026-08-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://brickbreaker.net/game/gold/</loc>
+      <lastmod>2026-08-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://brickbreaker.net/game/cosmic/</loc>
+      <lastmod>2026-08-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://brickbreaker.net/game/retro/</loc>
+      <lastmod>2026-08-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
    </url>
    <url>
       <loc>https://brickbreaker.net/about/</loc>
