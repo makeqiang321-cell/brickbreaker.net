@@ -362,6 +362,17 @@ strong { color: #fff; }
 
 .game-card-brick { font-size: 2.5rem; margin-bottom: 12px; }
 
+.game-card-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.02);
+}
+
 .game-card-name {
     font-family: var(--font-mono);
     font-size: 0.62rem;
