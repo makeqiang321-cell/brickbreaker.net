@@ -1,61 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <filter id="glowPink"><feGaussianBlur stdDeviation="6"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="glowCyan"><feGaussianBlur stdDeviation="6"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="glowGold"><feGaussianBlur stdDeviation="5"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="glowGreen"><feGaussianBlur stdDeviation="5"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f0f23"/><stop offset="100%" stop-color="#1a1040"/></linearGradient>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f8f9fa"/><stop offset="100%" stop-color="#ede9fe"/></linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#6d28d9"/></linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="630" fill="url(#bgGrad)"/>
-  <rect width="1200" height="630" fill="none" stroke="rgba(0,212,255,0.2)" stroke-width="3" rx="8"/>
+  <rect width="1200" height="630" fill="none" stroke="#7c3aed" stroke-width="2" stroke-opacity="0.15" rx="8"/>
 
-  <!-- Stars -->
-  <circle cx="50" cy="40" r="1.5" fill="#aabbcc" opacity="0.6"/>
-  <circle cx="150" cy="90" r="2" fill="#8899bb" opacity="0.5"/>
-  <circle cx="300" cy="30" r="1.5" fill="#aabbcc" opacity="0.7"/>
-  <circle cx="450" cy="70" r="1" fill="#8899bb" opacity="0.4"/>
-  <circle cx="600" cy="25" r="2" fill="#aabbcc" opacity="0.6"/>
-  <circle cx="750" cy="55" r="1.5" fill="#8899bb" opacity="0.5"/>
-  <circle cx="900" cy="35" r="1" fill="#aabbcc" opacity="0.7"/>
-  <circle cx="1050" cy="80" r="2" fill="#8899bb" opacity="0.4"/>
-  <circle cx="1150" cy="45" r="1.5" fill="#aabbcc" opacity="0.6"/>
-  <circle cx="80" cy="180" r="1" fill="#8899bb" opacity="0.3"/>
-  <circle cx="1120" cy="200" r="1" fill="#aabbcc" opacity="0.3"/>
+  <!-- Decorative dots -->
+  <circle cx="80" cy="80" r="4" fill="#7c3aed" opacity="0.12"/>
+  <circle cx="200" cy="50" r="3" fill="#0693e3" opacity="0.1"/>
+  <circle cx="350" cy="90" r="5" fill="#7c3aed" opacity="0.08"/>
+  <circle cx="850" cy="60" r="4" fill="#0693e3" opacity="0.1"/>
+  <circle cx="1000" cy="100" r="3" fill="#7c3aed" opacity="0.12"/>
+  <circle cx="1100" cy="50" r="5" fill="#fcb900" opacity="0.1"/>
 
   <!-- Brick row -->
-  <rect x="150" y="100" width="150" height="40" rx="4" fill="#ff2d78" opacity="0.85" filter="url(#glowPink)"/>
-  <rect x="320" y="100" width="150" height="40" rx="4" fill="#00d4ff" opacity="0.85" filter="url(#glowCyan)"/>
-  <rect x="490" y="100" width="150" height="40" rx="4" fill="#ffd700" opacity="0.9" filter="url(#glowGold)"/>
-  <rect x="660" y="100" width="150" height="40" rx="4" fill="#b44dff" opacity="0.85" filter="url(#glowCyan)"/>
-  <rect x="830" y="100" width="150" height="40" rx="4" fill="#39ff14" opacity="0.85" filter="url(#glowGreen)"/>
+  <rect x="150" y="100" width="150" height="40" rx="6" fill="#7c3aed" opacity="0.9"/>
+  <rect x="320" y="100" width="150" height="40" rx="6" fill="#0693e3" opacity="0.9"/>
+  <rect x="490" y="100" width="150" height="40" rx="6" fill="#fcb900" opacity="0.9"/>
+  <rect x="660" y="100" width="150" height="40" rx="6" fill="#a78bfa" opacity="0.9"/>
+  <rect x="830" y="100" width="150" height="40" rx="6" fill="#00d084" opacity="0.9"/>
+
+  <!-- Brick shine highlights -->
+  <rect x="152" y="102" width="146" height="6" rx="3" fill="#fff" opacity="0.25"/>
+  <rect x="322" y="102" width="146" height="6" rx="3" fill="#fff" opacity="0.25"/>
+  <rect x="492" y="102" width="146" height="6" rx="3" fill="#fff" opacity="0.3"/>
+  <rect x="662" y="102" width="146" height="6" rx="3" fill="#fff" opacity="0.25"/>
+  <rect x="832" y="102" width="146" height="6" rx="3" fill="#fff" opacity="0.25"/>
 
   <!-- Main Title -->
-  <text x="600" y="280" font-family="monospace" font-size="72" font-weight="bold" fill="#fff" text-anchor="middle" letter-spacing="8">
+  <text x="600" y="280" font-family="Inter,system-ui,sans-serif" font-size="76" font-weight="800" fill="#212529" text-anchor="middle" letter-spacing="4">
     BRICK
   </text>
-  <text x="600" y="360" font-family="monospace" font-size="72" font-weight="bold" fill="#fff" text-anchor="middle" letter-spacing="8">
+  <text x="600" y="360" font-family="Inter,system-ui,sans-serif" font-size="76" font-weight="800" fill="#212529" text-anchor="middle" letter-spacing="4">
     BREAKER
   </text>
 
-  <!-- Neon title glow effect -->
-  <text x="600" y="280" font-family="monospace" font-size="72" font-weight="bold" fill="none" stroke="#00d4ff" stroke-width="1.5" text-anchor="middle" letter-spacing="8" opacity="0.6" filter="url(#glowCyan)"/>
-  <text x="600" y="360" font-family="monospace" font-size="72" font-weight="bold" fill="none" stroke="#ff2d78" stroke-width="1.5" text-anchor="middle" letter-spacing="8" opacity="0.6" filter="url(#glowPink)"/>
+  <!-- Purple accent underline -->
+  <rect x="350" y="385" width="500" height="5" rx="3" fill="url(#accentGrad)"/>
 
   <!-- Subtitle -->
-  <text x="600" y="410" font-family="monospace" font-size="26" font-weight="700" fill="#ffd700" text-anchor="middle" letter-spacing="10" filter="url(#glowGold)">◆ RETRO ARCADE ◆</text>
+  <text x="600" y="435" font-family="Inter,system-ui,sans-serif" font-size="24" font-weight="700" fill="#7c3aed" text-anchor="middle" letter-spacing="6">◆ PLAY ONLINE FREE ◆</text>
 
   <!-- Tagline -->
-  <text x="600" y="460" font-family="monospace" font-size="20" fill="#7888a8" text-anchor="middle" letter-spacing="6">PLAY ONLINE FREE  ·  NO DOWNLOAD</text>
+  <text x="600" y="480" font-family="Inter,system-ui,sans-serif" font-size="18" fill="#6c757d" text-anchor="middle" letter-spacing="3">NO DOWNLOAD  ·  INSTANT PLAY  ·  ALL DEVICES</text>
 
   <!-- URL -->
-  <text x="600" y="580" font-family="monospace" font-size="18" fill="rgba(0,212,255,0.4)" text-anchor="middle" letter-spacing="5">brickbreaker.net</text>
-
-  <!-- Scanlines -->
-  <pattern id="scanlines" width="1200" height="4" patternUnits="userSpaceOnUse">
-    <rect x="0" y="0" width="1200" height="2" fill="rgba(0,0,0,0.04)"/>
-    <rect x="0" y="2" width="1200" height="2" fill="transparent"/>
-  </pattern>
-  <rect width="1200" height="630" fill="url(#scanlines)" pointer-events="none"/>
+  <text x="600" y="585" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="600" fill="#7c3aed" fill-opacity="0.5" text-anchor="middle" letter-spacing="4">brickbreaker.net</text>
 </svg>

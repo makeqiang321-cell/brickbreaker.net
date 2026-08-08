@@ -13,10 +13,10 @@
         :root {
             --bg: #000000;
             --neon-pink: #0693e3;
-            --neon-cyan: #7e3bd0;
+            --neon-cyan: #7c3aed;
             --neon-gold: #fcb900;
             --neon-green: #00d084;
-            --neon-purple: #974df3;
+            --neon-purple: #a78bfa;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,21 +33,6 @@
             -webkit-user-select: none;
             user-select: none;
             font-family: 'Orbitron', monospace;
-        }
-
-        /* Scanline overlay for retro feel */
-        .scanlines {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 200;
-            background: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 2px,
-                rgba(0,0,0,0.06) 2px,
-                rgba(0,0,0,0.06) 4px
-            );
         }
 
         .game-wrapper {
@@ -106,8 +91,8 @@
 
         .hud-score  { color: var(--neon-gold);   text-shadow: 0 0 8px rgba(252,185,0,0.5); }
         .hud-lives  { color: var(--neon-pink);    text-shadow: 0 0 8px rgba(6,147,227,0.5); }
-        .hud-level  { color: var(--neon-cyan);    text-shadow: 0 0 8px rgba(126,59,208,0.5); }
-        .hud-high   { color: var(--neon-purple);  text-shadow: 0 0 8px rgba(151,77,243,0.5); }
+        .hud-level  { color: var(--neon-cyan);    text-shadow: 0 0 8px rgba(124,58,237,0.5); }
+        .hud-high   { color: var(--neon-purple);  text-shadow: 0 0 8px rgba(167,139,250,0.5); }
 
         .hud-value {
             font-size: 1rem;
@@ -136,10 +121,10 @@
         }
 
         .hud-btn:hover {
-            background: rgba(126,59,208,0.1);
+            background: rgba(124,58,237,0.1);
             border-color: var(--neon-cyan);
             color: var(--neon-cyan);
-            box-shadow: 0 0 12px rgba(126,59,208,0.25);
+            box-shadow: 0 0 12px rgba(124,58,237,0.25);
         }
 
         /* ── Canvas ──────────────────────────── */
@@ -153,10 +138,10 @@
             display: block;
             width: 100%;
             height: auto;
-            border: 1px solid rgba(126,59,208,0.15);
+            border: 1px solid rgba(124,58,237,0.15);
             border-radius: 8px;
             box-shadow:
-                0 0 30px rgba(126,59,208,0.08),
+                0 0 30px rgba(124,58,237,0.08),
                 0 0 60px rgba(6,147,227,0.04),
                 inset 0 0 80px rgba(0,0,0,0.3);
         }
@@ -243,7 +228,7 @@
             font-size: 0.75rem;
             color: var(--neon-purple);
             letter-spacing: 2px;
-            text-shadow: 0 0 8px rgba(151,77,243,0.5);
+            text-shadow: 0 0 8px rgba(167,139,250,0.5);
         }
 
         /* Game Over */
@@ -281,7 +266,7 @@
             color: var(--neon-purple);
             letter-spacing: 2px;
             margin-bottom: 20px;
-            text-shadow: 0 0 8px rgba(151,77,243,0.5);
+            text-shadow: 0 0 8px rgba(167,139,250,0.5);
         }
 
         .go-badge {
@@ -308,14 +293,14 @@
             cursor: pointer;
             letter-spacing: 3px;
             text-shadow: 0 0 8px rgba(255,255,255,0.5);
-            box-shadow: 0 0 20px rgba(126,59,208,0.2), inset 0 0 20px rgba(126,59,208,0.05);
+            box-shadow: 0 0 20px rgba(124,58,237,0.2), inset 0 0 20px rgba(124,58,237,0.05);
             transition: all 0.2s;
             margin-bottom: 24px;
         }
 
         .overlay-btn:hover {
-            background: rgba(126,59,208,0.1);
-            box-shadow: 0 0 40px rgba(126,59,208,0.35), inset 0 0 30px rgba(126,59,208,0.1);
+            background: rgba(124,58,237,0.1);
+            box-shadow: 0 0 40px rgba(124,58,237,0.35), inset 0 0 30px rgba(124,58,237,0.1);
             text-shadow: 0 0 15px #fff;
         }
 
@@ -352,8 +337,6 @@
     </style>
 </head>
 <body>
-    <div class="scanlines"></div>
-
     <!-- ═══ START SCREEN ═══ -->
     <div class="overlay" id="startScreen">
         <div class="start-title">BRICK<br>BREAKER</div>
@@ -420,10 +403,10 @@
         // ── NEON COLORS ──────────────────────────────
         var NEON = {
             pink:   '#0693e3',
-            cyan:   '#7e3bd0',
+            cyan:   '#7c3aed',
             gold:   '#fcb900',
             green:  '#00d084',
-            purple: '#974df3',
+            purple: '#a78bfa',
             white:  '#f0f0ff',
             bg:     '#000000'
         };
@@ -478,8 +461,8 @@
         }
 
         var BRICK_DEFS = {
-            normal:  { hits: 1, color: NEON.cyan,   glow: 'rgba(126,59,208,0.6)', points: 10 },
-            strong:  { hits: 2, color: NEON.purple, glow: 'rgba(151,77,243,0.6)', points: 20 },
+            normal:  { hits: 1, color: NEON.cyan,   glow: 'rgba(124,58,237,0.6)', points: 10 },
+            strong:  { hits: 2, color: NEON.purple, glow: 'rgba(167,139,250,0.6)', points: 20 },
             gold:    { hits: 1, color: NEON.gold,   glow: 'rgba(252,185,0,0.6)',  points: 50 },
             steel:   { hits: Infinity, color: '#333', glow: 'rgba(100,100,100,0.3)', points: 0 }
         };
@@ -764,11 +747,11 @@
             }
 
             // Paddle with neon glow
-            ctx.shadowColor = 'rgba(126,59,208,0.5)';
+            ctx.shadowColor = 'rgba(124,58,237,0.5)';
             ctx.shadowBlur = 10;
             var pg = ctx.createLinearGradient(paddle.x, paddle.y, paddle.x, paddle.y + paddle.h);
             pg.addColorStop(0, NEON.cyan);
-            pg.addColorStop(1, '#2d1a4a');
+            pg.addColorStop(1, '#2d1750');
             ctx.fillStyle = pg;
             rrect(paddle.x, paddle.y, paddle.w, paddle.h, 5);
             ctx.shadowBlur = 0;
