@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Brick body -->
+  <rect x="18" y="22" width="64" height="48" rx="8" ry="8" fill="#7c3aed"/>
+
+  <!-- Brick highlight (top shine) -->
+  <rect x="20" y="24" width="60" height="8" rx="4" ry="4" fill="#fff" opacity="0.25"/>
+
+  <!-- Break/crack line -->
+  <line x1="28" y1="70" x2="58" y2="22" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <!-- Secondary crack -->
+  <line x1="58" y1="22" x2="68" y2="33" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <line x1="28" y1="70" x2="22" y2="62" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Ball (gold) bouncing off -->
+  <circle cx="72" cy="14" r="10" fill="#fcb900"/>
+  <circle cx="69" cy="11" r="3.5" fill="#fff" opacity="0.35"/>
+
+  <!-- Small brick fragment flying off -->
+  <rect x="14" y="26" width="8" height="6" rx="1.5" ry="1.5" fill="#a78bfa" transform="rotate(-20 18 29)"/>
+  <rect x="68" y="62" width="7" height="5" rx="1.5" ry="1.5" fill="#a78bfa" transform="rotate(15 71 64)"/>
+</svg>
