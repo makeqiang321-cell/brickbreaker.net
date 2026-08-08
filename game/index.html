@@ -11,12 +11,12 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet"></noscript>
     <style>
         :root {
-            --bg: #0f0f23;
-            --neon-pink: #ff2d78;
-            --neon-cyan: #00d4ff;
-            --neon-gold: #ffd700;
-            --neon-green: #39ff14;
-            --neon-purple: #b44dff;
+            --bg: #000000;
+            --neon-pink: #0693e3;
+            --neon-cyan: #7e3bd0;
+            --neon-gold: #fcb900;
+            --neon-green: #00d084;
+            --neon-purple: #974df3;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -104,10 +104,10 @@
             letter-spacing: 1px;
         }
 
-        .hud-score  { color: var(--neon-gold);   text-shadow: 0 0 8px rgba(255,215,0,0.5); }
-        .hud-lives  { color: var(--neon-pink);    text-shadow: 0 0 8px rgba(255,45,120,0.5); }
-        .hud-level  { color: var(--neon-cyan);    text-shadow: 0 0 8px rgba(0,212,255,0.5); }
-        .hud-high   { color: var(--neon-purple);  text-shadow: 0 0 8px rgba(180,77,255,0.5); }
+        .hud-score  { color: var(--neon-gold);   text-shadow: 0 0 8px rgba(252,185,0,0.5); }
+        .hud-lives  { color: var(--neon-pink);    text-shadow: 0 0 8px rgba(6,147,227,0.5); }
+        .hud-level  { color: var(--neon-cyan);    text-shadow: 0 0 8px rgba(126,59,208,0.5); }
+        .hud-high   { color: var(--neon-purple);  text-shadow: 0 0 8px rgba(151,77,243,0.5); }
 
         .hud-value {
             font-size: 1rem;
@@ -136,10 +136,10 @@
         }
 
         .hud-btn:hover {
-            background: rgba(0,212,255,0.1);
+            background: rgba(126,59,208,0.1);
             border-color: var(--neon-cyan);
             color: var(--neon-cyan);
-            box-shadow: 0 0 12px rgba(0,212,255,0.2);
+            box-shadow: 0 0 12px rgba(126,59,208,0.25);
         }
 
         /* ── Canvas ──────────────────────────── */
@@ -153,11 +153,11 @@
             display: block;
             width: 100%;
             height: auto;
-            border: 1px solid rgba(0,212,255,0.15);
+            border: 1px solid rgba(126,59,208,0.15);
             border-radius: 8px;
             box-shadow:
-                0 0 30px rgba(0,212,255,0.08),
-                0 0 60px rgba(255,45,120,0.04),
+                0 0 30px rgba(126,59,208,0.08),
+                0 0 60px rgba(6,147,227,0.04),
                 inset 0 0 80px rgba(0,0,0,0.3);
         }
 
@@ -169,7 +169,7 @@
             font-size: 0.72rem;
             font-weight: 700;
             color: var(--neon-gold);
-            text-shadow: 0 0 10px rgba(255,215,0,0.8);
+            text-shadow: 0 0 10px rgba(252,185,0,0.8);
             z-index: 100;
             animation: floatUp 0.8s ease-out forwards;
         }
@@ -188,7 +188,7 @@
             align-items: center;
             justify-content: center;
             z-index: 150;
-            background: rgba(15,15,35,0.92);
+            background: rgba(0,0,0,0.92);
             backdrop-filter: blur(4px);
         }
 
@@ -220,7 +220,7 @@
             font-size: 0.78rem;
             color: var(--neon-gold);
             letter-spacing: 4px;
-            text-shadow: 0 0 8px rgba(255,215,0,0.5);
+            text-shadow: 0 0 8px rgba(252,185,0,0.5);
             margin-bottom: 10px;
         }
 
@@ -243,7 +243,7 @@
             font-size: 0.75rem;
             color: var(--neon-purple);
             letter-spacing: 2px;
-            text-shadow: 0 0 8px rgba(180,77,255,0.5);
+            text-shadow: 0 0 8px rgba(151,77,243,0.5);
         }
 
         /* Game Over */
@@ -263,7 +263,7 @@
             font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 900;
             color: var(--neon-gold);
-            text-shadow: 0 0 20px rgba(255,215,0,0.6);
+            text-shadow: 0 0 20px rgba(252,185,0,0.6);
             margin-bottom: 8px;
         }
 
@@ -281,7 +281,7 @@
             color: var(--neon-purple);
             letter-spacing: 2px;
             margin-bottom: 20px;
-            text-shadow: 0 0 8px rgba(180,77,255,0.5);
+            text-shadow: 0 0 8px rgba(151,77,243,0.5);
         }
 
         .go-badge {
@@ -290,9 +290,9 @@
             font-size: 0.6rem;
             color: var(--neon-green);
             letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(57,255,20,0.6);
-            background: rgba(57,255,20,0.08);
-            border: 1px solid rgba(57,255,20,0.3);
+            text-shadow: 0 0 10px rgba(0,208,132,0.6);
+            background: rgba(0,208,132,0.08);
+            border: 1px solid rgba(0,208,132,0.3);
             padding: 10px 18px;
             margin-bottom: 24px;
             animation: blink 1.5s step-end infinite;
@@ -308,14 +308,14 @@
             cursor: pointer;
             letter-spacing: 3px;
             text-shadow: 0 0 8px rgba(255,255,255,0.5);
-            box-shadow: 0 0 20px rgba(0,212,255,0.2), inset 0 0 20px rgba(0,212,255,0.05);
+            box-shadow: 0 0 20px rgba(126,59,208,0.2), inset 0 0 20px rgba(126,59,208,0.05);
             transition: all 0.2s;
             margin-bottom: 24px;
         }
 
         .overlay-btn:hover {
-            background: rgba(0,212,255,0.1);
-            box-shadow: 0 0 40px rgba(0,212,255,0.35), inset 0 0 30px rgba(0,212,255,0.1);
+            background: rgba(126,59,208,0.1);
+            box-shadow: 0 0 40px rgba(126,59,208,0.35), inset 0 0 30px rgba(126,59,208,0.1);
             text-shadow: 0 0 15px #fff;
         }
 
@@ -419,13 +419,13 @@
 
         // ── NEON COLORS ──────────────────────────────
         var NEON = {
-            pink:   '#ff2d78',
-            cyan:   '#00d4ff',
-            gold:   '#ffd700',
-            green:  '#39ff14',
-            purple: '#b44dff',
+            pink:   '#0693e3',
+            cyan:   '#7e3bd0',
+            gold:   '#fcb900',
+            green:  '#00d084',
+            purple: '#974df3',
             white:  '#f0f0ff',
-            bg:     '#0f0f23'
+            bg:     '#000000'
         };
 
         // ── AUDIO (Web Audio API) ────────────────────
@@ -478,9 +478,9 @@
         }
 
         var BRICK_DEFS = {
-            normal:  { hits: 1, color: NEON.cyan,   glow: 'rgba(0,212,255,0.6)', points: 10 },
-            strong:  { hits: 2, color: NEON.purple, glow: 'rgba(180,77,255,0.6)', points: 20 },
-            gold:    { hits: 1, color: NEON.gold,   glow: 'rgba(255,215,0,0.6)',  points: 50 },
+            normal:  { hits: 1, color: NEON.cyan,   glow: 'rgba(126,59,208,0.6)', points: 10 },
+            strong:  { hits: 2, color: NEON.purple, glow: 'rgba(151,77,243,0.6)', points: 20 },
+            gold:    { hits: 1, color: NEON.gold,   glow: 'rgba(252,185,0,0.6)',  points: 50 },
             steel:   { hits: Infinity, color: '#333', glow: 'rgba(100,100,100,0.3)', points: 0 }
         };
 
@@ -764,11 +764,11 @@
             }
 
             // Paddle with neon glow
-            ctx.shadowColor = 'rgba(0,212,255,0.5)';
+            ctx.shadowColor = 'rgba(126,59,208,0.5)';
             ctx.shadowBlur = 10;
             var pg = ctx.createLinearGradient(paddle.x, paddle.y, paddle.x, paddle.y + paddle.h);
             pg.addColorStop(0, NEON.cyan);
-            pg.addColorStop(1, '#005f80');
+            pg.addColorStop(1, '#2d1a4a');
             ctx.fillStyle = pg;
             rrect(paddle.x, paddle.y, paddle.w, paddle.h, 5);
             ctx.shadowBlur = 0;
@@ -776,7 +776,7 @@
             if (powerupTimer > 0) {
                 ctx.strokeStyle = NEON.green;
                 ctx.lineWidth = 2;
-                ctx.shadowColor = 'rgba(57,255,20,0.6)';
+                ctx.shadowColor = 'rgba(0,208,132,0.6)';
                 ctx.shadowBlur = 12;
                 rrect(paddle.x-3, paddle.y-3, paddle.w+6, paddle.h+6, 6, true);
                 ctx.shadowBlur = 0;
@@ -785,7 +785,7 @@
             // Balls with neon glow
             for (var j = 0; j < balls.length; j++) {
                 var b = balls[j];
-                ctx.shadowColor = 'rgba(255,215,0,0.7)';
+                ctx.shadowColor = 'rgba(252,185,0,0.7)';
                 ctx.shadowBlur = 15;
                 var bg = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
                 bg.addColorStop(0, '#fff');
