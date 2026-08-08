@@ -92,7 +92,12 @@ strong { color: var(--text); font-weight: 600; }
     letter-spacing: -0.5px;
     color: var(--text);
     white-space: nowrap;
+    display: flex;
+    align-items: center;
 }
+.nav-logo-img { display: block; height: 36px; width: auto; }
+.hero-logo-img { display: block; height: auto; max-width: 100%; }
+.footer-logo-img { display: block; height: 36px; width: auto; }
 
 .nav-links {
     display: flex;
