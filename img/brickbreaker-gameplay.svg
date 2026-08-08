@@ -1,81 +1,107 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <defs>
-    <filter id="glowPink"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="glowCyan"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="glowGold"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f0f23"/><stop offset="100%" stop-color="#141430"/></linearGradient>
-  </defs>
   <!-- Background -->
-  <rect width="800" height="600" fill="url(#bgGrad)"/>
-  <!-- Stars -->
-  <circle cx="45" cy="30" r="1" fill="#8899bb" opacity="0.6"/>
-  <circle cx="120" cy="80" r="1.5" fill="#aabbcc" opacity="0.4"/>
-  <circle cx="200" cy="20" r="1" fill="#8899bb" opacity="0.7"/>
-  <circle cx="340" cy="55" r="1" fill="#aabbcc" opacity="0.5"/>
-  <circle cx="500" cy="35" r="1.5" fill="#8899bb" opacity="0.4"/>
-  <circle cx="620" cy="70" r="1" fill="#aabbcc" opacity="0.6"/>
-  <circle cx="750" cy="25" r="1" fill="#8899bb" opacity="0.5"/>
-  <circle cx="80" cy="140" r="1" fill="#aabbcc" opacity="0.3"/>
-  <circle cx="700" cy="150" r="1" fill="#8899bb" opacity="0.4"/>
+  <rect width="800" height="600" fill="#fafafa"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#grid)" opacity="0.03"/>
+
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#7c3aed" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Game area border -->
+  <rect x="30" y="50" width="740" height="510" rx="8" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
 
   <!-- HUD -->
-  <text x="20" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#ffd700" filter="url(#glowGold)">SCORE: 2,450</text>
-  <text x="350" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#ff2d78" filter="url(#glowPink)">♥ ♥ ♥</text>
-  <text x="550" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#00d4ff" filter="url(#glowCyan)">LEVEL 3</text>
-  <text x="700" y="30" font-family="monospace" font-size="16" font-weight="bold" fill="#b44dff">HI: 8,200</text>
+  <text x="50" y="78" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="700" fill="#7c3aed">◆ SCORE: 2,450</text>
+  <text x="370" y="78" font-family="Inter,system-ui,sans-serif" font-size="15" fill="#6c757d">♥ ♥ ♥</text>
+  <text x="560" y="78" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="700" fill="#212529">LEVEL 3</text>
+  <text x="700" y="78" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="600" fill="#a78bfa">HI: 8,200</text>
 
-  <!-- Brick Grid: Row 1 (gold row) -->
-  <rect x="50" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
-  <rect x="145" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
-  <rect x="240" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
-  <rect x="335" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
-  <rect x="430" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
-  <rect x="525" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
-  <rect x="620" y="70" width="80" height="28" rx="3" fill="#ffd700" opacity="0.85" filter="url(#glowGold)"/>
+  <!-- Brick Rows (matching game: 10×5 grid, 75×25 bricks, 80px col spacing, 30px row spacing) -->
+  <!-- Row 1: Gold bricks (50pts each) — top layer -->
+  <rect x="46" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="122" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="198" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="274" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="350" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="426" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="502" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="578" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="654" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="730" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
 
-  <!-- Row 2: Pink row (some cracked) -->
-  <rect x="50" y="112" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
-  <rect x="145" y="112" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
-  <rect x="240" y="112" width="80" height="28" rx="3" fill="#991133" opacity="0.6"/>
-  <rect x="335" y="112" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
-  <rect x="430" y="112" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
-  <rect x="525" y="112" width="80" height="28" rx="3" fill="#991133" opacity="0.6"/>
-  <rect x="620" y="112" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
+  <!-- Row 2: Purple/normal bricks, some destroyed -->
+  <rect x="46" y="133" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="122" y="133" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <!-- 3rd brick destroyed (gap) -->
+  <rect x="274" y="133" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="350" y="133" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <!-- 6th brick destroyed (gap) -->
+  <rect x="502" y="133" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="578" y="133" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="654" y="133" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="730" y="133" width="72" height="24" rx="3" fill="#7c3aed"/>
 
-  <!-- Row 3: Cyan row -->
-  <rect x="50" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
-  <rect x="145" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
-  <rect x="240" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
-  <rect x="335" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
-  <rect x="430" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
-  <rect x="525" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
-  <rect x="620" y="154" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.75" filter="url(#glowCyan)"/>
+  <!-- Row 3: Light purple (strong bricks — 2 hits) -->
+  <rect x="46" y="161" width="72" height="24" rx="3" fill="#a78bfa"/>
+  <rect x="122" y="161" width="72" height="24" rx="3" fill="#a78bfa"/>
+  <rect x="198" y="161" width="72" height="24" rx="3" fill="#a78bfa"/>
+  <rect x="274" y="161" width="72" height="24" rx="3" fill="#a78bfa"/>
+  <rect x="350" y="161" width="72" height="24" rx="3" fill="#a78bfa"/>
+  <rect x="426" y="161" width="72" height="24" rx="3" fill="#a78bfa"/>
+  <rect x="502" y="161" width="72" height="24" rx="3" fill="#a78bfa"/>
+  <rect x="578" y="161" width="72" height="24" rx="3" fill="#a78bfa"/>
+  <rect x="654" y="161" width="72" height="24" rx="3" fill="#a78bfa"/>
+  <rect x="730" y="161" width="72" height="24" rx="3" fill="#a78bfa"/>
 
-  <!-- Row 4: Steel (unbreakable) + mixed -->
-  <rect x="50" y="196" width="80" height="28" rx="3" fill="#4a5570" opacity="0.6"/>
-  <rect x="145" y="196" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.7" filter="url(#glowPink)"/>
-  <rect x="240" y="196" width="80" height="28" rx="3" fill="#4a5570" opacity="0.6"/>
-  <rect x="335" y="196" width="80" height="28" rx="3" fill="#4a5570" opacity="0.6"/>
-  <rect x="430" y="196" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.7" filter="url(#glowCyan)"/>
-  <rect x="525" y="196" width="80" height="28" rx="3" fill="#4a5570" opacity="0.6"/>
-  <rect x="620" y="196" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.7" filter="url(#glowPink)"/>
+  <!-- Row 4: Mixed — some purple, some steel -->
+  <rect x="46" y="189" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="122" y="189" width="72" height="24" rx="3" fill="#adb5bd"/>  <!-- steel -->
+  <rect x="198" y="189" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="274" y="189" width="72" height="24" rx="3" fill="#adb5bd"/>  <!-- steel -->
+  <rect x="350" y="189" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="426" y="189" width="72" height="24" rx="3" fill="#adb5bd"/>  <!-- steel -->
+  <rect x="502" y="189" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="578" y="189" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="654" y="189" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="730" y="189" width="72" height="24" rx="3" fill="#7c3aed"/>
 
-  <!-- Falling power-up -->
-  <circle cx="380" cy="340" r="14" fill="#ffd700" opacity="0.9" filter="url(#glowGold)"/>
-  <text x="374" y="346" font-family="monospace" font-size="18" font-weight="bold" fill="#000">M</text>
+  <!-- Row 5: Gold bottom row -->
+  <rect x="46" y="217" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="122" y="217" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="198" y="217" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="274" y="217" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="350" y="217" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="426" y="217" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="502" y="217" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="578" y="217" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="654" y="217" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="730" y="217" width="72" height="24" rx="3" fill="#fcb900"/>
 
-  <!-- Ball -->
-  <circle cx="410" cy="480" r="8" fill="#fff" opacity="0.9" filter="url(#glowCyan)"/>
-  <circle cx="410" cy="480" r="5" fill="#fff"/>
+  <!-- Falling M power-up -->
+  <circle cx="400" cy="360" r="15" fill="#7c3aed"/>
+  <text x="394" y="367" font-family="Inter,system-ui,sans-serif" font-size="18" font-weight="800" fill="#fff">M</text>
+
+  <!-- Ball (with trail) -->
+  <circle cx="460" cy="480" r="7" fill="#fcb900"/>
+  <circle cx="458" cy="478" r="2.5" fill="#fff" opacity="0.5"/>
+  <!-- Trail -->
+  <circle cx="480" cy="470" r="4" fill="#fcb900" opacity="0.4"/>
+  <circle cx="492" cy="463" r="2.5" fill="#fcb900" opacity="0.25"/>
 
   <!-- Paddle -->
-  <rect x="340" y="550" width="130" height="14" rx="7" fill="#00d4ff" opacity="0.85" filter="url(#glowCyan)"/>
-  <rect x="345" y="553" width="120" height="8" rx="4" fill="#88eeff" opacity="0.5"/>
+  <rect x="330" y="540" width="140" height="14" rx="7" fill="#7c3aed"/>
+  <rect x="335" y="543" width="130" height="7" rx="3.5" fill="#a78bfa" opacity="0.5"/>
 
-  <!-- Scanlines overlay -->
-  <pattern id="scanlines" width="800" height="4" patternUnits="userSpaceOnUse">
-    <rect x="0" y="0" width="800" height="2" fill="rgba(0,0,0,0.04)"/>
-    <rect x="0" y="2" width="800" height="2" fill="transparent"/>
-  </pattern>
-  <rect width="800" height="600" fill="url(#scanlines)" pointer-events="none"/>
+  <!-- Labels with arrows -->
+  <text x="50" y="300" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#6c757d">Gold Brick</text>
+  <line x1="82" y1="265" x2="82" y2="240" stroke="#6c757d" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+  <text x="240" y="300" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#6c757d">Steel Brick</text>
+  <line x1="158" y1="265" x2="158" y2="215" stroke="#6c757d" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+  <text x="530" y="300" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#7c3aed">Power-Up Drop</text>
+  <line x1="470" y1="295" x2="415" y2="360" stroke="#7c3aed" stroke-width="0.8" stroke-dasharray="3,2"/>
 </svg>

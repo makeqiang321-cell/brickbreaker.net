@@ -63,16 +63,6 @@ strong { color: var(--text); font-weight: 600; }
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
-    transition: all 0.3s;
-    opacity: 0;
-    transform: translateY(-4px);
-}
-
-.nav:hover,
-.nav.visible,
-.nav.nav-open {
-    opacity: 1;
-    transform: translateY(0);
     box-shadow: var(--shadow);
 }
 
@@ -212,7 +202,7 @@ strong { color: var(--text); font-weight: 600; }
     font-weight: 700;
     font-size: 1.3rem;
     letter-spacing: -0.5px;
-    color: var(--text);
+    color: var(--primary);
     text-align: center;
     margin-bottom: 40px;
 }

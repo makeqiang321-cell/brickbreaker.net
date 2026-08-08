@@ -1,62 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
-    <filter id="glowPink"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="glowCyan"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="glowGold"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="glowGreen"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f0f23"/><stop offset="100%" stop-color="#141430"/></linearGradient>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#7c3aed" stroke-width="0.5"/>
+    </pattern>
   </defs>
-  <rect width="800" height="600" fill="url(#bgGrad)"/>
-  <!-- Stars -->
-  <circle cx="90" cy="40" r="1.5" fill="#aabbcc" opacity="0.7"/>
-  <circle cx="250" cy="65" r="1" fill="#8899bb" opacity="0.5"/>
-  <circle cx="380" cy="25" r="1.5" fill="#aabbcc" opacity="0.6"/>
-  <circle cx="550" cy="50" r="1" fill="#8899bb" opacity="0.5"/>
-  <circle cx="700" cy="35" r="1.5" fill="#aabbcc" opacity="0.4"/>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f5f7"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#grid2)" opacity="0.03"/>
+
+  <!-- Game area border -->
+  <rect x="30" y="50" width="740" height="510" rx="8" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
 
   <!-- HUD -->
-  <text x="20" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#ffd700" filter="url(#glowGold)">SCORE: 5,820</text>
-  <text x="350" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#ff2d78" filter="url(#glowPink)">♥ ♥</text>
-  <text x="550" y="30" font-family="monospace" font-size="18" font-weight="bold" fill="#00d4ff" filter="url(#glowCyan)">LEVEL 8</text>
+  <text x="50" y="78" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="700" fill="#7c3aed">◆ SCORE: 5,820</text>
+  <text x="370" y="78" font-family="Inter,system-ui,sans-serif" font-size="15" fill="#6c757d">♥ ♥</text>
+  <text x="560" y="78" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="700" fill="#212529">LEVEL 8</text>
+  <text x="680" y="78" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700" fill="#00d084">BIG PADDLE!</text>
 
-  <!-- Big Paddle W power-up active indicator -->
-  <text x="680" y="30" font-family="monospace" font-size="14" font-weight="bold" fill="#39ff14" filter="url(#glowGreen)">BIG PADDLE!</text>
+  <!-- Few remaining bricks (scattered) -->
+  <rect x="240" y="105" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <rect x="430" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
+  <rect x="145" y="133" width="72" height="24" rx="3" fill="#a78bfa"/>
+  <rect x="525" y="133" width="72" height="24" rx="3" fill="#7c3aed"/>
 
-  <!-- Remaining bricks (few left) -->
-  <rect x="240" y="80" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.8" filter="url(#glowPink)"/>
-  <rect x="430" y="80" width="80" height="28" rx="3" fill="#ffd700" opacity="0.9" filter="url(#glowGold)"/>
-  <rect x="145" y="122" width="80" height="28" rx="3" fill="#00d4ff" opacity="0.7" filter="url(#glowCyan)"/>
-  <rect x="525" y="122" width="80" height="28" rx="3" fill="#ff2d78" opacity="0.7" filter="url(#glowPink)"/>
+  <!-- Steel obstacles -->
+  <rect x="320" y="133" width="72" height="24" rx="3" fill="#adb5bd"/>
+  <rect x="620" y="105" width="72" height="24" rx="3" fill="#adb5bd"/>
 
-  <!-- Multi-ball: 3 balls in play -->
-  <circle cx="250" cy="380" r="7" fill="#fff" opacity="0.9" filter="url(#glowCyan)"/>
-  <circle cx="420" cy="420" r="7" fill="#fff" opacity="0.9" filter="url(#glowCyan)"/>
-  <circle cx="580" cy="360" r="7" fill="#fff" opacity="0.9" filter="url(#glowCyan)"/>
+  <!-- Particle burst at destroyed brick area -->
+  <rect x="300" y="112" width="5" height="5" rx="1" fill="#fcb900" opacity="0.6"/>
+  <rect x="312" y="104" width="4" height="4" rx="1" fill="#fcb900" opacity="0.4"/>
+  <rect x="308" y="120" width="3" height="3" rx="1" fill="#fcb900" opacity="0.35"/>
+  <rect x="296" y="106" width="4" height="4" rx="1" fill="#fcb900" opacity="0.5"/>
 
-  <!-- Particle trail on one ball -->
-  <circle cx="235" cy="393" r="3" fill="#00d4ff" opacity="0.4"/>
-  <circle cx="225" cy="400" r="2" fill="#00d4ff" opacity="0.3"/>
-  <circle cx="218" cy="406" r="1.5" fill="#00d4ff" opacity="0.2"/>
+  <!-- 3 Multi-balls in play -->
+  <!-- Ball 1 -->
+  <circle cx="280" cy="380" r="7" fill="#fcb900"/>
+  <circle cx="278" cy="378" r="2.5" fill="#fff" opacity="0.5"/>
+  <!-- Trail -->
+  <circle cx="295" cy="368" r="4" fill="#fcb900" opacity="0.35"/>
+  <circle cx="305" cy="360" r="2.5" fill="#fcb900" opacity="0.2"/>
 
-  <!-- Big paddle (wide!) -->
-  <rect x="200" y="550" width="400" height="14" rx="7" fill="#39ff14" opacity="0.85" filter="url(#glowGreen)"/>
-  <rect x="205" y="553" width="390" height="8" rx="4" fill="#88ff88" opacity="0.4"/>
+  <!-- Ball 2 -->
+  <circle cx="440" cy="430" r="7" fill="#fcb900"/>
+  <circle cx="438" cy="428" r="2.5" fill="#fff" opacity="0.5"/>
+  <!-- Trail -->
+  <circle cx="455" cy="420" r="4" fill="#fcb900" opacity="0.35"/>
+  <circle cx="465" cy="414" r="2.5" fill="#fcb900" opacity="0.2"/>
+
+  <!-- Ball 3 -->
+  <circle cx="580" cy="360" r="7" fill="#fcb900"/>
+  <circle cx="578" cy="358" r="2.5" fill="#fff" opacity="0.5"/>
+  <!-- Trail -->
+  <circle cx="565" cy="370" r="4" fill="#fcb900" opacity="0.35"/>
+  <circle cx="555" cy="378" r="2.5" fill="#fcb900" opacity="0.2"/>
 
   <!-- Falling Extra Life power-up -->
-  <rect x="460" y="330" width="28" height="28" rx="4" fill="#ff2d78" opacity="0.9" filter="url(#glowPink)"/>
-  <text x="468" y="351" font-family="monospace" font-size="22" font-weight="bold" fill="#fff">+</text>
+  <rect x="460" y="310" width="28" height="28" rx="5" fill="#0693e3"/>
+  <text x="468" y="333" font-family="Inter,system-ui,sans-serif" font-size="22" font-weight="800" fill="#fff">+</text>
 
-  <!-- Particle burst effect -->
-  <rect x="300" y="105" width="6" height="6" rx="1" fill="#ffd700" opacity="0.7"/>
-  <rect x="315" y="95" width="4" height="4" rx="1" fill="#ffd700" opacity="0.5"/>
-  <rect x="310" y="112" width="3" height="3" rx="1" fill="#ffd700" opacity="0.4"/>
-  <rect x="295" y="98" width="5" height="5" rx="1" fill="#ffd700" opacity="0.6"/>
-  <rect x="320" y="102" width="4" height="4" rx="1" fill="#ffd700" opacity="0.5"/>
+  <!-- Big Paddle (wide — 400px, green glow) -->
+  <rect x="200" y="540" width="400" height="14" rx="7" fill="#00d084"/>
+  <rect x="205" y="543" width="390" height="7" rx="3.5" fill="#fff" opacity="0.3"/>
 
-  <!-- Scanlines -->
-  <pattern id="scanlines" width="800" height="4" patternUnits="userSpaceOnUse">
-    <rect x="0" y="0" width="800" height="2" fill="rgba(0,0,0,0.04)"/>
-    <rect x="0" y="2" width="800" height="2" fill="transparent"/>
-  </pattern>
-  <rect width="800" height="600" fill="url(#scanlines)" pointer-events="none"/>
+  <!-- Callouts -->
+  <!-- Multi-ball label -->
+  <text x="440" y="290" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#7c3aed" text-anchor="middle">3× Multi-Ball Active</text>
+  <line x1="440" y1="295" x2="440" y2="350" stroke="#7c3aed" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+  <!-- Big Paddle label -->
+  <text x="400" y="510" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#00d084" text-anchor="middle">Big Paddle (W) — 8s duration</text>
+  <line x1="400" y1="505" x2="400" y2="555" stroke="#00d084" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+  <!-- Extra Life label -->
+  <text x="590" y="310" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#0693e3">Extra Life (+)</text>
+  <line x1="530" y1="315" x2="488" y2="324" stroke="#0693e3" stroke-width="0.8" stroke-dasharray="3,2"/>
 </svg>
