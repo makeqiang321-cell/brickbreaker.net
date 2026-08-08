@@ -1,79 +1,87 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
-    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#7c3aed" stroke-width="0.5"/>
-    </pattern>
+    <filter id="bg"><feGaussianBlur stdDeviation="5"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="bg2"><feGaussianBlur stdDeviation="6"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="bg3"><feGaussianBlur stdDeviation="10"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="pg"><feGaussianBlur stdDeviation="7"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="pu"><feGaussianBlur stdDeviation="6"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="gr"><feGaussianBlur stdDeviation="8"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="bg" cx="0.35" cy="0.35"><stop offset="0%" stop-color="#ffffff"/><stop offset="40%" stop-color="#fcb900"/><stop offset="100%" stop-color="#805000"/></radialGradient>
+    <linearGradient id="pgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00d084"/><stop offset="100%" stop-color="#0a4a30"/></linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="600" fill="#f5f5f7"/>
-  <rect x="0" y="0" width="800" height="600" fill="url(#grid2)" opacity="0.03"/>
+  <!-- Black bg -->
+  <rect width="800" height="600" fill="#000000"/>
 
-  <!-- Game area border -->
-  <rect x="30" y="50" width="740" height="510" rx="8" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+  <!-- Starfield -->
+  <g fill="#c8dcff">
+    <circle cx="55" cy="30" r="1" opacity="0.35"/><circle cx="150" cy="70" r="0.8" opacity="0.3"/>
+    <circle cx="270" cy="20" r="1.1" opacity="0.4"/><circle cx="390" cy="48" r="0.7" opacity="0.25"/>
+    <circle cx="510" cy="22" r="0.9" opacity="0.3"/><circle cx="650" cy="60" r="1.1" opacity="0.35"/>
+    <circle cx="730" cy="15" r="0.6" opacity="0.4"/><circle cx="780" cy="55" r="1" opacity="0.25"/>
+    <circle cx="30" cy="110" r="0.7" opacity="0.2"/><circle cx="760" cy="100" r="0.8" opacity="0.2"/>
+  </g>
 
-  <!-- HUD -->
-  <text x="50" y="78" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="700" fill="#7c3aed">◆ SCORE: 5,820</text>
-  <text x="370" y="78" font-family="Inter,system-ui,sans-serif" font-size="15" fill="#6c757d">♥ ♥</text>
-  <text x="560" y="78" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="700" fill="#212529">LEVEL 8</text>
-  <text x="680" y="78" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700" fill="#00d084">BIG PADDLE!</text>
-
-  <!-- Few remaining bricks (scattered) -->
-  <rect x="240" y="105" width="72" height="24" rx="3" fill="#7c3aed"/>
-  <rect x="430" y="105" width="72" height="24" rx="3" fill="#fcb900"/>
-  <rect x="145" y="133" width="72" height="24" rx="3" fill="#a78bfa"/>
-  <rect x="525" y="133" width="72" height="24" rx="3" fill="#7c3aed"/>
+  <!-- Scattered remaining bricks (high level, most cleared) -->
+  <g filter="url(#bg)">
+    <rect x="240" y="80" width="75" height="25" rx="2" fill="#7c3aed"/>
+    <rect x="500" y="80" width="75" height="25" rx="2" fill="#fcb900" opacity="0.9"/>
+    <rect x="120" y="108" width="75" height="25" rx="2" fill="#a78bfa"/>
+  </g>
+  <g stroke="rgba(0,0,0,0.4)" stroke-width="0.8">
+    <rect x="240" y="80" width="75" height="25" rx="2" fill="none"/>
+    <rect x="500" y="80" width="75" height="25" rx="2" fill="none"/>
+    <rect x="120" y="108" width="75" height="25" rx="2" fill="none"/>
+  </g>
 
   <!-- Steel obstacles -->
-  <rect x="320" y="133" width="72" height="24" rx="3" fill="#adb5bd"/>
-  <rect x="620" y="105" width="72" height="24" rx="3" fill="#adb5bd"/>
+  <g filter="url(#bg)">
+    <rect x="340" y="108" width="75" height="25" rx="2" fill="#333333"/>
+    <rect x="620" y="80" width="75" height="25" rx="2" fill="#333333"/>
+  </g>
 
-  <!-- Particle burst at destroyed brick area -->
-  <rect x="300" y="112" width="5" height="5" rx="1" fill="#fcb900" opacity="0.6"/>
-  <rect x="312" y="104" width="4" height="4" rx="1" fill="#fcb900" opacity="0.4"/>
-  <rect x="308" y="120" width="3" height="3" rx="1" fill="#fcb900" opacity="0.35"/>
-  <rect x="296" y="106" width="4" height="4" rx="1" fill="#fcb900" opacity="0.5"/>
+  <!-- Particle burst from destroyed brick -->
+  <g fill="#fcb900">
+    <rect x="410" y="88" width="6" height="6" rx="1" opacity="0.7"/>
+    <rect x="425" y="80" width="4" height="4" rx="1" opacity="0.5"/>
+    <rect x="418" y="98" width="3" height="3" rx="1" opacity="0.4"/>
+    <rect x="405" y="84" width="5" height="5" rx="1" opacity="0.6"/>
+    <rect x="432" y="90" width="4" height="4" rx="1" opacity="0.5"/>
+  </g>
 
   <!-- 3 Multi-balls in play -->
-  <!-- Ball 1 -->
-  <circle cx="280" cy="380" r="7" fill="#fcb900"/>
-  <circle cx="278" cy="378" r="2.5" fill="#fff" opacity="0.5"/>
-  <!-- Trail -->
-  <circle cx="295" cy="368" r="4" fill="#fcb900" opacity="0.35"/>
-  <circle cx="305" cy="360" r="2.5" fill="#fcb900" opacity="0.2"/>
+  <g filter="url(#bg3)">
+    <circle cx="250" cy="400" r="7" fill="url(#bg)"/>
+    <circle cx="440" cy="440" r="7" fill="url(#bg)"/>
+    <circle cx="560" cy="370" r="7" fill="url(#bg)"/>
+  </g>
 
-  <!-- Ball 2 -->
-  <circle cx="440" cy="430" r="7" fill="#fcb900"/>
-  <circle cx="438" cy="428" r="2.5" fill="#fff" opacity="0.5"/>
-  <!-- Trail -->
-  <circle cx="455" cy="420" r="4" fill="#fcb900" opacity="0.35"/>
-  <circle cx="465" cy="414" r="2.5" fill="#fcb900" opacity="0.2"/>
-
-  <!-- Ball 3 -->
-  <circle cx="580" cy="360" r="7" fill="#fcb900"/>
-  <circle cx="578" cy="358" r="2.5" fill="#fff" opacity="0.5"/>
-  <!-- Trail -->
-  <circle cx="565" cy="370" r="4" fill="#fcb900" opacity="0.35"/>
-  <circle cx="555" cy="378" r="2.5" fill="#fcb900" opacity="0.2"/>
+  <!-- Ball trails -->
+  <circle cx="265" cy="387" r="3.5" fill="#fcb900" opacity="0.35"/>
+  <circle cx="275" cy="378" r="2.5" fill="#fcb900" opacity="0.2"/>
+  <circle cx="455" cy="428" r="3.5" fill="#fcb900" opacity="0.35"/>
+  <circle cx="465" cy="420" r="2.5" fill="#fcb900" opacity="0.2"/>
+  <circle cx="548" cy="382" r="3.5" fill="#fcb900" opacity="0.35"/>
+  <circle cx="540" cy="390" r="2.5" fill="#fcb900" opacity="0.2"/>
 
   <!-- Falling Extra Life power-up -->
-  <rect x="460" y="310" width="28" height="28" rx="5" fill="#0693e3"/>
-  <text x="468" y="333" font-family="Inter,system-ui,sans-serif" font-size="22" font-weight="800" fill="#fff">+</text>
+  <g filter="url(#pu)">
+    <rect x="440" y="310" width="28" height="28" rx="4" fill="#0693e3"/>
+  </g>
+  <text x="454" y="331" font-family="Orbitron,monospace" font-size="22" font-weight="700" fill="#000" text-anchor="middle">+</text>
 
-  <!-- Big Paddle (wide — 400px, green glow) -->
-  <rect x="200" y="540" width="400" height="14" rx="7" fill="#00d084"/>
-  <rect x="205" y="543" width="390" height="7" rx="3.5" fill="#fff" opacity="0.3"/>
+  <!-- Big Paddle (wide, green gradient, with green border glow) -->
+  <rect x="190" y="545" width="420" height="14" rx="5" fill="url(#pgG)" filter="url(#pg)"/>
+  <!-- Green powerup border glow -->
+  <rect x="187" y="542" width="426" height="20" rx="6" fill="none" stroke="#00d084" stroke-width="2" filter="url(#gr)" opacity="0.8"/>
 
-  <!-- Callouts -->
-  <!-- Multi-ball label -->
-  <text x="440" y="290" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#7c3aed" text-anchor="middle">3× Multi-Ball Active</text>
-  <line x1="440" y1="295" x2="440" y2="350" stroke="#7c3aed" stroke-width="0.8" stroke-dasharray="3,2"/>
-
-  <!-- Big Paddle label -->
-  <text x="400" y="510" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#00d084" text-anchor="middle">Big Paddle (W) — 8s duration</text>
-  <line x1="400" y1="505" x2="400" y2="555" stroke="#00d084" stroke-width="0.8" stroke-dasharray="3,2"/>
-
-  <!-- Extra Life label -->
-  <text x="590" y="310" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#0693e3">Extra Life (+)</text>
-  <line x1="530" y1="315" x2="488" y2="324" stroke="#0693e3" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <!-- HUD -->
+  <g font-family="Orbitron,monospace" font-weight="700" letter-spacing="1">
+    <text x="15" y="22" font-size="15" fill="#fcb900">SCORE</text>
+    <text x="90" y="22" font-size="16" font-weight="900" fill="#fcb900">5,820</text>
+    <text x="340" y="22" font-size="15" fill="#0693e3">♥ ♥</text>
+    <text x="530" y="22" font-size="15" fill="#7c3aed">LEVEL</text>
+    <text x="602" y="22" font-size="16" font-weight="900" fill="#7c3aed">8</text>
+    <text x="650" y="22" font-size="12" font-weight="700" fill="#00d084">BIG PADDLE!</text>
+  </g>
 </svg>
