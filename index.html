@@ -101,6 +101,34 @@
     }
     </script>
 
+    <!-- Schema.org: ItemList (Game Modes) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Brick Breaker Game Modes",
+        "description": "Nine brick breaker game modes and six new puzzle games available on BrickBreaker.net.",
+        "numberOfItems": 15,
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Classic Brick Breaker", "url": "https://brickbreaker.net/game/classic/" },
+            { "@type": "ListItem", "position": 2, "name": "Power-Up Brick Breaker", "url": "https://brickbreaker.net/game/power-up/" },
+            { "@type": "ListItem", "position": 3, "name": "Neon Brick Breaker", "url": "https://brickbreaker.net/game/neon/" },
+            { "@type": "ListItem", "position": 4, "name": "Arkanoid Brick Breaker", "url": "https://brickbreaker.net/game/arkanoid/" },
+            { "@type": "ListItem", "position": 5, "name": "Hard Brick Breaker", "url": "https://brickbreaker.net/game/hard/" },
+            { "@type": "ListItem", "position": 6, "name": "Precision Brick Breaker", "url": "https://brickbreaker.net/game/precision/" },
+            { "@type": "ListItem", "position": 7, "name": "Gold Brick Breaker", "url": "https://brickbreaker.net/game/gold/" },
+            { "@type": "ListItem", "position": 8, "name": "Cosmic Brick Breaker", "url": "https://brickbreaker.net/game/cosmic/" },
+            { "@type": "ListItem", "position": 9, "name": "Retro Brick Breaker", "url": "https://brickbreaker.net/game/retro/" },
+            { "@type": "ListItem", "position": 10, "name": "Block Crush", "url": "https://brickbreaker.net/game/block-crush/" },
+            { "@type": "ListItem", "position": 11, "name": "1010 Color Match", "url": "https://brickbreaker.net/game/1010-color-match/" },
+            { "@type": "ListItem", "position": 12, "name": "Block Puzzle Legend", "url": "https://brickbreaker.net/game/block-puzzle-legend/" },
+            { "@type": "ListItem", "position": 13, "name": "Bricky Blast", "url": "https://brickbreaker.net/game/bricky-blast/" },
+            { "@type": "ListItem", "position": 14, "name": "Block Blast 2048", "url": "https://brickbreaker.net/game/block-blast-2048/" },
+            { "@type": "ListItem", "position": 15, "name": "Slide Blocks Puzzle", "url": "https://brickbreaker.net/game/slide-blocks-puzzle/" }
+        ]
+    }
+    </script>
+
     <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX" crossorigin="anonymous"></script>
 
@@ -233,16 +261,19 @@
         .comment-flag:hover{color:var(--text-dim)}
 
         /* ── Recommended Games ──────────────── */
-        .rec-games-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-        @media(min-width:640px){.rec-games-grid{grid-template-columns:repeat(3,1fr)}}
-        @media(min-width:1024px){.rec-games-grid{grid-template-columns:repeat(4,1fr)}}
-        .rec-game-card{display:flex;align-items:center;gap:12px;border-radius:var(--radius-lg);padding:14px 16px;background:var(--bg-card);border:1px solid var(--border);text-decoration:none;transition:all .2s;box-shadow:var(--shadow-sm)}
-        .rec-game-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);text-decoration:none;border-color:rgba(124,58,237,0.25)}
-        .rec-game-thumb{width:48px;height:48px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;background:var(--bg)}
-        .rec-game-info{min-width:0}
-        .rec-game-info h3{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:2px;letter-spacing:-0.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-        .rec-game-info .rec-game-tag{font-size:.7rem;color:var(--text-faint);font-weight:500}
-        .rec-game-info .rec-game-stars{font-size:.68rem;color:#fcb900}
+        .rec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+        @media(min-width:640px){.rec-grid{grid-template-columns:repeat(3,1fr)}}
+        @media(min-width:1024px){.rec-grid{grid-template-columns:repeat(4,1fr)}}
+        .rec-card{position:relative;display:block;aspect-ratio:1.24/1;overflow:hidden;border-radius:18px;border:1px solid var(--border);background:var(--bg-card);text-decoration:none;color:inherit;transition:all .22s}
+        .rec-card:hover{border-color:rgba(124,58,237,0.45);transform:translateY(-2px);box-shadow:0 16px 34px rgba(124,58,237,0.14);text-decoration:none}
+        .rec-card-img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+        .rec-card:hover .rec-card-img{transform:scale(1.05)}
+        .rec-card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,5,30,0.05) 35%,rgba(10,5,30,0.82) 100%)}
+        .rec-card-badge{position:absolute;left:10px;top:10px;font-size:.55rem;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:rgba(124,58,237,0.2);color:#a78bfa;border:1px solid rgba(124,58,237,0.3)}
+        .rec-card-badge.hot{background:rgba(239,68,68,0.18);color:#f87171;border:1px solid rgba(239,68,68,0.3)}
+        .rec-card-body{position:absolute;inset-x:0;bottom:0;padding:12px 14px}
+        .rec-card-body span{display:block;font-size:.72rem;font-weight:800;color:#fff;line-height:1.2;text-shadow:0 1px 6px rgba(0,0,0,0.7)}
+        .rec-card-cat{font-size:.6rem;font-weight:600;color:rgba(255,255,255,0.65);margin-top:2px;letter-spacing:.3px}
 
         /* ── Features ─────────────────────────── */
         .features-grid{display:grid;grid-template-columns:1fr;gap:16px}
@@ -396,7 +427,6 @@
             <a href="#why-players-love">Why Players Love</a>
             <a href="#quick-facts">Quick Facts</a>
             <a href="#screenshots">Screenshots</a>
-            <a href="#recommended">Recommended</a>
             <a href="#from-the-blog">Blog</a>
             <a href="#faq">FAQ</a>
         </div>
@@ -446,6 +476,51 @@
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         <span>Share</span>
                     </a>
+                </div>
+            </div>
+        </section>
+
+                <!-- Game grid — inside #play-now (THY pattern) -->
+                <div style="margin-top:20px;">
+                    <h3 style="font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:12px;">More Games to Play</h3>
+                    <div class="rec-grid">
+                        <a href="game/block-crush/index.html" class="rec-card">
+                            <img src="img/block-crush-cover.jpg" alt="Block Crush" class="rec-card-img" loading="lazy">
+                            <div class="rec-card-overlay"></div>
+                            <span class="rec-card-badge hot">NEW</span>
+                            <div class="rec-card-body"><span>Block Crush</span><span class="rec-card-cat">Puzzle</span></div>
+                        </a>
+                        <a href="game/1010-color-match/index.html" class="rec-card">
+                            <img src="img/1010-color-match-cover.jpg" alt="1010 Color Match" class="rec-card-img" loading="lazy">
+                            <div class="rec-card-overlay"></div>
+                            <span class="rec-card-badge hot">NEW</span>
+                            <div class="rec-card-body"><span>1010 Color Match</span><span class="rec-card-cat">Puzzle</span></div>
+                        </a>
+                        <a href="game/block-puzzle-legend/index.html" class="rec-card">
+                            <img src="img/block-puzzle-legend-cover.jpg" alt="Block Puzzle Legend" class="rec-card-img" loading="lazy">
+                            <div class="rec-card-overlay"></div>
+                            <span class="rec-card-badge hot">NEW</span>
+                            <div class="rec-card-body"><span>Block Puzzle Legend</span><span class="rec-card-cat">Puzzle</span></div>
+                        </a>
+                        <a href="game/bricky-blast/index.html" class="rec-card">
+                            <img src="img/bricky-blast-cover.jpg" alt="Bricky Blast" class="rec-card-img" loading="lazy">
+                            <div class="rec-card-overlay"></div>
+                            <span class="rec-card-badge hot">NEW</span>
+                            <div class="rec-card-body"><span>Bricky Blast</span><span class="rec-card-cat">Puzzle</span></div>
+                        </a>
+                        <a href="game/block-blast-2048/index.html" class="rec-card">
+                            <img src="img/block-blast-2048-cover.jpg" alt="Block Blast 2048" class="rec-card-img" loading="lazy">
+                            <div class="rec-card-overlay"></div>
+                            <span class="rec-card-badge hot">NEW</span>
+                            <div class="rec-card-body"><span>Block Blast 2048</span><span class="rec-card-cat">Merge Puzzle</span></div>
+                        </a>
+                        <a href="game/slide-blocks-puzzle/index.html" class="rec-card">
+                            <img src="img/slide-blocks-puzzle-cover.jpg" alt="Slide Blocks Puzzle" class="rec-card-img" loading="lazy">
+                            <div class="rec-card-overlay"></div>
+                            <span class="rec-card-badge hot">NEW</span>
+                            <div class="rec-card-body"><span>Slide Blocks Puzzle</span><span class="rec-card-cat">Sliding Puzzle</span></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -646,112 +721,6 @@
                         <img src="img/brickbreaker-features.svg" alt="Brick breaker ball physics" class="ss-img" loading="lazy">
                         <figcaption>Ball physics — edge hits angle shots, gold bricks worth 50 pts.</figcaption>
                     </figure>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ #recommended ═══ -->
-        <section class="sec pt-0" id="recommended">
-            <div class="sec-inner">
-                <h2 class="sec-h2">Recommended Games</h2>
-                <p class="sec-lead">Nine brick breaker modes and puzzle favorites — every game loads instantly with no download.</p>
-                <div class="rec-games-grid">
-                    <a href="game/classic/index.html" class="rec-game-card">
-                        <img src="img/cover-classic.svg" alt="Classic Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Classic Brick Breaker</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                            <span class="rec-game-tag">Classic Mode</span>
-                        </div>
-                    </a>
-                    <a href="game/power-up/index.html" class="rec-game-card">
-                        <img src="img/cover-power-up.svg" alt="Power-Up Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Power-Up Brick Breaker</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                            <span class="rec-game-tag">Power-Up Mode</span>
-                        </div>
-                    </a>
-                    <a href="game/neon/index.html" class="rec-game-card">
-                        <img src="img/cover-neon.svg" alt="Neon Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Neon Brick Breaker</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                            <span class="rec-game-tag">Neon Mode</span>
-                        </div>
-                    </a>
-                    <a href="game/hard/index.html" class="rec-game-card">
-                        <img src="img/cover-hard.svg" alt="Hard Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Hard Brick Breaker</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                            <span class="rec-game-tag">Hard Mode</span>
-                        </div>
-                    </a>
-                    <a href="game/gold/index.html" class="rec-game-card">
-                        <img src="img/cover-gold.svg" alt="Gold Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Gold Brick Breaker</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                            <span class="rec-game-tag">Gold Rush Mode</span>
-                        </div>
-                    </a>
-                    <a href="game/precision/index.html" class="rec-game-card">
-                        <img src="img/cover-precision.svg" alt="Precision Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Precision Brick Breaker</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                            <span class="rec-game-tag">Precision Mode</span>
-                        </div>
-                    </a>
-                    <a href="game/cosmic/index.html" class="rec-game-card">
-                        <img src="img/cover-cosmic.svg" alt="Cosmic Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Cosmic Brick Breaker</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                            <span class="rec-game-tag">Cosmic Mode</span>
-                        </div>
-                    </a>
-                    <a href="game/retro/index.html" class="rec-game-card">
-                        <img src="img/cover-retro.svg" alt="Retro Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Retro Brick Breaker</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                            <span class="rec-game-tag">Retro Arcade</span>
-                        </div>
-                    </a>
-                    <a href="game/block-crush/index.html" class="rec-game-card">
-                        <img src="img/cover-classic.svg" alt="Block Crush" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Block Crush</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                            <span class="rec-game-tag">Match Puzzle</span>
-                        </div>
-                    </a>
-                    <a href="game/block-puzzle-master/index.html" class="rec-game-card">
-                        <img src="img/block-puzzle-master-cover.svg" alt="Block Puzzle Master" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Block Puzzle Master</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                            <span class="rec-game-tag">Block Puzzle</span>
-                        </div>
-                    </a>
-                    <a href="game/bricky-blast/index.html" class="rec-game-card">
-                        <img src="img/cover-neon.svg" alt="Bricky Blast" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Bricky Blast</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                            <span class="rec-game-tag">Blast Puzzle</span>
-                        </div>
-                    </a>
-                    <a href="game/slide-blocks-puzzle/index.html" class="rec-game-card">
-                        <img src="img/cover-retro.svg" alt="Slide Blocks Puzzle" class="rec-game-thumb" loading="lazy" width="48" height="48">
-                        <div class="rec-game-info">
-                            <h3>Slide Blocks Puzzle</h3>
-                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                            <span class="rec-game-tag">Slide Puzzle</span>
-                        </div>
-                    </a>
                 </div>
             </div>
         </section>
