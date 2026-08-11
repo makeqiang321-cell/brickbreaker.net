@@ -261,17 +261,20 @@
         .comment-flag:hover{color:var(--text-dim)}
 
         /* ── Recommended Games ──────────────── */
-        .rec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}
-        .rec-card{position:relative;display:block;aspect-ratio:1.24/1;overflow:hidden;border-radius:18px;border:1px solid var(--border);background:var(--bg-card);text-decoration:none;color:inherit;transition:all .22s}
-        .rec-card:hover{border-color:rgba(124,58,237,0.45);transform:translateY(-2px);box-shadow:0 16px 34px rgba(124,58,237,0.14);text-decoration:none}
+        .rec-grid{display:grid;grid-template-columns:1fr;gap:20px}
+        @media(min-width:600px){.rec-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(min-width:900px){.rec-grid{grid-template-columns:repeat(3,1fr)}}
+        .rec-card{display:flex;flex-direction:column;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);background:var(--bg-card);text-decoration:none;color:inherit;transition:all .22s;box-shadow:var(--shadow-sm)}
+        .rec-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);text-decoration:none;border-color:rgba(124,58,237,0.3)}
+        .rec-card-img-wrap{position:relative;overflow:hidden;aspect-ratio:16/10}
         .rec-card-img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
-        .rec-card:hover .rec-card-img{transform:scale(1.05)}
-        .rec-card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,5,30,0.05) 35%,rgba(10,5,30,0.82) 100%)}
-        .rec-card-badge{position:absolute;left:10px;top:10px;font-size:.55rem;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:rgba(0,210,132,0.18);color:#00d084;border:1px solid rgba(0,210,132,0.3)}
-        .rec-card-badge.hot{background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.25)}
-        .rec-card-body{position:absolute;inset-x:0;bottom:0;padding:12px 14px}
-        .rec-card-body span{display:block;font-size:.72rem;font-weight:800;color:#fff;line-height:1.2;text-shadow:0 1px 6px rgba(0,0,0,0.7)}
-        .rec-card-cat{font-size:.6rem;font-weight:600;color:rgba(255,255,255,0.65);margin-top:2px;letter-spacing:.3px}
+        .rec-card:hover .rec-card-img{transform:scale(1.04)}
+        .rec-card-badge{position:absolute;left:10px;top:10px;font-size:.55rem;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:rgba(0,210,132,0.22);color:#00d084;border:1px solid rgba(0,210,132,0.35)}
+        .rec-card-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
+        .rec-card-body h3{font-size:.9rem;font-weight:700;color:var(--text);margin:0;letter-spacing:-0.3px;line-height:1.25}
+        .rec-card-stars{font-size:.72rem;color:#eab308;letter-spacing:1px}
+        .rec-card-desc{font-size:.78rem;color:var(--text-dim);line-height:1.45;margin:0}
+        .rec-card-tag{display:inline-block;font-size:.68rem;font-weight:600;color:var(--primary);margin-top:2px}
 
         /* ── Features ─────────────────────────── */
         .features-grid{display:grid;grid-template-columns:1fr;gap:16px}
@@ -421,6 +424,7 @@
             <a href="#play-now">Play Now</a>
             <a href="#about">About</a>
             <a href="#features">Features</a>
+            <a href="#recommended">Recommended</a>
             <a href="#how-to-play">How to Play</a>
             <a href="#why-players-love">Why Players Love</a>
             <a href="#quick-facts">Quick Facts</a>
@@ -478,50 +482,6 @@
             </div>
         </section>
 
-                <!-- Game grid — inside #play-now (THY pattern) -->
-                <div style="margin-top:32px;">
-                    <p style="font-size:.62rem;font-weight:800;letter-spacing:2.6px;text-transform:uppercase;color:var(--primary);margin:0 0 6px;">More Games</p>
-                    <h3 style="font-weight:800;font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.1;letter-spacing:-0.5px;color:var(--text);margin:0 0 8px;">Try These New Puzzle Games</h3>
-                    <p style="font-size:.85rem;color:var(--text-dim);line-height:1.55;max-width:520px;margin:0 0 20px;">Six fresh puzzle and block games added to the collection. No download, no signup — every title loads instantly when you click the card.</p>
-                    <div class="rec-grid">
-                        <a href="game/block-crush/index.html" class="rec-card">
-                            <img src="img/block-crush-cover.jpg" alt="Block Crush" class="rec-card-img" loading="lazy">
-                            <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge">NEW</span>
-                            <div class="rec-card-body"><span>Block Crush</span><span class="rec-card-cat">Puzzle</span></div>
-                        </a>
-                        <a href="game/1010-color-match/index.html" class="rec-card">
-                            <img src="img/1010-color-match-cover.jpg" alt="1010 Color Match" class="rec-card-img" loading="lazy">
-                            <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge">NEW</span>
-                            <div class="rec-card-body"><span>1010 Color Match</span><span class="rec-card-cat">Puzzle</span></div>
-                        </a>
-                        <a href="game/block-puzzle-legend/index.html" class="rec-card">
-                            <img src="img/block-puzzle-legend-cover.jpg" alt="Block Puzzle Legend" class="rec-card-img" loading="lazy">
-                            <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge">NEW</span>
-                            <div class="rec-card-body"><span>Block Puzzle Legend</span><span class="rec-card-cat">Puzzle</span></div>
-                        </a>
-                        <a href="game/bricky-blast/index.html" class="rec-card">
-                            <img src="img/bricky-blast-cover.jpg" alt="Bricky Blast" class="rec-card-img" loading="lazy">
-                            <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge">NEW</span>
-                            <div class="rec-card-body"><span>Bricky Blast</span><span class="rec-card-cat">Puzzle</span></div>
-                        </a>
-                        <a href="game/block-blast-2048/index.html" class="rec-card">
-                            <img src="img/block-blast-2048-cover.jpg" alt="Block Blast 2048" class="rec-card-img" loading="lazy">
-                            <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge">NEW</span>
-                            <div class="rec-card-body"><span>Block Blast 2048</span><span class="rec-card-cat">Merge Puzzle</span></div>
-                        </a>
-                        <a href="game/slide-blocks-puzzle/index.html" class="rec-card">
-                            <img src="img/slide-blocks-puzzle-cover.jpg" alt="Slide Blocks Puzzle" class="rec-card-img" loading="lazy">
-                            <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge">NEW</span>
-                            <div class="rec-card-body"><span>Slide Blocks Puzzle</span><span class="rec-card-cat">Sliding Puzzle</span></div>
-                        </a>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -626,6 +586,88 @@
         <div class="ad-banner">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXX" data-ad-slot="0000000001" data-ad-format="auto" data-full-width-responsive="true"></ins>
         </div>
+
+        <!-- ═══ #recommended ═══ -->
+        <section class="sec" id="recommended">
+            <div class="sec-inner">
+                <h2 class="sec-h2">Recommended Games</h2>
+                <p class="sec-lead">Six new puzzle and block games — plus nine brick breaker modes. Click any card and play instantly with no download.</p>
+                <div class="rec-grid">
+                    <a href="game/block-crush/index.html" class="rec-card">
+                        <div class="rec-card-img-wrap">
+                            <img src="img/block-crush-cover.jpg" alt="Block Crush" class="rec-card-img" loading="lazy">
+                            <span class="rec-card-badge">NEW</span>
+                        </div>
+                        <div class="rec-card-body">
+                            <h3>Block Crush</h3>
+                            <span class="rec-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</span>
+                            <p class="rec-card-desc">Drag and drop blocks onto an 8×8 grid. Clear rows and columns before the board fills.</p>
+                            <span class="rec-card-tag">Puzzle</span>
+                        </div>
+                    </a>
+                    <a href="game/1010-color-match/index.html" class="rec-card">
+                        <div class="rec-card-img-wrap">
+                            <img src="img/1010-color-match-cover.jpg" alt="1010 Color Match" class="rec-card-img" loading="lazy">
+                            <span class="rec-card-badge">NEW</span>
+                        </div>
+                        <div class="rec-card-body">
+                            <h3>1010 Color Match</h3>
+                            <span class="rec-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.7</span>
+                            <p class="rec-card-desc">Match three same-colored blocks to pop them. 10×10 grid, no timer, pure strategy.</p>
+                            <span class="rec-card-tag">Puzzle</span>
+                        </div>
+                    </a>
+                    <a href="game/block-puzzle-legend/index.html" class="rec-card">
+                        <div class="rec-card-img-wrap">
+                            <img src="img/block-puzzle-legend-cover.jpg" alt="Block Puzzle Legend" class="rec-card-img" loading="lazy">
+                            <span class="rec-card-badge">NEW</span>
+                        </div>
+                        <div class="rec-card-body">
+                            <h3>Block Puzzle Legend</h3>
+                            <span class="rec-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</span>
+                            <p class="rec-card-desc">Pre-scattered 10×10 board. Clean it up piece by piece — the mess is already there.</p>
+                            <span class="rec-card-tag">Puzzle</span>
+                        </div>
+                    </a>
+                    <a href="game/bricky-blast/index.html" class="rec-card">
+                        <div class="rec-card-img-wrap">
+                            <img src="img/bricky-blast-cover.jpg" alt="Bricky Blast" class="rec-card-img" loading="lazy">
+                            <span class="rec-card-badge">NEW</span>
+                        </div>
+                        <div class="rec-card-body">
+                            <h3>Bricky Blast</h3>
+                            <span class="rec-card-stars">&#9733;&#9733;&#9733;&#9733;&#9734; 4.6</span>
+                            <p class="rec-card-desc">Three blocks per turn, auto-snap placement. Fast decisions, tight constraint.</p>
+                            <span class="rec-card-tag">Puzzle</span>
+                        </div>
+                    </a>
+                    <a href="game/block-blast-2048/index.html" class="rec-card">
+                        <div class="rec-card-img-wrap">
+                            <img src="img/block-blast-2048-cover.jpg" alt="Block Blast 2048" class="rec-card-img" loading="lazy">
+                            <span class="rec-card-badge">NEW</span>
+                        </div>
+                        <div class="rec-card-body">
+                            <h3>Block Blast 2048</h3>
+                            <span class="rec-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</span>
+                            <p class="rec-card-desc">2048 meets block puzzle. Five-lane board, tap to merge — no drag, no rotate.</p>
+                            <span class="rec-card-tag">Merge Puzzle</span>
+                        </div>
+                    </a>
+                    <a href="game/slide-blocks-puzzle/index.html" class="rec-card">
+                        <div class="rec-card-img-wrap">
+                            <img src="img/slide-blocks-puzzle-cover.jpg" alt="Slide Blocks Puzzle" class="rec-card-img" loading="lazy">
+                            <span class="rec-card-badge">NEW</span>
+                        </div>
+                        <div class="rec-card-body">
+                            <h3>Slide Blocks Puzzle</h3>
+                            <span class="rec-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.7</span>
+                            <p class="rec-card-desc">Classic sliding tile puzzle. Three grid sizes, dino-themed art, zero learning curve.</p>
+                            <span class="rec-card-tag">Sliding Puzzle</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <!-- ═══ #how-to-play ═══ -->
         <section class="sec" id="how-to-play">
