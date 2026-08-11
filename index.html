@@ -209,12 +209,40 @@
         .share-linkedin:hover{background:#0a66c2;color:#fff;border-color:#0a66c2}
 
         /* ── About ────────────────────────────── */
+        .about-layout{display:grid;grid-template-columns:1fr;gap:32px}
+        @media(min-width:900px){.about-layout{grid-template-columns:1fr 320px}}
         .about-body{max-width:720px}
         .about-body p{font-size:.94rem;color:var(--text-dim);line-height:1.7;margin-bottom:18px}
         .about-body p:last-child{margin-bottom:0}
         .about-figure{margin:24px 0 0;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border)}
         .about-fig-img{display:block;width:100%;height:auto}
         .about-figure figcaption{font-size:.8rem;color:var(--text-faint);text-align:center;padding:10px 16px;background:var(--bg-card)}
+
+        /* ── Comments / Reviews sidebar ──────── */
+        .comments-sidebar{display:flex;flex-direction:column;gap:14px}
+        .comments-heading{font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:2px;letter-spacing:-0.3px}
+        .comment-card{border-radius:var(--radius-md);padding:18px;background:var(--bg);border:1px solid var(--border)}
+        .comment-card-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+        .comment-avatar{width:36px;height:36px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.82rem;flex-shrink:0}
+        .comment-avatar.ca-2{background:#059669}.comment-avatar.ca-3{background:#d97706}.comment-avatar.ca-4{background:#dc2626}
+        .comment-name{font-weight:700;font-size:.82rem;color:var(--text)}
+        .comment-date{font-size:.7rem;color:var(--text-faint)}
+        .comment-stars{color:#fcb900;font-size:.7rem;letter-spacing:1px}
+        .comment-text{font-size:.8rem;color:var(--text-dim);line-height:1.5}
+        .comment-flag{display:inline-block;margin-top:8px;font-size:.7rem;color:var(--text-faint);cursor:pointer;background:none;border:none;padding:0}
+        .comment-flag:hover{color:var(--text-dim)}
+
+        /* ── Recommended Games ──────────────── */
+        .rec-games-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+        @media(min-width:640px){.rec-games-grid{grid-template-columns:repeat(3,1fr)}}
+        @media(min-width:1024px){.rec-games-grid{grid-template-columns:repeat(4,1fr)}}
+        .rec-game-card{display:flex;align-items:center;gap:12px;border-radius:var(--radius-lg);padding:14px 16px;background:var(--bg-card);border:1px solid var(--border);text-decoration:none;transition:all .2s;box-shadow:var(--shadow-sm)}
+        .rec-game-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);text-decoration:none;border-color:rgba(124,58,237,0.25)}
+        .rec-game-thumb{width:48px;height:48px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;background:var(--bg)}
+        .rec-game-info{min-width:0}
+        .rec-game-info h3{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:2px;letter-spacing:-0.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .rec-game-info .rec-game-tag{font-size:.7rem;color:var(--text-faint);font-weight:500}
+        .rec-game-info .rec-game-stars{font-size:.68rem;color:#fcb900}
 
         /* ── Features ─────────────────────────── */
         .features-grid{display:grid;grid-template-columns:1fr;gap:16px}
@@ -368,6 +396,7 @@
             <a href="#why-players-love">Why Players Love</a>
             <a href="#quick-facts">Quick Facts</a>
             <a href="#screenshots">Screenshots</a>
+            <a href="#recommended">Recommended</a>
             <a href="#from-the-blog">Blog</a>
             <a href="#faq">FAQ</a>
         </div>
@@ -430,15 +459,64 @@
         <section class="sec" id="about">
             <div class="sec-inner">
                 <h2 class="sec-h2" id="about-heading">About Brick Breaker</h2>
-                <div class="about-body">
-                    <p>A paddle, a ball, and a wall of bricks — the arcade formula that has not changed since 1976, because it does not need to. Brick breaker is the breakout classic rebuilt for the browser, and it runs the moment you click Play.</p>
-                    <p>Four brick types fill the grid. Normal bricks break in one hit and give 10 points. Strong bricks take two hits for 20. Gold bricks pay 50 points and should die first. Steel bricks cannot break, but they work as bounce pads — use them to angle the ball into places the paddle cannot reach.</p>
-                    <p>About 15% of broken bricks drop a power-up. Big Paddle (W) widens your paddle for eight seconds. Multi-Ball (M) splits one ball into three and suddenly you are juggling. Extra Life (+) is the rarest drop in the game. Clear every breakable brick and the board resets with a new layout and a faster ball. Your high score saves to your browser automatically. No account. No server. Just a number you will want to beat tomorrow.</p>
-                    <p>Two minutes or two hours — the game does not judge. It is the same loop that made Breakout a hit in 1976: pick it up in seconds, master it over months. Nobody clears level 25 on their first try. That is the point.</p>
-                    <figure class="about-figure">
-                        <img src="img/brickbreaker-gameplay.svg" alt="Brick breaker gameplay — paddle, ball, bricks, and power-ups at 60fps" class="about-fig-img" loading="lazy">
-                        <figcaption>A clean brick breaker setup: paddle, ball, brick grid, and a power-up drop — all running at 60fps in your browser.</figcaption>
-                    </figure>
+                <div class="about-layout">
+                    <div class="about-body">
+                        <p>A paddle, a ball, and a wall of bricks — the arcade formula that has not changed since 1976, because it does not need to. Brick breaker is the breakout classic rebuilt for the browser, and it runs the moment you click Play.</p>
+                        <p>Four brick types fill the grid. Normal bricks break in one hit and give 10 points. Strong bricks take two hits for 20. Gold bricks pay 50 points and should die first. Steel bricks cannot break, but they work as bounce pads — use them to angle the ball into places the paddle cannot reach.</p>
+                        <p>About 15% of broken bricks drop a power-up. Big Paddle (W) widens your paddle for eight seconds. Multi-Ball (M) splits one ball into three and suddenly you are juggling. Extra Life (+) is the rarest drop in the game. Clear every breakable brick and the board resets with a new layout and a faster ball. Your high score saves to your browser automatically. No account. No server. Just a number you will want to beat tomorrow.</p>
+                        <p>Two minutes or two hours — the game does not judge. It is the same loop that made Breakout a hit in 1976: pick it up in seconds, master it over months. Nobody clears level 25 on their first try. That is the point.</p>
+                        <figure class="about-figure">
+                            <img src="img/brickbreaker-gameplay.svg" alt="Brick breaker gameplay — paddle, ball, bricks, and power-ups at 60fps" class="about-fig-img" loading="lazy">
+                            <figcaption>A clean brick breaker setup: paddle, ball, brick grid, and a power-up drop — all running at 60fps in your browser.</figcaption>
+                        </figure>
+                    </div>
+                    <aside class="comments-sidebar">
+                        <h3 class="comments-heading">Player Reviews</h3>
+                        <div class="comment-card">
+                            <div class="comment-card-header">
+                                <div class="comment-avatar">J</div>
+                                <div>
+                                    <div class="comment-name">Jason M.</div>
+                                    <div class="comment-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                </div>
+                            </div>
+                            <p class="comment-text">"Best brick breaker online, hands down. No ads mid-game, the power-ups actually change how you play, and the high score tracker keeps me coming back."</p>
+                            <span class="comment-date">2 days ago</span>
+                        </div>
+                        <div class="comment-card">
+                            <div class="comment-card-header">
+                                <div class="comment-avatar ca-2">S</div>
+                                <div>
+                                    <div class="comment-name">Sarah K.</div>
+                                    <div class="comment-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                </div>
+                            </div>
+                            <p class="comment-text">"My 3rd graders play this during free time. No install needed, works on the classroom Chromebooks, and the kids are obsessed with beating each other's scores."</p>
+                            <span class="comment-date">5 days ago</span>
+                        </div>
+                        <div class="comment-card">
+                            <div class="comment-card-header">
+                                <div class="comment-avatar ca-3">R</div>
+                                <div>
+                                    <div class="comment-name">Ryan T.</div>
+                                    <div class="comment-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                                </div>
+                            </div>
+                            <p class="comment-text">"Finally a brick breaker that does not lag on mobile. Touch controls are tight. Level 18 is where it gets real — been stuck there for a week."</p>
+                            <span class="comment-date">1 week ago</span>
+                        </div>
+                        <div class="comment-card">
+                            <div class="comment-card-header">
+                                <div class="comment-avatar ca-4">M</div>
+                                <div>
+                                    <div class="comment-name">Maria G.</div>
+                                    <div class="comment-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                </div>
+                            </div>
+                            <p class="comment-text">"Used to play Breakout on my dad's Atari. This is the same feeling but smoother. Multi-ball mode is pure chaos in the best way."</p>
+                            <span class="comment-date">2 weeks ago</span>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </section>
@@ -568,6 +646,112 @@
                         <img src="img/brickbreaker-features.svg" alt="Brick breaker ball physics" class="ss-img" loading="lazy">
                         <figcaption>Ball physics — edge hits angle shots, gold bricks worth 50 pts.</figcaption>
                     </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ #recommended ═══ -->
+        <section class="sec pt-0" id="recommended">
+            <div class="sec-inner">
+                <h2 class="sec-h2">Recommended Games</h2>
+                <p class="sec-lead">Nine brick breaker modes and puzzle favorites — every game loads instantly with no download.</p>
+                <div class="rec-games-grid">
+                    <a href="game/classic/index.html" class="rec-game-card">
+                        <img src="img/cover-classic.svg" alt="Classic Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Classic Brick Breaker</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rec-game-tag">Classic Mode</span>
+                        </div>
+                    </a>
+                    <a href="game/power-up/index.html" class="rec-game-card">
+                        <img src="img/cover-power-up.svg" alt="Power-Up Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Power-Up Brick Breaker</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rec-game-tag">Power-Up Mode</span>
+                        </div>
+                    </a>
+                    <a href="game/neon/index.html" class="rec-game-card">
+                        <img src="img/cover-neon.svg" alt="Neon Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Neon Brick Breaker</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rec-game-tag">Neon Mode</span>
+                        </div>
+                    </a>
+                    <a href="game/hard/index.html" class="rec-game-card">
+                        <img src="img/cover-hard.svg" alt="Hard Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Hard Brick Breaker</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rec-game-tag">Hard Mode</span>
+                        </div>
+                    </a>
+                    <a href="game/gold/index.html" class="rec-game-card">
+                        <img src="img/cover-gold.svg" alt="Gold Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Gold Brick Breaker</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rec-game-tag">Gold Rush Mode</span>
+                        </div>
+                    </a>
+                    <a href="game/precision/index.html" class="rec-game-card">
+                        <img src="img/cover-precision.svg" alt="Precision Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Precision Brick Breaker</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rec-game-tag">Precision Mode</span>
+                        </div>
+                    </a>
+                    <a href="game/cosmic/index.html" class="rec-game-card">
+                        <img src="img/cover-cosmic.svg" alt="Cosmic Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Cosmic Brick Breaker</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rec-game-tag">Cosmic Mode</span>
+                        </div>
+                    </a>
+                    <a href="game/retro/index.html" class="rec-game-card">
+                        <img src="img/cover-retro.svg" alt="Retro Brick Breaker" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Retro Brick Breaker</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rec-game-tag">Retro Arcade</span>
+                        </div>
+                    </a>
+                    <a href="game/block-crush/index.html" class="rec-game-card">
+                        <img src="img/cover-classic.svg" alt="Block Crush" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Block Crush</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rec-game-tag">Match Puzzle</span>
+                        </div>
+                    </a>
+                    <a href="game/block-puzzle-master/index.html" class="rec-game-card">
+                        <img src="img/block-puzzle-master-cover.svg" alt="Block Puzzle Master" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Block Puzzle Master</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rec-game-tag">Block Puzzle</span>
+                        </div>
+                    </a>
+                    <a href="game/bricky-blast/index.html" class="rec-game-card">
+                        <img src="img/cover-neon.svg" alt="Bricky Blast" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Bricky Blast</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rec-game-tag">Blast Puzzle</span>
+                        </div>
+                    </a>
+                    <a href="game/slide-blocks-puzzle/index.html" class="rec-game-card">
+                        <img src="img/cover-retro.svg" alt="Slide Blocks Puzzle" class="rec-game-thumb" loading="lazy" width="48" height="48">
+                        <div class="rec-game-info">
+                            <h3>Slide Blocks Puzzle</h3>
+                            <span class="rec-game-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rec-game-tag">Slide Puzzle</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
