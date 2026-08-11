@@ -261,18 +261,17 @@
         .comment-flag:hover{color:var(--text-dim)}
 
         /* ── Recommended Games ──────────────── */
-        .rec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-        @media(min-width:768px){.rec-grid{grid-template-columns:repeat(3,1fr)}}
-        .rec-card{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border-radius:20px;border:1px solid var(--border);background:var(--bg-card);text-decoration:none;color:inherit;transition:all .22s}
-        .rec-card:hover{border-color:rgba(124,58,237,0.45);transform:translateY(-3px);box-shadow:0 18px 40px rgba(124,58,237,0.16);text-decoration:none}
+        .rec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}
+        .rec-card{position:relative;display:block;aspect-ratio:1.24/1;overflow:hidden;border-radius:18px;border:1px solid var(--border);background:var(--bg-card);text-decoration:none;color:inherit;transition:all .22s}
+        .rec-card:hover{border-color:rgba(124,58,237,0.45);transform:translateY(-2px);box-shadow:0 16px 34px rgba(124,58,237,0.14);text-decoration:none}
         .rec-card-img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
-        .rec-card:hover .rec-card-img{transform:scale(1.06)}
-        .rec-card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,5,30,0.02) 30%,rgba(10,5,30,0.78) 100%)}
-        .rec-card-badge{position:absolute;left:12px;top:12px;font-size:.58rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:20px;background:rgba(124,58,237,0.22);color:#c4b5fd;border:1px solid rgba(124,58,237,0.35)}
-        .rec-card-badge.hot{background:rgba(239,68,68,0.2);color:#fca5a5;border:1px solid rgba(239,68,68,0.35)}
-        .rec-card-body{position:absolute;inset-x:0;bottom:0;padding:16px 16px 14px}
-        .rec-card-body span{display:block;font-size:.82rem;font-weight:800;color:#fff;line-height:1.2;text-shadow:0 1px 8px rgba(0,0,0,0.75)}
-        .rec-card-cat{font-size:.65rem;font-weight:600;color:rgba(255,255,255,0.7);margin-top:3px;letter-spacing:.3px}
+        .rec-card:hover .rec-card-img{transform:scale(1.05)}
+        .rec-card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,5,30,0.05) 35%,rgba(10,5,30,0.82) 100%)}
+        .rec-card-badge{position:absolute;left:10px;top:10px;font-size:.55rem;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:rgba(0,210,132,0.18);color:#00d084;border:1px solid rgba(0,210,132,0.3)}
+        .rec-card-badge.hot{background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.25)}
+        .rec-card-body{position:absolute;inset-x:0;bottom:0;padding:12px 14px}
+        .rec-card-body span{display:block;font-size:.72rem;font-weight:800;color:#fff;line-height:1.2;text-shadow:0 1px 6px rgba(0,0,0,0.7)}
+        .rec-card-cat{font-size:.6rem;font-weight:600;color:rgba(255,255,255,0.65);margin-top:2px;letter-spacing:.3px}
 
         /* ── Features ─────────────────────────── */
         .features-grid{display:grid;grid-template-columns:1fr;gap:16px}
@@ -488,37 +487,37 @@
                         <a href="game/block-crush/index.html" class="rec-card">
                             <img src="img/block-crush-cover.jpg" alt="Block Crush" class="rec-card-img" loading="lazy">
                             <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge hot">NEW</span>
+                            <span class="rec-card-badge">NEW</span>
                             <div class="rec-card-body"><span>Block Crush</span><span class="rec-card-cat">Puzzle</span></div>
                         </a>
                         <a href="game/1010-color-match/index.html" class="rec-card">
                             <img src="img/1010-color-match-cover.jpg" alt="1010 Color Match" class="rec-card-img" loading="lazy">
                             <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge hot">NEW</span>
+                            <span class="rec-card-badge">NEW</span>
                             <div class="rec-card-body"><span>1010 Color Match</span><span class="rec-card-cat">Puzzle</span></div>
                         </a>
                         <a href="game/block-puzzle-legend/index.html" class="rec-card">
                             <img src="img/block-puzzle-legend-cover.jpg" alt="Block Puzzle Legend" class="rec-card-img" loading="lazy">
                             <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge hot">NEW</span>
+                            <span class="rec-card-badge">NEW</span>
                             <div class="rec-card-body"><span>Block Puzzle Legend</span><span class="rec-card-cat">Puzzle</span></div>
                         </a>
                         <a href="game/bricky-blast/index.html" class="rec-card">
                             <img src="img/bricky-blast-cover.jpg" alt="Bricky Blast" class="rec-card-img" loading="lazy">
                             <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge hot">NEW</span>
+                            <span class="rec-card-badge">NEW</span>
                             <div class="rec-card-body"><span>Bricky Blast</span><span class="rec-card-cat">Puzzle</span></div>
                         </a>
                         <a href="game/block-blast-2048/index.html" class="rec-card">
                             <img src="img/block-blast-2048-cover.jpg" alt="Block Blast 2048" class="rec-card-img" loading="lazy">
                             <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge hot">NEW</span>
+                            <span class="rec-card-badge">NEW</span>
                             <div class="rec-card-body"><span>Block Blast 2048</span><span class="rec-card-cat">Merge Puzzle</span></div>
                         </a>
                         <a href="game/slide-blocks-puzzle/index.html" class="rec-card">
                             <img src="img/slide-blocks-puzzle-cover.jpg" alt="Slide Blocks Puzzle" class="rec-card-img" loading="lazy">
                             <div class="rec-card-overlay"></div>
-                            <span class="rec-card-badge hot">NEW</span>
+                            <span class="rec-card-badge">NEW</span>
                             <div class="rec-card-body"><span>Slide Blocks Puzzle</span><span class="rec-card-cat">Sliding Puzzle</span></div>
                         </a>
                     </div>
