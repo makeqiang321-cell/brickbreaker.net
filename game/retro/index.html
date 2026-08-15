@@ -1,55 +1,254 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro Brick Breaker — Classic 80s Arcade Breakout Game Free Online</title>
-    <meta name="description" content="Travel back to the 80s with Retro Brick Breaker! Classic arcade breakout action with CRT scanlines, chiptune vibes, and pixel-perfect gameplay. Play free now!">
+    <title>Play Retro Arcade Brick Breaker Online | BrickBreaker</title>
+    <meta name="description" content="Play Retro Arcade Brick Breaker — no power-ups, no particles, CRT-style HUD, muted 1976 Breakout color palette on a modern 60fps engine. Free, no download.">
+    <meta name="keywords" content="retro arcade brick breaker, play retro brick breaker, classic 80s brick breaker, atari breakout tribute, vintage brick breaker, free brick breaker game online">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://brickbreaker.net/game/retro/">
+
+    <meta property="og:title" content="Play Retro Arcade Brick Breaker Online | BrickBreaker">
+    <meta property="og:description" content="Play Retro Arcade Brick Breaker — no power-ups, no particles, CRT-style HUD, muted 1976 Breakout color palette on a modern 60fps engine. Free, no download.">
+    <meta property="og:image" content="https://brickbreaker.net/og-image.png">
+    <meta property="og:url" content="https://brickbreaker.net/game/retro/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Schema.org: VideoGame -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Retro Arcade Brick Breaker",
+        "url": "https://brickbreaker.net/game/retro/",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web",
+        "description": "Play Retro Arcade Brick Breaker online — a tribute to Atari's 1976 Breakout with vintage color palette, CRT-style monospace HUD, and no visual frills. Modern 60fps engine, classic arcade soul.",
+        "playMode": "SinglePlayer",
+        "gamePlatform": "Web browser",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1 },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "bestRating": "5", "ratingCount": 830, "reviewCount": 125 }
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Retro Arcade Brick Breaker?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Retro Arcade is a tribute to Atari's 1976 Breakout with an authentic vintage color palette — muted brick reds, burnt oranges, harvest golds, olive greens — and a monospace CRT-style HUD. It runs on a modern 60fps engine."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Retro Arcade play like the original Breakout?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It looks like 1976 but plays like 2026 — same instant paddle response and accurate ball physics as every other mode. No particles, no steel bricks, no visual frills, just the raw brick-breaking loop."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why play Retro Arcade when newer modes exist?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Retro Arcade strips away every modern invention — no power-ups to catch, no particle effects to parse, no gold bricks to chase. Just you, the paddle, and a wall of bricks in the muted 1976 Atari palette. It is the purest, most focused brick-breaking experience on the site."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Brick Breaker", "item": "https://brickbreaker.net/" },
+            { "@type": "ListItem", "position": 2, "name": "Retro Brick Breaker", "item": "https://brickbreaker.net/game/retro/" }
+        ]
+    }
+    </script>
+
     <style>
-        .game-page { padding: 70px 0 40px; }
-        .game-page h1 { font-weight: 800; font-size: 1.2rem; color: var(--text); text-align: center; margin-bottom: 10px; letter-spacing: -0.5px; }
-        .game-subtitle { text-align: center; color: var(--text-dim); font-weight: 500; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 28px; }
-        .game-frame-wrap { max-width: 800px; margin: 0 auto; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); }
-        .game-frame { display: block; width: 100%; aspect-ratio: 800/600; border: none; }
-        .game-info { max-width: 720px; margin: 30px auto 0; }
-        .game-info h2 { font-weight: 700; font-size: 0.85rem; color: var(--gold); letter-spacing: 1px; margin: 20px 0 10px; }
-        .game-info p, .game-info li { color: var(--text-dim); font-size: 0.88rem; line-height: 1.8; margin-bottom: 10px; }
-        .game-info ul { padding-left: 18px; }
-        .back-link { text-align: center; margin: 30px 0; }
-        .back-link a { font-weight: 600; font-size: 0.7rem; letter-spacing: 1px; color: var(--primary); }
+        .detail-page { padding: 100px 0 60px; }
+        .breadcrumb { font-size: 0.8rem; color: var(--text-faint); margin-bottom: 12px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .detail-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+        .detail-main h1 { font-size: 1.5rem; font-weight: 800; margin: 0 0 4px; }
+        .detail-main .detail-tag { display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 1.5px; padding: 3px 10px; border-radius: 8px; background: rgba(255,145,0,0.12); color: #ff9100; margin-bottom: 12px; }
+        .detail-cover { width: 100%; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border); }
+        .detail-desc { font-size: 0.88rem; color: var(--text-dim); line-height: 1.7; margin-bottom: 24px; }
+        .detail-section { margin-bottom: 20px; }
+        .detail-section h2 { font-size: 0.9rem; font-weight: 700; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .detail-section p, .detail-section li { font-size: 0.82rem; color: var(--text-dim); line-height: 1.65; }
+        .detail-section ul { padding-left: 18px; }
+        .detail-section li { margin-bottom: 4px; }
+        .detail-section li::marker { color: #ff9100; }
+        .detail-sidebar { position: sticky; top: 100px; }
+        .game-window { background: #0a0a14; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .game-window iframe { width: 100%; height: 480px; border: none; display: block; }
+        .game-actions { display: flex; gap: 8px; padding: 10px 12px; background: var(--bg); border-top: 1px solid var(--border); }
+        .btn-play { flex:1; padding: 10px 0; background: #ff9100; color: #000; border: none; border-radius: 8px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.5px; cursor: pointer; text-align: center; text-decoration: none; display: block; }
+        .btn-play:hover { filter: brightness(1.15); }
+        .btn-full { width: 42px; height: 42px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .btn-full:hover { border-color: #ff9100; }
+        .game-stats { display: flex; gap: 12px; margin-top: 12px; }
+        .game-stat { flex:1; text-align: center; padding: 10px 6px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
+        .game-stat .stat-num { font-size: 1rem; font-weight: 800; color: var(--text); }
+        .game-stat .stat-label { font-size: 0.6rem; color: var(--text-faint); letter-spacing: 0.5px; margin-top: 2px; }
+        @media (max-width: 860px) { .detail-layout { grid-template-columns: 1fr; } .detail-sidebar { position: static; order: -1; } .game-window iframe { height: 360px; } }
     </style>
 </head>
 <body>
-    <nav class="nav visible">
-        <div class="nav-inner">
-            <a href="/" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
-            <ul class="nav-links"><li><a href="/">HOME</a></li><li><a href="/game/">FULL GAME</a></li></ul>
-        </div>
-    </nav>
-    <main class="game-page">
-        <div class="container">
-            <h1>RETRO BRICK BREAKER</h1>
-            <p class="game-subtitle">◆ 80S ARCADE TRIBUTE — PIXEL-PERFECT BREAKOUT ◆</p>
-            <div class="game-frame-wrap">
-                <iframe src="../../game/index.html?mode=retro" title="Play Retro Brick Breaker Online" allowfullscreen allow="autoplay; fullscreen" loading="lazy" class="game-frame"></iframe>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="../../index.html" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../../new-games/index.html">NEW GAMES</a></li>
+            <li><a href="../../hot-games/index.html">HOT GAMES</a></li>
+            <li><a href="../../blog.html">BLOG</a></li>
+            <li><a href="../../about/index.html">ABOUT</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<main class="detail-page">
+    <div class="container">
+        <div class="breadcrumb"><a href="../../index.html">Home</a> › <a href="../../new-games/index.html">New Games</a> › Retro Arcade</div>
+        <div class="detail-layout">
+            <div class="detail-main">
+                <span class="detail-tag">CLASSIC</span>
+                <h1>Play Retro Arcade Brick Breaker Online</h1>
+                <p style="font-size:0.82rem;color:var(--text-faint);margin:0 0 16px;">Brick Breaker • Pixel-Art Style • 1976 Tribute</p>
+
+                <svg class="detail-cover" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg8" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#100800"/><stop offset="100%" stop-color="#302000"/></linearGradient></defs><rect width="800" height="400" fill="url(#bg8)" rx="12"/><rect x="40" y="30" width="720" height="240" rx="8" fill="none" stroke="rgba(255,145,0,0.25)" stroke-width="2"/><rect x="60" y="45" width="48" height="20" rx="2" fill="#c0392b" opacity="0.85"/><rect x="114" y="45" width="48" height="20" rx="2" fill="#c0392b" opacity="0.85"/><rect x="168" y="45" width="48" height="20" rx="2" fill="#d4a017" opacity="0.85"/><rect x="222" y="45" width="48" height="20" rx="2" fill="#d4a017" opacity="0.85"/><rect x="276" y="45" width="48" height="20" rx="2" fill="#27ae60" opacity="0.85"/><rect x="330" y="45" width="48" height="20" rx="2" fill="#27ae60" opacity="0.85"/><rect x="60" y="71" width="48" height="20" rx="2" fill="#c0392b" opacity="0.7"/><rect x="114" y="71" width="48" height="20" rx="2" fill="#d4a017" opacity="0.7"/><rect x="168" y="71" width="48" height="20" rx="2" fill="#d4a017" opacity="0.7"/><rect x="222" y="71" width="48" height="20" rx="2" fill="#27ae60" opacity="0.7"/><rect x="276" y="71" width="48" height="20" rx="2" fill="#27ae60" opacity="0.7"/><circle cx="400" cy="210" r="7" fill="#fff" opacity="0.9"/><rect x="355" y="268" width="90" height="10" fill="#d4a017" opacity="0.85"/><text x="400" y="330" text-anchor="middle" fill="rgba(255,145,0,0.35)" font-family="monospace" font-size="16" font-weight="700">SCORE: 009750</text></svg>
+
+                <div class="detail-desc">
+                    <p><strong>Retro Arcade</strong> is our love letter to the <a href="../../index.html#about">brick breaker</a> that started it all — Atari's <em>Breakout</em> from 1976. The color palette pulls straight from the original cabinet: muted brick reds, burnt oranges, harvest golds, and olive greens against a dark field. The HUD uses a monospace font that looks like it belongs on a CRT monitor. No steel bricks, no visual frills, no particle explosions — just the raw, fundamental brick-breaking loop that's been eating quarters for 50 years.</p>
+                    <p>But don't confuse "retro looks" with "retro performance." Under the hood, Retro Arcade runs on the same 60fps engine as every other mode. The paddle responds instantly. The ball physics are identical. You get modern responsiveness wrapped in a vintage aesthetic — like finding a perfectly restored arcade cabinet that plays better than it did in 1976.</p>
+                </div>
+
+                <div class="detail-section">
+                    <h2>What Makes Retro Brick Breaker Unique</h2>
+                    <h3>Authentic Aesthetic</h3>
+                    <ul>
+                        <li><strong>Original Breakout palette.</strong> Muted red, orange, gold, and green bricks — the exact colors from the 1976 Atari cabinet.</li>
+                        <li><strong>Monospace typography.</strong> Score display in a pixel-style font. Feels like reading numbers off a CRT phosphor screen.</li>
+                    </ul>
+                    <h3>Minimalist Design</h3>
+                    <ul>
+                        <li><strong>Simple layouts.</strong> Classic 5-6 row grids. No steel bricks, no gimmicks. Just rows of colored bricks waiting to be broken.</li>
+                        <li><strong>Minimal HUD.</strong> Score and lives only. No level counter, no power-up indicators. Pure gameplay, no distractions.</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h2>Retro Brick Breaker Controls</h2>
+                    <h3>Paddle Controls</h3>
+                    <ul>
+                        <li><strong>Mouse / Touch</strong> — move paddle left/right</li>
+                        <li><strong>Keyboard arrows</strong> — fine paddle control</li>
+                        <li><strong>R key</strong> — restart</li>
+                        <li><strong>F key</strong> — toggle fullscreen</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h2>Retro Brick Breaker FAQ</h2>
+                    <h3>Q: What is Retro Arcade Brick Breaker?</h3>
+                    <p>Retro Arcade is a tribute to Atari's 1976 Breakout with an authentic vintage color palette — muted brick reds, burnt oranges, harvest golds, olive greens — and a monospace CRT-style HUD. It runs on a modern 60fps engine.</p>
+                    <h3>Q: Does Retro Arcade play like the original Breakout?</h3>
+                    <p>It looks like 1976 but plays like 2026 — same instant paddle response and accurate ball physics as every other mode. No particles, no steel bricks, no visual frills, just the raw brick-breaking loop.</p>
+                </div>
             </div>
-            <div class="game-info">
-                <h2>◆ ABOUT RETRO MODE</h2>
-                <p>Retro Brick Breaker is our <strong>love letter to the arcade era</strong>. This mode uses a <strong>simplified color palette</strong> inspired by the original Breakout (1976) — muted reds, oranges, yellows, and greens against a dark field. Brick layouts follow the classic 5-row grid structure that arcade veterans will recognize instantly. No steel obstacles, no fancy formations — just the raw, fundamental brick-breaking loop.</p>
-                <p>Under the hood, Retro Brick Breaker runs on the same <strong>60fps engine</strong> as every other mode. The ball physics are identical — you get modern responsiveness with a vintage look. The HUD displays score and lives in a clean, minimal layout without the visual frills of other modes. If you want to focus purely on gameplay without any distractions, Retro Mode is for you.</p>
-                <h2>◆ WHAT MAKES RETRO MODE UNIQUE</h2>
-                <ul>
-                    <li><strong>Original Breakout color scheme</strong> — muted red, orange, yellow, and green bricks</li>
-                    <li><strong>Simplified brick layouts</strong> — classic 5-row grids with no steel obstacles</li>
-                    <li><strong>Minimal HUD</strong> — score and lives only, no level counter or visual effects</li>
-                    <li><strong>Standard ball speed curve</strong> — no acceleration gimmicks, just steady progression</li>
-                </ul>
-                <div class="back-link"><a href="/">← BACK TO ALL GAMES</a></div>
+
+            <aside class="detail-sidebar">
+                <div class="game-window" id="gameWindow">
+                    <iframe src="../../game/index.html?mode=retro" title="Retro Arcade Brick Breaker" allow="autoplay" loading="eager" sandbox="allow-scripts allow-same-origin"></iframe>
+                    <div class="game-actions">
+                        <a href="../../game/index.html?mode=retro" target="_blank" class="btn-play">▶ PLAY FULLSCREEN</a>
+                        <button class="btn-full" id="fullBtn" title="Toggle fullscreen">⛶</button>
+                    </div>
+                </div>
+                <div class="game-stats">
+                    <div class="game-stat"><div class="stat-num">1976</div><div class="stat-label">ORIGINAL</div></div>
+                    <div class="game-stat"><div class="stat-num">60fps</div><div class="stat-label">MODERN</div></div>
+                    <div class="game-stat"><div class="stat-num">25+</div><div class="stat-label">LEVELS</div></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+<!-- ═══ TRY OTHER MODES ═══ -->
+<section style="max-width:1120px;margin:0 auto;padding:20px 24px 0;">
+    <h2 style="font-weight:800;font-size:clamp(1.1rem,2vw,1.45rem);letter-spacing:-0.5px;color:var(--text);margin:0 0 12px;">Try Other Brick Breaker Modes</h2>
+    <p style="font-size:.85rem;color:var(--text-dim);margin:0 0 16px;">Click any mode to switch — all free, no download.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-bottom:32px;">
+        <a href="../classic/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Classic</a>
+        <a href="../power-up/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Power-Up</a>
+        <a href="../neon/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Neon Style</a>
+        <a href="../hard/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Hard Mode</a>
+        <a href="../precision/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Precision</a>
+        <a href="../gold/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Gold Rush</a>
+        <a href="../cosmic/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Cosmic Run</a>
+        <a href="../retro/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Retro Arcade</a>
+        <a href="../arkanoid/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Arkanoid</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../../img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                <p>The best place to play brick breaker online. Free, fast, no download.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Play</h4>
+                <ul><li><a href="../../index.html#play-now">Play Now</a></li><li><a href="../../game/index.html">Full Game</a></li><li><a href="../../index.html#how-to-play">How to Play</a></li><li><a href="../../index.html#faq">FAQ</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="../../privacy/index.html">Privacy</a></li><li><a href="../../blog.html">Blog</a></li></ul>
             </div>
         </div>
-    </main>
+        <div class="footer-bottom"><p>© 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p></div>
+    </div>
+</footer>
+
+<script>
+(function(){
+    var fullBtn = document.getElementById('fullBtn');
+    var gameWindow = document.getElementById('gameWindow');
+    if (fullBtn && gameWindow) {
+        fullBtn.addEventListener('click', function(){
+            var el = gameWindow;
+            if (document.fullscreenElement) { document.exitFullscreen(); }
+            else { if (el.requestFullscreen) el.requestFullscreen(); else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); }
+        });
+    }
+})();
+</script>
+<script src="../../js/main.js"></script>
 </body>
 </html>

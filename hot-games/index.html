@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Brick Breaker Games | BrickBreaker</title>
+    <meta name="description" content="The most played browser games on BrickBreaker.net — block puzzles, brick breakers, and more. Click any card to play instantly.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="hot games, brick breaker hot games, trending browser games, most played brick breaker, popular puzzle games, free online games 2026">
+    <link rel="canonical" href="https://brickbreaker.net/hot-games/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta property="og:title" content="Hot Brick Breaker Games | BrickBreaker">
+    <meta property="og:description" content="The most played browser games on BrickBreaker.net — block puzzles, brick breakers, and more. Click any card to play instantly.">
+    <meta property="og:url" content="https://brickbreaker.net/hot-games/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="apple-touch-icon" href="../favicon.svg">
+
+    <!-- Schema.org: ItemList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Hot Games on BrickBreaker.net",
+        "description": "The most played browser games on BrickBreaker.net right now — block puzzles, brick breakers, and more. Play instantly, no download.",
+        "numberOfItems": 8,
+        "itemListElement": [
+            {"@type":"ListItem","position":1,"url":"https://brickbreaker.net/game/block-crush/","name":"Block Crush"},
+            {"@type":"ListItem","position":2,"url":"https://brickbreaker.net/game/1010-color-match/","name":"1010 Color Match"},
+            {"@type":"ListItem","position":3,"url":"https://brickbreaker.net/game/block-puzzle-legend/","name":"Block Puzzle Legend"},
+            {"@type":"ListItem","position":4,"url":"https://brickbreaker.net/game/bricky-blast/","name":"Bricky Blast"},
+            {"@type":"ListItem","position":5,"url":"https://brickbreaker.net/game/block-blast-2048/","name":"Block Blast 2048"},
+            {"@type":"ListItem","position":6,"url":"https://brickbreaker.net/game/slide-blocks-puzzle/","name":"Slide Blocks Puzzle"},
+            {"@type":"ListItem","position":7,"url":"https://brickbreaker.net/game/retro/","name":"Retro Arcade"},
+            {"@type":"ListItem","position":8,"url":"https://brickbreaker.net/game/block-puzzle-master/","name":"Block Puzzle Master"}
+        ]
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brickbreaker.net/" },
+            { "@type": "ListItem", "position": 2, "name": "Hot Games", "item": "https://brickbreaker.net/hot-games/" }
+        ]
+    }
+    </script>
+
+    <style>
+        .display-font { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 800; letter-spacing: -1px; }
+
+        /* ── HEADER ──────────────────────────── */
+        .hot-header {
+            margin: 100px auto 0;
+            width: min(1120px, calc(100vw - 32px));
+            padding-top: 32px;
+        }
+        @media (min-width: 768px) {
+            .hot-header { padding-top: 44px; }
+        }
+        .hot-header-card {
+            background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(167,139,250,0.04));
+            border: 1px solid var(--border);
+            border-radius: 34px;
+            padding: 28px 24px;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.14);
+        }
+        @media (min-width: 768px) {
+            .hot-header-card { padding: 32px; }
+        }
+        .hot-header-card .hot-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin: 0;
+        }
+        .hot-header-card h1 {
+            font-size: clamp(2rem, 3.6vw, 3.3rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--text);
+            margin: 12px 0 0;
+            line-height: 0.98;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .hot-header-card .hot-lead {
+            margin-top: 16px;
+            max-width: 60ch;
+            font-size: 1.02rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+        @media (min-width: 768px) {
+            .hot-header-card .hot-lead { font-size: 1.08rem; }
+        }
+
+        /* ── GAME GRID ───────────────────────── */
+        .hot-section {
+            padding: 48px 0 56px;
+        }
+        .hot-section-inner {
+            margin: 0 auto;
+            width: min(1120px, calc(100vw - 32px));
+        }
+        .hot-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media (min-width: 640px) {
+            .hot-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 1024px) {
+            .hot-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        }
+
+        /* ── GAME CARD ───────────────────────── */
+        .hot-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 22px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+        }
+        .hot-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(124,58,237,0.4);
+            box-shadow: 0 8px 28px rgba(124,58,237,0.12);
+        }
+        .hot-card-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: rgba(124,58,237,0.04);
+        }
+        .hot-card-thumb img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .hot-card:hover .hot-card-thumb img { transform: scale(1.03); }
+        .hot-card-thumb .hot-thumb-fallback {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+        }
+        .hot-card-badges {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            display: flex;
+            gap: 6px;
+            z-index: 2;
+        }
+        .hot-badge {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 9999px;
+            font-weight: 800;
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            line-height: 1;
+            padding: 4px 8px;
+        }
+        .hot-badge--hot {
+            background: #ff6b35;
+            color: #fff;
+        }
+        .hot-badge--trending {
+            background: #00d084;
+            color: #0a0a12;
+        }
+        .hot-badge--new {
+            background: #0693e3;
+            color: #fff;
+        }
+        .hot-badge--puzzle {
+            background: rgba(124,58,237,0.18);
+            color: var(--primary);
+        }
+        .hot-badge--classic {
+            background: rgba(255,145,0,0.18);
+            color: #ff9100;
+        }
+
+        /* ── CARD BODY ───────────────────────── */
+        .hot-card-body {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 16px;
+        }
+        .hot-card-body h3 {
+            font-weight: 800;
+            font-size: 1.05rem;
+            letter-spacing: -0.3px;
+            color: var(--text);
+            margin: 0;
+            line-height: 1.2;
+        }
+        .hot-card-body .hot-card-desc {
+            margin-top: 6px;
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .hot-card-meta {
+            margin-top: auto;
+            padding-top: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+        }
+        .hot-card-rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .hot-card-stars {
+            color: #fcb900;
+            font-size: 0.88rem;
+            letter-spacing: 1px;
+        }
+        .hot-card-score {
+            font-weight: 800;
+            font-size: 0.78rem;
+            color: var(--text);
+        }
+        .hot-card-plays {
+            font-size: 0.75rem;
+            color: var(--text-faint);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-brand"><img src="../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../new-games/index.html">NEW GAMES</a></li>
+            <li><a href="../hot-games/index.html" class="active">HOT GAMES</a></li>
+            <li><a href="../blog.html">BLOG</a></li>
+            <li><a href="../about/index.html">ABOUT</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<!-- ═══ HEADER ═══ -->
+<header class="hot-header">
+    <div class="hot-header-card">
+        <p class="hot-label">Right Now</p>
+        <h1 class="display-font"><span aria-hidden="true">&#128293;</span> Hot Brick Breaker Games</h1>
+        <p class="hot-lead">The most played browser games on BrickBreaker.net sorted by total play count. Jump into anything and keep the streak going.</p>
+    </div>
+</header>
+
+<h2 style="margin:0 auto;width:min(1120px,calc(100vw - 32px));padding:0 0 8px;font-weight:800;font-size:clamp(1.2rem,2.4vw,1.6rem);letter-spacing:-0.5px;color:var(--text);">Hot Brick Breaker &amp; Puzzle Games</h2>
+
+<!-- ═══ GAME GRID ═══ -->
+<main class="hot-section">
+    <div class="hot-section-inner">
+        <div class="hot-grid">
+
+            <!-- 1. Block Crush -->
+            <a href="../game/block-crush/index.html" class="hot-card">
+                <div class="hot-card-thumb">
+                    <img src="../img/block-crush-cover.jpg" alt="Block Crush cover art" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="hot-thumb-fallback" style="display:none;background:linear-gradient(135deg,#1a0030,#3d0060);">&#129512;</span>
+                    <div class="hot-card-badges">
+                        <span class="hot-badge hot-badge--hot">Hot</span>
+                        <span class="hot-badge hot-badge--puzzle">Puzzle</span>
+                    </div>
+                </div>
+                <div class="hot-card-body">
+                    <h3>Block Crush</h3>
+                    <p class="hot-card-desc">Block puzzle, 8×8 grid. Drag and drop shapes to fill rows and columns. No timer, no lives — just you and the shapes.</p>
+                    <div class="hot-card-meta">
+                        <div class="hot-card-rating">
+                            <span class="hot-card-stars" aria-hidden="true">★★★★★</span>
+                            <span class="hot-card-score">4.8</span>
+                        </div>
+                        <span class="hot-card-plays">12.4k plays</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 2. 1010 Color Match -->
+            <a href="../game/1010-color-match/index.html" class="hot-card">
+                <div class="hot-card-thumb">
+                    <img src="../img/1010-color-match-cover.jpg" alt="1010 Color Match cover art" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="hot-thumb-fallback" style="display:none;background:linear-gradient(135deg,#000020,#001040);">&#127912;</span>
+                    <div class="hot-card-badges">
+                        <span class="hot-badge hot-badge--hot">Hot</span>
+                        <span class="hot-badge hot-badge--puzzle">Puzzle</span>
+                    </div>
+                </div>
+                <div class="hot-card-body">
+                    <h3>1010 Color Match</h3>
+                    <p class="hot-card-desc">10×10 neon grid. Match three squares of the same color and they vanish. Simple, hypnotic, endless.</p>
+                    <div class="hot-card-meta">
+                        <div class="hot-card-rating">
+                            <span class="hot-card-stars" aria-hidden="true">★★★★★</span>
+                            <span class="hot-card-score">4.7</span>
+                        </div>
+                        <span class="hot-card-plays">10.8k plays</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 3. Block Puzzle Legend -->
+            <a href="../game/block-puzzle-legend/index.html" class="hot-card">
+                <div class="hot-card-thumb">
+                    <img src="../img/block-puzzle-legend-cover.jpg" alt="Block Puzzle Legend cover art" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="hot-thumb-fallback" style="display:none;background:linear-gradient(135deg,#200010,#400030);">&#129513;</span>
+                    <div class="hot-card-badges">
+                        <span class="hot-badge hot-badge--hot">Hot</span>
+                        <span class="hot-badge hot-badge--puzzle">Puzzle</span>
+                    </div>
+                </div>
+                <div class="hot-card-body">
+                    <h3>Block Puzzle Legend</h3>
+                    <p class="hot-card-desc">Pre-scattered board on a 10×10 grid. Clear rows and columns one by one. No luck involved — every move is a calculation.</p>
+                    <div class="hot-card-meta">
+                        <div class="hot-card-rating">
+                            <span class="hot-card-stars" aria-hidden="true">★★★★★</span>
+                            <span class="hot-card-score">4.9</span>
+                        </div>
+                        <span class="hot-card-plays">9.6k plays</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 4. Bricky Blast -->
+            <a href="../game/bricky-blast/index.html" class="hot-card">
+                <div class="hot-card-thumb">
+                    <img src="../img/bricky-blast-cover.jpg" alt="Bricky Blast cover art" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="hot-thumb-fallback" style="display:none;background:linear-gradient(135deg,#0a2000,#1a5000);">&#129512;</span>
+                    <div class="hot-card-badges">
+                        <span class="hot-badge hot-badge--hot">Hot</span>
+                        <span class="hot-badge hot-badge--puzzle">Puzzle</span>
+                    </div>
+                </div>
+                <div class="hot-card-body">
+                    <h3>Bricky Blast</h3>
+                    <p class="hot-card-desc">Three blocks per turn — place them or lose them. Auto-snap clears on full rows. Global leaderboard resets every week.</p>
+                    <div class="hot-card-meta">
+                        <div class="hot-card-rating">
+                            <span class="hot-card-stars" aria-hidden="true">★★★★★</span>
+                            <span class="hot-card-score">4.6</span>
+                        </div>
+                        <span class="hot-card-plays">8.3k plays</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 5. Block Blast 2048 -->
+            <a href="../game/block-blast-2048/index.html" class="hot-card">
+                <div class="hot-card-thumb">
+                    <img src="../img/block-blast-2048-cover.jpg" alt="Block Blast 2048 cover art" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="hot-thumb-fallback" style="display:none;background:linear-gradient(135deg,#201000,#504000);">&#128165;</span>
+                    <div class="hot-card-badges">
+                        <span class="hot-badge hot-badge--hot">Hot</span>
+                        <span class="hot-badge hot-badge--new">New</span>
+                    </div>
+                </div>
+                <div class="hot-card-body">
+                    <h3>Block Blast 2048</h3>
+                    <p class="hot-card-desc">Five lanes, one rule: merge equal-numbered blocks upward. 2048 is the destination — no drag, no rush, all strategy.</p>
+                    <div class="hot-card-meta">
+                        <div class="hot-card-rating">
+                            <span class="hot-card-stars" aria-hidden="true">★★★★★</span>
+                            <span class="hot-card-score">4.8</span>
+                        </div>
+                        <span class="hot-card-plays">7.9k plays</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 6. Slide Blocks Puzzle -->
+            <a href="../game/slide-blocks-puzzle/index.html" class="hot-card">
+                <div class="hot-card-thumb">
+                    <img src="../img/slide-blocks-puzzle-cover.jpg" alt="Slide Blocks Puzzle cover art" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="hot-thumb-fallback" style="display:none;background:linear-gradient(135deg,#001020,#003060);">&#129095;</span>
+                    <div class="hot-card-badges">
+                        <span class="hot-badge hot-badge--hot">Hot</span>
+                        <span class="hot-badge hot-badge--puzzle">Puzzle</span>
+                    </div>
+                </div>
+                <div class="hot-card-body">
+                    <h3>Slide Blocks Puzzle</h3>
+                    <p class="hot-card-desc">The 15-puzzle evolved — scrambled pictures, three grid sizes, click-to-slide mechanics that go back to 1880.</p>
+                    <div class="hot-card-meta">
+                        <div class="hot-card-rating">
+                            <span class="hot-card-stars" aria-hidden="true">★★★★★</span>
+                            <span class="hot-card-score">4.7</span>
+                        </div>
+                        <span class="hot-card-plays">6.5k plays</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 7. Retro Arcade -->
+            <a href="../game/retro/index.html" class="hot-card">
+                <div class="hot-card-thumb">
+                    <img src="../img/cover-retro.svg" alt="Retro Arcade cover art" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="hot-thumb-fallback" style="display:none;background:linear-gradient(135deg,#100800,#2a1a00);">&#127918;</span>
+                    <div class="hot-card-badges">
+                        <span class="hot-badge hot-badge--classic">Classic</span>
+                    </div>
+                </div>
+                <div class="hot-card-body">
+                    <h3>Retro Arcade</h3>
+                    <p class="hot-card-desc">Pixels, chiptunes, 1976 vibes. A love letter to the original brick breaker arcade cabinet, playable in your browser.</p>
+                    <div class="hot-card-meta">
+                        <div class="hot-card-rating">
+                            <span class="hot-card-stars" aria-hidden="true">★★★★★</span>
+                            <span class="hot-card-score">4.5</span>
+                        </div>
+                        <span class="hot-card-plays">5.2k plays</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 8. Block Puzzle Master -->
+            <a href="../game/block-puzzle-master/index.html" class="hot-card">
+                <div class="hot-card-thumb">
+                    <img src="../img/block-puzzle-master-cover.svg" alt="Block Puzzle Master cover art" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="hot-thumb-fallback" style="display:none;background:linear-gradient(135deg,#0a0020,#1a1050);">🧩</span>
+                    <div class="hot-card-badges">
+                        <span class="hot-badge hot-badge--hot">Hot</span>
+                        <span class="hot-badge hot-badge--puzzle">Puzzle</span>
+                    </div>
+                </div>
+                <div class="hot-card-body">
+                    <h3>Block Puzzle Master</h3>
+                    <p class="hot-card-desc">8×8 grid, three shapes at a time, no rotation, no timer. Drag, drop, clear rows and columns — pure spatial strategy.</p>
+                    <div class="hot-card-meta">
+                        <div class="hot-card-rating">
+                            <span class="hot-card-stars" aria-hidden="true">★★★★★</span>
+                            <span class="hot-card-score">4.2</span>
+                        </div>
+                        <span class="hot-card-plays">4.1k plays</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</main>
+
+<!-- ═══ WHAT MAKES A GAME HOT ═══ -->
+<section style="max-width:1120px;margin:0 auto;padding:40px 24px;">
+    <h2 style="font-weight:800;font-size:clamp(1.2rem,2.4vw,1.6rem);letter-spacing:-0.5px;color:var(--text);margin:0 0 12px;">What Makes a Game "Hot" on BrickBreaker.net</h2>
+    <p style="font-size:.88rem;color:var(--text-dim);line-height:1.6;max-width:720px;margin:0 0 24px;">Hot games are ranked by real player activity — total plays, return rate, and average session length — not by editorial picks. When a game climbs into the Hot Games list, it means players are choosing it organically and sticking with it. Our hot list updates weekly based on the past 7 days of play data across all browsers and devices.</p>
+</section>
+
+<!-- ═══ HOT GAMES FAQ ═══ -->
+<section style="max-width:1120px;margin:0 auto;padding:0 24px 40px;">
+    <h2 style="font-weight:800;font-size:clamp(1.2rem,2.4vw,1.6rem);letter-spacing:-0.5px;color:var(--text);margin:0 0 16px;">Hot Games FAQ</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;">
+        <details style="border:1px solid var(--border);border-radius:16px;padding:16px 20px;background:var(--bg-card);">
+            <summary style="font-weight:600;font-size:.9rem;color:var(--text);cursor:pointer;">How often does the Hot Games list update?</summary>
+            <p style="font-size:.84rem;color:var(--text-dim);line-height:1.55;margin:8px 0 0;">Every Monday based on the prior week's play data — total unique plays, return visits, and average session time across all devices.</p>
+        </details>
+        <details style="border:1px solid var(--border);border-radius:16px;padding:16px 20px;background:var(--bg-card);">
+            <summary style="font-weight:600;font-size:.9rem;color:var(--text);cursor:pointer;">Are hot games free to play?</summary>
+            <p style="font-size:.84rem;color:var(--text-dim);line-height:1.55;margin:8px 0 0;">Yes. Every game on this page is completely free, no download required. Click any card and start playing instantly in your browser — no signup, no paywall, no in-app purchases.</p>
+        </details>
+        <details style="border:1px solid var(--border);border-radius:16px;padding:16px 20px;background:var(--bg-card);">
+            <summary style="font-weight:600;font-size:.9rem;color:var(--text);cursor:pointer;">Can I suggest a game for the Hot Games list?</summary>
+            <p style="font-size:.84rem;color:var(--text-dim);line-height:1.55;margin:8px 0 0;">We don't manually curate the list — player activity drives it. But if you have a game suggestion, use our <a href="../contact/index.html" style="color:var(--primary);">contact page</a> to let us know.</p>
+        </details>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                <p>The best place to play brick breaker online. Free, fast, no download.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Play</h4>
+                <ul>
+                    <li><a href="../index.html#play-now">Play Now</a></li>
+                    <li><a href="../game/index.html">Full Game</a></li>
+                    <li><a href="../index.html#how-to-play">How to Play</a></li>
+                    <li><a href="../index.html#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul>
+                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="../privacy/index.html">Privacy</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p></div>
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,55 +1,254 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gold Rush Brick Breaker — High Score Brick Breaker Game Online</title>
-    <meta name="description" content="Play Gold Rush Brick Breaker — a high score chasing mode with bonus gold bricks worth 5× points! Maximize your score and climb the leaderboard. Free online!">
+    <title>Play Gold Rush Brick Breaker Online | BrickBreaker</title>
+    <meta name="description" content="Play Gold Rush Brick Breaker — gold bricks worth 50 pts (5× normal), level bonuses stack. Chase the high score. Free, no download.">
+    <meta name="keywords" content="gold rush brick breaker, play gold rush brick breaker, brick breaker high score, gold bricks game, high score brick breaker, free brick breaker game online">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://brickbreaker.net/game/gold/">
+
+    <meta property="og:title" content="Play Gold Rush Brick Breaker Online | BrickBreaker">
+    <meta property="og:description" content="Play Gold Rush Brick Breaker — gold bricks worth 50 pts (5× normal), level bonuses stack. Chase the high score. Free, no download.">
+    <meta property="og:image" content="https://brickbreaker.net/og-image.png">
+    <meta property="og:url" content="https://brickbreaker.net/game/gold/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Schema.org: VideoGame -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Gold Rush Brick Breaker",
+        "url": "https://brickbreaker.net/game/gold/",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web",
+        "description": "Play Gold Rush Brick Breaker online — chase the high score with gold bricks worth 50 points (5× normal). Scattered through every level, gold bricks turn each screen into a high-score puzzle.",
+        "playMode": "SinglePlayer",
+        "gamePlatform": "Web browser",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1 },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "bestRating": "5", "ratingCount": 750, "reviewCount": 113 }
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How many points are gold bricks worth in Brick Breaker?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Gold bricks are worth 50 points each — 5× the value of a normal brick (10pts). Always prioritize gold bricks before the ball speeds up. Level completion bonuses stack up to 2,500 points at level 25."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the best strategy for Gold Rush Brick Breaker?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Target gold bricks first on every level. Multi-Ball triples your coverage for finding gold. Use wall ricochets to reach gold behind normal bricks. Survive first, score second — dying resets your power-ups."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much are gold bricks worth in Gold Rush?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Gold bricks are worth 50 points each — 5× the value of a normal brick (10 pts). Every level scatters gold bricks through the layout, and level completion bonuses stack on top, making high-score runs deeply satisfying for score chasers."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Brick Breaker", "item": "https://brickbreaker.net/" },
+            { "@type": "ListItem", "position": 2, "name": "Gold Brick Breaker", "item": "https://brickbreaker.net/game/gold/" }
+        ]
+    }
+    </script>
+
     <style>
-        .game-page { padding: 70px 0 40px; }
-        .game-page h1 { font-weight: 800; font-size: 1.2rem; color: var(--text); text-align: center; margin-bottom: 10px; letter-spacing: -0.5px; }
-        .game-subtitle { text-align: center; color: var(--text-dim); font-weight: 500; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 28px; }
-        .game-frame-wrap { max-width: 800px; margin: 0 auto; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); }
-        .game-frame { display: block; width: 100%; aspect-ratio: 800/600; border: none; }
-        .game-info { max-width: 720px; margin: 30px auto 0; }
-        .game-info h2 { font-weight: 700; font-size: 0.85rem; color: var(--gold); letter-spacing: 1px; margin: 20px 0 10px; }
-        .game-info p, .game-info li { color: var(--text-dim); font-size: 0.88rem; line-height: 1.8; margin-bottom: 10px; }
-        .game-info ul { padding-left: 18px; }
-        .back-link { text-align: center; margin: 30px 0; }
-        .back-link a { font-weight: 600; font-size: 0.7rem; letter-spacing: 1px; color: var(--primary); }
+        .detail-page { padding: 100px 0 60px; }
+        .breadcrumb { font-size: 0.8rem; color: var(--text-faint); margin-bottom: 12px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .detail-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+        .detail-main h1 { font-size: 1.5rem; font-weight: 800; margin: 0 0 4px; }
+        .detail-main .detail-tag { display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 1.5px; padding: 3px 10px; border-radius: 8px; background: rgba(252,185,0,0.12); color: #fcb900; margin-bottom: 12px; }
+        .detail-cover { width: 100%; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border); }
+        .detail-desc { font-size: 0.88rem; color: var(--text-dim); line-height: 1.7; margin-bottom: 24px; }
+        .detail-section { margin-bottom: 20px; }
+        .detail-section h2 { font-size: 0.9rem; font-weight: 700; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .detail-section p, .detail-section li { font-size: 0.82rem; color: var(--text-dim); line-height: 1.65; }
+        .detail-section ul { padding-left: 18px; }
+        .detail-section li { margin-bottom: 4px; }
+        .detail-section li::marker { color: #fcb900; }
+        .detail-sidebar { position: sticky; top: 100px; }
+        .game-window { background: #0a0a14; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .game-window iframe { width: 100%; height: 480px; border: none; display: block; }
+        .game-actions { display: flex; gap: 8px; padding: 10px 12px; background: var(--bg); border-top: 1px solid var(--border); }
+        .btn-play { flex:1; padding: 10px 0; background: #fcb900; color: #000; border: none; border-radius: 8px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.5px; cursor: pointer; text-align: center; text-decoration: none; display: block; }
+        .btn-play:hover { filter: brightness(1.15); }
+        .btn-full { width: 42px; height: 42px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .btn-full:hover { border-color: #fcb900; }
+        .game-stats { display: flex; gap: 12px; margin-top: 12px; }
+        .game-stat { flex:1; text-align: center; padding: 10px 6px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
+        .game-stat .stat-num { font-size: 1rem; font-weight: 800; color: var(--text); }
+        .game-stat .stat-label { font-size: 0.6rem; color: var(--text-faint); letter-spacing: 0.5px; margin-top: 2px; }
+        @media (max-width: 860px) { .detail-layout { grid-template-columns: 1fr; } .detail-sidebar { position: static; order: -1; } .game-window iframe { height: 360px; } }
     </style>
 </head>
 <body>
-    <nav class="nav visible">
-        <div class="nav-inner">
-            <a href="/" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
-            <ul class="nav-links"><li><a href="/">HOME</a></li><li><a href="/game/">FULL GAME</a></li></ul>
-        </div>
-    </nav>
-    <main class="game-page">
-        <div class="container">
-            <h1>GOLD RUSH BRICK BREAKER</h1>
-            <p class="game-subtitle">◆ HIGH SCORE MODE — MAXIMIZE YOUR POINTS ◆</p>
-            <div class="game-frame-wrap">
-                <iframe src="../../game/index.html?mode=gold" title="Play Gold Rush Brick Breaker Online" allowfullscreen allow="autoplay; fullscreen" loading="lazy" class="game-frame"></iframe>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="../../index.html" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../../new-games/index.html">NEW GAMES</a></li>
+            <li><a href="../../hot-games/index.html">HOT GAMES</a></li>
+            <li><a href="../../blog.html">BLOG</a></li>
+            <li><a href="../../about/index.html">ABOUT</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<main class="detail-page">
+    <div class="container">
+        <div class="breadcrumb"><a href="../../index.html">Home</a> › <a href="../../hot-games/index.html">Hot Games</a> › Gold Rush</div>
+        <div class="detail-layout">
+            <div class="detail-main">
+                <span class="detail-tag">POWER-UP</span>
+                <h1>Play Gold Rush Brick Breaker Online</h1>
+                <p style="font-size:0.82rem;color:var(--text-faint);margin:0 0 16px;">Brick Breaker • Score Mode • Chase the Leaderboard</p>
+
+                <svg class="detail-cover" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg6" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1000"/><stop offset="100%" stop-color="#503000"/></linearGradient></defs><rect width="800" height="400" fill="url(#bg6)" rx="12"/><rect x="40" y="30" width="720" height="240" rx="8" fill="none" stroke="rgba(252,185,0,0.3)" stroke-width="2"/><rect x="60" y="45" width="44" height="18" rx="3" fill="#fcb900" opacity="0.95"/><rect x="110" y="45" width="44" height="18" rx="3" fill="#ff4040" opacity="0.8"/><rect x="160" y="45" width="44" height="18" rx="3" fill="#fcb900" opacity="0.95"/><rect x="210" y="45" width="44" height="18" rx="3" fill="#fcb900" opacity="0.95"/><rect x="260" y="45" width="44" height="18" rx="3" fill="#ff7400" opacity="0.8"/><rect x="60" y="69" width="44" height="18" rx="3" fill="#ff7400" opacity="0.7"/><rect x="110" y="69" width="44" height="18" rx="3" fill="#fcb900" opacity="0.9"/><rect x="160" y="69" width="44" height="18" rx="3" fill="#00d084" opacity="0.7"/><rect x="210" y="69" width="44" height="18" rx="3" fill="#fcb900" opacity="0.9"/><rect x="260" y="69" width="44" height="18" rx="3" fill="#fcb900" opacity="0.9"/><rect x="60" y="93" width="44" height="18" rx="3" fill="#00d084" opacity="0.6"/><rect x="110" y="93" width="44" height="18" rx="3" fill="#fcb900" opacity="0.9"/><rect x="160" y="93" width="44" height="18" rx="3" fill="#0693e3" opacity="0.6"/><rect x="210" y="93" width="44" height="18" rx="3" fill="#fcb900" opacity="0.9"/><circle cx="380" cy="210" r="8" fill="#fcb900" opacity="0.95"/><rect x="340" y="268" width="80" height="10" rx="5" fill="#fcb900" opacity="0.9"/><text x="400" y="330" text-anchor="middle" fill="rgba(252,185,0,0.4)" font-family="Inter,sans-serif" font-size="18" font-weight="700">SCORE: 31,700  🏆 BEST: 31,700</text></svg>
+
+                <div class="detail-desc">
+                    <p><strong>Gold Rush</strong> is <a href="../../index.html#why-players-love">brick breaker</a> score-chasing turned into an art form. Gold bricks — worth a massive <strong>50 points each (5× normal)</strong> — are scattered through every level like treasure. The question isn't "can you clear this screen" — it's "how many gold bricks can you break before the last normal brick falls?" Every level is a resource puzzle with a high-score payout.</p>
+                    <p>This mode attracts a specific breed of player: the leaderboard climber. Normal bricks are just obstacles between gold bricks. Power-ups exist to reach gold bricks faster. Level completion bonuses stack, and the game saves your personal best automatically. If you've ever finished a Classic run and thought "I could've scored higher," Gold Rush is where you prove it.</p>
+                </div>
+
+                <div class="detail-section">
+                    <h2>Gold Brick Breaker Scoring Breakdown</h2>
+                    <h3>Point Values</h3>
+                    <ul>
+                        <li><strong>Normal brick:</strong> 10 pts — one hit</li>
+                        <li><strong>Strong brick:</strong> 20 pts — two hits to destroy</li>
+                        <li><strong>Gold brick:</strong> 50 pts — one hit. Always prioritize these.</li>
+                        <li><strong>Level completion bonus:</strong> 100 × level number (Level 1 = 100, Level 25 = 2,500)</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h2>Gold Brick Breaker Strategy</h2>
+                    <h3>Targeting Gold Bricks</h3>
+                    <ul>
+                        <li><strong>Gold first, always.</strong> Identify every gold brick position on level start. Plan your first shot to hit at least one. Don't clear normal bricks until gold is gone.</li>
+                        <li><strong>Multi-Ball = score multiplier.</strong> Three balls sweeping the screen find gold bricks faster than you can aim. Stack Multi-Ball with Big Paddle for maximum coverage.</li>
+                    </ul>
+                    <h3>Survival &amp; Scoring Balance</h3>
+                    <ul>
+                        <li><strong>Bank shots into gold.</strong> When a gold brick sits behind normal bricks, use wall ricochets to reach it. Don't clear the blockers — go around them.</li>
+                        <li><strong>Don't die chasing gold.</strong> A death resets your power-ups and costs you potential gold on future levels. Survive first, score second.</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h2>Gold Brick Breaker FAQ</h2>
+                    <h3>Q: How many points are gold bricks worth in Brick Breaker?</h3>
+                    <p>Gold bricks are worth 50 points each — 5 times the value of a normal brick (10pts). Always prioritize gold bricks before the ball speeds up. Level completion bonuses stack up to 2,500 points at level 25.</p>
+                    <h3>Q: What is the best strategy for Gold Rush Brick Breaker?</h3>
+                    <p>Target gold bricks first on every level. Multi-Ball triples your coverage for finding gold. Use wall ricochets to reach gold behind normal bricks. Survive first, score second — dying resets your power-ups.</p>
+                </div>
             </div>
-            <div class="game-info">
-                <h2>◆ ABOUT GOLD RUSH</h2>
-                <p>Gold Rush Brick Breaker is all about <strong>maximizing your score</strong>. Gold bricks appear more frequently in this mode, each worth a massive <strong>50 points — 5× the value of a normal brick</strong>. The challenge is reaching them before they're shielded by other bricks or blocked by steel.</p>
-                <p>Every level is a puzzle: <strong>how many gold bricks can you break</strong> before clearing the level? The best players target gold bricks first and use multi-ball power-ups to sweep through them. Chase that high score — your personal best is saved automatically.</p>
-                <h2>◆ SCORING GUIDE</h2>
-                <ul>
-                    <li>Normal brick: <strong>10 points</strong> — one hit to destroy</li>
-                    <li>Strong brick: <strong>20 points</strong> — two hits, changes color when damaged</li>
-                    <li>Gold brick: <strong>50 points</strong> — prioritize these above all else!</li>
-                    <li>Level completion bonus: <strong>100 × level number</strong></li>
-                </ul>
-                <div class="back-link"><a href="/">← BACK TO ALL GAMES</a></div>
+
+            <aside class="detail-sidebar">
+                <div class="game-window" id="gameWindow">
+                    <iframe src="../../game/index.html?mode=gold" title="Gold Rush Brick Breaker" allow="autoplay" loading="eager" sandbox="allow-scripts allow-same-origin"></iframe>
+                    <div class="game-actions">
+                        <a href="../../game/index.html?mode=gold" target="_blank" class="btn-play">▶ PLAY FULLSCREEN</a>
+                        <button class="btn-full" id="fullBtn" title="Toggle fullscreen">⛶</button>
+                    </div>
+                </div>
+                <div class="game-stats">
+                    <div class="game-stat"><div class="stat-num">50</div><div class="stat-label">GOLD PTS</div></div>
+                    <div class="game-stat"><div class="stat-num">5×</div><div class="stat-label">MULTIPLIER</div></div>
+                    <div class="game-stat"><div class="stat-num">2,500</div><div class="stat-label">MAX BONUS</div></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+<!-- ═══ TRY OTHER MODES ═══ -->
+<section style="max-width:1120px;margin:0 auto;padding:20px 24px 0;">
+    <h2 style="font-weight:800;font-size:clamp(1.1rem,2vw,1.45rem);letter-spacing:-0.5px;color:var(--text);margin:0 0 12px;">Try Other Brick Breaker Modes</h2>
+    <p style="font-size:.85rem;color:var(--text-dim);margin:0 0 16px;">Click any mode to switch — all free, no download.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-bottom:32px;">
+        <a href="../classic/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Classic</a>
+        <a href="../power-up/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Power-Up</a>
+        <a href="../neon/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Neon Style</a>
+        <a href="../hard/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Hard Mode</a>
+        <a href="../precision/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Precision</a>
+        <a href="../gold/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Gold Rush</a>
+        <a href="../cosmic/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Cosmic Run</a>
+        <a href="../retro/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Retro Arcade</a>
+        <a href="../arkanoid/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Arkanoid</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../../img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                <p>The best place to play brick breaker online. Free, fast, no download.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Play</h4>
+                <ul><li><a href="../../index.html#play-now">Play Now</a></li><li><a href="../../game/index.html">Full Game</a></li><li><a href="../../index.html#how-to-play">How to Play</a></li><li><a href="../../index.html#faq">FAQ</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="../../privacy/index.html">Privacy</a></li><li><a href="../../blog.html">Blog</a></li></ul>
             </div>
         </div>
-    </main>
+        <div class="footer-bottom"><p>© 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p></div>
+    </div>
+</footer>
+
+<script>
+(function(){
+    var fullBtn = document.getElementById('fullBtn');
+    var gameWindow = document.getElementById('gameWindow');
+    if (fullBtn && gameWindow) {
+        fullBtn.addEventListener('click', function(){
+            var el = gameWindow;
+            if (document.fullscreenElement) { document.exitFullscreen(); }
+            else { if (el.requestFullscreen) el.requestFullscreen(); else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); }
+        });
+    }
+})();
+</script>
+<script src="../../js/main.js"></script>
 </body>
 </html>

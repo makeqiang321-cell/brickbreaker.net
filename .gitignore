@@ -1,0 +1,11 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+
+# Scratch / test files (not for production)
+faq-test.html
+index-rich-test.html
+temp_structure.txt
+supabase-setup.sql

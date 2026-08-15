@@ -3,12 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>BRICKBREAKER</title>
-    <meta name="robots" content="noindex">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet"></noscript>
+    <title>Play Brick Breaker — Full Game with 9 Modes | BrickBreaker</title>
+    <meta name="description" content="Play brick breaker online free — 9 modes: Classic, Power-Up, Neon, Arkanoid, Hard, Precision, Gold Rush, Cosmic Run, Retro Arcade. No download, instant play.">
+    <link rel="canonical" href="https://brickbreaker.net/game/">
+    <meta property="og:title" content="Play Brick Breaker — Full Game with 9 Modes | BrickBreaker">
+    <meta property="og:description" content="Play brick breaker online free — 9 modes: Classic, Power-Up, Neon, Arkanoid, Hard, Precision, Gold Rush, Cosmic Run, Retro Arcade. No download, instant play.">
+    <meta property="og:image" content="https://brickbreaker.net/og-image.png">
+    <meta property="og:url" content="https://brickbreaker.net/game/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="brick breaker, play brick breaker, brick breaker game, free brick breaker, breakout game, arcade game, brick breaker online, browser game, html5 game, no download game">
+    <!-- Schema.org: VideoGame -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Brick Breaker",
+      "url": "https://brickbreaker.net/game/",
+      "description": "Play brick breaker online free — full game with 9 modes. Classic breakout arcade with power-ups, progressive levels, and high scores.",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web",
+      "playMode": "SinglePlayer",
+      "gamePlatform": "Web browser",
+      "genre": ["Arcade", "Action", "Casual"],
+      "image": "https://brickbreaker.net/og-image.png",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1 },
+      "author": { "@type": "Organization", "name": "BrickBreaker.net" },
+      "publisher": { "@type": "Organization", "name": "BrickBreaker.net" }
+    }
+    </script>
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brickbreaker.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Play Brick Breaker", "item": "https://brickbreaker.net/game/" }
+      ]
+    }
+    </script>
     <style>
         :root {
             --bg: #000000;
@@ -319,7 +355,7 @@
 <body>
     <!-- ═══ START SCREEN ═══ -->
     <div class="overlay" id="startScreen">
-        <div class="start-title">BRICK<br>BREAKER</div>
+        <h1 class="start-title">BRICK<br>BREAKER</h1>
         <div class="start-subtitle">◆ RETRO ARCADE EDITION ◆</div>
         <div class="start-hint">CLICK TO START</div>
         <div class="start-score" id="startHigh">HI-SCORE: <span id="startHighVal">0</span></div>
@@ -364,6 +400,8 @@
 
         <div class="mobile-note">◆ DRAG TO MOVE PADDLE ◆ WORKS ON MOBILE ◆</div>
     </div>
+
+    <h2 style="font-family:'Orbitron',monospace;font-size:0.8rem;font-weight:700;color:var(--neon-cyan);letter-spacing:2px;text-align:center;margin-top:12px;z-index:1;text-shadow:0 0 10px rgba(124,58,237,0.5);">More Brick Breaker Game Modes</h2>
 
     <script>
     (function() {
@@ -433,9 +471,200 @@
         var shakeTimer = 0;
         var bgStars = [];
 
-        // Generate starfield
-        for (var si = 0; si < 60; si++) {
-            bgStars.push({ x: Math.random() * 800, y: Math.random() * 600, r: Math.random() * 1.2 + 0.3, a: Math.random() * 0.4 + 0.1 });
+        // ── MODE DETECTION ──────────────────────────
+        var params = new URLSearchParams(window.location.search);
+        var MODE = params.get('mode') || 'classic';
+
+        var MODE_CONFIG = {
+            classic: {
+                lives: 3, paddleW: 130, ballSpeed: 4, speedRamp: 0.08,
+                powerUpRate: 0.15, powerUpDuration: 480,
+                particleMult: 1, starCount: 60, starAlpha: 0.4,
+                brickRows: 6, brickCols: 10,
+                steelInLayouts: false, goldFreq: 'normal',
+                colorPalette: 'default', levelBonus: 0,
+                showLevel: true, showHighScore: true, showPowerups: true,
+                retroHUD: false
+            },
+            powerup: {
+                lives: 3, paddleW: 130, ballSpeed: 4, speedRamp: 0.08,
+                powerUpRate: 0.30, powerUpDuration: 600,
+                particleMult: 1, starCount: 60, starAlpha: 0.4,
+                brickRows: 6, brickCols: 10,
+                steelInLayouts: false, goldFreq: 'normal',
+                colorPalette: 'powerup', levelBonus: 0,
+                showLevel: true, showHighScore: true, showPowerups: true,
+                retroHUD: false
+            },
+            neon: {
+                lives: 3, paddleW: 130, ballSpeed: 4, speedRamp: 0.08,
+                powerUpRate: 0.15, powerUpDuration: 480,
+                particleMult: 2, starCount: 80, starAlpha: 0.6,
+                brickRows: 6, brickCols: 10,
+                steelInLayouts: false, goldFreq: 'normal',
+                colorPalette: 'neon', levelBonus: 0,
+                showLevel: true, showHighScore: true, showPowerups: true,
+                retroHUD: false
+            },
+            hard: {
+                lives: 2, paddleW: 130, ballSpeed: 5.2, speedRamp: 0.10,
+                powerUpRate: 0.07, powerUpDuration: 360,
+                particleMult: 1, starCount: 40, starAlpha: 0.3,
+                brickRows: 7, brickCols: 10,
+                steelInLayouts: true, goldFreq: 'rare',
+                colorPalette: 'hard', levelBonus: 0,
+                showLevel: true, showHighScore: true, showPowerups: true,
+                retroHUD: false
+            },
+            precision: {
+                lives: 3, paddleW: 80, ballSpeed: 3.5, speedRamp: 0.06,
+                powerUpRate: 0.12, powerUpDuration: 480,
+                particleMult: 1, starCount: 50, starAlpha: 0.35,
+                brickRows: 5, brickCols: 10,
+                steelInLayouts: false, goldFreq: 'corners',
+                colorPalette: 'precision', levelBonus: 0,
+                showLevel: true, showHighScore: true, showPowerups: true,
+                retroHUD: false
+            },
+            gold: {
+                lives: 3, paddleW: 130, ballSpeed: 4, speedRamp: 0.08,
+                powerUpRate: 0.18, powerUpDuration: 480,
+                particleMult: 1.5, starCount: 60, starAlpha: 0.4,
+                brickRows: 6, brickCols: 10,
+                steelInLayouts: false, goldFreq: 'abundant',
+                colorPalette: 'gold', levelBonus: 100,
+                showLevel: true, showHighScore: true, showPowerups: true,
+                retroHUD: false
+            },
+            cosmic: {
+                lives: 3, paddleW: 130, ballSpeed: 4, speedRamp: 0.08,
+                powerUpRate: 0.15, powerUpDuration: 480,
+                particleMult: 1.5, starCount: 90, starAlpha: 0.7,
+                brickRows: 6, brickCols: 10,
+                steelInLayouts: false, goldFreq: 'normal',
+                colorPalette: 'cosmic', levelBonus: 0,
+                showLevel: true, showHighScore: true, showPowerups: true,
+                retroHUD: false
+            },
+            retro: {
+                lives: 3, paddleW: 130, ballSpeed: 4, speedRamp: 0.08,
+                powerUpRate: 0, powerUpDuration: 0,
+                particleMult: 0.5, starCount: 20, starAlpha: 0.2,
+                brickRows: 5, brickCols: 10,
+                steelInLayouts: false, goldFreq: 'none',
+                colorPalette: 'retro', levelBonus: 0,
+                showLevel: false, showHighScore: false, showPowerups: false,
+                retroHUD: true
+            }
+        };
+
+        var CFG = MODE_CONFIG[MODE] || MODE_CONFIG.classic;
+
+        // ── COLOR PALETTES ─────────────────────────
+        var PALETTES = {
+            default: {
+                pink: '#0693e3', cyan: '#7c3aed', gold: '#fcb900', green: '#00d084', purple: '#a78bfa',
+                white: '#f0f0ff', bg: '#000000',
+                brickColors: ['#ff4040','#ff7400','#fcb900','#00d084','#0693e3','#a78bfa'],
+                brickGlows: ['rgba(255,64,64,0.6)','rgba(255,116,0,0.6)','rgba(252,185,0,0.6)','rgba(0,208,132,0.6)','rgba(6,147,227,0.6)','rgba(167,139,250,0.6)'],
+                paddleGradTop: '#7c3aed', paddleGradBot: '#2d1750', paddleGlow: 'rgba(124,58,237,0.5)',
+                ballInner: '#fff', ballMid: '#fcb900', ballOuter: '#806000', ballGlow: 'rgba(252,185,0,0.7)',
+                starColor: '200,220,255'
+            },
+            powerup: {
+                pink: '#00d084', cyan: '#7c3aed', gold: '#fcb900', green: '#00d084', purple: '#a78bfa',
+                white: '#f0f0ff', bg: '#000a05',
+                brickColors: ['#ff4040','#ff7400','#fcb900','#00d084','#0693e3','#a78bfa'],
+                brickGlows: ['rgba(255,64,64,0.6)','rgba(255,116,0,0.6)','rgba(252,185,0,0.6)','rgba(0,208,132,0.6)','rgba(6,147,227,0.6)','rgba(167,139,250,0.6)'],
+                paddleGradTop: '#00d084', paddleGradBot: '#0a3020', paddleGlow: 'rgba(0,208,132,0.5)',
+                ballInner: '#fff', ballMid: '#fcb900', ballOuter: '#806000', ballGlow: 'rgba(252,185,0,0.7)',
+                starColor: '180,255,200'
+            },
+            neon: {
+                pink: '#e879f9', cyan: '#a78bfa', gold: '#facc15', green: '#4ade80', purple: '#c084fc',
+                white: '#f5f0ff', bg: '#050010',
+                brickColors: ['#e879f9','#c084fc','#a78bfa','#818cf8','#60a5fa','#38bdf8'],
+                brickGlows: ['rgba(232,121,249,0.8)','rgba(192,132,252,0.8)','rgba(167,139,250,0.8)','rgba(129,140,248,0.8)','rgba(96,165,250,0.8)','rgba(56,189,248,0.8)'],
+                paddleGradTop: '#c084fc', paddleGradBot: '#3b0764', paddleGlow: 'rgba(192,132,252,0.6)',
+                ballInner: '#fff', ballMid: '#facc15', ballOuter: '#854d0e', ballGlow: 'rgba(250,204,21,0.8)',
+                starColor: '220,200,255'
+            },
+            hard: {
+                pink: '#ef4444', cyan: '#dc2626', gold: '#f87171', green: '#b91c1c', purple: '#991b1b',
+                white: '#f0f0f0', bg: '#050000',
+                brickColors: ['#dc2626','#b91c1c','#991b1b','#7f1d1d','#ef4444','#f87171'],
+                brickGlows: ['rgba(220,38,38,0.5)','rgba(185,28,28,0.5)','rgba(153,27,27,0.5)','rgba(127,29,29,0.5)','rgba(239,68,68,0.5)','rgba(248,113,113,0.5)'],
+                paddleGradTop: '#ef4444', paddleGradBot: '#450a0a', paddleGlow: 'rgba(239,68,68,0.4)',
+                ballInner: '#fff', ballMid: '#f87171', ballOuter: '#7f1d1d', ballGlow: 'rgba(248,113,113,0.6)',
+                starColor: '180,150,150'
+            },
+            precision: {
+                pink: '#06b6d4', cyan: '#0891b2', gold: '#22d3ee', green: '#0e7490', purple: '#155e75',
+                white: '#f0faff', bg: '#000810',
+                brickColors: ['#06b6d4','#0891b2','#0e7490','#155e75','#22d3ee','#67e8f9'],
+                brickGlows: ['rgba(6,182,212,0.6)','rgba(8,145,178,0.6)','rgba(14,116,144,0.6)','rgba(21,94,117,0.6)','rgba(34,211,238,0.6)','rgba(103,232,249,0.6)'],
+                paddleGradTop: '#06b6d4', paddleGradBot: '#083344', paddleGlow: 'rgba(6,182,212,0.5)',
+                ballInner: '#fff', ballMid: '#22d3ee', ballOuter: '#155e75', ballGlow: 'rgba(34,211,238,0.7)',
+                starColor: '150,210,230'
+            },
+            gold: {
+                pink: '#fbbf24', cyan: '#f59e0b', gold: '#fbbf24', green: '#d97706', purple: '#b45309',
+                white: '#fffdf0', bg: '#0a0800',
+                brickColors: ['#fbbf24','#f59e0b','#d97706','#b45309','#fcd34d','#fde68a'],
+                brickGlows: ['rgba(251,191,36,0.7)','rgba(245,158,11,0.7)','rgba(217,119,6,0.7)','rgba(180,83,9,0.7)','rgba(252,211,77,0.7)','rgba(253,230,138,0.7)'],
+                paddleGradTop: '#fbbf24', paddleGradBot: '#78350f', paddleGlow: 'rgba(251,191,36,0.6)',
+                ballInner: '#fff', ballMid: '#fbbf24', ballOuter: '#92400e', ballGlow: 'rgba(251,191,36,0.8)',
+                starColor: '255,230,180'
+            },
+            cosmic: {
+                pink: '#60a5fa', cyan: '#818cf8', gold: '#f9a8d4', green: '#34d399', purple: '#a78bfa',
+                white: '#f0f4ff', bg: '#000818',
+                brickColors: ['#3b82f6','#6366f1','#8b5cf6','#a78bfa','#60a5fa','#818cf8'],
+                brickGlows: ['rgba(59,130,246,0.6)','rgba(99,102,241,0.6)','rgba(139,92,246,0.6)','rgba(167,139,250,0.6)','rgba(96,165,250,0.6)','rgba(129,140,248,0.6)'],
+                paddleGradTop: '#818cf8', paddleGradBot: '#1e1b4b', paddleGlow: 'rgba(129,140,248,0.5)',
+                ballInner: '#fff', ballMid: '#f9a8d4', ballOuter: '#831843', ballGlow: 'rgba(249,168,212,0.7)',
+                starColor: '180,200,255'
+            },
+            retro: {
+                pink: '#d4a574', cyan: '#c4956a', gold: '#e8c170', green: '#a08060', purple: '#8b7355',
+                white: '#f5e6d3', bg: '#1a1008',
+                brickColors: ['#c0392b','#d35400','#e67e22','#7d8c3a','#8b6914','#6b4c2a'],
+                brickGlows: ['rgba(192,57,43,0.3)','rgba(211,84,0,0.3)','rgba(230,126,34,0.3)','rgba(125,140,58,0.3)','rgba(139,105,20,0.3)','rgba(107,76,42,0.3)'],
+                paddleGradTop: '#c4956a', paddleGradBot: '#4a3520', paddleGlow: 'rgba(196,149,106,0.3)',
+                ballInner: '#f5e6d3', ballMid: '#e8c170', ballOuter: '#8b6914', ballGlow: 'rgba(232,193,112,0.4)',
+                starColor: '180,160,140'
+            }
+        };
+
+        var PAL = PALETTES[CFG.colorPalette] || PALETTES.default;
+
+        // Apply palette to NEON object
+        Object.keys(PAL).forEach(function(k) {
+            if (k === 'brickColors' || k === 'brickGlows' || k === 'paddleGradTop' ||
+                k === 'paddleGradBot' || k === 'paddleGlow' || k === 'ballInner' ||
+                k === 'ballMid' || k === 'ballOuter' || k === 'ballGlow' || k === 'starColor') {
+                // handled in render, not via NEON
+            } else if (NEON.hasOwnProperty(k)) {
+                NEON[k] = PAL[k];
+            }
+        });
+        // Force specific NEON values
+        NEON.pink = PAL.pink; NEON.cyan = PAL.cyan; NEON.gold = PAL.gold;
+        NEON.green = PAL.green; NEON.purple = PAL.purple;
+        NEON.white = PAL.white; NEON.bg = PAL.bg;
+
+        // Regenerate starfield with mode config
+        bgStars = [];
+        for (var si = 0; si < CFG.starCount; si++) {
+            bgStars.push({ x: Math.random() * 800, y: Math.random() * 600, r: Math.random() * 1.2 + 0.3, a: Math.random() * CFG.starAlpha + 0.05, twinkle: Math.random() > 0.7 });
+        }
+
+        // Cosmic: add nebula blobs
+        var nebulae = [];
+        if (MODE === 'cosmic') {
+            for (var ni = 0; ni < 4; ni++) {
+                nebulae.push({ x: Math.random() * 800, y: Math.random() * 600, r: 50 + Math.random() * 80, a: 0.03 + Math.random() * 0.04, hue: 220 + Math.random() * 40 });
+            }
         }
 
         var BRICK_DEFS = {
@@ -447,13 +676,13 @@
 
         function createBall(x, y) {
             var angle = (Math.random() * 0.8 - 0.4) + Math.PI * 1.5;
-            return { x: x, y: y, r: 7, dx: Math.cos(angle) * 4, dy: Math.sin(angle) * 4, baseSpeed: 4 };
+            return { x: x, y: y, r: 7, dx: Math.cos(angle) * CFG.ballSpeed, dy: Math.sin(angle) * CFG.ballSpeed, baseSpeed: CFG.ballSpeed };
         }
 
         function initState() {
-            score = 0; lives = 3; level = 1; gameState = 'waiting';
-            highScore = parseInt(localStorage.getItem('bbNeonHighScore')) || 0;
-            paddle = { x: 335, y: 555, w: 130, h: 14, normalW: 130 };
+            score = 0; lives = CFG.lives; level = 1; gameState = 'waiting';
+            highScore = parseInt(localStorage.getItem('bbHigh_' + MODE)) || 0;
+            paddle = { x: 335, y: 555, w: CFG.paddleW, h: 14, normalW: CFG.paddleW };
             powerupTimer = 0;
             bricks = []; powerups = []; particles = []; floatTexts = [];
             balls = [createBall(400, 500)];
@@ -474,42 +703,207 @@
 
         function resetAfterLife() {
             balls = [createBall(400, 500)];
-            paddle.w = paddle.normalW;
+            paddle.w = CFG.paddleW;
             powerupTimer = 0;
         }
 
         // ── LEVELS ───────────────────────────────────
         function createLevel() {
             bricks = []; powerups = []; particles = []; floatTexts = [];
-            var layouts = [
-                function() { for (var r = 0; r < 5; r++) for (var c = 0; c < 10; c++) addBrick(c, r, 'normal'); },
-                function() { for (var r = 0; r < 6; r++) for (var c = 0; c < 10; c++) addBrick(c, r, r < 2 ? 'strong' : 'normal'); },
-                function() {
-                    for (var r = 0; r < 6; r++)
-                        for (var c = 0; c < 10; c++) {
-                            if (r === 2 && (c === 3 || c === 6)) addBrick(c, r, 'steel');
-                            else if (r === 5) addBrick(c, r, 'gold');
-                            else if (r < 2) addBrick(c, r, 'strong');
-                            else addBrick(c, r, 'normal');
-                        }
-                },
-                function() {
-                    var rows = Math.min(10, 5 + level - 4);
-                    for (var r = 0; r < rows; r++)
-                        for (var c = 0; c < 10; c++) {
-                            var rnd = Math.random();
-                            if (rnd < 0.05) addBrick(c, r, 'steel');
-                            else if (rnd < 0.2) addBrick(c, r, 'gold');
-                            else if (rnd < 0.4) addBrick(c, r, 'strong');
-                            else addBrick(c, r, 'normal');
-                        }
-                }
-            ];
-            var li = Math.min(level - 1, layouts.length - 1);
-            if (level > layouts.length) layouts[layouts.length - 1]();
-            else layouts[li]();
+            var bRows = CFG.brickRows;
+            var bCols = CFG.brickCols;
 
-            var mult = 1 + (level - 1) * 0.08;
+            // Classic / Neon / Cosmic: standard progressive layouts
+            if (MODE === 'classic' || MODE === 'neon' || MODE === 'cosmic') {
+                var layouts = [
+                    function() { for (var r = 0; r < 5; r++) for (var c = 0; c < bCols; c++) addBrick(c, r, 'normal'); },
+                    function() { for (var r = 0; r < bRows; r++) for (var c = 0; c < bCols; c++) addBrick(c, r, r < 2 ? 'strong' : 'normal'); },
+                    function() {
+                        for (var r = 0; r < bRows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                if (r === 5) addBrick(c, r, 'gold');
+                                else if (r < 2) addBrick(c, r, 'strong');
+                                else addBrick(c, r, 'normal');
+                            }
+                    },
+                    function() {
+                        var rows = Math.min(bRows + 4, 5 + Math.floor((level - 4) / 2));
+                        for (var r = 0; r < rows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                var rnd = Math.random();
+                                if (rnd < 0.15 && CFG.goldFreq !== 'none') addBrick(c, r, 'gold');
+                                else if (rnd < 0.35) addBrick(c, r, 'strong');
+                                else addBrick(c, r, 'normal');
+                            }
+                    }
+                ];
+                var li = Math.min(level - 1, layouts.length - 1);
+                if (level > layouts.length) layouts[layouts.length - 1]();
+                else layouts[li]();
+            }
+
+            // Hard mode: steel bricks, denser, more rows
+            else if (MODE === 'hard') {
+                var layouts = [
+                    function() { for (var r = 0; r < 6; r++) for (var c = 0; c < bCols; c++) addBrick(c, r, r === 2 && c%3===0 ? 'steel' : 'normal'); },
+                    function() { for (var r = 0; r < bRows; r++) for (var c = 0; c < bCols; c++) addBrick(c, r, r < 2 ? 'strong' : (r === 3 && c%3===0 ? 'steel' : 'normal')); },
+                    function() {
+                        for (var r = 0; r < bRows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                if (r === 2 && (c === 2 || c === 5 || c === 8)) addBrick(c, r, 'steel');
+                                else if (r === 4 && (c === 3 || c === 6)) addBrick(c, r, 'steel');
+                                else if (r < 2) addBrick(c, r, 'strong');
+                                else addBrick(c, r, 'normal');
+                            }
+                    },
+                    function() {
+                        var rows = Math.min(bRows + 3, 5 + Math.floor((level - 4) / 2));
+                        for (var r = 0; r < rows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                var rnd = Math.random();
+                                if (rnd < 0.12) addBrick(c, r, 'steel');
+                                else if (rnd < 0.35) addBrick(c, r, 'strong');
+                                else addBrick(c, r, 'normal');
+                            }
+                    }
+                ];
+                var li = Math.min(level - 1, layouts.length - 1);
+                if (level > layouts.length) layouts[layouts.length - 1]();
+                else layouts[li]();
+            }
+
+            // Precision: sparse layouts with gold in corners, smaller gaps
+            else if (MODE === 'precision') {
+                var layouts = [
+                    function() {
+                        for (var r = 0; r < bRows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                if (r === 0 && (c === 0 || c === bCols-1)) addBrick(c, r, 'gold');
+                                else if ((c + r) % 3 !== 0) addBrick(c, r, 'normal');
+                            }
+                    },
+                    function() {
+                        for (var r = 0; r < bRows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                if (r === 0 && (c <= 1 || c >= bCols-2)) addBrick(c, r, 'gold');
+                                else if ((r + c) % 2 === 0) addBrick(c, r, 'strong');
+                                else if (c % 3 !== 0) addBrick(c, r, 'normal');
+                            }
+                    },
+                    function() {
+                        for (var r = 0; r < bRows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                if (r <= 1 && (c === 0 || c === bCols-1)) addBrick(c, r, 'gold');
+                                else if (c === 3 || c === 6) addBrick(c, r, 'normal');
+                                else if ((r + c) % 3 !== 1) addBrick(c, r, 'strong');
+                            }
+                    },
+                    function() {
+                        for (var r = 0; r < bRows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                var rnd = Math.random();
+                                if (rnd < 0.08 && (c <= 1 || c >= bCols-2)) addBrick(c, r, 'gold');
+                                else if (rnd < 0.45) { if ((r + c) % 3 !== 0) addBrick(c, r, rnd < 0.25 ? 'strong' : 'normal'); }
+                            }
+                    }
+                ];
+                var li = Math.min(level - 1, layouts.length - 1);
+                if (level > layouts.length) layouts[layouts.length - 1]();
+                else layouts[li]();
+            }
+
+            // Gold Rush: abundant gold bricks
+            else if (MODE === 'gold') {
+                var layouts = [
+                    function() { for (var r = 0; r < 5; r++) for (var c = 0; c < bCols; c++) addBrick(c, r, r === 2 ? 'gold' : 'normal'); },
+                    function() { for (var r = 0; r < bRows; r++) for (var c = 0; c < bCols; c++) addBrick(c, r, r === 0 || r === 4 ? 'gold' : (r < 2 ? 'strong' : 'normal')); },
+                    function() {
+                        for (var r = 0; r < bRows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                if (r === 1 || r === 4) addBrick(c, r, 'gold');
+                                else if (r < 2) addBrick(c, r, 'strong');
+                                else addBrick(c, r, 'normal');
+                            }
+                    },
+                    function() {
+                        var rows = Math.min(bRows + 4, 5 + Math.floor((level - 4) / 2));
+                        for (var r = 0; r < rows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                var rnd = Math.random();
+                                if (rnd < 0.25) addBrick(c, r, 'gold');
+                                else if (rnd < 0.45) addBrick(c, r, 'strong');
+                                else addBrick(c, r, 'normal');
+                            }
+                    }
+                ];
+                var li = Math.min(level - 1, layouts.length - 1);
+                if (level > layouts.length) layouts[layouts.length - 1]();
+                else layouts[li]();
+            }
+
+            // Power-Up mode: same as classic but with more power-up opportunities
+            else if (MODE === 'powerup') {
+                var layouts = [
+                    function() { for (var r = 0; r < 5; r++) for (var c = 0; c < bCols; c++) addBrick(c, r, 'normal'); },
+                    function() { for (var r = 0; r < bRows; r++) for (var c = 0; c < bCols; c++) addBrick(c, r, r < 2 ? 'strong' : 'normal'); },
+                    function() {
+                        for (var r = 0; r < bRows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                if (r === 5) addBrick(c, r, 'gold');
+                                else if (r < 2) addBrick(c, r, 'strong');
+                                else addBrick(c, r, 'normal');
+                            }
+                    },
+                    function() {
+                        var rows = Math.min(bRows + 4, 5 + Math.floor((level - 4) / 2));
+                        for (var r = 0; r < rows; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                var rnd = Math.random();
+                                if (rnd < 0.15) addBrick(c, r, 'gold');
+                                else if (rnd < 0.4) addBrick(c, r, 'strong');
+                                else addBrick(c, r, 'normal');
+                            }
+                    }
+                ];
+                var li = Math.min(level - 1, layouts.length - 1);
+                if (level > layouts.length) layouts[layouts.length - 1]();
+                else layouts[li]();
+            }
+
+            // Retro: simple 5-row layouts, no steel, no gold
+            else if (MODE === 'retro') {
+                var layouts = [
+                    function() { for (var r = 0; r < 5; r++) for (var c = 0; c < bCols; c++) addBrick(c, r, 'normal'); },
+                    function() { for (var r = 0; r < 5; r++) for (var c = 0; c < bCols; c++) addBrick(c, r, r < 1 ? 'strong' : 'normal'); },
+                    function() {
+                        for (var r = 0; r < 5; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                if (r < 2 && c % 2 === 0) addBrick(c, r, 'strong');
+                                else addBrick(c, r, 'normal');
+                            }
+                    },
+                    function() {
+                        for (var r = 0; r < 5; r++)
+                            for (var c = 0; c < bCols; c++) {
+                                var rnd = Math.random();
+                                if (rnd < 0.35) addBrick(c, r, 'strong');
+                                else addBrick(c, r, 'normal');
+                            }
+                    }
+                ];
+                var li = Math.min(level - 1, layouts.length - 1);
+                if (level > layouts.length) layouts[layouts.length - 1]();
+                else layouts[li]();
+            }
+
+            // Fallback: classic layouts
+            else {
+                for (var r = 0; r < bRows; r++)
+                    for (var c = 0; c < bCols; c++)
+                        addBrick(c, r, 'normal');
+            }
+
+            var mult = 1 + (level - 1) * CFG.speedRamp;
             for (var i = 0; i < balls.length; i++) {
                 var b = balls[i], spd = Math.sqrt(b.dx*b.dx + b.dy*b.dy);
                 var ns = b.baseSpeed * mult;
@@ -531,7 +925,7 @@
             updateParticles();
             updateFloatTexts();
             checkCollisions();
-            if (powerupTimer > 0 && --powerupTimer === 0 && paddle.w !== paddle.normalW) paddle.w = paddle.normalW;
+            if (powerupTimer > 0 && --powerupTimer === 0 && paddle.w !== CFG.paddleW) paddle.w = CFG.paddleW;
             if (shakeTimer > 0) shakeTimer--;
             checkWin();
         }
@@ -579,7 +973,7 @@
         }
 
         function spawnParticles(x, y, color, count) {
-            for (var i = 0; i < count; i++) {
+            for (var i = 0; i < Math.floor(count * CFG.particleMult); i++) {
                 particles.push({ x:x, y:y, vx:(Math.random()-0.5)*8, vy:(Math.random()-0.5)*8-2, life:1, color:color });
             }
         }
@@ -641,7 +1035,7 @@
             } else {
                 spawnParticles(r.x+r.w/2, r.y+r.h/2, r.color, 18);
                 spawnFloat(r.x+r.w/2, r.y, '+' + r.points, r.color);
-                if (Math.random() < 0.15) {
+                if (Math.random() < CFG.powerUpRate) {
                     var types = ['bigPaddle','multiBall','extraLife'];
                     var pwColors = {'bigPaddle': NEON.green, 'multiBall': NEON.cyan, 'extraLife': NEON.pink};
                     var t = types[Math.floor(Math.random()*3)];
@@ -655,7 +1049,7 @@
 
         function activatePowerup(t) {
             switch(t) {
-                case 'bigPaddle': paddle.w = paddle.normalW * 1.6; powerupTimer = 480; break;
+                case 'bigPaddle': paddle.w = CFG.paddleW * 1.6; powerupTimer = CFG.powerUpDuration; break;
                 case 'multiBall':
                     var mb = balls[0]; if (!mb) break;
                     for (var i = 0; i < 2; i++) {
@@ -682,13 +1076,16 @@
 
         function checkWin() {
             var left = bricks.filter(function(r){ return r.type !== 'steel'; });
-            if (left.length === 0) { level++; sfxLevelUp(); updateHUD(); createLevel(); resetAfterLife(); }
+            if (left.length === 0) {
+                if (CFG.levelBonus > 0) { score += CFG.levelBonus * level; spawnFloat(400, 300, '+' + (CFG.levelBonus * level), NEON.gold); }
+                level++; sfxLevelUp(); updateHUD(); createLevel(); resetAfterLife();
+            }
         }
 
         function gameOver() {
             gameState = 'over';
             var isNew = score > highScore;
-            if (isNew) { highScore = score; localStorage.setItem('bbNeonHighScore', highScore); }
+            if (isNew) { highScore = score; localStorage.setItem('bbHigh_' + MODE, highScore); }
             goFinalScore.textContent = score;
             goHighScore.textContent = 'HI-SCORE: ' + highScore;
             if (isNew) goNewHigh.classList.remove('hidden'); else goNewHigh.classList.add('hidden');
@@ -699,84 +1096,120 @@
         function render() {
             ctx.clearRect(0, 0, 800, 600);
 
+            // Background
+            ctx.fillStyle = PAL.bg;
+            ctx.fillRect(0, 0, 800, 600);
+
+            // Cosmic: draw nebulae
+            if (MODE === 'cosmic') {
+                for (var ui = 0; ui < nebulae.length; ui++) {
+                    var neb = nebulae[ui];
+                    var grd = ctx.createRadialGradient(neb.x, neb.y, 0, neb.x, neb.y, neb.r);
+                    grd.addColorStop(0, 'hsla(' + neb.hue + ', 60%, 30%, ' + (neb.a * 2) + ')');
+                    grd.addColorStop(1, 'transparent');
+                    ctx.fillStyle = grd;
+                    ctx.beginPath();
+                    ctx.arc(neb.x, neb.y, neb.r, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
             // Starfield
             for (var si = 0; si < bgStars.length; si++) {
                 var s = bgStars[si];
-                ctx.fillStyle = 'rgba(200,220,255,' + s.a + ')';
+                var alpha = s.a;
+                // Cosmic: twinkling stars
+                if (MODE === 'cosmic' && s.twinkle) {
+                    alpha = s.a * (0.5 + 0.5 * Math.sin(Date.now() * 0.003 + si));
+                }
+                ctx.fillStyle = 'rgba(' + PAL.starColor + ',' + alpha + ')';
                 ctx.fillRect(s.x, s.y, s.r, s.r);
             }
 
-            // Bricks with neon glow
+            // Retro mode: no glow on bricks
+            var glowBlur = MODE === 'retro' ? 0 : 8;
+
+            // Bricks with glow
             for (var i = 0; i < bricks.length; i++) {
                 var r = bricks[i];
-                // Glow
                 ctx.shadowColor = r.glow;
-                ctx.shadowBlur = 8;
+                ctx.shadowBlur = glowBlur;
                 ctx.fillStyle = r.color;
                 ctx.fillRect(r.x, r.y, r.w, r.h);
                 ctx.shadowBlur = 0;
                 // Border
-                ctx.strokeStyle = 'rgba(0,0,0,0.4)';
+                ctx.strokeStyle = MODE === 'retro' ? 'rgba(0,0,0,0.6)' : 'rgba(0,0,0,0.4)';
                 ctx.lineWidth = 1;
                 ctx.strokeRect(r.x, r.y, r.w, r.h);
-                // Shine highlight
-                ctx.fillStyle = 'rgba(255,255,255,0.12)';
-                ctx.fillRect(r.x+1, r.y+1, r.w-2, 4);
+                // Shine highlight (retro skips)
+                if (MODE !== 'retro') {
+                    ctx.fillStyle = 'rgba(255,255,255,0.12)';
+                    ctx.fillRect(r.x+1, r.y+1, r.w-2, 4);
+                }
             }
 
-            // Paddle with neon glow
-            ctx.shadowColor = 'rgba(124,58,237,0.5)';
-            ctx.shadowBlur = 10;
+            // Paddle with glow
+            ctx.shadowColor = PAL.paddleGlow;
+            ctx.shadowBlur = MODE === 'retro' ? 0 : 10;
             var pg = ctx.createLinearGradient(paddle.x, paddle.y, paddle.x, paddle.y + paddle.h);
-            pg.addColorStop(0, NEON.cyan);
-            pg.addColorStop(1, '#2d1750');
+            pg.addColorStop(0, PAL.paddleGradTop);
+            pg.addColorStop(1, PAL.paddleGradBot);
             ctx.fillStyle = pg;
-            rrect(paddle.x, paddle.y, paddle.w, paddle.h, 5);
+            rrect(paddle.x, paddle.y, paddle.w, paddle.h, MODE === 'retro' ? 2 : 5);
             ctx.shadowBlur = 0;
             // Paddle powerup indicator
-            if (powerupTimer > 0) {
+            if (powerupTimer > 0 && CFG.showPowerups) {
                 ctx.strokeStyle = NEON.green;
                 ctx.lineWidth = 2;
                 ctx.shadowColor = 'rgba(0,208,132,0.6)';
-                ctx.shadowBlur = 12;
+                ctx.shadowBlur = MODE === 'retro' ? 0 : 12;
                 rrect(paddle.x-3, paddle.y-3, paddle.w+6, paddle.h+6, 6, true);
                 ctx.shadowBlur = 0;
             }
 
-            // Balls with neon glow
+            // Balls with glow
             for (var j = 0; j < balls.length; j++) {
                 var b = balls[j];
-                ctx.shadowColor = 'rgba(252,185,0,0.7)';
-                ctx.shadowBlur = 15;
+                ctx.shadowColor = PAL.ballGlow;
+                ctx.shadowBlur = MODE === 'retro' ? 0 : 15;
                 var bg = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
-                bg.addColorStop(0, '#fff');
-                bg.addColorStop(0.4, NEON.gold);
-                bg.addColorStop(1, '#806000');
+                bg.addColorStop(0, PAL.ballInner);
+                bg.addColorStop(0.4, PAL.ballMid);
+                bg.addColorStop(1, PAL.ballOuter);
                 ctx.fillStyle = bg;
                 ctx.beginPath();
                 ctx.arc(b.x, b.y, b.r, 0, Math.PI*2);
                 ctx.fill();
                 ctx.shadowBlur = 0;
+                // Cosmic: dust trail behind ball
+                if (MODE === 'cosmic') {
+                    ctx.fillStyle = 'rgba(' + PAL.starColor + ',0.25)';
+                    ctx.beginPath();
+                    ctx.arc(b.x - b.dx * 1.5, b.y - b.dy * 1.5, b.r * 0.6, 0, Math.PI*2);
+                    ctx.fill();
+                }
             }
 
             // Powerups
-            for (var k = 0; k < powerups.length; k++) {
-                var pw = powerups[k];
-                ctx.save();
-                ctx.translate(pw.x, pw.y);
-                ctx.rotate(pw.rot);
-                ctx.shadowColor = pw.color;
-                ctx.shadowBlur = 10;
-                ctx.fillStyle = pw.color;
-                rrect(-14, -14, 28, 28, 4);
-                ctx.shadowBlur = 0;
-                ctx.fillStyle = '#000';
-                ctx.font = 'bold 12px Orbitron, monospace';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-                var label = pw.type === 'bigPaddle' ? 'W' : pw.type === 'multiBall' ? 'M' : '+';
-                ctx.fillText(label, 0, 0);
-                ctx.restore();
+            if (CFG.showPowerups) {
+                for (var k = 0; k < powerups.length; k++) {
+                    var pw = powerups[k];
+                    ctx.save();
+                    ctx.translate(pw.x, pw.y);
+                    ctx.rotate(pw.rot);
+                    ctx.shadowColor = pw.color;
+                    ctx.shadowBlur = 10;
+                    ctx.fillStyle = pw.color;
+                    rrect(-14, -14, 28, 28, 4);
+                    ctx.shadowBlur = 0;
+                    ctx.fillStyle = '#000';
+                    ctx.font = 'bold 12px Orbitron, monospace';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    var label = pw.type === 'bigPaddle' ? 'W' : pw.type === 'multiBall' ? 'M' : '+';
+                    ctx.fillText(label, 0, 0);
+                    ctx.restore();
+                }
             }
 
             // Particles
@@ -785,7 +1218,7 @@
                 ctx.globalAlpha = p.life;
                 ctx.fillStyle = p.color;
                 ctx.shadowColor = p.color;
-                ctx.shadowBlur = 4;
+                ctx.shadowBlur = MODE === 'retro' ? 0 : 4;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, 2.2, 0, Math.PI*2);
                 ctx.fill();
@@ -799,8 +1232,8 @@
                 ctx.globalAlpha = ft.life;
                 ctx.fillStyle = ft.color;
                 ctx.shadowColor = ft.color;
-                ctx.shadowBlur = 6;
-                ctx.font = 'bold 13px "Press Start 2P", monospace';
+                ctx.shadowBlur = MODE === 'retro' ? 0 : 6;
+                ctx.font = 'bold 13px ' + (MODE === 'retro' ? '"Press Start 2P", monospace' : '"Press Start 2P", monospace');
                 ctx.textAlign = 'center';
                 ctx.fillText(ft.text, ft.x, ft.y);
             }
@@ -906,6 +1339,29 @@
 
         // ── INIT ─────────────────────────────────────
         initState();
+
+        // Retro mode: hide level and high score from HUD
+        if (!CFG.showLevel) {
+            document.getElementById('level').parentElement.style.display = 'none';
+        }
+        if (!CFG.showHighScore) {
+            document.getElementById('highScore').parentElement.style.display = 'none';
+        }
+
+        // Update start screen subtitle per mode
+        var modeNames = {
+            classic: '◆ CLASSIC ARCADE EDITION ◆',
+            powerup: '◆ POWER-UP ARENA ◆',
+            neon: '◆ NEON STYLE ◆',
+            hard: '◆ EXPERT CHALLENGE ◆',
+            precision: '◆ PRECISION HIT ◆',
+            gold: '◆ GOLD RUSH ◆',
+            cosmic: '◆ COSMIC RUN ◆',
+            retro: '◆ RETRO ARCADE ◆'
+        };
+        var subtitleEl = document.querySelector('.start-subtitle');
+        if (subtitleEl) subtitleEl.textContent = modeNames[MODE] || modeNames.classic;
+
         updateHUD();
         updateHearts();
         loop();

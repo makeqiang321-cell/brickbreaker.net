@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brick Breaker Blog — Tips &amp; Guides | BrickBreaker</title>
+    <meta name="description" content="Brick breaker game guides, tips and tricks, mobile setup, PC walkthroughs, and the 50-year history from Atari Breakout to modern browser gaming.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="brick breaker blog, brick breaker guides, brick breaker tips, arcade game history, breakout game blog, brick breaker walkthrough">
+    <link rel="canonical" href="https://brickbreaker.net/blog.html">
+
+    <meta property="og:title" content="Brick Breaker Blog — Tips &amp; Guides | BrickBreaker">
+    <meta property="og:description" content="Brick breaker game guides, tips and tricks, mobile setup, PC walkthroughs, and the 50-year history from Atari Breakout to modern browser gaming.">
+    <meta property="og:image" content="https://brickbreaker.net/og-image.png">
+    <meta property="og:url" content="https://brickbreaker.net/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Brick Breaker Blog",
+        "url": "https://brickbreaker.net/blog.html",
+        "description": "Brick breaker game guides, tips and tricks, and arcade history — from Atari Breakout to modern browser gaming.",
+        "publisher": { "@type": "Organization", "name": "BrickBreaker.net", "url": "https://brickbreaker.net" }
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brickbreaker.net/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://brickbreaker.net/blog.html" }
+        ]
+    }
+    </script>
+
+    <style>
+        .blog-page { padding: 100px 0 60px; }
+        .breadcrumb { font-size: 0.8rem; color: var(--text-faint); margin-bottom: 10px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .blog-header { margin-bottom: 36px; }
+        .blog-tag {
+            display: inline-block;
+            font-size: 0.58rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--primary);
+            background: rgba(124,58,237,0.1);
+            border: 1px solid rgba(124,58,237,0.25);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        .blog-h1 { font-weight: 800; font-size: clamp(1.4rem, 3vw, 1.9rem); letter-spacing: -0.5px; margin: 0 0 8px; }
+        .blog-desc { font-size: 0.85rem; color: var(--text-dim); max-width: 560px; line-height: 1.6; margin: 0; }
+        .blog-h2 { font-weight: 700; font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--text); margin: 0 0 18px; letter-spacing: -0.3px; }
+        .blog-grid { display: grid; grid-template-columns: 1fr; gap: 0; max-width: 760px; }
+        .post-card {
+            display: flex;
+            flex-direction: column;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border);
+            padding: 22px 0;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s;
+        }
+        .post-card:first-of-type { border-top: 1px solid var(--border); }
+        .post-card:hover { border-bottom-color: var(--primary); }
+        .post-card .post-cat {
+            display: inline-block;
+            font-size: 0.55rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+        .post-card h3 {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text);
+            margin: 0 0 4px;
+            line-height: 1.3;
+        }
+        .post-card:hover h3 { color: var(--primary); }
+        .post-card .post-desc {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.55;
+            margin: 0 0 8px;
+        }
+        .post-card .post-meta {
+            font-size: 0.68rem;
+            color: var(--text-faint);
+            letter-spacing: 0.3px;
+        }
+        .post-card .post-link {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 4px;
+        }
+        .post-card:hover .post-link { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .blog-h1 { font-size: 1.3rem; }
+            .post-card { padding: 16px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="./index.html" class="nav-brand"><img src="./img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./new-games/index.html">NEW GAMES</a></li>
+                <li><a href="./hot-games/index.html">HOT GAMES</a></li>
+                <li><a href="blog.html" class="active">BLOG</a></li>
+                <li><a href="./about/index.html">ABOUT</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+        </div>
+    </nav>
+
+    <main class="blog-page">
+        <div class="container">
+            <div class="breadcrumb"><a href="./index.html">Home</a> › Blog</div>
+            <div class="blog-header">
+                <span class="blog-tag">Guides & Stories</span>
+                <h1 class="blog-h1">Brick Breaker Blog — Game Guides, Tips &amp; Arcade History</h1>
+                <p class="blog-desc">Guides, walkthroughs, and deep dives into the brick-breaking genre — from the 1976 original to modern browser gaming. New articles added regularly.</p>
+            </div>
+
+            <h2 class="blog-h2">Latest Brick Breaker Articles &amp; Guides</h2>
+
+            <div class="blog-grid">
+                <!-- Retro: blackberry brick breaker -->
+                <a class="post-card" href="blog-blackberry-brick-breaker.html">
+                    <span class="post-cat">Retro</span>
+                    <h3>BlackBerry Brick Breaker — The Phone Game That Defined a Generation</h3>
+                    <p class="post-desc">Before the iPhone, before the App Store, there was Brick Breaker on BlackBerry. The story of the game that turned millions of businesspeople into gamers — and why it still holds up.</p>
+                    <span class="post-meta">August 2026</span>
+                    <span class="post-link">Read Article →</span>
+                </a>
+
+                <!-- Guide: brick breaker io unlocked all levels -->
+                <a class="post-card" href="blog-brick-breaker-io-unlocked.html">
+                    <span class="post-cat">Guide</span>
+                    <h3>Brick Breaker IO — Unlocked All Levels</h3>
+                    <p class="post-desc">Skip the grind. Here is how .io brick breaker games handle level unlocks, which versions give you all stages from the start, and where to play with everything open.</p>
+                    <span class="post-meta">August 2026</span>
+                    <span class="post-link">Read Guide →</span>
+                </a>
+
+                <!-- History: brick game online -->
+                <a class="post-card" href="blog-brick-breaker-original.html">
+                    <span class="post-cat">History</span>
+                    <h3>Brick Game Online — The Original Brick Breaker from Atari to BlackBerry</h3>
+                    <p class="post-desc">Before browsers and app stores, the original brick game lived on arcade cabinets and flip phones. The Jobs-and-Wozniak origin story, plus the BlackBerry version that defined a generation.</p>
+                    <span class="post-meta">August 2026</span>
+                    <span class="post-link">Read History →</span>
+                </a>
+
+                <!-- Nostalgia: old brick breaker game (KD 29.7 容易) -->
+                <a class="post-card" href="blog-old-brick-breaker.html">
+                    <span class="post-cat">Nostalgia</span>
+                    <h3>Old Brick Breaker Games — And Where to Play Them Now</h3>
+                    <p class="post-desc">BlackBerry, DX-Ball, Miniclip Flash games — a tour through the brick breakers that defined snack breaks before smartphones, and how to replay every one of them.</p>
+                    <span class="post-meta">August 2026</span>
+                    <span class="post-link">Read Nostalgia →</span>
+                </a>
+
+                <!-- Guide: brick breaker unblocked (KD 34 容易) -->
+                <a class="post-card" href="blog-brick-breaker-unblocked.html">
+                    <span class="post-cat">Guide</span>
+                    <h3>How to Play Brick Breaker Unblocked at School or Work</h3>
+                    <p class="post-desc">HTML5 games slip through filters that block app stores and downloads. No install, no admin — here is why it loads on networks where other game sites get stuck.</p>
+                    <span class="post-meta">August 2026</span>
+                    <span class="post-link">Read Guide →</span>
+                </a>
+
+                <!-- Feature: google block breaker (保留) -->
+                <a class="post-card" href="blog-google-block-breaker.html">
+                    <span class="post-cat">Feature</span>
+                    <h3>Google Block Breaker — The Easter Egg Hiding in Plain Sight</h3>
+                    <p class="post-desc">How Google's built-in search result game put arcade gameplay in front of millions. No download, no app — just type and play, right above the blue links.</p>
+                    <span class="post-meta">August 2026</span>
+                    <span class="post-link">Read Feature →</span>
+                </a>
+
+                <!-- Retro: retro brick breaker (KD 30.4 容易) -->
+                <a class="post-card" href="blog-retro-brick-breaker.html">
+                    <span class="post-cat">Retro Pick</span>
+                    <h3>Brick Breaker Retro — GamePix & Other Classic Throwbacks</h3>
+                    <p class="post-desc">Pixel-art paddles, chiptune soundtracks, arcade-perfect throwbacks. Where to find the best retro brick breaker on GamePix and beyond.</p>
+                    <span class="post-meta">August 2026</span>
+                    <span class="post-link">Read Retro Pick →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="./img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                    <p>The best place to play brick breaker online. Free, fast, no download.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Play</h4>
+                    <ul>
+                        <li><a href="./index.html#play-now">Play Now</a></li>
+                        <li><a href="./game/index.html">Full Game</a></li>
+                        <li><a href="./index.html#how-to-play">How to Play</a></li>
+                        <li><a href="./index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="./about/index.html">About</a></li>
+                        <li><a href="./contact/index.html">Contact</a></li>
+                        <li><a href="./privacy/index.html">Privacy</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

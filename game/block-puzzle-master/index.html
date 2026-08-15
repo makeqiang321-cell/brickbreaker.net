@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Puzzle Master — Play Free Online | BrickBreaker</title>
+    <meta name="description" content="Play Block Puzzle Master online — drag colorful pieces onto an 8×8 grid, clear rows and columns, and keep the board alive. No rotation, no timer, free to play.">
+    <meta name="keywords" content="block puzzle master, block puzzle game, free puzzle game, no timer puzzle, block placement game">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://brickbreaker.net/game/block-puzzle-master/">
+
+    <meta property="og:title" content="Block Puzzle Master — Play Free Online | BrickBreaker">
+    <meta property="og:description" content="Play Block Puzzle Master online — drag colorful pieces onto an 8×8 grid, clear rows and columns, and keep the board alive. No rotation, no timer, free to play.">
+    <meta property="og:image" content="https://brickbreaker.net/img/block-puzzle-master-cover.svg">
+    <meta property="og:url" content="https://brickbreaker.net/game/block-puzzle-master/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"VideoGame","name":"Block Puzzle Master","description":"Play Block Puzzle Master online — drag colorful pieces onto an 8×8 grid, clear rows and columns, and keep the board alive. No rotation, no timer, free to play.","genre":["Puzzle","Casual","Strategy"],"image":"https://brickbreaker.net/img/block-puzzle-master-cover.svg","url":"https://brickbreaker.net/game/block-puzzle-master/","applicationCategory":"Game","operatingSystem":"Web","playMode":"SinglePlayer","gamePlatform":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":1},"author":{"@type":"Organization","name":"BrickBreaker.net"},"publisher":{"@type":"Organization","name":"BrickBreaker.net"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.2","bestRating":"5","ratingCount":1800,"reviewCount":270}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Block Puzzle Master?","acceptedAnswer":{"@type":"Answer","text":"Block Puzzle Master is a free online block puzzle game where you drag colorful pieces onto an 8×8 grid. Clear complete rows and columns to make space, keep the board from filling up, and chase your highest score. No rotation, no timer, no download — just open and play."}},{"@type":"Question","name":"Can I play Block Puzzle Master online?","acceptedAnswer":{"@type":"Answer","text":"Yes. Block Puzzle Master runs in any modern browser — desktop, tablet, or phone. Touch controls let you press, drag, and drop pieces naturally. No app install, no registration, no Adobe Flash required."}},{"@type":"Question","name":"How do you score higher in Block Puzzle Master?","acceptedAnswer":{"@type":"Answer","text":"Keep the center of the board flexible as long as possible — that is where large pieces go. Clear rows and columns in combos for score multipliers, avoid leaving isolated single-cell holes, and scan all three upcoming pieces before placing the first one so you never trap yourself with a shape that cannot fit."}},{"@type":"Question","name":"Who should play Block Puzzle Master?","acceptedAnswer":{"@type":"Answer","text":"Block Puzzle Master is perfect for players who enjoy calm strategy over speed — block puzzle fans, casual gamers looking for a relaxing break, and anyone who likes high-score chases with no timer pressure. If you enjoy games like Block Crush or Block Puzzle Legend, you will feel right at home."}}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://brickbreaker.net/"},{"@type":"ListItem","position":2,"name":"Hot Games","item":"https://brickbreaker.net/hot-games/"},{"@type":"ListItem","position":3,"name":"Block Puzzle Master","item":"https://brickbreaker.net/game/block-puzzle-master/"}]}
+    </script>
+
+    <style>
+        .gd-page { padding: 90px 0 0; }
+        .gd-breadcrumb { font-size: 0.78rem; color: var(--text-faint); padding: 16px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .gd-breadcrumb a:hover { text-decoration: underline; }
+
+        /* Section Nav */
+        .gd-nav { position: sticky; top: 56px; z-index: 40; border-bottom: 1px solid var(--border); background: var(--bg); padding: 10px 0; }
+        .gd-nav-inner { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; gap: 8px; overflow-x: auto; }
+        .gd-nav a { white-space: nowrap; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); padding: 7px 16px; font-size: 0.78rem; font-weight: 700; color: var(--text); text-decoration: none; transition: border-color .2s,background .2s; }
+        .gd-nav a:hover { border-color: var(--primary); background: rgba(124,58,237,.08); }
+
+        /* Play Section */
+        .gd-play { padding: 24px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-play-card { overflow: hidden; border-radius: 24px; border: 1px solid rgba(255,255,255,.06); background: linear-gradient(180deg,#0a0020,#100030); padding: 16px; box-shadow: 0 20px 44px rgba(0,0,0,.3); }
+        .gd-play-frame { position: relative; overflow: hidden; background: #000; border-radius: 16px; }
+        .gd-play-frame iframe { width: 100%; height: 44vh; min-height: 340px; border: none; display: block; }
+        .gd-play-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; padding: 12px 16px; border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); }
+        .gd-play-score { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+        .gd-play-score-label { font-size: .68rem; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; color: var(--text); }
+        .gd-stars { color: #fcb900; font-size: 1rem; }
+        .gd-rating { font-weight: 700; color: var(--text); font-size: .82rem; }
+        .gd-rating-count { font-size: .72rem; color: var(--text-faint); }
+        .gd-play-actions { display: flex; gap: 8px; }
+        .gd-btn-full { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text); font-size: .78rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: border-color .2s; }
+        .gd-btn-full:hover { border-color: var(--primary); }
+        .gd-btn-play { display: inline-flex; align-items: center; gap: 6px; padding: 9px 22px; border-radius: 999px; background: linear-gradient(180deg,#8b5cf6,#7c3aed); color: #fff; font-size: .78rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: filter .2s; border: none; }
+        .gd-btn-play:hover { filter: brightness(1.15); }
+
+        /* Game Info */
+        .gd-info { padding: 12px 24px 0; max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+        .gd-info-card { border-radius: 16px; border: 1px solid var(--border); background: var(--bg-card); padding: 12px 18px; }
+        .gd-info-card .gd-byline { font-size: .7rem; color: var(--text-faint); margin-top: 2px; }
+        .gd-share-row { display: flex; gap: 8px; margin-left: auto; }
+        .gd-btn-share { display: inline-flex; align-items: center; gap: 5px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-dim); font-size: .72rem; font-weight: 600; cursor: pointer; transition: border-color .2s; }
+        .gd-btn-share:hover { border-color: var(--primary); color: var(--text); }
+
+        /* Hero Guide */
+        .gd-hero { padding: 28px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-hero-card { border-radius: 24px; border: 1px solid rgba(124,58,237,.18); background: linear-gradient(135deg,rgba(124,58,237,.1),rgba(167,139,250,.03)); padding: 32px 30px; }
+        .gd-hero-tag { font-size: .58rem; font-weight: 800; letter-spacing: 2.4px; text-transform: uppercase; color: var(--primary); margin: 0 0 8px; }
+        .gd-hero-h1 { font-weight: 800; font-size: clamp(1.6rem,3.2vw,2.4rem); line-height: .98; letter-spacing: -.6px; color: var(--text); margin: 0 0 10px; max-width: 22ch; }
+        .gd-hero-desc { font-size: .88rem; color: var(--text-dim); line-height: 1.65; max-width: 560px; margin: 0; }
+        .gd-hero-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; background: var(--primary); color: #fff; border: none; border-radius: 999px; padding: 10px 22px; font-size: .84rem; font-weight: 700; text-decoration: none; transition: filter .2s; }
+        .gd-hero-cta:hover { filter: brightness(1.15); }
+
+        /* Guide Sections */
+        .gd-section { padding: 32px 24px; }
+        .gd-section-inner { max-width: 1120px; margin: 0 auto; display: grid; gap: 24px; grid-template-columns: 1.05fr .95fr; }
+        .gd-article { border-radius: 22px; border: 1px solid var(--border); background: var(--bg-card); padding: 26px 28px; }
+        .gd-article-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); line-height: 1; color: var(--text); margin: 0 0 8px; }
+        .gd-article-sub { font-size: .84rem; color: var(--text-faint); margin: 0 0 14px; }
+        .gd-article-body { font-size: 1rem; color: var(--text-dim); line-height: 1.7; }
+        .gd-article-body p { margin: 0 0 13px; }
+        .gd-article-body ul { padding-left: 18px; margin: 8px 0 16px; }
+        .gd-article-body li { margin-bottom: 6px; }
+        .gd-article-body li::marker { color: var(--primary); }
+
+        .gd-sidebar { display: flex; flex-direction: column; gap: 16px; }
+        .gd-sb-card { border-radius: 22px; border: 1px solid var(--border); background: var(--bg-card); padding: 22px 24px; }
+        .gd-sb-card h3 { font-weight: 800; font-size: 1.05rem; color: var(--text); margin: 0 0 12px; }
+        .gd-sb-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 7px; }
+        .gd-sb-list li { border-radius: 12px; border: 1px solid var(--border); background: rgba(124,58,237,.03); padding: 10px 14px; font-size: .84rem; font-weight: 600; color: var(--text-dim); }
+
+        /* Screenshots */
+        .gd-shots { padding: 0 24px 32px; max-width: 1120px; margin: 0 auto; }
+        .gd-shots-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-shots-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-shots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+        .gd-shot { border-radius: 20px; border: 1px solid var(--border); background: var(--bg-card); overflow: hidden; }
+        .gd-shot img { width: 100%; min-height: 200px; object-fit: cover; display: block; }
+        .gd-shot figcaption { padding: 12px 16px; font-size: .76rem; color: var(--text-faint); line-height: 1.5; }
+
+        /* FAQ */
+        .gd-faq { padding: 0 24px 48px; max-width: 1120px; margin: 0 auto; }
+        .gd-faq-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-faq-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-faq-item { border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); padding: 18px 22px; margin-bottom: 10px; }
+        .gd-faq-q { font-size: .85rem; font-weight: 700; color: var(--text); margin: 0 0 6px; }
+        .gd-faq-a { font-size: .8rem; color: var(--text-dim); line-height: 1.6; margin: 0; }
+
+        .gd-footer-msg { padding: 0 24px 20px; max-width: 1120px; margin: 0 auto; font-size: .76rem; color: var(--text-faint); text-align: center; }
+
+        /* You May Also Like */
+        .gd-also { padding: 0 24px 48px; max-width: 1120px; margin: 0 auto; }
+        .gd-also-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-also-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-also-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+        .gd-also-card { display: block; border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); overflow: hidden; text-decoration: none; color: inherit; transition: border-color .2s, transform .2s, box-shadow .2s; }
+        .gd-also-card:hover { border-color: rgba(124,58,237,.4); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(124,58,237,.1); }
+        .gd-also-img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; }
+        .gd-also-body { padding: 14px 16px; }
+        .gd-also-title { font-size: .82rem; font-weight: 800; color: var(--text); margin: 0 0 4px; }
+        .gd-also-desc { font-size: .72rem; color: var(--text-faint); line-height: 1.5; margin: 0; }
+
+        @media (max-width: 768px) {
+            .gd-section-inner { grid-template-columns: 1fr; }
+            .gd-play-frame iframe { height: 320px; min-height: 280px; }
+            .gd-hero-card { padding: 22px 18px; }
+            .gd-info { flex-direction: column; align-items: flex-start; }
+            .gd-share-row { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="../../index.html" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../../new-games/index.html">NEW GAMES</a></li>
+            <li><a href="../../hot-games/index.html">HOT GAMES</a></li>
+            <li><a href="../../blog.html">BLOG</a></li>
+            <li><a href="../../about/index.html">ABOUT</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<main class="gd-page">
+
+    <!-- Breadcrumb -->
+    <div class="gd-breadcrumb"><a href="../../index.html">Home</a> / <a href="../../hot-games/index.html">Hot Games</a> / <strong>Block Puzzle Master</strong></div>
+
+    <!-- Section Nav -->
+    <nav class="gd-nav">
+        <div class="gd-nav-inner">
+            <a href="#play">Play</a>
+            <a href="#overview">Overview</a>
+            <a href="#platforms">Platforms</a>
+            <a href="#how-to-play">How to Play</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Play Section -->
+    <section class="gd-play" id="play">
+        <div class="gd-play-card">
+            <div class="gd-play-frame" id="gameWindow">
+                <iframe src="https://play.wgplayground.com/ifr/51ea0bc5f256bb51d5276e1c0441566c" title="Block Puzzle Master" allow="autoplay; fullscreen" loading="eager" allowfullscreen></iframe>
+            </div>
+            <div class="gd-play-bar">
+                <div class="gd-play-score">
+                    <span class="gd-play-score-label">Player Score</span>
+                    <span class="gd-stars">★★★★★</span>
+                    <span class="gd-rating">4.2/5</span>
+                    <span class="gd-rating-count">Based on 1,800+ ratings</span>
+                </div>
+                <div class="gd-play-actions">
+                    <a href="https://www.wgplayground.com/game/gamepush/block-puzzle-master" target="_blank" class="gd-btn-play">▶ Play Fullscreen</a>
+                    <button class="gd-btn-full" id="fullBtn" title="Toggle fullscreen">⛶</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Info -->
+    <div class="gd-info">
+        <div class="gd-info-card">
+            <p class="gd-byline" style="font-weight:800;font-size:1.15rem;color:var(--text);margin:0;">Block Puzzle Master</p>
+            <p class="gd-byline">Puzzle • 8×8 Grid • No Timer • No Rotation • by Onki Games</p>
+        </div>
+        <div class="gd-share-row">
+            <button class="gd-btn-share" onclick="navigator.clipboard.writeText('https://brickbreaker.net/game/block-puzzle-master/')">📋 Copy link</button>
+        </div>
+    </div>
+
+    <!-- Hero Guide -->
+    <div class="gd-hero">
+        <div class="gd-hero-card">
+            <p class="gd-hero-tag">Block Puzzle Master Guide</p>
+            <h1 class="gd-hero-h1">Play Block Puzzle Master Online</h1>
+            <p class="gd-hero-desc">Block Puzzle Master is a free block puzzle game about placing pieces on an 8×8 grid, clearing rows and columns, managing space, and chasing a higher score before the board fills up.</p>
+            <a href="#play" class="gd-hero-cta">▼ Play Now</a>
+        </div>
+    </div>
+
+    <!-- Overview + Sidebar -->
+    <section class="gd-section" id="overview">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Block Puzzle Master Guide</h2>
+                <p class="gd-article-sub">Block Puzzle Master is calm at first, but every piece changes the board and makes the next placement more important.</p>
+                <div class="gd-article-body">
+                    <p>Block Puzzle Master asks you to fit pieces into an 8×8 grid and clear rows or columns before the board gets crowded. You get three shapes at a time — pick any of them, drag it onto the grid, and the piece locks in place. No rotation, no undo, no timer. Once a piece lands, it is permanent, and every gap you leave is a future problem.</p>
+                    <p>The challenge comes from planning space. A useful gap can save a run, while one awkward L-shape can block several future moves. Unlike Tetris where speed is everything, here spatial reasoning is the skill. You see three pieces in the queue. You pick which one to play. The game ends only when no remaining piece fits anywhere, and that moment always arrives faster than you expect.</p>
+                    <p>Good players keep the board flexible, avoid isolated 1×1 holes, and use each clear to open room for the next set. Clearing a row and a column with the same piece triggers a combo multiplier — that is where the high scores live. Block Puzzle Master stays compelling because it never punishes you for taking your time, yet every placement feels like it matters.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card" id="platforms">
+                    <h3>Block Puzzle Master Release Date & Platforms</h3>
+                    <ul class="gd-sb-list">
+                        <li>Released: March 2024</li>
+                        <li>Developer: Onki Games</li>
+                        <li>Platform: Web browser (HTML5)</li>
+                        <li>Mobile: iOS & Android supported</li>
+                        <li>Genre: Casual block puzzle</li>
+                        <li>Rating: 4.2/5 (1,800+ votes)</li>
+                    </ul>
+                </div>
+                <div class="gd-sb-card" id="how-to-play">
+                    <h3>How to Play Block Puzzle Master</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Start with the basics, then use each run to improve placement, board management, and line-clear efficiency.</p>
+                    <ul class="gd-sb-list">
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Place pieces carefully</strong><span style="font-size:.8rem;color:var(--text-faint);">Fit each block where it leaves useful room for future shapes.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Clear full lines</strong><span style="font-size:.8rem;color:var(--text-faint);">Complete rows or columns to remove blocks and create space.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Avoid trapped holes</strong><span style="font-size:.8rem;color:var(--text-faint);">Small isolated gaps can make later pieces much harder to place.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Plan for the next set</strong><span style="font-size:.8rem;color:var(--text-faint);">Do not use all open space unless the clear is worth it.</span></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <div class="gd-shots">
+        <h2 class="gd-shots-h2">Block Puzzle Master Screenshots</h2>
+        <p class="gd-shots-sub">A quick look at the colorful block puzzle style and space-control loop of Block Puzzle Master.</p>
+        <div class="gd-shots-grid">
+            <figure class="gd-shot">
+                <img src="../../img/block-puzzle-master-cover.svg" alt="Block Puzzle Master artwork showing colorful block puzzle pieces" loading="lazy">
+                <figcaption>Block Puzzle Master turns smart placement into a colorful score-chasing puzzle.</figcaption>
+            </figure>
+            <figure class="gd-shot">
+                <img src="../../img/block-puzzle-master-cover.svg" alt="Block Puzzle Master game art with bright blocks and a puzzle board" loading="lazy" style="object-position: top;">
+                <figcaption>Clean line clears keep the board open and the next move possible.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+
+    <!-- Tips -->
+    <section class="gd-section" id="strategy">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Block Puzzle Master Tips — Plan Your Moves</h2>
+                <p class="gd-article-sub">Block Puzzle Master rewards spatial reasoning and planning. Here is how to push your score higher.</p>
+                <div class="gd-article-body">
+                    <p>Keep the board flexible — a rigid board kills runs faster than any single bad piece. Spread placements across the grid so every new set of three has options. Avoid crowding the center or one corner because lopsided boards collapse on the heavy side every time.</p>
+                    <p>Avoid isolated 1×1 holes at all costs. A single square gap in the wrong spot is a run-ender because most pieces are 2+ blocks wide — they cannot fill a lone empty cell. Before committing any placement, ask whether the remaining two pieces in your set can fill the gaps you are about to create.</p>
+                    <p>Clearing a row and a column with the same piece triggers a combo multiplier — that is where the high scores live. Set up cross-shaped openings that let one piece wipe a row and column simultaneously. Combo clears multiply your score and buy you more breathing room than single-line clears ever will.</p>
+                    <p>Use each clear strategically to open room for the next set. A clear that leaves an awkward narrow corridor is worse than no clear at all. Target clears that produce wide, open rectangles — those are the spaces where any piece shape can land without trouble.</p>
+                    <p>Watch the three-piece queue before every move. Those visible shapes are your planning horizon. If a long bar is coming, leave a vertical or horizontal lane open for it now instead of burning the perfect piece on a mediocre spot.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card">
+                    <h3>Block Puzzle Master Score Tips &amp; Strategy</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Combo clears are where the high scores live — one piece clearing a row AND a column triggers the multiplier.</p>
+                    <ul class="gd-sb-list">
+                        <li>Combo clears multiply your score — row + column = multiplier</li>
+                        <li>Keep the board flexible — avoid crowding one area</li>
+                        <li>Never create 1×1 holes — most pieces cannot fill them</li>
+                        <li>Check the three-piece queue before every placement</li>
+                        <li>Clear with purpose — open wide spaces, not narrow corridors</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- What Makes Block Puzzle Master Different -->
+    <section class="gd-section" id="differences">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">What Makes Block Puzzle Master Different</h2>
+                <p class="gd-article-sub">No rotation, no timer, no undo — Block Puzzle Master strips block puzzles down to their purest form.</p>
+                <div class="gd-article-body">
+                    <p>Most block puzzle games give you rotation, a hold slot, or the ability to skip pieces you do not like. Block Puzzle Master removes all of that. You get three pieces, you pick one, and it locks in place exactly as it appears — no rotation, no undo, no second chances. That constraint makes every placement a deliberate commitment rather than a casual drop.</p>
+                    <p>Unlike Tetris where speed is everything, Block Puzzle Master tests spatial reasoning at your own pace. There is no falling clock and no gravity pushing pieces down — you see three shapes and have unlimited time to decide where each one goes. The tension comes from watching your open space shrink, not from a countdown. That makes it a perfect second-screen game: open a tab, place two pieces, get back to work.</p>
+                    <p>The 8×8 grid is also tighter than the 10×10 grids used by many competitors. Smaller board means fewer safe zones — every gap matters from the very first placement. Where larger grids give you a breezy opening phase with low stakes, Block Puzzle Master demands smart placement from move one. If you have played 10×10 block puzzles and found the early game too forgiving, the 8×8 format will feel like a meaningful upgrade.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card">
+                    <h3>6 Key Differences: Block Puzzle Master vs Others</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">No rotation, no undo, and a tight 8×8 grid — Block Puzzle Master strips the formula down to pure placement.</p>
+                    <ul class="gd-sb-list">
+                        <li>No rotation — pieces lock as they appear</li>
+                        <li>No undo — every placement is permanent</li>
+                        <li>8×8 grid — tighter than typical 10×10 puzzles</li>
+                        <li>No timer — play at your own pace</li>
+                        <li>Three-piece queue — pick one, plan the rest</li>
+                        <li>Spatial reasoning over speed — think, do not react</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Why Still Played -->
+    <section class="gd-section" id="why">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Why Block Puzzle Master Still Gets Played</h2>
+                <p class="gd-article-sub">The no-timer, no-rotation format keeps the game accessible while the tight 8×8 grid keeps it tense — that balance is why players return.</p>
+                <div class="gd-article-body">
+                    <p>Block Puzzle Master stays compelling because it never punishes you for taking your time, yet every placement feels like it matters. There is no clock, no falling pieces, no pressure — just you, three shapes, and an 8×8 grid that gets tighter every turn. The game ends only when no remaining piece can fit anywhere, and that moment always arrives faster than you expect, which is exactly what keeps you clicking "play again."</p>
+                    <p>The placement permanence creates a tight feedback loop. No rotation, no undo — when a run ends, you can trace exactly which placement killed it. See the mistake, learn from it, try again. That loop is what keeps people coming back for one more round, and it is the same mechanic that makes chess puzzles and Sudoku endlessly replayable: every failure is a lesson, and every lesson makes the next run feel winnable.</p>
+                    <p>The game also works as a perfect quick-session puzzle. Open a tab, place a few pieces, close it — no penalty, no lost progress. That low-commitment design fits into coffee breaks, commutes, and the gaps between meetings. In a world of games that demand your full attention for 30-minute sessions, Block Puzzle Master respects that you might only have three minutes — and makes those three minutes count.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card">
+                    <h3>Why Players Return to Block Puzzle Master</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">The placement-permanence loop creates a "one more round" pull — every failure teaches you something, and every run feels winnable.</p>
+                    <ul class="gd-sb-list">
+                        <li>No timer — play at your own pace, no pressure</li>
+                        <li>No rotation — placement is final and every move matters</li>
+                        <li>3 visible pieces — each turn is a strategic choice</li>
+                        <li>Empty board start — you build the problem yourself</li>
+                        <li>Spatial reasoning over reflexes — think, do not react</li>
+                        <li>Quick sessions fit any spare moment, no commitment</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Watch + Timeline -->
+    <section class="gd-section" id="timeline">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Watch Block Puzzle Master</h2>
+                <p class="gd-article-sub">A quick visual read on the game's pace, style, and why the retry loop keeps feeling tempting.</p>
+                <figure class="gd-shot" style="margin-top:16px;">
+                    <img src="../../img/block-puzzle-master-cover.svg" alt="Block Puzzle Master key art" style="aspect-ratio:16/9;">
+                    <figcaption>Block Puzzle Master — visual overview from the official cover art.</figcaption>
+                </figure>
+            </article>
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Block Puzzle Master Timeline</h2>
+                <div class="gd-article-body" style="margin-top:14px;">
+                    <p>Released March 2024 by Onki Games. Built in Unity 6 for WebGL. Playable on desktop browsers, iPhone, iPad, and Android — same game, same high-score chase, any screen.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <div class="gd-faq" id="faq">
+        <h2 class="gd-faq-h2">Block Puzzle Master FAQ</h2>
+        <p class="gd-faq-sub">Quick answers for players trying Block Puzzle Master, block placement, scoring, and beginner strategy.</p>
+        <div class="gd-faq-item"><p class="gd-faq-q">What is Block Puzzle Master?</p><p class="gd-faq-a">Block Puzzle Master is a block puzzle game where you place pieces, clear lines, and try to keep the board from filling up.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">Can I play Block Puzzle Master online?</p><p class="gd-faq-a">Yes. Block Puzzle Master is playable online from this game page.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">How do you score higher in Block Puzzle Master?</p><p class="gd-faq-a">Keep the board flexible, clear rows and columns, and avoid leaving awkward isolated holes.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">Who should play Block Puzzle Master?</p><p class="gd-faq-a">It is a good choice for players who enjoy block puzzles, calm strategy, and high-score games.</p></div>
+    </div>
+
+    <!-- You May Also Like -->
+    <div class="gd-also">
+        <h2 class="gd-also-h2">More Block Puzzle Games You May Like</h2>
+        <p class="gd-also-sub">More browser games with the same short-session, one-more-try energy.</p>
+        <div class="gd-also-grid">
+            <a href="../block-crush/index.html" class="gd-also-card">
+                <img src="../../img/block-crush-cover.jpg" alt="Block Crush" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body">
+                    <p class="gd-also-title">Block Crush</p>
+                    <p class="gd-also-desc">Same 8×8 grid, but with rotation and a bigger piece set — more options, more ways to mess up.</p>
+                </div>
+            </a>
+            <a href="../1010-color-match/index.html" class="gd-also-card">
+                <img src="../../img/1010-color-match-cover.jpg" alt="1010 Color Match" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body">
+                    <p class="gd-also-title">1010 Color Match</p>
+                    <p class="gd-also-desc">Color-matching on a 10×10 grid — pop three of the same color instead of clearing lines.</p>
+                </div>
+            </a>
+            <a href="../block-puzzle-legend/index.html" class="gd-also-card">
+                <img src="../../img/block-puzzle-legend-cover.jpg" alt="Block Puzzle Legend" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body">
+                    <p class="gd-also-title">Block Puzzle Legend</p>
+                    <p class="gd-also-desc">Pre-scattered board changes everything — you are not building from zero, you are cleaning up.</p>
+                </div>
+            </a>
+            <a href="../bricky-blast/index.html" class="gd-also-card">
+                <img src="../../img/bricky-blast-cover.jpg" alt="Bricky Blast" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body">
+                    <p class="gd-also-title">Bricky Blast</p>
+                    <p class="gd-also-desc">Three blocks, no skipping, auto-snap — the constraint is the point, and it works.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <p class="gd-footer-msg">Block Puzzle Master is free to play online — no download, no sign-up, no timer. Drag, drop, clear, repeat.</p>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../../img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                <p>The best place to play brick breaker online. Free, fast, no download.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Play</h4>
+                <ul><li><a href="../../index.html#play-now">Play Now</a></li><li><a href="../../game/index.html">Full Game</a></li><li><a href="../../index.html#how-to-play">How to Play</a></li><li><a href="../../index.html#faq">FAQ</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="../../privacy/index.html">Privacy</a></li><li><a href="../../blog.html">Blog</a></li></ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p></div>
+    </div>
+</footer>
+
+<script>
+(function(){
+    var fullBtn = document.getElementById('fullBtn');
+    var gameWindow = document.getElementById('gameWindow');
+    if (fullBtn && gameWindow) {
+        fullBtn.addEventListener('click', function(){
+            var el = gameWindow;
+            if (document.fullscreenElement) { document.exitFullscreen(); }
+            else { if (el.requestFullscreen) el.requestFullscreen(); else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); }
+        });
+    }
+})();
+</script>
+<script src="../../js/main.js"></script>
+</body>
+</html>

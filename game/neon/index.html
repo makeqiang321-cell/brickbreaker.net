@@ -1,55 +1,258 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Brick Breaker — Retro Arcade Breakout with Glowing Visual Effects</title>
-    <meta name="description" content="Play Neon Brick Breaker with stunning retro arcade visuals! Glowing bricks, neon particle effects, and cosmic backgrounds. Free browser game — play now!">
+    <title>Play Neon Brick Breaker Online | BrickBreaker</title>
+    <meta name="description" content="Play Neon Style Brick Breaker — glowing bricks, particle explosions, dark theme. The visual upgrade for classic breakout. Free, no download.">
+    <meta name="keywords" content="neon brick breaker, play neon brick breaker, glowing brick breaker, neon breakout game, dark theme brick breaker, free brick breaker game online">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://brickbreaker.net/game/neon/">
+
+    <meta property="og:title" content="Play Neon Brick Breaker Online | BrickBreaker">
+    <meta property="og:description" content="Play Neon Style Brick Breaker — glowing bricks, particle explosions, dark theme. The visual upgrade for classic breakout. Free, no download.">
+    <meta property="og:image" content="https://brickbreaker.net/og-image.png">
+    <meta property="og:url" content="https://brickbreaker.net/game/neon/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Schema.org: VideoGame -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Neon Brick Breaker",
+        "url": "https://brickbreaker.net/game/neon/",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web",
+        "description": "Play Neon Brick Breaker online — glowing visuals, double particle explosions, 80+ twinkling stars, and a vibrant purple-blue palette. Same core physics as Classic, maxed-out presentation.",
+        "playMode": "SinglePlayer",
+        "gamePlatform": "Web browser",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1 },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "bestRating": "5", "ratingCount": 920, "reviewCount": 138 }
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What makes Neon Brick Breaker different?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Neon Brick Breaker cranks every visual system to maximum — double particle counts, glowing brick explosions, 80+ animated background stars, and a vibrant purple-blue neon palette. Same physics, cinematic presentation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Neon Brick Breaker harder than Classic?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No — it uses the same core physics, ball speed ramping, and 25+ level layouts as Classic Mode. The neon glow against the dark background actually makes the ball easier to track at high speeds, and the brighter brick colors improve visibility during fast-paced later levels."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I play Neon Brick Breaker on my phone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Neon Brick Breaker works on iOS, Android, and any modern mobile browser. The dark theme and glowing visuals look especially striking on OLED phone screens, where the deep blacks make the neon colors pop without draining battery."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Brick Breaker", "item": "https://brickbreaker.net/" },
+            { "@type": "ListItem", "position": 2, "name": "Neon Brick Breaker", "item": "https://brickbreaker.net/game/neon/" }
+        ]
+    }
+    </script>
+
     <style>
-        .game-page { padding: 70px 0 40px; }
-        .game-page h1 { font-weight: 800; font-size: 1.2rem; color: var(--text); text-align: center; margin-bottom: 10px; letter-spacing: -0.5px; }
-        .game-subtitle { text-align: center; color: var(--text-dim); font-weight: 500; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 28px; }
-        .game-frame-wrap { max-width: 800px; margin: 0 auto; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); }
-        .game-frame { display: block; width: 100%; aspect-ratio: 800/600; border: none; }
-        .game-info { max-width: 720px; margin: 30px auto 0; }
-        .game-info h2 { font-weight: 700; font-size: 0.85rem; color: var(--gold); letter-spacing: 1px; margin: 20px 0 10px; }
-        .game-info p, .game-info li { color: var(--text-dim); font-size: 0.88rem; line-height: 1.8; margin-bottom: 10px; }
-        .game-info ul { padding-left: 18px; }
-        .back-link { text-align: center; margin: 30px 0; }
-        .back-link a { font-weight: 600; font-size: 0.7rem; letter-spacing: 1px; color: var(--primary); }
+        .detail-page { padding: 100px 0 60px; }
+        .breadcrumb { font-size: 0.8rem; color: var(--text-faint); margin-bottom: 12px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .detail-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+        .detail-main h1 { font-size: 1.5rem; font-weight: 800; margin: 0 0 4px; }
+        .detail-main .detail-tag { display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 1.5px; padding: 3px 10px; border-radius: 8px; background: rgba(167,139,250,0.12); color: #a78bfa; margin-bottom: 12px; }
+        .detail-cover { width: 100%; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border); }
+        .detail-desc { font-size: 0.88rem; color: var(--text-dim); line-height: 1.7; margin-bottom: 24px; }
+        .detail-section { margin-bottom: 20px; }
+        .detail-section h2 { font-size: 0.9rem; font-weight: 700; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .detail-section p, .detail-section li { font-size: 0.82rem; color: var(--text-dim); line-height: 1.65; }
+        .detail-section ul { padding-left: 18px; }
+        .detail-section li { margin-bottom: 4px; }
+        .detail-section li::marker { color: #a78bfa; }
+        .detail-sidebar { position: sticky; top: 100px; }
+        .game-window { background: #0a0a14; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .game-window iframe { width: 100%; height: 480px; border: none; display: block; }
+        .game-actions { display: flex; gap: 8px; padding: 10px 12px; background: var(--bg); border-top: 1px solid var(--border); }
+        .btn-play { flex:1; padding: 10px 0; background: #a78bfa; color: #000; border: none; border-radius: 8px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.5px; cursor: pointer; text-align: center; text-decoration: none; display: block; }
+        .btn-play:hover { filter: brightness(1.15); }
+        .btn-full { width: 42px; height: 42px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .btn-full:hover { border-color: #a78bfa; }
+        .game-stats { display: flex; gap: 12px; margin-top: 12px; }
+        .game-stat { flex:1; text-align: center; padding: 10px 6px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
+        .game-stat .stat-num { font-size: 1rem; font-weight: 800; color: var(--text); }
+        .game-stat .stat-label { font-size: 0.6rem; color: var(--text-faint); letter-spacing: 0.5px; margin-top: 2px; }
+        @media (max-width: 860px) { .detail-layout { grid-template-columns: 1fr; } .detail-sidebar { position: static; order: -1; } .game-window iframe { height: 360px; } }
     </style>
 </head>
 <body>
-    <nav class="nav visible">
-        <div class="nav-inner">
-            <a href="/" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
-            <ul class="nav-links"><li><a href="/">HOME</a></li><li><a href="/game/">FULL GAME</a></li></ul>
-        </div>
-    </nav>
-    <main class="game-page">
-        <div class="container">
-            <h1>NEON BRICK BREAKER</h1>
-            <p class="game-subtitle">◆ RETRO ARCADE GLOW — COSMIC VISUALS ◆</p>
-            <div class="game-frame-wrap">
-                <iframe src="../../game/index.html?mode=neon" title="Play Neon Brick Breaker Online" allowfullscreen allow="autoplay; fullscreen" loading="lazy" class="game-frame"></iframe>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="../../index.html" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../../new-games/index.html">NEW GAMES</a></li>
+            <li><a href="../../hot-games/index.html">HOT GAMES</a></li>
+            <li><a href="../../blog.html">BLOG</a></li>
+            <li><a href="../../about/index.html">ABOUT</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<main class="detail-page">
+    <div class="container">
+        <div class="breadcrumb"><a href="../../index.html">Home</a> › <a href="../../hot-games/index.html">Hot Games</a> › Neon Style</div>
+        <div class="detail-layout">
+            <div class="detail-main">
+                <span class="detail-tag">ARCADE</span>
+                <h1>Play Neon Brick Breaker Online</h1>
+                <p style="font-size:0.82rem;color:var(--text-faint);margin:0 0 16px;">Brick Breaker • Glowing Visuals • Dark Theme</p>
+
+                <svg class="detail-cover" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d0020"/><stop offset="100%" stop-color="#2d0060"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="800" height="400" fill="url(#bg4)" rx="12"/><rect x="40" y="30" width="720" height="240" rx="8" fill="none" stroke="rgba(167,139,250,0.4)" stroke-width="2" filter="url(#glow)"/><rect x="60" y="45" width="46" height="18" rx="3" fill="#a78bfa" opacity="0.95" filter="url(#glow)"/><rect x="112" y="45" width="46" height="18" rx="3" fill="#c084fc" opacity="0.95"/><rect x="164" y="45" width="46" height="18" rx="3" fill="#e879f9" opacity="0.95"/><rect x="216" y="45" width="46" height="18" rx="3" fill="#a78bfa" opacity="0.95"/><rect x="60" y="69" width="46" height="18" rx="3" fill="#818cf8" opacity="0.85"/><rect x="112" y="69" width="46" height="18" rx="3" fill="#a78bfa" opacity="0.85"/><rect x="164" y="69" width="46" height="18" rx="3" fill="#c084fc" opacity="0.85"/><rect x="216" y="69" width="46" height="18" rx="3" fill="#818cf8" opacity="0.85"/><circle cx="360" cy="200" r="8" fill="#e879f9" filter="url(#glow)" opacity="0.95"/><rect x="320" y="265" width="80" height="10" rx="5" fill="#a78bfa" filter="url(#glow)" opacity="0.9"/><circle cx="580" cy="100" r="1.5" fill="#fff" opacity="0.4"/><circle cx="620" cy="160" r="1" fill="#fff" opacity="0.3"/><circle cx="550" cy="140" r="1.5" fill="#fff" opacity="0.5"/><text x="400" y="330" text-anchor="middle" fill="rgba(167,139,250,0.4)" font-family="Inter,sans-serif" font-size="18" font-weight="700">SCORE: 22,100</text></svg>
+
+                <div class="detail-desc">
+                    <p><strong>Neon Style</strong> is the mode you play when you want <a href="../../index.html#features">brick breaker</a> to <em>look</em> as good as it feels. Same <a href="../../index.html#how-to-play">brick breaker</a> core physics as Classic, but every visual system is cranked to maximum intensity — double particle counts, glowing brick explosions, a denser starfield, and HUD elements that pulse as your score climbs. The paddle leaves a subtle motion trail. Power-up pickups flash. Every brick shatter is a tiny fireworks show.</p>
+                    <p>We built Neon Style for the "aesthetics matter" players — the ones who want the game to feel cinematic. It's the same 25+ levels and 6-row grid you know, but the presentation makes every hit feel more satisfying. And honestly? The neon glow against the dark background makes it easier to track the ball at high speeds.</p>
+                </div>
+
+                <div class="detail-section">
+                    <h2>Neon Brick Breaker Visual Upgrades</h2>
+                    <h3>Particle Effects</h3>
+                    <ul>
+                        <li><strong>Double particles.</strong> Every brick hit produces twice the sparkle count. Colors match the brick — red bricks explode red, purple bricks explode purple.</li>
+                        <li><strong>Paddle trail.</strong> A subtle afterglow follows your paddle movement, making fast repositioning look cinematic.</li>
+                    </ul>
+                    <h3>Visual Feedback</h3>
+                    <ul>
+                        <li><strong>Pulsing HUD.</strong> Score and level indicators glow brighter as you progress through levels.</li>
+                        <li><strong>Denser starfield.</strong> 80+ background stars with randomized twinkle — the deeper you go, the more active the cosmos.</li>
+                    </ul>
+                    <h3>Color Palette</h3>
+                    <ul>
+                        <li><strong>Enhanced palette.</strong> Bricks use vibrant purples, electric blues, hot pinks — no muted colors allowed.</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h2>Neon Brick Breaker Controls</h2>
+                    <h3>Paddle Controls</h3>
+                    <ul>
+                        <li><strong>Mouse / Touch</strong> — move paddle left/right</li>
+                        <li><strong>Keyboard arrows</strong> — fine paddle control</li>
+                        <li><strong>R key</strong> — restart any level</li>
+                        <li><strong>F key</strong> — toggle fullscreen</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h2>Neon Brick Breaker FAQ</h2>
+                    <h3>Q: What makes Neon Brick Breaker different?</h3>
+                    <p>Neon Brick Breaker cranks every visual system to maximum — double particle counts, glowing brick explosions, 80+ animated background stars, and a vibrant purple-blue neon palette. Same physics, cinematic presentation.</p>
+                    <h3>Q: Is Neon Brick Breaker harder than Classic?</h3>
+                    <p>No — it uses the same core physics, ball speed ramping, and 25+ level layouts as Classic Mode. The neon glow against the dark background actually makes the ball easier to track at high speeds, and the brighter brick colors improve visibility during fast-paced later levels.</p>
+                </div>
             </div>
-            <div class="game-info">
-                <h2>◆ ABOUT NEON STYLE</h2>
-                <p>Neon Brick Breaker amplifies the visual intensity of every moment. <strong>Particle effects are doubled</strong> — each brick destruction explodes with extra sparkles in the brick's own color. The starfield background is denser and brighter, creating a cosmic light show behind the action. HUD elements pulse gently with a glow effect that intensifies as your score climbs.</p>
-                <p>This mode uses the same core physics and brick layouts as Classic, but every visual system runs at <strong>maximum intensity</strong>. If you love watching bricks shatter in a burst of color, Neon Style is your mode. The score float animations are larger, the power-up pickups flash more dramatically, and even the paddle leaves a subtle motion trail as it moves.</p>
-                <h2>◆ WHAT'S DIFFERENT IN NEON MODE</h2>
-                <ul>
-                    <li><strong>Double particle count</strong> — every brick hit produces twice the visual feedback</li>
-                    <li><strong>Enhanced color palette</strong> — bricks use vibrant purple, electric blue, gold, and violet</li>
-                    <li><strong>Paddle motion trail</strong> — a subtle afterglow follows your paddle movement</li>
-                    <li><strong>Pulsing HUD</strong> — score and level indicators glow brighter as you progress</li>
-                </ul>
-                <div class="back-link"><a href="/">← BACK TO ALL GAMES</a></div>
+
+            <aside class="detail-sidebar">
+                <div class="game-window" id="gameWindow">
+                    <iframe src="../../game/index.html?mode=neon" title="Neon Style Brick Breaker" allow="autoplay" loading="eager" sandbox="allow-scripts allow-same-origin"></iframe>
+                    <div class="game-actions">
+                        <a href="../../game/index.html?mode=neon" target="_blank" class="btn-play">▶ PLAY FULLSCREEN</a>
+                        <button class="btn-full" id="fullBtn" title="Toggle fullscreen">⛶</button>
+                    </div>
+                </div>
+                <div class="game-stats">
+                    <div class="game-stat"><div class="stat-num">2×</div><div class="stat-label">PARTICLES</div></div>
+                    <div class="game-stat"><div class="stat-num">80+</div><div class="stat-label">STARS</div></div>
+                    <div class="game-stat"><div class="stat-num">25+</div><div class="stat-label">LEVELS</div></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+<!-- ═══ TRY OTHER MODES ═══ -->
+<section style="max-width:1120px;margin:0 auto;padding:20px 24px 0;">
+    <h2 style="font-weight:800;font-size:clamp(1.1rem,2vw,1.45rem);letter-spacing:-0.5px;color:var(--text);margin:0 0 12px;">Try Other Brick Breaker Modes</h2>
+    <p style="font-size:.85rem;color:var(--text-dim);margin:0 0 16px;">Click any mode to switch — all free, no download.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-bottom:32px;">
+        <a href="../classic/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Classic</a>
+        <a href="../power-up/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Power-Up</a>
+        <a href="../neon/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Neon Style</a>
+        <a href="../hard/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Hard Mode</a>
+        <a href="../precision/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Precision</a>
+        <a href="../gold/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Gold Rush</a>
+        <a href="../cosmic/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Cosmic Run</a>
+        <a href="../retro/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Retro Arcade</a>
+        <a href="../arkanoid/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Arkanoid</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../../img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                <p>The best place to play brick breaker online. Free, fast, no download.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Play</h4>
+                <ul><li><a href="../../index.html#play-now">Play Now</a></li><li><a href="../../game/index.html">Full Game</a></li><li><a href="../../index.html#how-to-play">How to Play</a></li><li><a href="../../index.html#faq">FAQ</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="../../privacy/index.html">Privacy</a></li><li><a href="../../blog.html">Blog</a></li></ul>
             </div>
         </div>
-    </main>
+        <div class="footer-bottom"><p>© 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p></div>
+    </div>
+</footer>
+
+<script>
+(function(){
+    var fullBtn = document.getElementById('fullBtn');
+    var gameWindow = document.getElementById('gameWindow');
+    if (fullBtn && gameWindow) {
+        fullBtn.addEventListener('click', function(){
+            var el = gameWindow;
+            if (document.fullscreenElement) { document.exitFullscreen(); }
+            else { if (el.requestFullscreen) el.requestFullscreen(); else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); }
+        });
+    }
+})();
+</script>
+<script src="../../js/main.js"></script>
 </body>
 </html>

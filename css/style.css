@@ -227,19 +227,6 @@ strong { color: var(--text); font-weight: 600; }
     font-weight: 600;
 }
 
-/* ── AD BANNER ─────────────────────────────── */
-.ad-banner {
-    max-width: 840px;
-    margin: 0 auto 8px;
-    min-height: 60px;
-    background: var(--bg-light);
-    border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
 /* ── GAMES GRID ────────────────────────────── */
 .games-section { background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 

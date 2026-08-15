@@ -1,55 +1,278 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classic Brick Breaker — Play Retro Breakout Game Online Free</title>
-    <meta name="description" content="Play Classic Brick Breaker online free! Retro breakout arcade game with original brick patterns, paddle control, and high score tracking. No download required.">
+    <title>Play Classic Brick Breaker Online | BrickBreaker</title>
+    <meta name="description" content="Play Brick Breaker Classic Mode — the original paddle-and-ball arcade experience. 25+ levels, ramping ball speed, pure breakout action. Free, no download.">
+    <meta name="keywords" content="classic brick breaker, play classic brick breaker, brick breaker classic mode, original brick breaker, breakout game, free brick breaker game online">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://brickbreaker.net/game/classic/">
+
+    <meta property="og:title" content="Play Classic Brick Breaker Online | BrickBreaker">
+    <meta property="og:description" content="Play Brick Breaker Classic Mode — the original paddle-and-ball arcade experience. 25+ levels, ramping ball speed, pure breakout action. Free, no download.">
+    <meta property="og:image" content="https://brickbreaker.net/og-image.png">
+    <meta property="og:url" content="https://brickbreaker.net/game/classic/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Schema.org: VideoGame -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Classic Brick Breaker",
+        "url": "https://brickbreaker.net/game/classic/",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web",
+        "description": "Play Classic Brick Breaker online — the original paddle-and-ball arcade game with 25+ levels, ramping ball speed, and pure breakout action. No gimmicks, free, no download.",
+        "playMode": "SinglePlayer",
+        "gamePlatform": "Web browser",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1 },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "bestRating": "5", "ratingCount": 1850, "reviewCount": 278 }
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Classic Brick Breaker?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Classic Brick Breaker is the purest paddle-and-ball arcade experience — 25+ levels, ramping ball speed, no gimmicks. Break every brick on screen to advance while the ball gets faster each round."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many levels does Classic Brick Breaker have?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Classic Brick Breaker has 25+ levels. Ball speed climbs about 8% per round. New layouts every level — the further you go, the harder it gets."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does scoring work in Classic Brick Breaker?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Higher rows pay more — top red row = 60pts, bottom purple = 10pts. The formula is (6 - row) × 10. Clearing a full screen banks 500 to 2,000 points depending on the layout."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Classic Brick Breaker save my high score?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes — your high score saves automatically to your browser via localStorage and persists even after you close the tab. The game also tracks your personal best across sessions, so you can always pick up right where you left off on the leaderboard."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Brick Breaker", "item": "https://brickbreaker.net/" },
+            { "@type": "ListItem", "position": 2, "name": "Classic Brick Breaker", "item": "https://brickbreaker.net/game/classic/" }
+        ]
+    }
+    </script>
+
     <style>
-        .game-page { padding: 70px 0 40px; }
-        .game-page h1 { font-weight: 800; font-size: 1.2rem; color: var(--text); text-align: center; margin-bottom: 10px; letter-spacing: -0.5px; }
-        .game-subtitle { text-align: center; color: var(--text-dim); font-weight: 500; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 28px; }
-        .game-frame-wrap { max-width: 800px; margin: 0 auto; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); }
-        .game-frame { display: block; width: 100%; aspect-ratio: 800/600; border: none; }
-        .game-info { max-width: 720px; margin: 30px auto 0; }
-        .game-info h2 { font-weight: 700; font-size: 0.85rem; color: var(--gold); letter-spacing: 1px; margin: 20px 0 10px; }
-        .game-info p, .game-info li { color: var(--text-dim); font-size: 0.88rem; line-height: 1.8; margin-bottom: 10px; }
-        .game-info ul { padding-left: 18px; }
-        .back-link { text-align: center; margin: 30px 0; }
-        .back-link a { font-weight: 600; font-size: 0.7rem; letter-spacing: 1px; color: var(--primary); }
+        .detail-page { padding: 100px 0 60px; }
+        .breadcrumb { font-size: 0.8rem; color: var(--text-faint); margin-bottom: 12px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .detail-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+        .detail-main h1 { font-size: 1.5rem; font-weight: 800; margin: 0 0 4px; }
+        .detail-main .detail-tag { display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 1.5px; padding: 3px 10px; border-radius: 8px; background: rgba(124,58,237,0.12); color: var(--primary); margin-bottom: 12px; }
+        .detail-cover { width: 100%; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border); }
+        .detail-desc { font-size: 0.88rem; color: var(--text-dim); line-height: 1.7; margin-bottom: 24px; }
+        .detail-section { margin-bottom: 20px; }
+        .detail-section h2 { font-size: 0.9rem; font-weight: 700; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .detail-section p, .detail-section li { font-size: 0.82rem; color: var(--text-dim); line-height: 1.65; }
+        .detail-section ul { padding-left: 18px; }
+        .detail-section li { margin-bottom: 4px; }
+        .detail-section li::marker { color: var(--primary); }
+        .detail-sidebar { position: sticky; top: 100px; }
+        .game-window { background: #0a0a14; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .game-window iframe { width: 100%; height: 480px; border: none; display: block; }
+        .game-actions { display: flex; gap: 8px; padding: 10px 12px; background: var(--bg); border-top: 1px solid var(--border); }
+        .btn-play { flex:1; padding: 10px 0; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.5px; cursor: pointer; text-align: center; text-decoration: none; display: block; }
+        .btn-play:hover { filter: brightness(1.15); }
+        .btn-full { width: 42px; height: 42px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .btn-full:hover { border-color: var(--primary); }
+        .game-stats { display: flex; gap: 12px; margin-top: 12px; }
+        .game-stat { flex:1; text-align: center; padding: 10px 6px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
+        .game-stat .stat-num { font-size: 1rem; font-weight: 800; color: var(--text); }
+        .game-stat .stat-label { font-size: 0.6rem; color: var(--text-faint); letter-spacing: 0.5px; margin-top: 2px; }
+        @media (max-width: 860px) {
+            .detail-layout { grid-template-columns: 1fr; }
+            .detail-sidebar { position: static; order: -1; }
+            .game-window iframe { height: 360px; }
+        }
     </style>
 </head>
 <body>
-    <nav class="nav visible">
-        <div class="nav-inner">
-            <a href="/" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
-            <ul class="nav-links"><li><a href="/">HOME</a></li><li><a href="/game/">FULL GAME</a></li></ul>
-        </div>
-    </nav>
-    <main class="game-page">
-        <div class="container">
-            <h1>CLASSIC BRICK BREAKER</h1>
-            <p class="game-subtitle">◆ RETRO BREAKOUT — ORIGINAL BRICK PATTERNS ◆</p>
-            <div class="game-frame-wrap">
-                <iframe src="../../game/index.html?mode=classic" title="Play Classic Brick Breaker Online" allowfullscreen allow="autoplay; fullscreen" loading="lazy" class="game-frame"></iframe>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="../../index.html" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../../new-games/index.html">NEW GAMES</a></li>
+            <li><a href="../../hot-games/index.html">HOT GAMES</a></li>
+            <li><a href="../../blog.html">BLOG</a></li>
+            <li><a href="../../about/index.html">ABOUT</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<main class="detail-page">
+    <div class="container">
+        <div class="breadcrumb"><a href="../../index.html">Home</a> › <a href="../../hot-games/index.html">Hot Games</a> › Classic Mode</div>
+        <div class="detail-layout">
+            <div class="detail-main">
+                <span class="detail-tag">CLASSIC</span>
+                <h1>Play Classic Brick Breaker Online</h1>
+                <p style="font-size:0.82rem;color:var(--text-faint);margin:0 0 16px;">Brick Breaker • 25+ Levels • Ramping Speed</p>
+
+                <svg class="detail-cover" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0020"/><stop offset="100%" stop-color="#1a0050"/></linearGradient></defs><rect width="800" height="400" fill="url(#bg1)" rx="12"/><rect x="40" y="30" width="720" height="240" rx="8" fill="none" stroke="rgba(124,58,237,0.3)" stroke-width="2"/><rect x="60" y="45" width="46" height="18" rx="3" fill="#ff4040" opacity="0.9"/><rect x="112" y="45" width="46" height="18" rx="3" fill="#ff7400" opacity="0.9"/><rect x="164" y="45" width="46" height="18" rx="3" fill="#fcb900" opacity="0.9"/><rect x="216" y="45" width="46" height="18" rx="3" fill="#00d084" opacity="0.9"/><rect x="268" y="45" width="46" height="18" rx="3" fill="#0693e3" opacity="0.9"/><rect x="320" y="45" width="46" height="18" rx="3" fill="#7c3aed" opacity="0.9"/><rect x="60" y="69" width="46" height="18" rx="3" fill="#ff4040" opacity="0.7"/><rect x="112" y="69" width="46" height="18" rx="3" fill="#ff7400" opacity="0.7"/><rect x="164" y="69" width="46" height="18" rx="3" fill="#fcb900" opacity="0.7"/><rect x="216" y="69" width="46" height="18" rx="3" fill="#00d084" opacity="0.7"/><rect x="268" y="69" width="46" height="18" rx="3" fill="#0693e3" opacity="0.7"/><rect x="320" y="69" width="46" height="18" rx="3" fill="#7c3aed" opacity="0.7"/><circle cx="380" cy="200" r="8" fill="#fff" opacity="0.9"/><rect x="340" y="265" width="80" height="10" rx="5" fill="#fff" opacity="0.9"/><text x="400" y="330" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-family="Inter,sans-serif" font-size="18" font-weight="700">SCORE: 12,450</text></svg>
+
+                <div class="detail-desc">
+                    <p><strong>Classic Mode</strong> is where every <a href="../../index.html#play-now">brick breaker</a> player starts — and where most of them stay. No gimmicks, no power-ups (unless you flip 'em on), just you, a paddle, and a ball that gets faster every time it ricochets off a brick. It's the purest version of the game, and honestly? It might be the best.</p>
+                    <p>We built this mode to feel like the arcade cabinets you'd find in a 1980s bowling alley — tight controls, satisfying brick-shatter feedback, and just enough screen shake to make every hit feel <em>important</em>. The ball speeds up across 25+ levels, and by the time you hit Level 20, you're tracking it with your peripheral vision because your eyes can't keep up directly.</p>
+                </div>
+
+                <div class="detail-section">
+                    <h2>How to Play Classic Brick Breaker</h2>
+                    <h3>Core Gameplay</h3>
+                    <p>Move your paddle left and right to bounce the ball upward. Break every brick on screen to advance. If the ball falls past your paddle, you lose a life. Clear all bricks before lives run out. That's the whole game — but "simple" and "easy" are not the same thing.</p>
+                    <h3>Controls &amp; Keys</h3>
+                    <ul>
+                        <li><strong>Mouse / Touch</strong> — move paddle left/right</li>
+                        <li><strong>Keyboard arrows</strong> — fine paddle control</li>
+                        <li><strong>R key</strong> — restart any level</li>
+                        <li><strong>S key</strong> — toggle sound on/off</li>
+                        <li><strong>F key</strong> — toggle fullscreen</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h2>Classic Brick Breaker Scoring &amp; Progression</h2>
+                    <h3>Point System</h3>
+                    <p>Higher rows pay more points. Top row (red) = 60 pts, bottom row (purple) = 10 pts — the formula is <code>(6 - row) × 10</code>. This rewards aggressive play: the bricks that are hardest to reach are worth the most. Clear a full screen and you'll bank anywhere from 500 to 2,000 points depending on the layout.</p>
+                    <h3>Level Progression</h3>
+                    <p>Levels grow progressively harder — more columns, denser layouts, and faster ball speed. By Level 25, the ball is moving at nearly double its starting velocity. Your <a href="../../index.html#how-to-play">brick breaker</a> high score saves automatically to your browser.</p>
+                </div>
+
+                <div class="detail-section">
+                    <h2>Classic Tips &amp; Strategy</h2>
+                    <h3>Scoring Priority</h3>
+                    <ul>
+                        <li><strong>Aim for the top row first.</strong> Red bricks pay 60 points each — clearing them early banks the most score before the ball speeds up.</li>
+                        <li><strong>Use the paddle edges.</strong> Hitting the ball near the left or right edge of the paddle sends it at a sharper angle, helping you reach tricky corner bricks.</li>
+                        <li><strong>Don't chase the ball.</strong> Watch the ball's trajectory, not the paddle. Anticipate where it's going, not where it is.</li>
+                        <li><strong>Keep the ball above the bricks.</strong> Once the ball gets behind the brick rows, it bounces around wildly — great for clearing, terrible for control.</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h2>Classic Brick Breaker FAQ</h2>
+                    <h3>Q: What is Classic Brick Breaker?</h3>
+                    <p>Classic Brick Breaker is the purest paddle-and-ball arcade experience — 25+ levels, ramping ball speed, no gimmicks. Break every brick on screen to advance while the ball gets faster each round.</p>
+                    <h3>Q: How many levels does Classic Brick Breaker have?</h3>
+                    <p>Classic Brick Breaker has 25+ levels. Ball speed climbs about 8% per round. New layouts every level — the further you go, the harder it gets.</p>
+                    <h3>Q: How does scoring work in Classic Brick Breaker?</h3>
+                    <p>Higher rows pay more — top red row = 60pts, bottom purple = 10pts. The formula is (6 - row) times 10. Clearing a full screen banks 500 to 2,000 points depending on the layout.</p>
+                    <h3>Q: Does Classic Brick Breaker save my high score?</h3>
+                    <p>Yes — your high score saves automatically to your browser via localStorage and persists even after you close the tab. The game also tracks your personal best across sessions, so you can always pick up right where you left off on the leaderboard.</p>
+                </div>
             </div>
-            <div class="game-info">
-                <h2>◆ ABOUT CLASSIC MODE</h2>
-                <p>Classic Brick Breaker brings back the <strong>original breakout experience</strong> that started it all. Simple brick layouts, steady ball speed, and pure arcade satisfaction — just like the 1976 original, but with modern visuals.</p>
-                <p>This mode features <strong>standard brick patterns</strong> with all 4 brick types (Normal, Strong, Gold, Steel). Perfect for beginners learning the basics of angle control, or veterans who want that authentic retro feel.</p>
-                <h2>◆ TIPS FOR BEGINNERS</h2>
-                <ul>
-                    <li>Stay near the <strong>center of the screen</strong> for best paddle coverage</li>
-                    <li>Hit the ball with <strong>paddle edges</strong> to create angled shots</li>
-                    <li>Prioritize <strong>gold bricks</strong> — they're worth 5× normal points</li>
-                    <li>Use <strong>arrow keys</strong> or <strong>A/D keys</strong> for precise paddle movement</li>
-                </ul>
-                <div class="back-link"><a href="/">← BACK TO ALL GAMES</a></div>
+
+            <aside class="detail-sidebar">
+                <div class="game-window" id="gameWindow">
+                    <iframe src="../../game/index.html?mode=classic" title="Classic Mode Brick Breaker" allow="autoplay" loading="eager" sandbox="allow-scripts allow-same-origin"></iframe>
+                    <div class="game-actions">
+                        <a href="../../game/index.html?mode=classic" target="_blank" class="btn-play">▶ PLAY FULLSCREEN</a>
+                        <button class="btn-full" id="fullBtn" title="Toggle fullscreen">⛶</button>
+                    </div>
+                </div>
+                <div class="game-stats">
+                    <div class="game-stat"><div class="stat-num">25+</div><div class="stat-label">LEVELS</div></div>
+                    <div class="game-stat"><div class="stat-num">6</div><div class="stat-label">BRICK ROWS</div></div>
+                    <div class="game-stat"><div class="stat-num">60</div><div class="stat-label">MAX/HIT</div></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+<!-- ═══ TRY OTHER MODES ═══ -->
+<section style="max-width:1120px;margin:0 auto;padding:20px 24px 0;">
+    <h2 style="font-weight:800;font-size:clamp(1.1rem,2vw,1.45rem);letter-spacing:-0.5px;color:var(--text);margin:0 0 12px;">Try Other Brick Breaker Modes</h2>
+    <p style="font-size:.85rem;color:var(--text-dim);margin:0 0 16px;">Click any mode to switch — all free, no download.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-bottom:32px;">
+        <a href="../classic/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Classic</a>
+        <a href="../power-up/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Power-Up</a>
+        <a href="../neon/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Neon Style</a>
+        <a href="../hard/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Hard Mode</a>
+        <a href="../precision/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Precision</a>
+        <a href="../gold/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Gold Rush</a>
+        <a href="../cosmic/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Cosmic Run</a>
+        <a href="../retro/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Retro Arcade</a>
+        <a href="../arkanoid/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Arkanoid</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../../img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                <p>The best place to play brick breaker online. Free, fast, no download.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Play</h4>
+                <ul><li><a href="../../index.html#play-now">Play Now</a></li><li><a href="../../game/index.html">Full Game</a></li><li><a href="../../index.html#how-to-play">How to Play</a></li><li><a href="../../index.html#faq">FAQ</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="../../privacy/index.html">Privacy</a></li><li><a href="../../blog.html">Blog</a></li></ul>
             </div>
         </div>
-    </main>
+        <div class="footer-bottom"><p>© 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p></div>
+    </div>
+</footer>
+
+<script>
+(function(){
+    var fullBtn = document.getElementById('fullBtn');
+    var gameWindow = document.getElementById('gameWindow');
+    if (fullBtn && gameWindow) {
+        fullBtn.addEventListener('click', function(){
+            var el = gameWindow;
+            if (document.fullscreenElement) { document.exitFullscreen(); }
+            else { if (el.requestFullscreen) el.requestFullscreen(); else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); }
+        });
+    }
+})();
+</script>
+<script src="../../js/main.js"></script>
 </body>
 </html>

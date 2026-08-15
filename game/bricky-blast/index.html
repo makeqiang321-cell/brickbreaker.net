@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bricky Blast — Play Free Online | BrickBreaker</title>
+    <meta name="description" content="Play Bricky Blast online — three blocks per turn, no skipping. Auto-snap clears, combo chains, global leaderboard. Free, no download.">
+    <meta name="keywords" content="bricky blast, bricky blast game, block puzzle, free puzzle game, 3 blocks per turn, auto-snap puzzle">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://brickbreaker.net/game/bricky-blast/">
+    <meta property="og:title" content="Bricky Blast — Play Free Online | BrickBreaker">
+    <meta property="og:description" content="Play Bricky Blast online — three blocks per turn, no skipping. Auto-snap clears, combo chains, global leaderboard. Free, no download.">
+    <meta property="og:image" content="https://brickbreaker.net/img/bricky-blast-cover.jpg">
+    <meta property="og:url" content="https://brickbreaker.net/game/bricky-blast/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"VideoGame","name":"Bricky Blast","description":"Play Bricky Blast online — three blocks per turn, no skipping. Auto-snap clears, combo chains, global leaderboard. Free, no download.","genre":["Puzzle","Casual","Strategy"],"image":"https://brickbreaker.net/img/bricky-blast-cover.jpg","url":"https://brickbreaker.net/game/bricky-blast/","applicationCategory":"Game","operatingSystem":"Web","playMode":"SinglePlayer","gamePlatform":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":1},"author":{"@type":"Organization","name":"BrickBreaker.net"},"publisher":{"@type":"Organization","name":"BrickBreaker.net"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","bestRating":"5","ratingCount":2600,"reviewCount":390}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I have to place all three blocks in Bricky Blast?","acceptedAnswer":{"@type":"Answer","text":"Yes — that is the core rule of Bricky Blast. You must place all three blocks before the next set arrives, with no skipping and no holding. Every trio is a mini-puzzle you have to solve in sequence, and the order you place them — awkward piece first while the board is open, easy piece last — is what determines whether the set clears space or clogs the grid."}},{"@type":"Question","name":"How is Bricky Blast different from other block puzzles?","acceptedAnswer":{"@type":"Answer","text":"Bricky Blast sets itself apart with three pillars: forced 3-block placement (no skipping, no holding), auto-snap positioning (blocks lock into valid spots automatically as you drag), and a global leaderboard that ranks your best score against players worldwide. Most block puzzles let you pick the easiest piece; Bricky Blast makes you solve all three."}},{"@type":"Question","name":"Can I play Bricky Blast online on my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes — Bricky Blast works on iOS, Android, and any modern browser with touch controls. Auto-snap placement feels especially natural on mobile, where you drag with your finger and the block locks in automatically. No download or registration needed."}},{"@type":"Question","name":"Is Bricky Blast free to play?","acceptedAnswer":{"@type":"Answer","text":"Completely free with no download, registration, or in-app purchases required. Just open your browser, start a new game, and your score posts to the global leaderboard automatically."}},{"@type":"Question","name":"Does Bricky Blast have a global leaderboard?","acceptedAnswer":{"@type":"Answer","text":"Yes — a global leaderboard ranks your best score against players worldwide after every session. Every run posts a number, which transforms solo puzzle sessions into a quiet rivalry that keeps you coming back to climb the ranks."}}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://brickbreaker.net/"},{"@type":"ListItem","position":2,"name":"New Games","item":"https://brickbreaker.net/new-games/"},{"@type":"ListItem","position":3,"name":"Bricky Blast","item":"https://brickbreaker.net/game/bricky-blast/"}]}
+    </script>
+
+    <style>
+        .gd-page { padding: 90px 0 0; }
+        .gd-breadcrumb { font-size: 0.78rem; color: var(--text-faint); padding: 16px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .gd-breadcrumb a:hover { text-decoration: underline; }
+
+        /* Section Nav */
+        .gd-nav { position: sticky; top: 56px; z-index: 40; border-bottom: 1px solid var(--border); background: var(--bg); padding: 10px 0; }
+        .gd-nav-inner { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; gap: 8px; overflow-x: auto; }
+        .gd-nav a { white-space: nowrap; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); padding: 7px 16px; font-size: 0.78rem; font-weight: 700; color: var(--text); text-decoration: none; transition: border-color .2s,background .2s; }
+        .gd-nav a:hover { border-color: var(--primary); background: rgba(124,58,237,.08); }
+
+        /* Play Section */
+        .gd-play { padding: 24px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-play-card { overflow: hidden; border-radius: 24px; border: 1px solid rgba(255,255,255,.06); background: linear-gradient(180deg,#0a0020,#100030); padding: 16px; box-shadow: 0 20px 44px rgba(0,0,0,.3); }
+        .gd-play-frame { position: relative; overflow: hidden; background: #000; border-radius: 16px; }
+        .gd-play-frame iframe { width: 100%; height: 44vh; min-height: 340px; border: none; display: block; }
+        .gd-play-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; padding: 12px 16px; border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); }
+        .gd-play-score { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+        .gd-play-score-label { font-size: .68rem; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; color: var(--text); }
+        .gd-stars { color: #fcb900; font-size: 1rem; }
+        .gd-rating { font-weight: 700; color: var(--text); font-size: .82rem; }
+        .gd-rating-count { font-size: .72rem; color: var(--text-faint); }
+        .gd-play-actions { display: flex; gap: 8px; }
+        .gd-btn-full { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text); font-size: .78rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: border-color .2s; }
+        .gd-btn-full:hover { border-color: var(--primary); }
+        .gd-btn-play { display: inline-flex; align-items: center; gap: 6px; padding: 9px 22px; border-radius: 999px; background: linear-gradient(180deg,#8b5cf6,#7c3aed); color: #fff; font-size: .78rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: filter .2s; border: none; }
+        .gd-btn-play:hover { filter: brightness(1.15); }
+
+        /* Game Info */
+        .gd-info { padding: 12px 24px 0; max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+        .gd-info-card { border-radius: 16px; border: 1px solid var(--border); background: var(--bg-card); padding: 12px 18px; }
+        .gd-info-card .gd-byline { font-size: .7rem; color: var(--text-faint); margin-top: 2px; }
+        .gd-share-row { display: flex; gap: 8px; margin-left: auto; }
+        .gd-btn-share { display: inline-flex; align-items: center; gap: 5px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-dim); font-size: .72rem; font-weight: 600; cursor: pointer; transition: border-color .2s; }
+        .gd-btn-share:hover { border-color: var(--primary); color: var(--text); }
+
+        /* Hero Guide */
+        .gd-hero { padding: 28px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-hero-card { border-radius: 24px; border: 1px solid rgba(124,58,237,.18); background: linear-gradient(135deg,rgba(124,58,237,.1),rgba(167,139,250,.03)); padding: 32px 30px; }
+        .gd-hero-tag { font-size: .58rem; font-weight: 800; letter-spacing: 2.4px; text-transform: uppercase; color: var(--primary); margin: 0 0 8px; }
+        .gd-hero-h1 { font-weight: 800; font-size: clamp(1.6rem,3.2vw,2.4rem); line-height: .98; letter-spacing: -.6px; color: var(--text); margin: 0 0 10px; max-width: 22ch; }
+        .gd-hero-desc { font-size: .88rem; color: var(--text-dim); line-height: 1.65; max-width: 560px; margin: 0; }
+        .gd-hero-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; background: var(--primary); color: #fff; border: none; border-radius: 999px; padding: 10px 22px; font-size: .84rem; font-weight: 700; text-decoration: none; transition: filter .2s; }
+        .gd-hero-cta:hover { filter: brightness(1.15); }
+
+        /* Guide Sections */
+        .gd-section { padding: 32px 24px; }
+        .gd-section-inner { max-width: 1120px; margin: 0 auto; display: grid; gap: 24px; grid-template-columns: 1.05fr .95fr; }
+        .gd-article { border-radius: 22px; border: 1px solid var(--border); background: var(--bg-card); padding: 26px 28px; }
+        .gd-article-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); line-height: 1; color: var(--text); margin: 0 0 8px; }
+        .gd-article-sub { font-size: .84rem; color: var(--text-faint); margin: 0 0 14px; }
+        .gd-article-body { font-size: 1rem; color: var(--text-dim); line-height: 1.7; }
+        .gd-article-body p { margin: 0 0 13px; }
+        .gd-article-body ul { padding-left: 18px; margin: 8px 0 16px; }
+        .gd-article-body li { margin-bottom: 6px; }
+        .gd-article-body li::marker { color: var(--primary); }
+
+        .gd-sidebar { display: flex; flex-direction: column; gap: 16px; }
+        .gd-sb-card { border-radius: 22px; border: 1px solid var(--border); background: var(--bg-card); padding: 22px 24px; }
+        .gd-sb-card h3 { font-weight: 800; font-size: 1.05rem; color: var(--text); margin: 0 0 12px; }
+        .gd-sb-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 7px; }
+        .gd-sb-list li { border-radius: 12px; border: 1px solid var(--border); background: rgba(124,58,237,.03); padding: 10px 14px; font-size: .84rem; font-weight: 600; color: var(--text-dim); }
+
+        /* Screenshots */
+        .gd-shots { padding: 0 24px 32px; max-width: 1120px; margin: 0 auto; }
+        .gd-shots-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-shots-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-shots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+        .gd-shot { border-radius: 20px; border: 1px solid var(--border); background: var(--bg-card); overflow: hidden; }
+        .gd-shot img { width: 100%; min-height: 200px; object-fit: cover; display: block; }
+        .gd-shot figcaption { padding: 12px 16px; font-size: .76rem; color: var(--text-faint); line-height: 1.5; }
+
+        /* FAQ */
+        .gd-faq { padding: 0 24px 48px; max-width: 1120px; margin: 0 auto; }
+        .gd-faq-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-faq-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-faq-item { border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); padding: 18px 22px; margin-bottom: 10px; }
+        .gd-faq-q { font-size: .85rem; font-weight: 700; color: var(--text); margin: 0 0 6px; }
+        .gd-faq-a { font-size: .8rem; color: var(--text-dim); line-height: 1.6; margin: 0; }
+
+        /* Comparison Table */
+        .gd-table { width: 100%; border-collapse: collapse; margin: 16px 0 20px; font-size: .8rem; }
+        .gd-table thead th { text-align: left; font-weight: 800; font-size: .72rem; letter-spacing: .6px; text-transform: uppercase; color: var(--primary); padding: 10px 12px; border-bottom: 2px solid var(--border); background: rgba(124,58,237,.04); }
+        .gd-table tbody td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-dim); line-height: 1.5; vertical-align: top; }
+        .gd-table tbody tr:hover { background: rgba(124,58,237,.03); }
+        .gd-table tbody td:first-child { font-weight: 700; color: var(--text); white-space: nowrap; }
+
+        .gd-footer-msg { padding: 0 24px 20px; max-width: 1120px; margin: 0 auto; font-size: .76rem; color: var(--text-faint); text-align: center; }
+
+        /* You May Also Like */
+        .gd-also { padding: 0 24px 48px; max-width: 1120px; margin: 0 auto; }
+        .gd-also-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-also-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-also-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+        .gd-also-card { display: block; border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); overflow: hidden; text-decoration: none; color: inherit; transition: border-color .2s, transform .2s, box-shadow .2s; }
+        .gd-also-card:hover { border-color: rgba(124,58,237,.4); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(124,58,237,.1); }
+        .gd-also-img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; }
+        .gd-also-body { padding: 14px 16px; }
+        .gd-also-title { font-size: .82rem; font-weight: 800; color: var(--text); margin: 0 0 4px; }
+        .gd-also-desc { font-size: .72rem; color: var(--text-faint); line-height: 1.5; margin: 0; }
+
+        @media (max-width: 768px) {
+            .gd-section-inner { grid-template-columns: 1fr; }
+            .gd-play-frame iframe { height: 320px; min-height: 280px; }
+            .gd-hero-card { padding: 22px 18px; }
+            .gd-info { flex-direction: column; align-items: flex-start; }
+            .gd-share-row { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="../../index.html" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../../new-games/index.html">NEW GAMES</a></li>
+            <li><a href="../../hot-games/index.html">HOT GAMES</a></li>
+            <li><a href="../../blog.html">BLOG</a></li>
+            <li><a href="../../about/index.html">ABOUT</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<main class="gd-page">
+
+    <!-- Breadcrumb -->
+    <div class="gd-breadcrumb"><a href="../../index.html">Home</a> / <a href="../../new-games/index.html">New Games</a> / <strong>Bricky Blast</strong></div>
+
+    <!-- Section Nav -->
+    <nav class="gd-nav">
+        <div class="gd-nav-inner">
+            <a href="#play">Play</a>
+            <a href="#overview">Overview</a>
+            <a href="#how-to-play">How to Play</a>
+            <a href="#strategy">Strategy</a>
+            <a href="#why">Why Still Played</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Play Section -->
+    <section class="gd-play" id="play">
+        <div class="gd-play-card">
+            <div class="gd-play-frame" id="gameWindow">
+                <iframe src="https://blockblast2.io/embed/bricky-blast" title="Bricky Blast Puzzle Game" allow="autoplay" loading="eager" sandbox="allow-scripts allow-same-origin"></iframe>
+            </div>
+            <div class="gd-play-bar">
+                <div class="gd-play-score">
+                    <span class="gd-play-score-label">Player Score</span>
+                    <span class="gd-stars">★★★★★</span>
+                    <span class="gd-rating">4.5/5</span>
+                    <span class="gd-rating-count">Based on 2,600+ ratings</span>
+                </div>
+                <div class="gd-play-actions">
+                    <a href="https://blockblast2.io/embed/bricky-blast" target="_blank" class="gd-btn-play">▶ Play Fullscreen</a>
+                    <button class="gd-btn-full" id="fullBtn" title="Toggle fullscreen">⛶</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Info -->
+    <div class="gd-info">
+        <div class="gd-info-card">
+            <p class="gd-byline" style="font-weight:800;font-size:1.15rem;color:var(--text);margin:0;">Bricky Blast</p>
+            <p class="gd-byline">Puzzle • 3 Blocks Per Turn • Auto-Snap</p>
+        </div>
+        <div class="gd-share-row">
+            <button class="gd-btn-share" onclick="navigator.clipboard.writeText('https://brickbreaker.net/game/bricky-blast/')">📋 Copy link</button>
+        </div>
+    </div>
+
+    <!-- Hero Guide -->
+    <div class="gd-hero">
+        <div class="gd-hero-card">
+            <p class="gd-hero-tag">Bricky Blast Game Guide</p>
+            <h1 class="gd-hero-h1">Play Bricky Blast Online</h1>
+            <p class="gd-hero-desc">Bricky Blast flips the block puzzle formula on its head — three blocks per turn, no skipping, no holding. Every set is a commitment. Auto-snap makes placement fast, combo chains multiply your score, and a global leaderboard lets you measure up against the world.</p>
+            <a href="#play" class="gd-hero-cta">▼ Play Now</a>
+        </div>
+    </div>
+
+    <!-- Overview + Sidebar -->
+    <section class="gd-section" id="overview">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Play Bricky Blast Online Free — Full Guide</h2>
+                <p class="gd-article-sub">If you are here to play Bricky Blast, know this upfront: you do not get to skip the awkward piece.</p>
+                <div class="gd-article-body">
+                    <p>Bricky Blast works because it removes the safety net. Three blocks appear at the top of the screen and you must place all three — no exceptions. No reserve slot, no discard button, no "maybe later." If a shape is ugly, you find it a home anyway.</p>
+                    <p>That one rule changes everything. Instead of cherry-picking the best piece from a queue, you scan all three at once and plan a sequence. Which block opens space for the next? Which one burns a tricky corner? The order you place them determines whether the set clears the board or clogs it.</p>
+                    <p>Auto-snap keeps the pacing fast. As you drag a block across the grid, valid placements highlight automatically. Drop it and it locks into the nearest valid spot. No pixel-perfect alignment, no frustrating near-misses. The friction is all in the decision-making, not the controls.</p>
+                    <p>Combo clears are where the game rewards planning. Fill a row and a column with a single placement and you trigger a multiplier. Chain multiple combos within one set and the numbers climb fast. The global leaderboard tracks your best run, so every session is a shot at climbing the ranks.</p>
+                    <p>If you like puzzles that force commitment, reward foresight, and give you a worldwide scoreboard to chase, Bricky Blast delivers. No timer, no pressure — just three blocks at a time and a grid that gets tighter every turn.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card" id="how-to-play">
+                    <h3>How to Play Bricky Blast</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Three blocks per turn, no skipping — start with the basics, then use each run to sharpen set-planning, combo-clearing, and leaderboard climbing.</p>
+                    <ul class="gd-sb-list">
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Place all three blocks every turn</strong><span style="font-size:.8rem;color:var(--text-faint);">No holding, no swapping — every block in the set must find a home on the grid.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Auto-snap into position</strong><span style="font-size:.8rem;color:var(--text-faint);">Drag across the grid and valid spots highlight automatically — release to lock in.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Clear rows and columns</strong><span style="font-size:.8rem;color:var(--text-faint);">Fill complete lines to remove blocks and create breathing room for the next set.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Combo clears multiply your score</strong><span style="font-size:.8rem;color:var(--text-faint);">Clear a row and column with one placement to trigger the multiplier — chain combos for high scores.</span></li>
+                    </ul>
+                </div>
+                <div class="gd-sb-card">
+                    <h3>Bricky Blast Release Date &amp; Platforms</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Bricky Blast launched in 2023 with forced 3-block placement — playable anywhere with a browser, no install required.</p>
+                    <ul class="gd-sb-list">
+                        <li>Released: 2023</li>
+                        <li>Developer: 1Games.IO</li>
+                        <li>Platform: Web browser (HTML5)</li>
+                        <li>Mobile: iOS &amp; Android supported</li>
+                        <li>Type: Forced-placement block puzzle</li>
+                        <li>Rating: 4.5/5 (2,600+ votes)</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <div class="gd-shots">
+        <h2 class="gd-shots-h2">Bricky Blast Screenshots</h2>
+        <p class="gd-shots-sub">Clean, dark-grid visuals with satisfying auto-snap placement and combo-clear animations.</p>
+        <div class="gd-shots-grid">
+            <figure class="gd-shot">
+                <img src="../../img/bricky-blast-cover.jpg" alt="Bricky Blast gameplay — three blocks per turn on a dark grid" loading="lazy">
+                <figcaption>Bricky Blast hits its stride when the grid is half-full and every three-block set demands a real plan.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Tips -->
+    <section class="gd-section" id="strategy">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Bricky Blast Tips — Plan the Set, Not the Piece</h2>
+                <p class="gd-article-sub">Bricky Blast rewards forward planning. Here is how to push your score higher and climb the leaderboard.</p>
+                <div class="gd-article-body">
+                    <p>Scan all three blocks before your first placement because the order you place them matters more than which piece you pick. Put the awkward shape first while the grid is still open around it, then save the easy-fit block for last — it will find a spot even if things get tight.</p>
+                    <p>Aim for combo clears above everything because a single placement that fills both a row and a column triggers a multiplier. The best players set up cross-shaped openings that let one block clear two lines at once. More combos mean more points and more breathing room.</p>
+                    <p>Keep corners flexible and avoid boxing yourself into a single quadrant. Spread placements across the grid so every new set of three has options — a clumped board kills runs faster than any awkward piece.</p>
+                    <p>Chase the global leaderboard because your score updates live and every session counts. Even a mid-range run can teach you what not to do next time, and watching the top players' scores gives you a benchmark for your own ceiling.</p>
+                    <p>Never place a block that creates a one-square hole because a single empty cell in the wrong spot can make future blocks impossible to place. Before committing, ask: can the remaining two blocks in this set fill the gaps I am about to create?</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card">
+                    <h3>Bricky Blast Score Tips &amp; Strategy</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Combo clears are where high scores live — one placement clearing a row AND a column triggers the multiplier that sends scores climbing.</p>
+                    <ul class="gd-sb-list">
+                        <li>Combo clears multiply your score — row + column = multiplier</li>
+                        <li>Place awkward blocks first each set while the board is open</li>
+                        <li>Spread placements across the grid — avoid crowding one quadrant</li>
+                        <li>Avoid creating one-square gaps that block future placements</li>
+                        <li>Check the global leaderboard for motivation and benchmarks</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- What Makes Bricky Blast Different -->
+    <section class="gd-section" id="differences">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">What Makes Bricky Blast Different</h2>
+                <p class="gd-article-sub">Forced commitment — that is the Bricky Blast difference in one phrase.</p>
+                <div class="gd-article-body">
+                    <p>Most block puzzle games hand you a queue of pieces and let you pick whichever one feels easiest. Block Crush gives you three to choose from. Tetris sends blocks one at a time and gives you a next-piece preview. You can always stall, rotate, or hold. Bricky Blast rejects all of that.</p>
+                    <p>The defining constraint is simple but unforgiving: <strong>you must place all three blocks every single turn.</strong> No skipping. No holding. No swapping one out. Three blocks appear, and until all three are on the grid, you do not get a new set. That means every trio is a mini-puzzle you have to solve right now, in sequence, with no bailout.</p>
+                    <p>This changes how you think. Instead of asking "which piece fits best?" you ask "in what order do I place these three so they all fit?" The awkward L-shape goes first while the board is open. The easy 1x1 gets saved for last when options are tight. The order you commit is the strategy — and getting it wrong means you just burned a set.</p>
+                    <p>Auto-snap fit is the second pillar. Blocks do not require pixel-perfect alignment. As you drag, valid positions highlight automatically. Release near one and the block locks in. This keeps the game about decisions, not dexterity. You never lose a run because your finger was two pixels off — you lose because you planned poorly.</p>
+                    <p>The global leaderboard is the third. Unlike most casual block puzzles that keep your score local, Bricky Blast ranks you against every player worldwide. Every session posts a number. Every run is a shot at moving up. That competitive layer transforms a chill puzzle into something you want to beat.</p>
+                    <p>If you have played other block puzzles and found them a little too forgiving — a little too easy to stall your way out of trouble — Bricky Blast is the upgrade. No safety net, no holding pattern, just three blocks and a grid that waits for you to prove you know what you are doing.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card">
+                    <h3>6 Key Differences: Bricky Blast vs Others</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Forced 3-block placement, auto-snap positioning, and a global leaderboard — the three pillars that set Bricky Blast apart.</p>
+                    <ul class="gd-sb-list">
+                        <li>Forced 3-block placement — no skipping</li>
+                        <li>Auto-snap positioning — drag &amp; release</li>
+                        <li>Global leaderboard ranks every player</li>
+                        <li>No hold slot — no stashing pieces</li>
+                        <li>Order matters — sequence IS the strategy</li>
+                        <li>Combo multipliers reward planning ahead</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Watch + Timeline -->
+    <section class="gd-section" id="watch">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Watch Bricky Blast</h2>
+                <p class="gd-article-sub">A quick visual read on forced 3-block placement, auto-snap combos, and why the leaderboard keeps players coming back.</p>
+                <figure class="gd-shot" style="margin-top:16px;">
+                    <img src="../../img/bricky-blast-cover.jpg" alt="Bricky Blast key art" style="aspect-ratio:16/9;">
+                    <figcaption>Bricky Blast — visual overview from the official cover art.</figcaption>
+                </figure>
+            </article>
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Bricky Blast Timeline</h2>
+                <div class="gd-article-body" style="margin-top:14px;">
+                    <p>Released 2023 by 1Games.IO. Built for HTML5. Playable on desktop, iPhone, iPad, and Android — same forced 3-block placement, same global leaderboard, any screen.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Why Still Played -->
+    <section class="gd-section" id="why">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Why Bricky Blast Still Gets Played</h2>
+                <p class="gd-article-sub">Three years after release, players keep coming back. The formula is simple but the hooks run deep.</p>
+                <div class="gd-article-body">
+                    <p>The 3-blocks-per-turn constraint is the engine that keeps every session tense. You cannot cherry-pick the easy piece and ignore the rest — all three blocks must find a home. That forced commitment turns every set into a mini-puzzle where the order you place them is the difference between clearing the board and clogging it. The tension never lets up, and that is exactly why players stay locked in.</p>
+                    <p>Auto-snap clears are deeply satisfying in a way that manual placement never matches. Dragging a block across the grid and watching valid spots light up, then releasing to see rows and columns vanish in a combo chain — it delivers a clean dopamine hit every time. The game removes all friction from the controls so the only thing standing between you and a high score is your own planning.</p>
+                    <p>The global leaderboard adds a layer of competition that most casual puzzle games lack. Every run posts a number, and every number is ranked against players worldwide. It transforms a solo puzzle session into a quiet rivalry — you are not just trying to beat your own best, you are trying to climb past strangers who posted their scores hours or days ago. That competitive pull is what turns a five-minute game into a two-hour session.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card">
+                    <h3>Why Players Return to Bricky Blast</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">The 3-blocks-per-turn constraint keeps every session tense — you cannot cherry-pick the easy piece and ignore the rest.</p>
+                    <ul class="gd-sb-list">
+                        <li>Forced 3-block placement keeps every turn tense and deliberate</li>
+                        <li>Auto-snap combos deliver satisfying chain clears with no missed inputs</li>
+                        <li>Global leaderboard fuels quiet competition against players worldwide</li>
+                        <li>No timer — play at your own pace with zero pressure</li>
+                        <li>Quick sessions fit into any spare moment, no commitment needed</li>
+                        <li>Every run is a clean slate — no power-ups, pure skill-based scoring</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <div class="gd-faq" id="faq">
+        <h2 class="gd-faq-h2">Bricky Blast Online — FAQ</h2>
+        <p class="gd-faq-sub">Quick answers to the most common questions about the Bricky Blast game.</p>
+        <div class="gd-faq-item"><p class="gd-faq-q">Do I have to place all three blocks in Bricky Blast?</p><p class="gd-faq-a">Yes — that is the core rule of Bricky Blast. You must place all three blocks before the next set arrives, with no skipping and no holding. Every trio is a mini-puzzle you have to solve in sequence, and the order you place them — awkward piece first while the board is open, easy piece last — is what determines whether the set clears space or clogs the grid.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">How is Bricky Blast different from other block puzzles?</p><p class="gd-faq-a">Bricky Blast sets itself apart with three pillars: forced 3-block placement (no skipping, no holding), auto-snap positioning (blocks lock into valid spots automatically as you drag), and a global leaderboard that ranks your best score against players worldwide. Most block puzzles let you pick the easiest piece; Bricky Blast makes you solve all three.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">Can I play Bricky Blast online on my phone?</p><p class="gd-faq-a">Yes — Bricky Blast works on iOS, Android, and any modern browser with touch controls. Auto-snap placement feels especially natural on mobile, where you drag with your finger and the block locks in automatically. No download or registration needed.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">Is the Bricky Blast game free?</p><p class="gd-faq-a">Completely free with no download, registration, or in-app purchases required. Just open your browser, start a new game, and your score posts to the global leaderboard automatically.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">Does Bricky Blast have a leaderboard?</p><p class="gd-faq-a">Yes — a global leaderboard ranks your best score against players worldwide after every session. Every run posts a number, which transforms solo puzzle sessions into a quiet rivalry that keeps you coming back to climb the ranks.</p></div>
+    </div>
+
+    <!-- You May Also Like -->
+    <div class="gd-also">
+        <h2 class="gd-also-h2">More Bricky Blast Games You May Like</h2>
+        <p class="gd-also-sub">More browser block puzzle games where commitment, not speed, determines your score.</p>
+        <div class="gd-also-grid">
+            <a href="../block-crush/index.html" class="gd-also-card">
+                <img src="../../img/block-crush-cover.jpg" alt="Block Crush" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body"><p class="gd-also-title">Block Crush</p><p class="gd-also-desc">8×8 grid with no timer — pick from three shapes and clear lines at your own pace.</p></div>
+            </a>
+            <a href="../block-puzzle-master/index.html" class="gd-also-card">
+                <img src="../../img/block-puzzle-master-cover.svg" alt="Block Puzzle Master" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body"><p class="gd-also-title">Block Puzzle Master</p><p class="gd-also-desc">No rotation, no timer — pure spatial placement where every gap you leave is a future problem.</p></div>
+            </a>
+            <a href="../1010-color-match/index.html" class="gd-also-card">
+                <img src="../../img/1010-color-match-cover.jpg" alt="1010 Color Match" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body"><p class="gd-also-title">1010 Color Match</p><p class="gd-also-desc">Tap matching colors on a neon 10×10 grid — the board shifts after every clear.</p></div>
+            </a>
+            <a href="../block-puzzle-legend/index.html" class="gd-also-card">
+                <img src="../../img/block-puzzle-legend-cover.jpg" alt="Block Puzzle Legend" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body"><p class="gd-also-title">Block Puzzle Legend</p><p class="gd-also-desc">Pre-scattered 10×10 board — you walk into a mess and clean it up, one row at a time.</p></div>
+            </a>
+            <a href="../../index.html" class="gd-also-card">
+                <img src="../../img/cover-classic.svg" alt="Brick Breaker" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body"><p class="gd-also-title">Brick Breaker</p><p class="gd-also-desc">Switch gears — classic paddle-and-ball arcade action with 9 modes. Same instant-play, totally different challenge.</p></div>
+            </a>
+        </div>
+    </div>
+
+    <p class="gd-footer-msg">Bricky Blast is free to play online — three blocks per turn, no skipping, auto-snap combos. Drag, place, clear, climb the leaderboard.</p>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../../img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                <p>The best place to play brick breaker online. Free, fast, no download.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Play</h4>
+                <ul><li><a href="../../index.html#play-now">Play Now</a></li><li><a href="../../game/index.html">Full Game</a></li><li><a href="../../index.html#how-to-play">How to Play</a></li><li><a href="../../index.html#faq">FAQ</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="../../privacy/index.html">Privacy</a></li><li><a href="../../blog.html">Blog</a></li></ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p></div>
+    </div>
+</footer>
+
+<script>
+(function(){
+    var fullBtn = document.getElementById('fullBtn');
+    var gameWindow = document.getElementById('gameWindow');
+    if (fullBtn && gameWindow) {
+        fullBtn.addEventListener('click', function(){
+            var el = gameWindow;
+            if (document.fullscreenElement) { document.exitFullscreen(); }
+            else { if (el.requestFullscreen) el.requestFullscreen(); else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); }
+        });
+    }
+})();
+</script>
+<script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,18 +1,40 @@
 User-agent: *
 Allow: /
 
-# Allow all crawlers
+# Block test / staging pages from all crawlers
+Disallow: /faq-test.html
+Disallow: /index-rich-test.html
+Disallow: /og-image.html
+
+# Google
 User-agent: Googlebot
 Allow: /
+Disallow: /faq-test.html
+Disallow: /index-rich-test.html
+Disallow: /og-image.html
 
 User-agent: Googlebot-Image
 Allow: /
 
+User-agent: Googlebot-News
+Allow: /
+
+# AdSense
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# Bing
 User-agent: Bingbot
 Allow: /
+Disallow: /faq-test.html
+Disallow: /index-rich-test.html
+Disallow: /og-image.html
 
 # Sitemap
 Sitemap: https://brickbreaker.net/sitemap.xml
 
-# Crawl-delay (polite)
-Crawl-delay: 5
+# Crawl-delay
+Crawl-delay: 1

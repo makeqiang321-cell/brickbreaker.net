@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkanoid Online — 1986 Arcade Classic | BrickBreaker</title>
+    <meta name="description" content="Play Arkanoid online for free. The classic 1986 Taito arcade game with 6 power-up capsules, 33 stages, and the DOH boss. No download needed.">
+    <meta name="keywords" content="arkanoid, arkanoid online, play arkanoid, arkanoid arcade game, taito arkanoid, retro arcade game, brick breaker arkanoid, arkanoid free">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://brickbreaker.net/blog-arkanoid.html">
+
+    <meta property="og:title" content="Arkanoid Online — 1986 Arcade Classic | BrickBreaker">
+    <meta property="og:description" content="Play Arkanoid online for free. The classic 1986 Taito arcade game with 6 power-up capsules, 33 stages, and the DOH boss. No download needed.">
+    <meta property="og:image" content="https://brickbreaker.net/img/og-image.svg">
+    <meta property="og:url" content="https://brickbreaker.net/blog-arkanoid.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Arkanoid — Classic 1986 Brick-Breaking Arcade Game",
+        "description": "Arkanoid is the 1986 Taito arcade game that brought power-up capsules to brick-breaking. Play it free online.",
+        "url": "https://brickbreaker.net/blog-arkanoid.html",
+        "author": { "@type": "Organization", "name": "BrickBreaker.net" },
+        "publisher": { "@type": "Organization", "name": "BrickBreaker.net", "url": "https://brickbreaker.net" },
+        "datePublished": "2026-08-09", "dateModified": "2026-08-09",
+        "image": "https://brickbreaker.net/img/og-image.svg",
+        "mainEntityOfPage": "https://brickbreaker.net/blog-arkanoid.html",
+        "articleSection": "Retro",
+        "wordCount": 3100,
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "keywords": ["arkanoid", "classic arcade game", "brick breaker", "Taito", "power-up capsules", "DOH boss", "retro gaming", "Vaus paddle"],
+        "about": { "@type": "Thing", "name": "Arkanoid arcade game" }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brickbreaker.net/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://brickbreaker.net/blog.html" },
+            { "@type": "ListItem", "position": 3, "name": "Arkanoid — Classic 1986 Brick-Breaking Arcade Game", "item": "https://brickbreaker.net/blog-arkanoid.html" }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question", "name": "What is Arkanoid?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Arkanoid is the 1986 Taito arcade game that introduced power-up capsules to the brick-breaking genre. You control the Vaus paddle, bounce an energy ball into 78 bricks per stage, and work through 33 levels including the DOH boss fight." }
+            },
+            {
+                "@type": "Question", "name": "Is Arkanoid free to play?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely free — play it right here in your browser. No download, no account, no quarters required." }
+            },
+            {
+                "@type": "Question", "name": "How do you score high in Arkanoid?",
+                "acceptedAnswer": { "@type": "Answer", "text": "High scores come from drilling to the top rows early — red bricks pay 60 points versus 10 for purple at the bottom. Use sharp paddle angles to reach the ceiling fast, pair Laser with Catch for column clears, and never drop the ball chasing a distant capsule." }
+            },
+            {
+                "@type": "Question", "name": "What's the best power-up combo in Arkanoid?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Laser plus Catch, no contest. Catch freezes the ball on your paddle so you can aim, and Laser burns through every brick in that column. Re-catch the ball on the way down and repeat until the stage is empty." }
+            },
+            {
+                "@type": "Question", "name": "How do you beat the DOH boss?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Destroy it outside-in — ears first to shrink the hitbox and reduce projectiles, then cheeks and jaw, then forehead and nose. Enter stage 33 with Laser active and the fight takes about two minutes. Enter without it and prepare for a grind." }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        .ark-hero { padding: 80px 20px 36px; background: var(--bg-light); display: flex; flex-direction: column; align-items: center; }
+        .ark-hero .game-frame-wrap { max-width: 500px; background: #000; }
+        .ark-canvas { display: block; width: 100%; aspect-ratio: 448/400; max-height: 420px; margin: 0 auto; }
+        .ark-hero .hero-scroll-hint { font-size: 0.75rem; color: var(--text-faint); letter-spacing: 1px; padding-top: 18px; animation: fadeHint 2s ease-in-out infinite; }
+        .breadcrumb { font-size: 0.8rem; color: var(--text-faint); margin-bottom: 12px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        .seo-content { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+        .seo-content .intro h1 { font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 0 0 10px; letter-spacing: -0.3px; }
+        .seo-content .intro p { font-size: 0.88rem; color: var(--text-dim); line-height: 1.85; margin: 0; }
+        .seo-content .sec { display: flex; flex-direction: column; gap: 16px; }
+        .seo-content .sec h2 { font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 0; letter-spacing: -0.2px; }
+        .seo-content .sec h3 { font-size: 0.88rem; font-weight: 700; color: var(--text); margin: 0 0 6px; }
+        .seo-content .sec p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.8; margin: 0; }
+        .feature-block { margin-bottom: 18px; }
+        .feature-block h3 { font-size: 0.9rem; font-weight: 700; color: var(--text); margin: 0 0 8px; }
+        .feature-block p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.8; margin: 0 0 8px; }
+        .dash { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+        .dash li { display: flex; gap: 8px; font-size: 0.85rem; color: var(--text-dim); line-height: 1.65; }
+        .dash li b { color: var(--primary); flex-shrink: 0; font-weight: 700; }
+        .faq { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 22px; }
+        .faq li h3 { display: block; font-size: 0.85rem; margin: 0 0 5px; color: var(--text); font-weight: 700; }
+        .faq li span { font-size: 0.85rem; color: var(--text-dim); line-height: 1.65; }
+    </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="./index.html" class="nav-brand"><img src="./img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./new-games/index.html">NEW GAMES</a></li>
+            <li><a href="./hot-games/index.html">HOT GAMES</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="./about/index.html">ABOUT</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<section class="ark-hero" id="play-game">
+    <div class="game-frame-wrap"><canvas class="ark-canvas"></canvas></div>
+    <div class="hero-scroll-hint">▼ SCROLL FOR GUIDE ▼</div>
+</section>
+
+<main class="below-fold">
+    <section class="section content-section">
+        <div class="container">
+            <div class="breadcrumb"><a href="./index.html">Home</a> › <a href="blog.html">Blog</a> › Arkanoid</div>
+            <div class="seo-content">
+
+                <div class="intro">
+                    <h1>Arkanoid — Classic Brick-Breaking Arcade Action</h1>
+                    <p class="post-byline" style="font-size:0.82rem;color:var(--text-faint);margin:4px 0 18px;">Published August 9, 2026 by <strong>BrickBreaker.net</strong></p>
+                    <p>Modern games ask for dozens of gigabytes, a high-end graphics card, and a fifteen-minute tutorial before you even press start. Arkanoid asks for none of that. All you need is a paddle, a ball, and a screen full of colored bricks waiting to be smashed.</p>
+                    <p>Arkanoid is quick, precise, and instantly familiar. You tell yourself you'll play one stage just to kill five minutes, and suddenly you're on stage 18, the ball is moving twice as fast, and you're gripping the mouse like your life depends on it.</p>
+                    <p>Released by Taito in 1986, Arkanoid did something no brick-breaking game had done before — it dropped power-up capsules from broken bricks and turned a simple bat-and-ball formula into a game of constant split-second decisions. Nearly forty years later, it still proves that fun doesn't need to be complicated. It just needs to be fun.</p>
+                    <p>This guide covers every power-up, the scoring system, ball physics, stage-by-stage tactics, and the DOH boss fight. Everything you need to play Arkanoid like you know what you're doing.</p>
+                </div>
+
+                <!-- WHY SO ADDICTIVE -->
+                <div class="sec">
+                    <h2>Why Arkanoid Is So Addictive</h2>
+                    <p>Arkanoid sits at the root of an entire genre. Before <a href="./index.html#play-now">brick breaker</a>, before DX Ball, before every browser clone that came after — there was Arkanoid. And the reason it still holds up is simple: a mechanic so tight that it becomes endlessly replayable.</p>
+                    <p>Here's how it works. You slide the Vaus paddle left and right at the bottom of the screen. You bounce an energy ball into a wall of 78 bricks. Break a brick, and sometimes a capsule drops — Laser, Catch, Slow, Enlarge, Multi-Ball, or 1UP. Grab it, and the rest of the stage changes. Miss it, and you keep playing the hand you've got.</p>
+                    <p>The genius is in the paddle physics. Hit the ball with the center of the Vaus and it rises straight. Hit the left edge and it angles left — up to 63 degrees. Hit the right edge and it mirrors right. This isn't random deflection. Every bounce is something you controlled, whether you meant to or not. Once the ball speeds up — and it does, especially past stage 18 — your reflexes kick into overdrive and every decision is made in fractions of a second.</p>
+                    <p>And it's all playable right here in your browser. No installation, no account, no waiting. Just the exact same arcade logic that ate quarters in 1986, running smooth on whatever device you're holding.</p>
+                </div>
+
+                <!-- TOP FEATURES -->
+                <div class="sec">
+                    <h2>Top Features That Make Arkanoid Legendary</h2>
+
+                    <div class="feature-block">
+                        <h3>1. Six Power-Up Capsules That Actually Change How You Play</h3>
+                        <p>The six capsules in Arkanoid aren't cosmetic buffs. They change the rules of the stage the moment you grab them.</p>
+                        <ul class="dash">
+                            <li><b>-</b>Laser shoots a beam through every brick in a column. Pair it with Catch and you can clear an entire stage without the ball touching a single brick.</li>
+                            <li><b>-</b>Catch freezes the ball on your paddle so you can re-aim. The most tactical capsule in the game.</li>
+                            <li><b>-</b>Slow cuts ball speed in half. A lifesaver past stage 18 when the ball starts moving faster than your eyes can track.</li>
+                            <li><b>-</b>Enlarge widens the Vaus by about 50%. Great on open layouts, dangerous on tight ones where a bigger paddle means less room to maneuver.</li>
+                            <li><b>-</b>Multi-Ball splits one ball into three. Triple coverage, triple chaos.</li>
+                            <li><b>-</b>1UP grants an extra life. Simple, precious — never waste it.</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-block">
+                        <h3>2. Paddle Physics You Can Actually Learn</h3>
+                        <p>Most <a href="./index.html#how-to-play">brick breaker</a> games give you a paddle and hope for the best. Arkanoid gives you a paddle and tells you exactly where the ball will go based on where it hits.</p>
+                        <p>The angle formula maps the hit position across the 52-pixel Vaus — far left sends the ball at a sharp -63 degrees, dead center sends it straight up, far right sends it at +63 degrees. Once you internalize this, you stop reacting to where the ball goes and start putting it where you want. That transition — from panicked chaser to calm placer — is the moment Arkanoid clicks.</p>
+                    </div>
+
+                    <div class="feature-block">
+                        <h3>3. 33 Handcrafted Stages</h3>
+                        <p>These aren't randomly generated brick piles. Every stage was designed by someone who wanted to test a specific skill.</p>
+                        <ul class="dash">
+                            <li><b>-</b>Early stages teach you corner escapes and basic angles.</li>
+                            <li><b>-</b>Mid-game stages push you into narrow gaps and force precise column drilling.</li>
+                            <li><b>-</b>Late stages combine everything — dense clusters, awkward gaps, bricks that feel deliberately placed to punish rushed shots.</li>
+                            <li><b>-</b>Stage 33 isn't a stage at all. It's the DOH boss fight.</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-block">
+                        <h3>4. The DOH Boss Fight</h3>
+                        <p>After 32 stages of breaking bricks, Arkanoid throws a curveball: a giant moai head that fires projectiles back at you. Destroy it outside-in — ears first to shrink the hitbox and reduce incoming fire, then cheeks and jaw, then forehead and nose. One missed ball and the entire fight resets. Walk in with Laser active and you can finish it in about two minutes. Walk in empty-handed and prepare for a five-minute war.</p>
+                    </div>
+
+                    <div class="feature-block">
+                        <h3>5. A Scoring System That Pushes You to Play Better</h3>
+                        <p>Red bricks on the top row are worth 60 points. Purple bricks on the bottom row are worth 10. The game doesn't just suggest you play aggressively — it pays you to. Every stage is a choice: clear safely from the bottom up, or drill through the center, reach the top, and let the ball ricochet through the high-value rows. Safe play gets you through the stage. Risky play gets you a score worth remembering.</p>
+                    </div>
+                </div>
+
+                <!-- HOW TO PLAY LIKE A PRO -->
+                <div class="sec">
+                    <h2>How to Play Arkanoid Like a Pro: Strategies for High Scores</h2>
+
+                    <div class="feature-block">
+                        <h3>1. Learn to Control Your Angles</h3>
+                        <p>Center paddle hits send the ball straight up. Edge hits send it at sharp diagonals — up to 63 degrees in either direction. Angled shots reach the top rows and slip into tight corners. Flat shots are easier to aim but slower to clear. Start every stage by drilling a side gap with sharp angles, then work the ball into the ceiling space above the bricks.</p>
+                    </div>
+
+                    <div class="feature-block">
+                        <h3>2. Get the Ball Stuck Above the Bricks</h3>
+                        <p>This is the dream scenario. The ball bounces between the ceiling and the top row of bricks, clearing everything while you sit still and watch. To pull it off, drill a single column early — usually dead center — to create an opening. Once the ball is through, it ricochets horizontally and does the rest.</p>
+                    </div>
+
+                    <div class="feature-block">
+                        <h3>3. Do Not Chase Every Capsule</h3>
+                        <p>This is where most beginners lose. A capsule drops on the far left, you slide over to grab it, and the ball sails past your old position on the right. Game over. Chase Catch, Slow, Laser, and 1UP — these are worth the risk. Be cautious with Enlarge and Multi-Ball — they're useful but can put you in worse positions on tight layouts.</p>
+                    </div>
+
+                    <div class="feature-block">
+                        <h3>4. Pair Laser with Catch Whenever Possible</h3>
+                        <p>Catch freezes the ball. Laser shoots a beam through every brick above you. Together, they let you aim a shot, fire the laser, and catch the ball on its way back down — all without ever putting the ball at risk. This combo turns the hardest stages into target practice.</p>
+                    </div>
+
+                    <div class="feature-block">
+                        <h3>5. Study the Stage Before You Launch</h3>
+                        <p>Take three seconds to scan the layout. Where are the red bricks? Where are the gaps? Which columns are thin enough to drill through? A stage played blind is a stage played twice — the first time to learn the layout, the second time to actually beat it.</p>
+                    </div>
+
+                    <div class="feature-block">
+                        <h3>6. Stay Near Center, but Never Stop Moving</h3>
+                        <p>The Vaus is 52 pixels wide. The canvas is 448. Center position gives you the shortest path to the ball no matter where it goes. But don't park — constant micro-adjustments keep you ready for sudden angle changes after the ball hits a brick edge or a tight corner.</p>
+                    </div>
+
+                    <div class="feature-block">
+                        <h3>7. Control Your Panic</h3>
+                        <p>When the ball speeds up past stage 18, the natural instinct is to swing hard and hope. That's how you send the ball into a dead corner at full speed. Smooth, controlled paddle motion beats wild swings every time. If you feel yourself panicking, focus on just saving the ball — not breaking bricks, not grabbing capsules. One save at a time.</p>
+                    </div>
+                </div>
+
+                <!-- WHY IT STILL HITS -->
+                <div class="sec">
+                    <h2>Why Arkanoid Still Hits the Spot Today</h2>
+                    <p>With thousands of games available in 2026, why does a 1986 arcade cabinet port still grab your attention and refuse to let go?</p>
+                    <ul class="dash">
+                        <li><b>-</b>It's effortless — open your browser and play. No download, no signup, no tutorial.</li>
+                        <li><b>-</b>It's nostalgic — the neon bricks, the arcade sounds, the exact same 33 stages that ate your allowance in the 80s.</li>
+                        <li><b>-</b>It's deep — six capsules, paddle physics with real precision, and a boss fight that takes actual strategy.</li>
+                        <li><b>-</b>It's satisfying — every brick smashed triggers a little hit of dopamine. Sixty points for a red brick feels earned.</li>
+                        <li><b>-</b>It's hard — casual enough to pick up, challenging enough that stage 33 still has a body count.</li>
+                        <li><b>-</b>It doesn't try to impress — it just works. No leaderboards, no battle passes, no notifications. Just you, a paddle, and 78 bricks per stage.</li>
+                    </ul>
+                </div>
+
+                <!-- FINAL THOUGHTS -->
+                <div class="sec">
+                    <h2>Final Thoughts: A Small Game With Big Charm</h2>
+                    <p>Arkanoid doesn't pretend to be a blockbuster. That's exactly why it still works forty years later. It's accessible the moment you open it, deep enough to reward weeks of practice, and tight enough that every lost ball feels like your fault — not the game's. Whether you're here for five minutes between tasks or aiming to clear all 33 stages in one sitting, there's a reason this game launched an entire genre. Open it up, launch the ball, and enjoy smashing some bricks.</p>
+                </div>
+
+                <!-- FAQ -->
+                <div class="sec">
+                    <h2>FAQs for Arkanoid</h2>
+                    <ul class="faq">
+                        <li>
+                            <h3>What is Arkanoid?</h3>
+                            <span>Arkanoid is the 1986 Taito arcade game that introduced power-up capsules to the brick-breaking genre. You control the Vaus paddle, bounce an energy ball into 78 bricks per stage, and work through 33 levels including the DOH boss fight.</span>
+                        </li>
+                        <li>
+                            <h3>Is Arkanoid free to play?</h3>
+                            <span>Yes, completely free — play it right here in your browser. No download, no account, no quarters required.</span>
+                        </li>
+                        <li>
+                            <h3>How do you score high in Arkanoid?</h3>
+                            <span>High scores come from drilling to the top rows early — red bricks pay 60 points versus 10 for purple at the bottom. Use sharp paddle angles to reach the ceiling fast, pair Laser with Catch for column clears, and never drop the ball chasing a distant capsule.</span>
+                        </li>
+                        <li>
+                            <h3>What's the best power-up combo in Arkanoid?</h3>
+                            <span>Laser plus Catch, no contest. Catch freezes the ball on your paddle so you can aim, and Laser burns through every brick in that column. Re-catch the ball on the way down and repeat until the stage is empty.</span>
+                        </li>
+                        <li>
+                            <h3>How do you beat the DOH boss?</h3>
+                            <span>Destroy it outside-in — ears first to shrink the hitbox and reduce projectiles, then cheeks and jaw, then forehead and nose. Enter stage 33 with Laser active and the fight takes about two minutes. Enter without it and prepare for a grind.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-block">
+                <h2 class="cta-title">Play Arkanoid Now</h2>
+                <p class="cta-sub">33 stages, 6 power-ups, and the DOH boss — all playable right here.</p>
+                <a href="#play-game" class="cta-btn">▶ &nbsp;PLAY ARKANOID</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="./img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                <p>The best place to play brick breaker online. Free, fast, no download.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Play</h4>
+                <ul>
+                    <li><a href="./index.html#play-now">Play Now</a></li>
+                    <li><a href="./game/index.html">Full Game</a></li>
+                    <li><a href="./index.html#how-to-play">How to Play</a></li>
+                    <li><a href="./index.html#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul>
+                    <li><a href="./about/index.html">About</a></li>
+                    <li><a href="./contact/index.html">Contact</a></li>
+                    <li><a href="./privacy/index.html">Privacy</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p>
+        </div>
+    </div>
+</footer>
+
+<script src="./js/main.js"></script>
+<script>
+(function() {
+    'use strict';
+    var canvas = document.querySelector(".ark-canvas");
+    var ctx = canvas.getContext("2d");
+    canvas.width = 448; canvas.height = 400;
+    var br = 4, bx = canvas.width/2, by = canvas.height-30, dx = 3, dy = -4;
+    var pw = 52, ph = 10, px = (canvas.width-pw)/2, py = canvas.height-ph-10;
+    var PS = 7, rp = false, lp = false;
+    var rows = 6, cols = 13, bw = 32, bh = 16, boT = 80, boL = 16;
+    var bricks = [], ACTIVE = 1, DONE = 0;
+    var rc = ['#ff4500','#ff6b6b','#fcb900','#00d084','#0693e3','#7c3aed'];
+    for (var c = 0; c < cols; c++) { bricks[c] = []; for (var r = 0; r < rows; r++) { bricks[c][r] = { x: c*bw+boL, y: r*bh+boT, s: ACTIVE, cl: rc[r] }; } }
+    var go = false, sc = 0;
+    function db() { ctx.beginPath(); ctx.arc(bx, by, br, 0, Math.PI*2); ctx.fillStyle="#fff"; ctx.fill(); ctx.closePath(); }
+    function dp() { ctx.fillStyle="#7c3aed"; ctx.beginPath(); ctx.moveTo(px+4,py); ctx.lineTo(px+pw-4,py); ctx.quadraticCurveTo(px+pw,py,px+pw,py+4); ctx.lineTo(px+pw,py+ph-4); ctx.quadraticCurveTo(px+pw,py+ph,px+pw-4,py+ph); ctx.lineTo(px+4,py+ph); ctx.quadraticCurveTo(px,py+ph,px,py+ph-4); ctx.lineTo(px,py+4); ctx.quadraticCurveTo(px,py,px+4,py); ctx.closePath(); ctx.fill(); ctx.fillStyle="#a78bfa"; ctx.fillRect(px+6,py+3,pw-12,3); }
+    function dbr() { for (var c=0;c<cols;c++) for (var r=0;r<rows;r++) { var b=bricks[c][r]; if(b.s===DONE) continue; ctx.fillStyle=b.cl; ctx.fillRect(b.x,b.y,bw-1,bh-1); ctx.fillStyle="rgba(255,255,255,0.2)"; ctx.fillRect(b.x,b.y,bw-1,4); } }
+    function dsc() { ctx.fillStyle="#fcb900"; ctx.font="bold 11px 'Inter', monospace"; ctx.fillText("SCORE "+sc,12,22); ctx.fillStyle="#a78bfa"; ctx.font="9px 'Inter', monospace"; ctx.fillText("←→ KEYS  |  MOUSE  |  TOUCH",12,42); }
+    function cd() { for (var c=0;c<cols;c++) for (var r=0;r<rows;r++) { var b=bricks[c][r]; if(b.s===DONE) continue; if(bx>b.x&&bx<b.x+bw&&by>b.y&&by<b.y+bh){dy=-dy;b.s=DONE;sc+=(6-r)*10; if(bricks.every(function(co){return co.every(function(br){return br.s===DONE;});}))go=true;} } }
+    function bm() { if(bx+dx>canvas.width-br||bx+dx<br)dx=-dx; if(by+dy<br)dy=-dy; if(bx>px&&bx<px+pw&&by+dy>py-br){var hp=(bx-px)/pw,an=(hp-0.5)*Math.PI*0.7,sp=Math.sqrt(dx*dx+dy*dy);dx=sp*Math.sin(an);dy=-sp*Math.cos(an);} else if(by+dy>canvas.height-br){if(!go)go=true;} bx+=dx;by+=dy; }
+    function pm(){if(rp&&px+pw<canvas.width)px+=PS;else if(lp&&px>0)px-=PS;}
+    function draw(){ ctx.clearRect(0,0,canvas.width,canvas.height); ctx.fillStyle="#0a0a15";ctx.fillRect(0,0,canvas.width,canvas.height); dbr();db();dp();dsc();cd();bm();pm(); if(go){ctx.fillStyle="rgba(0,0,0,0.75)";ctx.fillRect(0,0,canvas.width,canvas.height); ctx.fillStyle="#fcb900";ctx.font="bold 28px 'Inter', monospace";ctx.textAlign="center"; var w=bricks.every(function(co){return co.every(function(br){return br.s===DONE;});}); ctx.fillText(w?"STAGE CLEAR!":"GAME OVER",canvas.width/2,canvas.height/2-10); ctx.fillStyle="#fff";ctx.font="13px 'Inter', monospace"; ctx.fillText("Score: "+sc+"  |  Refresh to play again",canvas.width/2,canvas.height/2+28); ctx.textAlign="start";return;} window.requestAnimationFrame(draw); }
+    document.addEventListener("keydown",function(e){if(e.key==="Right"||e.key==="ArrowRight"){rp=true;e.preventDefault();}else if(e.key==="Left"||e.key==="ArrowLeft"){lp=true;e.preventDefault();}});
+    document.addEventListener("keyup",function(e){if(e.key==="Right"||e.key==="ArrowRight")rp=false;else if(e.key==="Left"||e.key==="ArrowLeft")lp=false;});
+    canvas.addEventListener("touchmove",function(e){e.preventDefault();var re=canvas.getBoundingClientRect(),sx=canvas.width/re.width;px=Math.max(0,Math.min(canvas.width-pw,(e.touches[0].clientX-re.left)*sx-pw/2));});
+    canvas.addEventListener("mousemove",function(e){var re=canvas.getBoundingClientRect(),sx=canvas.width/re.width;px=Math.max(0,Math.min(canvas.width-pw,(e.clientX-re.left)*sx-pw/2));});
+    draw();
+})();
+</script>
+</body>
+</html>

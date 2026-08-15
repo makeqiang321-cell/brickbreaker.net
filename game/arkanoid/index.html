@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Arkanoid Online — 1986 Arcade Classic | BrickBreaker</title>
+    <meta name="description" content="Play Arkanoid online — the 1986 Taito arcade classic that invented brick breaker power-ups. Vaus paddle, DOH boss battles. No download, instant play.">
+    <meta name="keywords" content="arkanoid, play arkanoid, arkanoid online, taito arkanoid, arkanoid game, retro arcade game, brick breaker arkanoid, arkanoid free">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://brickbreaker.net/game/arkanoid/">
+
+    <meta property="og:title" content="Play Arkanoid Online — 1986 Arcade Classic | BrickBreaker">
+    <meta property="og:description" content="Play Arkanoid online — the 1986 Taito arcade classic that invented brick breaker power-ups. Vaus paddle, DOH boss battles. No download, instant play.">
+    <meta property="og:image" content="https://brickbreaker.net/og-image.png">
+    <meta property="og:url" content="https://brickbreaker.net/game/arkanoid/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Schema.org: VideoGame -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Arkanoid",
+        "url": "https://brickbreaker.net/game/arkanoid/",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web",
+        "description": "Play Arkanoid online — the legendary 1986 Taito arcade brick breaker with 6 power-up capsules, Vaus paddle control, and DOH boss battles.",
+        "playMode": "SinglePlayer",
+        "gamePlatform": "Web browser",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1 },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "bestRating": "5", "ratingCount": 2100, "reviewCount": 315 },
+        "author": { "@type": "Organization", "name": "Taito" },
+        "datePublished": "1986"
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Arkanoid?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Arkanoid is a 1986 Taito arcade game that reinvented the brick breaker genre. It introduced 6 power-up capsules, a spaceship-shaped Vaus paddle, and DOH boss battles across 33 hand-designed stages. It sold 200,000+ arcade boards in Japan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What power-ups does Arkanoid have?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Arkanoid has 6 capsule power-ups: L (Laser) fires twin beams that melt bricks, E (Enlarge) widens the Vaus 1.6x, C (Catch) lets you hold and aim the ball, S (Slow) halves ball speed, M (Multi-Ball) splits into 3 balls, and 1UP grants an extra life."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who is the boss in Arkanoid?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DOH is the final boss at stage 33 — a giant Easter Island moai head made of brick segments. It shoots energy projectiles while you break its body. Beat it by targeting outer segments first, then working inward."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is Arkanoid different from Breakout?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Arkanoid added 6 power-up capsules, a curved Vaus paddle with spinner controller, 33 unique hand-designed stages, and DOH boss battles. Breakout had none of these — it was basic rows of bricks with flat scoring."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Brick Breaker", "item": "https://brickbreaker.net/" },
+            { "@type": "ListItem", "position": 2, "name": "Arkanoid Brick Breaker", "item": "https://brickbreaker.net/game/arkanoid/" }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ── Game hero (compact, not full-screen) ── */
+        .ark-hero {
+            padding: 80px 20px 36px;
+            background: var(--bg-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ark-hero .game-frame-wrap {
+            max-width: 500px;
+            background: #000;
+        }
+        .ark-canvas {
+            display: block;
+            width: 100%;
+            aspect-ratio: 448/400;
+            max-height: 420px;
+            margin: 0 auto;
+        }
+        .ark-hero .hero-scroll-hint {
+            font-size: 0.75rem;
+            color: var(--text-faint);
+            letter-spacing: 1px;
+            padding-top: 18px;
+            animation: fadeHint 2s ease-in-out infinite;
+        }
+
+        /* ── Capsule cards ── */
+        .capsule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .capsule-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 18px;
+            box-shadow: var(--shadow);
+            transition: box-shadow 0.25s, transform 0.2s;
+        }
+        .capsule-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+        .capsule-badge {
+            display: inline-block;
+            min-width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .badge-l { background: #ff4500; }
+        .badge-e { background: #0693e3; }
+        .badge-c { background: #00d084; }
+        .badge-s { background: #fcb900; color: #212529; }
+        .badge-m { background: #7c3aed; }
+        .badge-up { background: #ff6b6b; }
+        .capsule-card h4 {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .capsule-card p {
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* ── Comparison table ── */
+        .vs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0 0;
+            font-size: 0.88rem;
+        }
+        .vs-table thead th {
+            background: var(--primary-light);
+            color: var(--text);
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            padding: 12px 16px;
+            text-align: left;
+        }
+        .vs-table thead th:first-child { border-radius: var(--radius) 0 0 0; }
+        .vs-table thead th:last-child  { border-radius: 0 var(--radius) 0 0; }
+        .vs-table td {
+            padding: 11px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-dim);
+            vertical-align: top;
+        }
+        .vs-table tr:hover td { background: var(--bg-light); }
+        .vs-table td:first-child { font-weight: 600; color: var(--text); white-space: nowrap; }
+
+        /* ── Paddle comparison visual ── */
+        .paddle-compare {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .paddle-viz {
+            text-align: center;
+        }
+        .paddle-viz .label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--text-dim);
+            margin-bottom: 10px;
+        }
+        .paddle-viz svg { display: block; margin: 0 auto; }
+
+        /* ── Legacy timeline ── */
+        .timeline { margin: 14px 0 0; }
+        .timeline-item {
+            display: flex;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .timeline-item:last-child { border-bottom: none; }
+        .timeline-year {
+            flex-shrink: 0;
+            width: 56px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            color: var(--primary);
+            text-align: right;
+        }
+        .timeline-body h4 {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--text);
+            margin-bottom: 3px;
+        }
+        .timeline-body p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            line-height: 1.65;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ NAV ═══ -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../../index.html" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../../index.html">HOME</a></li>
+                <li><a href="../../new-games/index.html">NEW GAMES</a></li>
+                <li><a href="../../hot-games/index.html">HOT GAMES</a></li>
+                <li><a href="../../blog.html">BLOG</a></li>
+                <li><a href="../../about/index.html">ABOUT</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- ═══ GAME ═══ -->
+    <section class="ark-hero" id="play-game">
+        <div class="game-frame-wrap">
+            <canvas class="ark-canvas"></canvas>
+        </div>
+        <div class="hero-scroll-hint">SCROLL DOWN FOR MORE ▼</div>
+    </section>
+
+    <!-- ═══ BELOW THE FOLD ═══ -->
+    <main class="below-fold">
+
+        <!-- ═══ H1 + STATS ═══ -->
+        <section class="section stats-section">
+            <div class="container">
+                <h1 class="page-h1">Play Arkanoid Online — 1986 Arcade Classic</h1>
+                <div class="stat-row">
+                    <div class="stat-card">
+                        <span class="stat-num neon-gold">1986</span>
+                        <span class="stat-label">Taito Arcade</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num neon-cyan">33</span>
+                        <span class="stat-label">Unique Stages</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num neon-pink">6</span>
+                        <span class="stat-label">Power-Up Capsules</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num neon-green">200K+</span>
+                        <span class="stat-label">Boards Sold</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ WHAT IS ARKANOID ═══ -->
+        <section class="section content-section">
+            <div class="container container-narrow">
+                <h2 class="section-title">What Is Arkanoid</h2>
+                <div class="content-body">
+                    <p>In 1986, Taito took the <a href="../../index.html#play-now">brick breaker</a> formula and <strong>added something Breakout never had: consequences for greed.</strong> Arkanoid's design team, led by Akira Fujita, introduced <a href="../../index.html#features">brick breaker</a> power-up capsules that fall from destroyed bricks — catch one and you gain an edge. Chase one at the wrong moment and you lose a life.</p>
+
+                    <p>The game built everything around this tension. A <strong>spaceship-shaped Vaus paddle</strong> with curved edges for precise angle control. <strong>33 hand-designed stages</strong> with color-coded brick patterns. And at the end: <strong>DOH</strong>, a giant stone moai head that shoots back — gaming's first brick breaker boss fight.</p>
+
+                    <p>Arkanoid sold over <strong>200,000 arcade PCBs</strong> in Japan. It spawned sequels across every major platform. Its capsule system became the blueprint for every power-up in the genre. Breakout invented brick breaking. <strong>Arkanoid made it a real game.</strong></p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ 3 INNOVATIONS ═══ -->
+        <section class="section content-section alt-bg">
+            <div class="container container-narrow">
+                <h2 class="section-title">3 Innovations That Changed Brick Breakers Forever</h2>
+                <div class="content-body">
+
+                    <h3 class="content-h3">1. The Capsule Catch — Risk vs Reward</h3>
+                    <p>Destroy a brick. A colored capsule drops. You have <strong>half a second</strong> to decide: slide the Vaus under it, or stay put and keep the ball alive? Catch it and you're stronger. Miss it and it's gone. Miss the <em>ball</em> and you lose a life. No brick breaker before Arkanoid asked you to make that choice.</p>
+
+                    <h3 class="content-h3">2. The Vaus — A Paddle With Handling</h3>
+
+                    <div class="paddle-compare">
+                        <div class="paddle-viz">
+                            <div class="label">BREAKOUT (1976)</div>
+                            <svg width="120" height="24" viewBox="0 0 120 24"><rect x="0" y="0" width="120" height="24" rx="2" fill="#dee2e6" stroke="#adb5bd" stroke-width="1"/></svg>
+                            <div style="font-size:0.6rem;color:var(--text-faint);margin-top:4px;">Flat rectangle</div>
+                        </div>
+                        <div style="font-size:1.5rem;color:var(--primary);">→</div>
+                        <div class="paddle-viz">
+                            <div class="label">ARKANOID — THE VAUS</div>
+                            <svg width="120" height="24" viewBox="0 0 120 24"><path d="M8,0 L112,0 Q118,0 118,6 L118,18 Q118,24 112,24 L8,24 Q2,24 2,18 L2,6 Q2,0 8,0 Z" fill="#7c3aed" stroke="#6d28d9" stroke-width="1"/><rect x="16" y="7" width="88" height="3" rx="1" fill="#a78bfa"/></svg>
+                            <div style="font-size:0.6rem;color:var(--primary);margin-top:4px;">Curved edges = angle control</div>
+                        </div>
+                    </div>
+
+                    <p>The Vaus isn't a flat bar — it's a <strong>curved spaceship-shaped energy vessel</strong>. The rounded edges produce different bounce angles than a rectangle, giving you finer control over shot direction. In Japanese arcades, you steered it with a <strong>weighted spinner knob</strong> — analog hardware precise enough to position the Vaus to the exact pixel.</p>
+
+                    <h3 class="content-h3">3. DOH — The Boss That Shoots Back</h3>
+                    <p>Stage 33. The bricks clear. Then a <strong>giant Easter Island head</strong> fills the top of the screen — and it's firing energy bolts at you. DOH is constructed from brick segments you must destroy while dodging its attacks. Die during the fight and you restart the whole encounter. In 1986, a <a href="../../index.html#quick-facts">brick breaker</a> with a boss was science fiction. <strong>Arkanoid made it real.</strong></p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ 6 POWER-UP CAPSULES ═══ -->
+        <section class="section content-section">
+            <div class="container container-narrow">
+                <h2 class="section-title">6 Power-Up Capsules — What Each One Does</h2>
+                <div class="content-body">
+                    <p>Arkanoid's six capsules each change <strong>how</strong> you play, not just how fast you score. Know what to grab — and what to ignore.</p>
+
+                    <div class="capsule-grid">
+                        <div class="capsule-card">
+                            <span class="capsule-badge badge-l">L</span>
+                            <h4>Laser</h4>
+                            <p>Twin beams fire from the Vaus, melting through every breakable brick in one hit. <strong>Lasts until you die.</strong> The strongest offensive capsule. Always prioritize.</p>
+                        </div>
+                        <div class="capsule-card">
+                            <span class="capsule-badge badge-e">E</span>
+                            <h4>Enlarge</h4>
+                            <p>Vaus stretches to <strong>1.6× width</strong>. Easier catches, but flatter bounce angles. Good for survival; bad for precision shots through narrow gaps.</p>
+                        </div>
+                        <div class="capsule-card">
+                            <span class="capsule-badge badge-c">C</span>
+                            <h4>Catch</h4>
+                            <p>Ball <strong>sticks to the Vaus</strong> on contact. Tap to release — aim every shot with perfect control. Turns chaos into a puzzle game.</p>
+                        </div>
+                        <div class="capsule-card">
+                            <span class="capsule-badge badge-s">S</span>
+                            <h4>Slow</h4>
+                            <p>Cuts ball speed <strong>in half</strong>. Your lifeline past stage 20, when the ball becomes a blur. Save it for late levels.</p>
+                        </div>
+                        <div class="capsule-card">
+                            <span class="capsule-badge badge-m">M</span>
+                            <h4>Multi-Ball</h4>
+                            <p>One ball → <strong>three</strong>. You only die when all balls drop. Clears bricks fast; tracking three trajectories takes practice.</p>
+                        </div>
+                        <div class="capsule-card">
+                            <span class="capsule-badge badge-up">1UP</span>
+                            <h4>Extra Vaus</h4>
+                            <p>Grants <strong>one extra life</strong>. Rarest capsule in the game — maybe 2–3 per full 33-stage run. Always catch this.</p>
+                        </div>
+                    </div>
+
+                    <p><strong>Grab priority:</strong> 1UP → Laser → Catch → Slow → Enlarge → Multi-Ball. Enlarge can backfire on tight layouts. Multi-Ball chaos isn't always welcome when you're cleaning up the last few bricks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ DOH BOSS ═══ -->
+        <section class="section content-section alt-bg">
+            <div class="container container-narrow">
+                <h2 class="section-title">DOH — The Stage 33 Boss Fight</h2>
+                <div class="content-body">
+                    <p>DOH is a <strong>giant moai statue</strong> built from brick segments, occupying the top of the screen. To beat the game, you must break every segment — while dodging the energy projectiles it fires at your Vaus.</p>
+
+                    <p>The fight is a two-front war: <strong>aim the ball upward to chip away at DOH's body, weave the Vaus to avoid incoming shots.</strong> Laser makes it manageable. Without Laser, it's a 5-minute siege where one mistake sends you back to the start.</p>
+
+                    <p><strong>Proven approach:</strong> destroy DOH's outer "ear" segments first. This shrinks its hitbox and reduces projectile fire rate. Work inward toward the center. By the time you reach the core, DOH has fewer angles to shoot from — and you have fewer segments left to break.</p>
+
+                    <p>The 1987 sequel, <strong>Revenge of Doh</strong>, brought the boss back angrier — moving mouth, faster projectiles, 34 new stages.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ 6 ARKANOID STRATEGIES ═══ -->
+        <section class="section content-section">
+            <div class="container container-narrow">
+                <h2 class="section-title">Arkanoid Strategy — 6 Techniques</h2>
+                <div class="content-body">
+                    <h3 class="content-h3">Arcade-Tested Tactics for Reaching Stage 33</h3>
+
+                    <ul class="feature-list">
+                        <li><strong>Laser Defines the Run.</strong> Once you have Laser, the beams clear bricks faster than the ball. Switch to defense: keep the ball alive with small Vaus moves while lasers shred rows above you. Laser + Catch together is nearly unstoppable.</li>
+                        <li><strong>With Catch, Aim Before You Release.</strong> Catch holds the ball on contact. Don't just tap to fire — <strong>slide the Vaus to line up the shot first</strong>, then release. Pick off isolated corner bricks surgically. This turns frantic levels into a methodical puzzle.</li>
+                        <li><strong>Not Every Capsule Is Worth the Risk.</strong> 1UP drops on the far left, your ball is descending on the right — you have to choose. <strong>1UP and Laser: take the risk. Enlarge and Multi-Ball: let them go.</strong> The catch window is shorter than you think.</li>
+                        <li><strong>DOH: Outside-In Strategy.</strong> Target the "ears" first (outermost segments). They're the hardest to hit once the center opens up, and breaking them reduces DOH's fire rate. Save the forehead and nose for last.</li>
+                        <li><strong>Save Slow for Stage 20+.</strong> Ball speed escalates every few stages. By stage 20, it's punishing. Slow is your insurance policy — <strong>grab it on stage 18+ even if it means repositioning.</strong> A slow ball on stage 25 beats Laser on stage 3.</li>
+                        <li><strong>Snap, Don't Track.</strong> Arcade veterans flicked the spinner to snap the Vaus across the screen instantly. Same idea here: <strong>quick, decisive moves</strong> to where the ball will be, not slow tracking of where it is. Anticipate the angle, reposition, wait.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- ═══ FAQ ═══ -->
+        <section class="section content-section">
+            <div class="container container-narrow">
+                <h2 class="section-title">FAQ</h2>
+                <div class="content-body">
+                    <p><strong>Q: What is Arkanoid?</strong></p>
+                    <p>Arkanoid is a 1986 Taito arcade game that reinvented the brick breaker genre. It introduced 6 power-up capsules, a spaceship-shaped Vaus paddle, and DOH boss battles across 33 hand-designed stages. It sold 200,000+ arcade boards in Japan.</p>
+                    <p><strong>Q: What power-ups does Arkanoid have?</strong></p>
+                    <p>Arkanoid has 6 capsule power-ups: L (Laser) fires twin beams that melt bricks, E (Enlarge) widens the Vaus 1.6x, C (Catch) lets you hold and aim the ball, S (Slow) halves ball speed, M (Multi-Ball) splits into 3 balls, and 1UP grants an extra life.</p>
+                    <p><strong>Q: Who is the boss in Arkanoid?</strong></p>
+                    <p>DOH is the final boss at stage 33 — a giant Easter Island moai head made of brick segments. It shoots energy projectiles while you break its body. Beat it by targeting outer segments first, then working inward.</p>
+                    <p><strong>Q: How is Arkanoid different from Breakout?</strong></p>
+                    <p>Arkanoid added 6 power-up capsules, a curved Vaus paddle with spinner controller, 33 unique hand-designed stages, and DOH boss battles. Breakout had none of these — it was basic rows of bricks with flat scoring.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ BLOG LINK ═══ -->
+        <section class="section content-section">
+            <div class="container container-narrow" style="text-align:center;">
+                <p style="font-size:0.95rem;color:var(--text-dim);margin-bottom:8px;">Want the full story? Read our deep-dive on Arkanoid's history, sequels, and how it compares to Breakout.</p>
+                <a href="../../blog-arkanoid.html" style="font-weight:700;font-size:0.85rem;color:var(--primary);">📖 Arkanoid: How Taito Changed Brick Breaker Games Forever →</a>
+            </div>
+        </section>
+
+
+        <!-- ═══ CTA ═══ -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-block">
+                    <h2 class="cta-title">Ready to Play Arkanoid?</h2>
+                    <p class="cta-sub">The 1986 arcade legend — play free in your browser right now.</p>
+                    <a href="#play-game" class="cta-btn">▶ &nbsp;PLAY ARKANOID NOW</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══ TRY OTHER MODES ═══ -->
+    <section style="max-width:1120px;margin:0 auto;padding:20px 24px 0;">
+        <h2 style="font-weight:800;font-size:clamp(1.1rem,2vw,1.45rem);letter-spacing:-0.5px;color:var(--text);margin:0 0 12px;">Try Other Brick Breaker Modes</h2>
+        <p style="font-size:.85rem;color:var(--text-dim);margin:0 0 16px;">Click any mode to switch — all free, no download.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-bottom:32px;">
+            <a href="../classic/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Classic</a>
+            <a href="../power-up/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Power-Up</a>
+            <a href="../neon/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Neon Style</a>
+            <a href="../hard/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Hard Mode</a>
+            <a href="../precision/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Precision</a>
+            <a href="../gold/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Gold Rush</a>
+            <a href="../cosmic/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Cosmic Run</a>
+            <a href="../retro/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Retro Arcade</a>
+            <a href="../arkanoid/index.html" rel="nofollow" style="display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card);color:var(--text);text-decoration:none;font-weight:600;font-size:.82rem;text-align:center;transition:border-color .2s;">Arkanoid</a>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="../../img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                    <p>The best place to play brick breaker online. Free, fast, no download.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Play</h4>
+                    <ul>
+                        <li><a href="../../index.html#play-now">Play Now</a></li>
+                        <li><a href="../../game/index.html">Full Game</a></li>
+                        <li><a href="../../index.html#how-to-play">How to Play</a></li>
+                        <li><a href="../../index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="../../about/index.html">About</a></li>
+                        <li><a href="../../contact/index.html">Contact</a></li>
+                        <li><a href="../../privacy/index.html">Privacy</a></li>
+                        <li><a href="../../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+
+    <!-- ═══ ARKANOID CANVAS GAME ═══ -->
+    <script>
+    (function() {
+        'use strict';
+        var canvas = document.querySelector(".ark-canvas");
+        var ctx = canvas.getContext("2d");
+        canvas.width = 448; canvas.height = 400;
+
+        // ── Game constants ──
+        var ROWS = 6, COLS = 13, BW = 32, BH = 14, BOT = 60, BOL = 8;
+        var PAW = 52, PAH = 10, PS = 7;
+        var BR = 4, BASE_SPD = 3.2;
+        var PW_COLORS = { L:'#ff4500', E:'#0693e3', C:'#00d084', S:'#fcb900', M:'#7c3aed', '1UP':'#ff6b6b' };
+        var PW_LABELS = { L:'L', E:'E', C:'C', S:'S', M:'M', '1UP':'+' };
+        var ROW_COLORS = ['#ff4500','#ff6b6b','#fcb900','#00d084','#0693e3','#7c3aed'];
+
+        // ── State ──
+        var score = 0, lives = 3, stage = 1, highScore = 0;
+        var px, py, pw, balls = [], powerups = [], particles = [];
+        var lasers = [], caughtBall = null;
+        var rp = false, lp = false, mouseX = canvas.width/2, mouseActive = false;
+        var gameState = 'title'; // title | playing | paused | stageClear | gameOver | bossDefeated
+        var stageTimer = 0, bossHP = 0, bossMaxHP = 0;
+        var bricks = [];
+
+        // Load high score
+        try { highScore = parseInt(localStorage.getItem('arkanoidHigh')) || 0; } catch(e) {}
+
+        // ── Bricks ──
+        function buildStage(num) {
+            bricks = [];
+            var isBoss = (num >= 33);
+            if (isBoss) {
+                // DOH boss — giant moai head made of bricks
+                bossMaxHP = 40 + Math.floor((num - 32) * 5);
+                bossHP = bossMaxHP;
+                // Center head (10x5)
+                for (var c = 2; c <= 9; c++)
+                    for (var r = 0; r < 5; r++)
+                        bricks.push({ x:c*BW+BOL, y:r*BH+BOT+30, w:BW-1, h:BH-1, hp:2, maxHp:2, cl:'#555', alive:true });
+                // Eyes
+                bricks.push({ x:3*BW+BOL, y:1*BH+BOT+30, w:BW*2-1, h:BH*2-1, hp:1, maxHp:1, cl:'#ff4500', alive:true });
+                bricks.push({ x:7*BW+BOL, y:1*BH+BOT+30, w:BW*2-1, h:BH*2-1, hp:1, maxHp:1, cl:'#ff4500', alive:true });
+                // Mouth
+                bricks.push({ x:4*BW+BOL, y:4*BH+BOT+30, w:BW*3-1, h:BH-1, hp:3, maxHp:3, cl:'#ff6b6b', alive:true });
+                // Crown/horns
+                bricks.push({ x:1*BW+BOL, y:0*BH+BOT+30-14, w:BW-1, h:BH-1, hp:1, maxHp:1, cl:'#fcb900', alive:true });
+                bricks.push({ x:10*BW+BOL, y:0*BH+BOT+30-14, w:BW-1, h:BH-1, hp:1, maxHp:1, cl:'#fcb900', alive:true });
+            } else {
+                // Standard stage layouts
+                var pat = num % 7;
+                for (var c = 0; c < COLS; c++) {
+                    for (var r = 0; r < ROWS; r++) {
+                        var alive = true, hp = 1, cl = ROW_COLORS[r];
+                        if (pat === 0) { alive = true; }
+                        else if (pat === 1) { alive = (c + r) % 3 !== 0; }
+                        else if (pat === 2) { alive = c % 2 === 0 || r < 2; }
+                        else if (pat === 3) { alive = r !== 2 || (c >= 4 && c <= 8); }
+                        else if (pat === 4) { alive = (c >= 2 && c <= 10); if (r === 0 && (c === 2 || c === 10)) hp = 2; }
+                        else if (pat === 5) {
+                            alive = true;
+                            if (r < 2) hp = 2;
+                            if (r === 3 && (c === 3 || c === 6 || c === 9)) { cl = '#888'; hp = 99; } // indestructible
+                        }
+                        else if (pat === 6) { alive = (r + c) % 2 === 0; if (r === 0 && alive) hp = 2; }
+                        if (alive) bricks.push({ x:c*BW+BOL, y:r*BH+BOT, w:BW-1, h:BH-1, hp:hp, maxHp:hp, cl:cl, alive:true });
+                    }
+                }
+            }
+        }
+
+        // ── Ball ──
+        function createBall(x, y) {
+            var a = (Math.random() * 0.6 - 0.3) + Math.PI * 1.5;
+            return { x:x, y:y, r:BR, dx:Math.cos(a)*BASE_SPD, dy:Math.sin(a)*BASE_SPD, alive:true };
+        }
+
+        function resetBall() {
+            balls = [createBall(px + pw/2, py - 10)];
+            lasers = [];
+            caughtBall = null;
+        }
+
+        // ── Power-up ──
+        function spawnPowerup(x, y) {
+            var types = ['L','E','C','S','M','1UP'];
+            var weights = [0.18, 0.20, 0.18, 0.18, 0.16, 0.10];
+            var rnd = Math.random(), cum = 0;
+            for (var i = 0; i < types.length; i++) { cum += weights[i]; if (rnd < cum) { powerups.push({ x:x, y:y, type:types[i], vy:1.8, alive:true }); break; } }
+        }
+
+        function activatePowerup(type) {
+            switch(type) {
+                case 'L': lasers.push({ active:true }); break;
+                case 'E': pw = PAW * 1.6; break;
+                case 'C': caughtBall = null; break;
+                case 'S':
+                    for (var i = 0; i < balls.length; i++) {
+                        var spd = Math.sqrt(balls[i].dx*balls[i].dx + balls[i].dy*balls[i].dy);
+                        var ns = Math.max(1.5, spd * 0.5);
+                        balls[i].dx = (balls[i].dx/spd) * ns;
+                        balls[i].dy = (balls[i].dy/spd) * ns;
+                    }
+                    break;
+                case 'M':
+                    var src = balls[0] || createBall(px+pw/2, py-10);
+                    for (var j = 0; j < 2; j++) {
+                        var a2 = Math.random()*Math.PI*0.5 + Math.PI*0.25;
+                        var s = Math.sqrt(src.dx*src.dx + src.dy*src.dy);
+                        balls.push({ x:src.x, y:src.y, r:BR, dx:s*Math.cos(a2)*(j?1:-1), dy:-s*Math.sin(a2), alive:true });
+                    }
+                    break;
+                case '1UP': lives++; break;
+            }
+        }
+
+        // ── Particles ──
+        function spawnParticles(x, y, color, n) {
+            for (var i = 0; i < n; i++)
+                particles.push({ x:x, y:y, vx:(Math.random()-0.5)*6, vy:(Math.random()-0.5)*6-2, life:1, color:color });
+        }
+
+        // ── Init ──
+        function initGame() {
+            score = 0; lives = 3; stage = 1;
+            pw = PAW;
+            px = (canvas.width - pw) / 2;
+            py = canvas.height - PAH - 15;
+            buildStage(1);
+            resetBall();
+            powerups = []; particles = []; lasers = [];
+            gameState = 'playing';
+        }
+
+        // ── Update ──
+        function update() {
+            if (gameState !== 'playing') return;
+            // Paddle movement
+            if (rp && px + pw < canvas.width) px += PS;
+            if (lp && px > 0) px -= PS;
+            if (mouseActive) px += (mouseX - pw/2 - px) * 0.5;
+            px = Math.max(0, Math.min(canvas.width - pw, px));
+
+            // Balls
+            for (var bi = balls.length-1; bi >= 0; bi--) {
+                var b = balls[bi];
+                if (caughtBall === b) { b.x = px + pw/2; b.y = py - BR - 2; continue; }
+                b.x += b.dx; b.y += b.dy;
+                // Wall bounce
+                if (b.x - b.r <= 0) { b.dx = Math.abs(b.dx); b.x = b.r; }
+                if (b.x + b.r >= canvas.width) { b.dx = -Math.abs(b.dx); b.x = canvas.width - b.r; }
+                if (b.y - b.r <= 0) { b.dy = Math.abs(b.dy); b.y = b.r; }
+                // Paddle collision
+                if (b.y + b.r >= py && b.y - b.r <= py + PAH && b.x >= px - 2 && b.x <= px + pw + 2) {
+                    if (!caughtBall && Math.random() < 0.25) { caughtBall = b; b.x = px + pw/2; b.y = py - BR - 2; continue; }
+                    var hp = (b.x - px) / pw;
+                    var angle = (hp - 0.5) * Math.PI * 0.65;
+                    var spd = Math.sqrt(b.dx*b.dx + b.dy*b.dy);
+                    b.dx = spd * Math.sin(angle);
+                    b.dy = -spd * Math.cos(angle);
+                    if (b.dy > -2) b.dy = -2;
+                    b.y = py - b.r;
+                    spawnParticles(b.x, b.y, '#a78bfa', 4);
+                }
+                // Fall off screen
+                if (b.y > canvas.height + 10) { balls.splice(bi, 1); continue; }
+                // Brick collision
+                for (var ri = bricks.length-1; ri >= 0; ri--) {
+                    var r = bricks[ri];
+                    if (!r.alive) continue;
+                    if (b.x+b.r > r.x && b.x-b.r < r.x+r.w && b.y+b.r > r.y && b.y-b.r < r.y+r.h) {
+                        var ox = Math.min(b.x+b.r - r.x, r.x+r.w - (b.x-b.r));
+                        var oy = Math.min(b.y+b.r - r.y, r.y+r.h - (b.y-b.r));
+                        if (ox < oy) b.dx = -b.dx; else b.dy = -b.dy;
+                        hitBrick(ri);
+                        break;
+                    }
+                }
+            }
+
+            // If no balls left
+            if (balls.length === 0) {
+                lives--;
+                if (lives <= 0) { gameState = 'gameOver'; return; }
+                pw = PAW; lasers = []; caughtBall = null;
+                resetBall();
+            }
+
+            // Lasers
+            for (var li = lasers.length-1; li >= 0; li--) {
+                for (var ri = bricks.length-1; ri >= 0; ri--) {
+                    var r2 = bricks[ri];
+                    if (!r2.alive) continue;
+                    if (lasers[li] && r2.x < px + pw/2 && r2.x + r2.w > px + pw/2) {
+                        hitBrick(ri);
+                    }
+                }
+            }
+
+            // Powerups
+            for (var pi = powerups.length-1; pi >= 0; pi--) {
+                var pwUp = powerups[pi];
+                pwUp.y += pwUp.vy;
+                if (pwUp.y > canvas.height + 20) { powerups.splice(pi, 1); continue; }
+                if (pwUp.x+10 > px && pwUp.x-10 < px+pw && pwUp.y+10 > py && pwUp.y-10 < py+PAH) {
+                    activatePowerup(pwUp.type);
+                    spawnParticles(pwUp.x, pwUp.y, PW_COLORS[pwUp.type], 10);
+                    powerups.splice(pi, 1);
+                }
+            }
+
+            // Particles
+            for (var i = particles.length-1; i >= 0; i--) {
+                var p = particles[i];
+                p.x += p.vx; p.y += p.vy; p.vy += 0.06; p.life -= 0.022;
+                if (p.life <= 0) particles.splice(i, 1);
+            }
+
+            // Check win
+            var aliveBricks = bricks.filter(function(r){ return r.alive && r.hp < 99; });
+            if (aliveBricks.length === 0 && gameState === 'playing') {
+                if (stage >= 33) { gameState = 'bossDefeated'; }
+                else { gameState = 'stageClear'; stageTimer = 90; }
+            }
+
+            // Stage clear timer
+            if (gameState === 'stageClear' && --stageTimer <= 0) {
+                stage++;
+                pw = PAW; lasers = []; caughtBall = null;
+                buildStage(stage);
+                resetBall();
+                powerups = []; particles = [];
+                // Speed increase per stage
+                var mult = 1 + (stage - 1) * 0.03;
+                for (var bi2 = 0; bi2 < balls.length; bi2++) {
+                    var sp2 = Math.sqrt(balls[bi2].dx*balls[bi2].dx + balls[bi2].dy*balls[bi2].dy);
+                    var ns2 = BASE_SPD * mult;
+                    balls[bi2].dx = (balls[bi2].dx/sp2) * ns2;
+                    balls[bi2].dy = (balls[bi2].dy/sp2) * ns2;
+                }
+                gameState = 'playing';
+            }
+        }
+
+        function hitBrick(i) {
+            var r = bricks[i];
+            r.hp--;
+            score += (ROWS - Math.floor((r.y - BOT) / BH)) * 10;
+            if (r.hp <= 0) {
+                r.alive = false;
+                spawnParticles(r.x+r.w/2, r.y+r.h/2, r.cl, 10);
+                if (Math.random() < 0.22) spawnPowerup(r.x+r.w/2, r.y+r.h/2);
+            } else {
+                spawnParticles(r.x+r.w/2, r.y+r.h/2, r.cl, 4);
+                r.cl = r.cl.replace('ff','cc').replace('6b','55');
+            }
+            if (r.hp >= 99) spawnParticles(r.x+r.w/2, r.y+r.h/2, '#888', 3);
+        }
+
+        // ── Render ──
+        function render() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // Background
+            ctx.fillStyle = '#0a0a15';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Stars
+            ctx.fillStyle = 'rgba(200,210,255,0.3)';
+            for (var si = 0; si < 30; si++) {
+                var sx = (si * 137 + 50) % canvas.width;
+                var sy = (si * 89 + 30) % canvas.height;
+                ctx.fillRect(sx, sy, 1.2, 1.2);
+            }
+
+            // Bricks
+            for (var i = 0; i < bricks.length; i++) {
+                var r = bricks[i];
+                if (!r.alive) continue;
+                ctx.fillStyle = r.cl;
+                ctx.shadowColor = r.cl;
+                ctx.shadowBlur = r.hp >= 99 ? 2 : 6;
+                ctx.fillRect(r.x, r.y, r.w, r.h);
+                ctx.shadowBlur = 0;
+                // Border
+                ctx.strokeStyle = 'rgba(0,0,0,0.5)';
+                ctx.lineWidth = 0.5;
+                ctx.strokeRect(r.x, r.y, r.w, r.h);
+                // Highlight
+                ctx.fillStyle = 'rgba(255,255,255,0.15)';
+                ctx.fillRect(r.x+1, r.y+1, r.w-2, 3);
+                // HP indicator for multi-hit bricks
+                if (r.maxHp > 1 && r.hp < r.maxHp && r.hp < 99) {
+                    ctx.fillStyle = 'rgba(0,0,0,0.3)';
+                    ctx.fillRect(r.x+1, r.y+r.h-3, (r.w-2)*(r.hp/r.maxHp), 2);
+                }
+            }
+
+            // Paddle (Vaus shape)
+            ctx.fillStyle = '#7c3aed';
+            ctx.shadowColor = 'rgba(124,58,237,0.5)';
+            ctx.shadowBlur = 10;
+            ctx.beginPath();
+            var vx = px, vy = py, vw = pw, vh = PAH;
+            ctx.moveTo(vx+6, vy);
+            ctx.lineTo(vx+vw-6, vy);
+            ctx.quadraticCurveTo(vx+vw, vy, vx+vw, vy+4);
+            ctx.lineTo(vx+vw, vy+vh-4);
+            ctx.quadraticCurveTo(vx+vw, vy+vh, vx+vw-6, vy+vh);
+            ctx.lineTo(vx+vw-10, vy+vh-2);
+            ctx.lineTo(vx+vw-20, vy+vh);
+            ctx.lineTo(vx+20, vy+vh);
+            ctx.lineTo(vx+10, vy+vh-2);
+            ctx.lineTo(vx+6, vy+vh);
+            ctx.quadraticCurveTo(vx, vy+vh, vx, vy+vh-4);
+            ctx.lineTo(vx, vy+4);
+            ctx.quadraticCurveTo(vx, vy, vx+6, vy);
+            ctx.fill();
+            ctx.shadowBlur = 0;
+            // Highlight
+            ctx.fillStyle = 'rgba(167,139,250,0.7)';
+            ctx.fillRect(vx+8, vy+2, vw-16, 2);
+
+            // Lasers
+            if (lasers.length > 0) {
+                ctx.strokeStyle = '#ff4500';
+                ctx.lineWidth = 2;
+                ctx.shadowColor = 'rgba(255,69,0,0.7)';
+                ctx.shadowBlur = 8;
+                ctx.beginPath();
+                ctx.moveTo(px + pw/2, py);
+                ctx.lineTo(px + pw/2, 0);
+                ctx.stroke();
+                ctx.shadowBlur = 0;
+            }
+
+            // Balls
+            for (var j = 0; j < balls.length; j++) {
+                var b = balls[j];
+                ctx.shadowColor = 'rgba(255,255,255,0.6)';
+                ctx.shadowBlur = 8;
+                var grd = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
+                grd.addColorStop(0, '#fff');
+                grd.addColorStop(0.5, '#fcb900');
+                grd.addColorStop(1, '#806000');
+                ctx.fillStyle = grd;
+                ctx.beginPath();
+                ctx.arc(b.x, b.y, b.r, 0, Math.PI*2);
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+
+            // Caught ball indicator
+            if (caughtBall) {
+                ctx.strokeStyle = '#00d084';
+                ctx.lineWidth = 2;
+                ctx.shadowColor = 'rgba(0,208,132,0.6)';
+                ctx.shadowBlur = 10;
+                ctx.beginPath();
+                ctx.arc(caughtBall.x, caughtBall.y, BR+3, 0, Math.PI*2);
+                ctx.stroke();
+                ctx.shadowBlur = 0;
+            }
+
+            // Powerups
+            for (var k = 0; k < powerups.length; k++) {
+                var p2 = powerups[k];
+                ctx.fillStyle = PW_COLORS[p2.type];
+                ctx.shadowColor = PW_COLORS[p2.type];
+                ctx.shadowBlur = 8;
+                ctx.fillRect(p2.x-10, p2.y-10, 20, 20);
+                ctx.shadowBlur = 0;
+                ctx.fillStyle = '#000';
+                ctx.font = 'bold 11px Inter, monospace';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(PW_LABELS[p2.type], p2.x, p2.y);
+            }
+
+            // Particles
+            for (var m = 0; m < particles.length; m++) {
+                var p3 = particles[m];
+                ctx.globalAlpha = p3.life;
+                ctx.fillStyle = p3.color;
+                ctx.beginPath();
+                ctx.arc(p3.x, p3.y, 1.8, 0, Math.PI*2);
+                ctx.fill();
+            }
+            ctx.globalAlpha = 1;
+
+            // HUD
+            ctx.textAlign = 'start';
+            ctx.fillStyle = '#fcb900';
+            ctx.font = 'bold 12px Inter, monospace';
+            ctx.fillText('SCORE ' + score, 10, 18);
+            ctx.fillStyle = '#a78bfa';
+            ctx.font = '10px Inter, monospace';
+            ctx.fillText('STAGE ' + stage + '/33', 10, 34);
+            // Lives
+            ctx.fillStyle = '#ff6b6b';
+            var hearts = '';
+            for (var h = 0; h < lives; h++) hearts += '♥ ';
+            ctx.fillText(hearts, canvas.width - 60, 18);
+            // High score
+            ctx.fillStyle = '#888';
+            ctx.fillText('BEST ' + Math.max(score, highScore), canvas.width - 80, 34);
+            // Controls hint
+            ctx.fillStyle = 'rgba(255,255,255,0.35)';
+            ctx.font = '8px Inter, monospace';
+            ctx.fillText('←→ KEYS | MOUSE | TOUCH | CLICK TO RELEASE', canvas.width/2 - 105, canvas.height - 4);
+
+            // Boss HP bar
+            if (stage >= 33 && bossMaxHP > 0) {
+                ctx.fillStyle = 'rgba(255,255,255,0.1)';
+                ctx.fillRect(10, canvas.height - 22, canvas.width - 20, 8);
+                ctx.fillStyle = '#ff4500';
+                ctx.fillRect(10, canvas.height - 22, (canvas.width - 20) * (bossHP / bossMaxHP), 8);
+                ctx.fillStyle = '#fff';
+                ctx.font = 'bold 7px Inter, monospace';
+                ctx.textAlign = 'center';
+                ctx.fillText('DOH', canvas.width/2, canvas.height - 16);
+            }
+
+            // Overlays
+            ctx.textAlign = 'center';
+            if (gameState === 'title') {
+                ctx.fillStyle = 'rgba(0,0,0,0.8)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#fcb900';
+                ctx.font = 'bold 26px Inter, monospace';
+                ctx.fillText('ARKANOID', canvas.width/2, canvas.height/2 - 30);
+                ctx.fillStyle = '#a78bfa';
+                ctx.font = '12px Inter, monospace';
+                ctx.fillText('1986 Taito Arcade Classic', canvas.width/2, canvas.height/2 + 4);
+                ctx.fillStyle = '#fff';
+                ctx.font = 'bold 12px Inter, monospace';
+                ctx.fillText('CLICK OR PRESS SPACE TO START', canvas.width/2, canvas.height/2 + 44);
+                ctx.fillStyle = '#888';
+                ctx.font = '10px Inter, monospace';
+                ctx.fillText('HI-SCORE: ' + highScore, canvas.width/2, canvas.height/2 + 68);
+            } else if (gameState === 'stageClear') {
+                ctx.fillStyle = 'rgba(0,0,0,0.65)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#00d084';
+                ctx.font = 'bold 24px Inter, monospace';
+                ctx.fillText('STAGE CLEAR!', canvas.width/2, canvas.height/2 - 8);
+                ctx.fillStyle = '#fff';
+                ctx.font = '12px Inter, monospace';
+                ctx.fillText('Stage ' + (stage+1) + ' starting...', canvas.width/2, canvas.height/2 + 24);
+            } else if (gameState === 'gameOver') {
+                ctx.fillStyle = 'rgba(0,0,0,0.8)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#ff6b6b';
+                ctx.font = 'bold 28px Inter, monospace';
+                ctx.fillText('GAME OVER', canvas.width/2, canvas.height/2 - 24);
+                ctx.fillStyle = '#fcb900';
+                ctx.font = '18px Inter, monospace';
+                ctx.fillText('Score: ' + score, canvas.width/2, canvas.height/2 + 14);
+                if (score > highScore) {
+                    ctx.fillStyle = '#00d084';
+                    ctx.font = 'bold 11px Inter, monospace';
+                    ctx.fillText('★ NEW HIGH SCORE ★', canvas.width/2, canvas.height/2 + 38);
+                }
+                ctx.fillStyle = '#fff';
+                ctx.font = 'bold 11px Inter, monospace';
+                ctx.fillText('CLICK TO PLAY AGAIN', canvas.width/2, canvas.height/2 + 64);
+            } else if (gameState === 'bossDefeated') {
+                ctx.fillStyle = 'rgba(0,0,0,0.8)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#fcb900';
+                ctx.font = 'bold 24px Inter, monospace';
+                ctx.fillText('DOH DEFEATED!', canvas.width/2, canvas.height/2 - 24);
+                ctx.fillStyle = '#00d084';
+                ctx.font = '14px Inter, monospace';
+                ctx.fillText('YOU BEAT ARKANOID!', canvas.width/2, canvas.height/2 + 10);
+                ctx.fillStyle = '#fcb900';
+                ctx.font = '18px Inter, monospace';
+                ctx.fillText('Final Score: ' + score, canvas.width/2, canvas.height/2 + 42);
+                if (score > highScore) {
+                    ctx.fillStyle = '#00d084';
+                    ctx.font = 'bold 11px Inter, monospace';
+                    ctx.fillText('★ NEW HIGH SCORE ★', canvas.width/2, canvas.height/2 + 62);
+                }
+                ctx.fillStyle = '#fff';
+                ctx.font = 'bold 11px Inter, monospace';
+                ctx.fillText('CLICK TO PLAY AGAIN', canvas.width/2, canvas.height/2 + 86);
+            }
+            ctx.textAlign = 'start';
+        }
+
+        // ── Loop ──
+        function loop() {
+            update();
+            render();
+            requestAnimationFrame(loop);
+        }
+
+        // ── Input ──
+        function handleStart() {
+            if (gameState === 'title' || gameState === 'gameOver' || gameState === 'bossDefeated') {
+                if (gameState !== 'title' && score > highScore) {
+                    highScore = score;
+                    try { localStorage.setItem('arkanoidHigh', highScore); } catch(e) {}
+                }
+                initGame();
+            } else if (gameState === 'playing' && caughtBall) {
+                // Release caught ball
+                var a = (Math.random() * 0.6 - 0.3) + Math.PI * 1.5;
+                caughtBall.dx = Math.cos(a) * BASE_SPD * (1 + (stage-1)*0.03);
+                caughtBall.dy = -Math.sin(a) * BASE_SPD * (1 + (stage-1)*0.03);
+                caughtBall = null;
+            }
+        }
+
+        canvas.addEventListener('click', handleStart);
+        document.addEventListener('keydown', function(e) {
+            if (e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); handleStart(); }
+            if (e.key === 'ArrowRight' || e.key === 'Right') { rp = true; e.preventDefault(); }
+            if (e.key === 'ArrowLeft' || e.key === 'Left') { lp = true; e.preventDefault(); }
+        });
+        document.addEventListener('keyup', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'Right') rp = false;
+            if (e.key === 'ArrowLeft' || e.key === 'Left') lp = false;
+        });
+        canvas.addEventListener('mousemove', function(e) {
+            var rect = canvas.getBoundingClientRect();
+            var scaleX = canvas.width / rect.width;
+            mouseX = (e.clientX - rect.left) * scaleX;
+            mouseActive = true;
+        });
+        canvas.addEventListener('mouseleave', function() { mouseActive = false; });
+        canvas.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+            var rect = canvas.getBoundingClientRect();
+            var scaleX = canvas.width / rect.width;
+            mouseX = (e.touches[0].clientX - rect.left) * scaleX;
+            mouseActive = true;
+        }, { passive: false });
+        canvas.addEventListener('touchend', function() { mouseActive = false; });
+
+        // ── Start ──
+        loop();
+    })();
+    </script>
+</body>
+</html>

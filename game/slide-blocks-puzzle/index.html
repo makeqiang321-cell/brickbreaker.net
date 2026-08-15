@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Blocks Puzzle — Play Free Online | BrickBreaker</title>
+    <meta name="description" content="Play Slide Blocks Puzzle online — scrambled dino pictures, three grid sizes (3×3, 4×4, 5×5). Slide to solve. The classic 15-puzzle, evolved. Free, no download.">
+    <meta name="keywords" content="slide blocks puzzle, sliding puzzle, 15 puzzle, dino puzzle, free puzzle game, sliding block puzzle">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://brickbreaker.net/game/slide-blocks-puzzle/">
+    <meta property="og:title" content="Slide Blocks Puzzle — Play Free Online | BrickBreaker">
+    <meta property="og:description" content="Play Slide Blocks Puzzle online — scrambled dino pictures, three grid sizes (3×3, 4×4, 5×5). Slide to solve. The classic 15-puzzle, evolved. Free, no download.">
+    <meta property="og:image" content="https://brickbreaker.net/img/slide-blocks-puzzle-cover.jpg">
+    <meta property="og:url" content="https://brickbreaker.net/game/slide-blocks-puzzle/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"VideoGame","name":"Slide Blocks Puzzle","description":"Play Slide Blocks Puzzle online — scrambled dino pictures, three grid sizes (3×3, 4×4, 5×5). Slide to solve. The classic 15-puzzle, evolved. Free, no download.","genre":["Puzzle","Casual","Classic"],"image":"https://brickbreaker.net/img/slide-blocks-puzzle-cover.jpg","url":"https://brickbreaker.net/game/slide-blocks-puzzle/","applicationCategory":"Game","operatingSystem":"Web","playMode":"SinglePlayer","gamePlatform":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":1},"author":{"@type":"Organization","name":"BrickBreaker.net"},"publisher":{"@type":"Organization","name":"BrickBreaker.net"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.3","bestRating":"5","ratingCount":1900,"reviewCount":285}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you play Slide Blocks Puzzle?","acceptedAnswer":{"@type":"Answer","text":"Click any tile directly next to the empty space and it slides into the gap — each move counts toward your total. Repeat until the scrambled dino picture is fully restored. No timer, no score pressure — just the quiet satisfaction of restoring order one tile at a time."}},{"@type":"Question","name":"What grid sizes does Slide Blocks Puzzle have?","acceptedAnswer":{"@type":"Answer","text":"Three sizes: 3×3 (8 tiles), 4×4 (15 tiles), and 5×5 (24 tiles). Pick your grid size before you start for a different solve experience each time — 3×3 is a quick warm-up, 4×4 is the classic 15-puzzle experience, and 5×5 is a genuine spatial-reasoning challenge that tests even experienced solvers."}},{"@type":"Question","name":"Is Slide Blocks Puzzle free to play?","acceptedAnswer":{"@type":"Answer","text":"Completely free with no download, registration, or in-app purchases. Just open your browser and start sliding on any device — desktop, tablet, or phone."}},{"@type":"Question","name":"What is the best strategy for solving sliding puzzles?","acceptedAnswer":{"@type":"Answer","text":"Solve corners first — the four corner tiles anchor the board and everything else falls into position around them. Then work row by row from top to bottom, ignoring completed rows. On larger grids, tackle the last two rows left to right as a unit — systematic placement beats intuition every time, and never make a move that does not advance your sequence."}},{"@type":"Question","name":"Can I play Slide Blocks Puzzle on my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes, Slide Blocks Puzzle works on iOS, Android, and any modern mobile browser. Tap controls feel natural — just tap a tile next to the gap and it slides right in, with no dragging or precision inputs required."}}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://brickbreaker.net/"},{"@type":"ListItem","position":2,"name":"New Games","item":"https://brickbreaker.net/new-games/"},{"@type":"ListItem","position":3,"name":"Slide Blocks Puzzle","item":"https://brickbreaker.net/game/slide-blocks-puzzle/"}]}
+    </script>
+
+    <style>
+        .gd-page { padding: 90px 0 0; }
+        .gd-breadcrumb { font-size: 0.78rem; color: var(--text-faint); padding: 16px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .gd-breadcrumb a:hover { text-decoration: underline; }
+
+        /* Section Nav */
+        .gd-nav { position: sticky; top: 56px; z-index: 40; border-bottom: 1px solid var(--border); background: var(--bg); padding: 10px 0; }
+        .gd-nav-inner { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; gap: 8px; overflow-x: auto; }
+        .gd-nav a { white-space: nowrap; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); padding: 7px 16px; font-size: 0.78rem; font-weight: 700; color: var(--text); text-decoration: none; transition: border-color .2s,background .2s; }
+        .gd-nav a:hover { border-color: var(--primary); background: rgba(124,58,237,.08); }
+
+        /* Play Section */
+        .gd-play { padding: 24px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-play-card { overflow: hidden; border-radius: 24px; border: 1px solid rgba(255,255,255,.06); background: linear-gradient(180deg,#0a0020,#100030); padding: 16px; box-shadow: 0 20px 44px rgba(0,0,0,.3); }
+        .gd-play-frame { position: relative; overflow: hidden; background: #000; border-radius: 16px; }
+        .gd-play-frame iframe { width: 100%; height: 44vh; min-height: 340px; border: none; display: block; }
+        .gd-play-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; padding: 12px 16px; border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); }
+        .gd-play-score { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+        .gd-play-score-label { font-size: .68rem; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; color: var(--text); }
+        .gd-stars { color: #fcb900; font-size: 1rem; }
+        .gd-rating { font-weight: 700; color: var(--text); font-size: .82rem; }
+        .gd-rating-count { font-size: .72rem; color: var(--text-faint); }
+        .gd-play-actions { display: flex; gap: 8px; }
+        .gd-btn-full { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text); font-size: .78rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: border-color .2s; }
+        .gd-btn-full:hover { border-color: var(--primary); }
+        .gd-btn-play { display: inline-flex; align-items: center; gap: 6px; padding: 9px 22px; border-radius: 999px; background: linear-gradient(180deg,#8b5cf6,#7c3aed); color: #fff; font-size: .78rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: filter .2s; border: none; }
+        .gd-btn-play:hover { filter: brightness(1.15); }
+
+        /* Game Info */
+        .gd-info { padding: 12px 24px 0; max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+        .gd-info-card { border-radius: 16px; border: 1px solid var(--border); background: var(--bg-card); padding: 12px 18px; }
+        .gd-info-card .gd-byline { font-size: .7rem; color: var(--text-faint); margin-top: 2px; }
+        .gd-share-row { display: flex; gap: 8px; margin-left: auto; }
+        .gd-btn-share { display: inline-flex; align-items: center; gap: 5px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-dim); font-size: .72rem; font-weight: 600; cursor: pointer; transition: border-color .2s; }
+        .gd-btn-share:hover { border-color: var(--primary); color: var(--text); }
+
+        /* Hero Guide */
+        .gd-hero { padding: 28px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-hero-card { border-radius: 24px; border: 1px solid rgba(124,58,237,.18); background: linear-gradient(135deg,rgba(124,58,237,.1),rgba(167,139,250,.03)); padding: 32px 30px; }
+        .gd-hero-tag { font-size: .58rem; font-weight: 800; letter-spacing: 2.4px; text-transform: uppercase; color: var(--primary); margin: 0 0 8px; }
+        .gd-hero-h1 { font-weight: 800; font-size: clamp(1.6rem,3.2vw,2.4rem); line-height: .98; letter-spacing: -.6px; color: var(--text); margin: 0 0 10px; max-width: 22ch; }
+        .gd-hero-desc { font-size: .88rem; color: var(--text-dim); line-height: 1.65; max-width: 560px; margin: 0; }
+        .gd-hero-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; background: var(--primary); color: #fff; border: none; border-radius: 999px; padding: 10px 22px; font-size: .84rem; font-weight: 700; text-decoration: none; transition: filter .2s; }
+        .gd-hero-cta:hover { filter: brightness(1.15); }
+
+        /* Guide Sections */
+        .gd-section { padding: 32px 24px; }
+        .gd-section-inner { max-width: 1120px; margin: 0 auto; display: grid; gap: 24px; grid-template-columns: 1.05fr .95fr; }
+        .gd-article { border-radius: 22px; border: 1px solid var(--border); background: var(--bg-card); padding: 26px 28px; }
+        .gd-article-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); line-height: 1; color: var(--text); margin: 0 0 8px; }
+        .gd-article-sub { font-size: .84rem; color: var(--text-faint); margin: 0 0 14px; }
+        .gd-article-body { font-size: 1rem; color: var(--text-dim); line-height: 1.7; }
+        .gd-article-body p { margin: 0 0 13px; }
+        .gd-article-body ul { padding-left: 18px; margin: 8px 0 16px; }
+        .gd-article-body li { margin-bottom: 6px; }
+        .gd-article-body li::marker { color: var(--primary); }
+
+        .gd-sidebar { display: flex; flex-direction: column; gap: 16px; }
+        .gd-sb-card { border-radius: 22px; border: 1px solid var(--border); background: var(--bg-card); padding: 22px 24px; }
+        .gd-sb-card h3 { font-weight: 800; font-size: 1.05rem; color: var(--text); margin: 0 0 12px; }
+        .gd-sb-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 7px; }
+        .gd-sb-list li { border-radius: 12px; border: 1px solid var(--border); background: rgba(124,58,237,.03); padding: 10px 14px; font-size: .84rem; font-weight: 600; color: var(--text-dim); }
+
+        /* Screenshots */
+        .gd-shots { padding: 0 24px 32px; max-width: 1120px; margin: 0 auto; }
+        .gd-shots-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-shots-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-shots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+        .gd-shot { border-radius: 20px; border: 1px solid var(--border); background: var(--bg-card); overflow: hidden; }
+        .gd-shot img { width: 100%; min-height: 200px; object-fit: cover; display: block; }
+        .gd-shot figcaption { padding: 12px 16px; font-size: .76rem; color: var(--text-faint); line-height: 1.5; }
+
+        /* FAQ */
+        .gd-faq { padding: 0 24px 48px; max-width: 1120px; margin: 0 auto; }
+        .gd-faq-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-faq-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-faq-item { border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); padding: 18px 22px; margin-bottom: 10px; }
+        .gd-faq-q { font-size: .85rem; font-weight: 700; color: var(--text); margin: 0 0 6px; }
+        .gd-faq-a { font-size: .8rem; color: var(--text-dim); line-height: 1.6; margin: 0; }
+
+        /* Comparison Table */
+        .gd-compare-table-wrap { overflow-x: auto; margin: 14px 0 0; border-radius: 14px; border: 1px solid var(--border); }
+        .gd-compare-table { width: 100%; border-collapse: collapse; font-size: .78rem; }
+        .gd-compare-table thead th { background: rgba(124,58,237,.12); color: var(--text); font-weight: 700; padding: 10px 14px; text-align: left; font-size: .76rem; letter-spacing: .4px; white-space: nowrap; }
+        .gd-compare-table tbody td { padding: 10px 14px; color: var(--text-dim); border-top: 1px solid var(--border); }
+        .gd-compare-table tbody tr:first-child td { border-top: 1px solid var(--border); }
+        .gd-compare-table tbody tr:hover { background: rgba(124,58,237,.04); }
+        .gd-compare-table tbody td:first-child { font-weight: 600; color: var(--text); white-space: nowrap; }
+
+        .gd-footer-msg { padding: 0 24px 20px; max-width: 1120px; margin: 0 auto; font-size: .76rem; color: var(--text-faint); text-align: center; }
+
+        /* You May Also Like */
+        .gd-also { padding: 0 24px 48px; max-width: 1120px; margin: 0 auto; }
+        .gd-also-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-also-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-also-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+        .gd-also-card { display: block; border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); overflow: hidden; text-decoration: none; color: inherit; transition: border-color .2s, transform .2s, box-shadow .2s; }
+        .gd-also-card:hover { border-color: rgba(124,58,237,.4); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(124,58,237,.1); }
+        .gd-also-img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; }
+        .gd-also-body { padding: 14px 16px; }
+        .gd-also-title { font-size: .82rem; font-weight: 800; color: var(--text); margin: 0 0 4px; }
+        .gd-also-desc { font-size: .72rem; color: var(--text-faint); line-height: 1.5; margin: 0; }
+
+        @media (max-width: 768px) {
+            .gd-section-inner { grid-template-columns: 1fr; }
+            .gd-play-frame iframe { height: 320px; min-height: 280px; }
+            .gd-hero-card { padding: 22px 18px; }
+            .gd-info { flex-direction: column; align-items: flex-start; }
+            .gd-share-row { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="../../index.html" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../../new-games/index.html">NEW GAMES</a></li>
+            <li><a href="../../hot-games/index.html">HOT GAMES</a></li>
+            <li><a href="../../blog.html">BLOG</a></li>
+            <li><a href="../../about/index.html">ABOUT</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<main class="gd-page">
+
+    <!-- Breadcrumb -->
+    <div class="gd-breadcrumb"><a href="../../index.html">Home</a> / <a href="../../new-games/index.html">New Games</a> / <strong>Slide Blocks Puzzle</strong></div>
+
+    <!-- Section Nav -->
+    <nav class="gd-nav">
+        <div class="gd-nav-inner">
+            <a href="#play">Play</a>
+            <a href="#overview">Overview</a>
+            <a href="#how-to-play">How to Play</a>
+            <a href="#strategy">Strategy</a>
+            <a href="#why">Why Still Played</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Play Section -->
+    <section class="gd-play" id="play">
+        <div class="gd-play-card">
+            <div class="gd-play-frame" id="gameWindow">
+                <iframe src="https://html5.gamemonetize.games/daq0m4jag5cwoe39ky08ryglpu6yc5cq/" title="Slide Blocks Puzzle Game" allow="autoplay" loading="eager" sandbox="allow-scripts allow-same-origin"></iframe>
+            </div>
+            <div class="gd-play-bar">
+                <div class="gd-play-score">
+                    <span class="gd-play-score-label">Player Rating</span>
+                    <span class="gd-stars">★★★★☆</span>
+                    <span class="gd-rating">4.3/5</span>
+                    <span class="gd-rating-count">Based on 1,900+ ratings</span>
+                </div>
+                <div class="gd-play-actions">
+                    <a href="https://html5.gamemonetize.games/daq0m4jag5cwoe39ky08ryglpu6yc5cq/" target="_blank" class="gd-btn-play">&#9654; Play Fullscreen</a>
+                    <button class="gd-btn-full" id="fullBtn" title="Toggle fullscreen">&#9974;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Info -->
+    <div class="gd-info">
+        <div class="gd-info-card">
+            <p class="gd-byline" style="font-weight:800;font-size:1.15rem;color:var(--text);margin:0;">Slide Blocks Puzzle</p>
+            <p class="gd-byline">Sliding Puzzle &#8226; 3 Grid Sizes &#8226; Dino Pictures</p>
+        </div>
+        <div class="gd-share-row">
+            <button class="gd-btn-share" onclick="navigator.clipboard.writeText('https://brickbreaker.net/game/slide-blocks-puzzle/')">&#128203; Copy link</button>
+        </div>
+    </div>
+
+    <!-- Hero Guide -->
+    <div class="gd-hero">
+        <div class="gd-hero-card">
+            <p class="gd-hero-tag">Slide Blocks Puzzle Game Guide</p>
+            <h1 class="gd-hero-h1">Play Slide Blocks Puzzle Online</h1>
+            <p class="gd-hero-desc">Slide Blocks Puzzle takes scrambled dino pictures and drops them onto three grid sizes: 3&#215;3, 4&#215;4, and 5&#215;5. It is the classic 15-puzzle format you have known forever — now with colorful dinosaur art instead of numbered tiles. Slide adjacent tiles into the empty gap and restore the picture, one move at a time.</p>
+            <a href="#play" class="gd-hero-cta">&#9660; Play Now</a>
+        </div>
+    </div>
+
+    <!-- Overview + Sidebar -->
+    <section class="gd-section" id="overview">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Play Slide Blocks Puzzle Online Free — Full Guide</h2>
+                <p class="gd-article-sub">If you are here to play Slide Blocks Puzzle, the appeal is simple: a timeless sliding mechanic, dino artwork, and three difficulty levels that scale from casual fun to genuine brain workout.</p>
+                <div class="gd-article-body">
+                    <p>Slide Blocks Puzzle works because it takes the classic 15-puzzle format — invented in 1880 — and gives it a fresh coat of paint. Instead of numbered tiles, you get colorful dinosaur pictures scrambled across a grid. One tile is always missing. Click any tile next to the empty space and it slides into the gap. Do that enough times and the picture snaps back together.</p>
+                    <p>That is the whole game. No timer, no score pressure, no complicated rules. Just you, a scrambled image, and the quiet satisfaction of restoring order one tile at a time. The move counter lets you chase personal bests, but there is no penalty for taking a hundred moves or a thousand.</p>
+                    <p>The three grid sizes change everything. On 3&#215;3 you are solving in under a minute — it is a warm-up. On 4&#215;4 you get the true 15-puzzle experience, the one that has been frustrating and delighting people for 140 years. On 5&#215;5 the puzzle gets genuinely hard. Twenty-four tiles is a lot of pieces to track, and the final two rows will test your patience.</p>
+                    <p>If you like puzzles that reward methodical thinking over reflexes, Slide Blocks Puzzle stays compelling because every solve feels earned. There is no randomness, no luck — just pure spatial logic and the satisfaction of watching a scrambled dino turn back into a recognizable picture under your own hands.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card" id="how-to-play">
+                    <h3>How to Play Slide Blocks Puzzle</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">The classic 15-puzzle format with dino artwork — start with the basics, then use each solve to sharpen spatial reasoning and move-count efficiency.</p>
+                    <ul class="gd-sb-list">
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Click tiles next to the empty space</strong><span style="font-size:.8rem;color:var(--text-faint);">Tap or click any tile directly adjacent to the gap — it slides right in, counting as one move.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Work row by row, top to bottom</strong><span style="font-size:.8rem;color:var(--text-faint);">Solve the top row first, then ignore it. Move to the second row. On 5&#215;5, handle the last two rows as a unit.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Solve corners first</strong><span style="font-size:.8rem;color:var(--text-faint);">The four corner tiles anchor the board — place them early and everything else falls into position around them.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Plan three moves ahead</strong><span style="font-size:.8rem;color:var(--text-faint);">Before every slide, ask whether it moves you closer to placing the next tile in sequence — never shuffle without purpose.</span></li>
+                    </ul>
+                </div>
+                <div class="gd-sb-card">
+                    <h3>Slide Blocks Puzzle Release Date &amp; Platforms</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Slide Blocks Puzzle launched in 2022 with three grid sizes and colorful dino artwork — playable anywhere with a browser, no install required.</p>
+                    <ul class="gd-sb-list">
+                        <li>Released: 2022</li>
+                        <li>Developer: Gamemonetize</li>
+                        <li>Platform: Web browser</li>
+                        <li>Mobile: iOS &amp; Android supported</li>
+                        <li>Type: Sliding puzzle — 3 sizes</li>
+                        <li>Rating: 4.3/5 (1,900+ votes)</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <div class="gd-shots">
+        <h2 class="gd-shots-h2">Slide Blocks Puzzle Screenshots</h2>
+        <p class="gd-shots-sub">A quick look at the game — colorful dino pictures, clean grid, and harder than it looks once you hit 5&#215;5.</p>
+        <div class="gd-shots-grid">
+            <figure class="gd-shot">
+                <img src="../../img/slide-blocks-puzzle-cover.jpg" alt="Slide Blocks Puzzle — scrambled dino picture on a 4×4 grid" loading="lazy">
+                <figcaption>Slide Blocks Puzzle at its best — half-solved, every move a small victory.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Tips -->
+    <section class="gd-section" id="strategy">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Slide Blocks Puzzle Tips — Solve Smarter, Not Harder</h2>
+                <p class="gd-article-sub">Slide Blocks Puzzle rewards method, not speed. Here is how to cut your move count.</p>
+                <div class="gd-article-body">
+                    <p>A smart solve starts with locking in the corners first — the four corner tiles have fixed positions in the final picture. Get them in place early and they anchor everything else. Once the corners are right, the edges of the puzzle start to feel less chaotic and the middle starts solving itself.</p>
+                    <p>The most reliable approach is solving row by row, top to bottom. Do not try to solve the whole board at once. Get the top row correct, then ignore it and move to the second row. On 4&#215;4 and 5&#215;5 grids, solve the first N-2 rows individually, then tackle the last two rows together as a unit — treating them as a single puzzle block avoids undoing work you have already finished.</p>
+                    <p>On 5&#215;5 especially, the bottom two rows are where most people stall. Work left to right within each row: place the leftmost tile first, then the next, then the next. Do not jump around — systematic placement beats intuition every time. The last two rows are the real test, and the only way through them is disciplined left-to-right sequencing.</p>
+                    <p>Every slide you make opens a new gap and closes the old one, so thinking three moves ahead changes everything. Before you click, ask: does this move bring me closer to placing the next tile in sequence, or does it just shuffle pieces around? If the answer is "shuffle," find a better move — each wasted slide adds up quickly.</p>
+                    <p>The gap is your only tool, so use the empty space strategically. Park it next to the tile you want to move, slide that tile in, then immediately plan where the gap needs to be for the next tile in your sequence. Do not let the gap wander — every gap position either advances your solve or sets you back, and controlling it deliberately is what separates efficient solves from chaotic ones.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card">
+                    <h3>Slide Blocks Puzzle Score Tips &amp; Strategy</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">A corner-first strategy paired with systematic row-by-row solving cuts move counts and keeps the board under control — here are the essentials.</p>
+                    <ul class="gd-sb-list">
+                        <li>Corners first — they anchor the board</li>
+                        <li>Top row, then second row, then bottom rows</li>
+                        <li>On 5&#215;5, solve last two rows as a unit</li>
+                        <li>Never make a move that does not advance your sequence</li>
+                        <li>Keep the gap next to your target tile</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Differences -->
+    <section class="gd-section" id="differences">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">What Makes Slide Blocks Puzzle Different</h2>
+                <p class="gd-article-sub">The classic 15-puzzle format, updated with dino artwork and three grid sizes — no timers, no scores, just pure unscrambling.</p>
+                <div class="gd-article-body">
+                    <p>Slide Blocks Puzzle is the classic 15-puzzle format — invented in 1880 by Noyes Palmer Chapman — but updated with colorful dinosaur artwork and three grid sizes. Unlike modern puzzle games that rely on timers, scores, or power-ups to create urgency, this is pure unscrambling. No clock ticking down, no points on the line, no complicated rules. Just you, a scrambled dino picture, and the quiet satisfaction of restoring order one tile at a time.</p>
+                    <p>The three grid sizes are what make this game work for everyone. The 3&#215;3 is a warm-up — you solve it in under a minute and feel good about yourself. The 4&#215;4 is the standard 15-puzzle experience, the one that has been frustrating and delighting puzzle fans for over 140 years. And the 5&#215;5? That is where Slide Blocks Puzzle gets genuinely hard. Twenty-four tiles demands real spatial reasoning, and the final two rows will test your patience in ways the smaller grids never do.</p>
+                    <p>Most modern puzzle games are designed to keep you hooked with daily challenges, leaderboards, and reward loops. Slide Blocks Puzzle does none of that. It trusts the core mechanic — slide a tile, plan the next move, watch the picture come together — to be compelling on its own. And it is. There is something deeply satisfying about solving a puzzle where the only thing standing between you and a restored dino picture is your own ability to think three moves ahead.</p>
+                    <p>The dino artwork is the other thing that sets it apart. Most sliding puzzles use numbered tiles or generic stock photos. Slide Blocks Puzzle gives you actual dinosaur illustrations — colorful, kid-friendly, and genuinely fun to look at. It turns what could be a dry logic exercise into something that feels like a game. You are not just aligning numbered squares; you are putting a T-Rex back together.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card">
+                    <h3>6 Key Differences: Slide Blocks Puzzle vs Others</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Slide Blocks Puzzle stands apart from modern puzzle games with its pure, no-pressure design — dino art, classic 15-puzzle mechanics, and zero distractions.</p>
+                    <ul class="gd-sb-list">
+                        <li>Classic 15-puzzle format — invented 1880</li>
+                        <li>Dino artwork instead of numbered tiles</li>
+                        <li>Three grid sizes: 3&#215;3, 4&#215;4, 5&#215;5</li>
+                        <li>No timer — zero time pressure</li>
+                        <li>No score — pure solving satisfaction</li>
+                        <li>No daily challenges or reward loops</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Watch + Timeline -->
+    <section class="gd-section" id="watch">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Watch Slide Blocks Puzzle</h2>
+                <p class="gd-article-sub">A quick visual read on the classic sliding format, dino artwork, and why 140 years of puzzle history still holds up.</p>
+                <figure class="gd-shot" style="margin-top:16px;">
+                    <img src="../../img/slide-blocks-puzzle-cover.jpg" alt="Slide Blocks Puzzle key art" style="aspect-ratio:16/9;">
+                    <figcaption>Slide Blocks Puzzle — visual overview from the official cover art.</figcaption>
+                </figure>
+            </article>
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Slide Blocks Puzzle Timeline</h2>
+                <div class="gd-article-body" style="margin-top:14px;">
+                    <p>Released 2022 by Gamemonetize. Built for HTML5. Playable on desktop, iPhone, iPad, and Android — same classic 15-puzzle format with dino art, three grid sizes, any screen.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Why Still Played -->
+    <section class="gd-section" id="why">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Why Slide Blocks Puzzle Still Gets Played</h2>
+                <p class="gd-article-sub">A 140-year-old puzzle format that hasn't aged a day — here's why players keep coming back to Slide Blocks Puzzle.</p>
+                <div class="gd-article-body">
+                    <p>The 15-puzzle format is 140 years old, and it has never gone out of style. Slide Blocks Puzzle taps into that timeless appeal: a simple sliding mechanic, a clear goal, and the quiet satisfaction of restoring order from chaos. Unlike games that rely on flashy effects or endless content updates, this format earns its longevity through pure design — one empty space, adjacent tiles, and a scrambled picture that rewards patience. Players keep returning because the challenge feels the same every time yet never feels solved: each shuffle creates a new problem to work through, and that infinite replayability is something no content treadmill can match.</p>
+                    <p>The dino artwork keeps it playful. Most sliding puzzles use numbered tiles — functional but dull. Slide Blocks Puzzle swaps numbers for colorful dinosaur illustrations that make the solve feel like a game rather than a logic exercise. Putting a T-Rex back together piece by piece is genuinely more fun than aligning digits, and it gives the puzzle a personality that numbered grids never achieve. That visual charm matters, especially for younger players discovering sliding puzzles for the first time.</p>
+                    <p>Three grid sizes give Slide Blocks Puzzle real progression. Start on 3&#215;3 to warm up, tackle 4&#215;4 for the classic 15-puzzle experience, then graduate to 5&#215;5 when you want a genuine challenge. Sliding puzzles also train spatial reasoning differently than block placement games — you are not stacking or matching, you are mentally rotating and sequencing pieces within a constrained space. That kind of thinking transfers to real-world skills in ways that pattern-matching games don't, and it is a big part of why teachers and parents have used sliding puzzles in classrooms for decades.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card">
+                    <h3>Why Players Return to Slide Blocks Puzzle</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">A 140-year-old puzzle format that never gets old — every shuffle creates a fresh problem, and the quiet satisfaction of restoring order keeps players coming back.</p>
+                    <ul class="gd-sb-list">
+                        <li>Timeless 15-puzzle format — 140 years strong</li>
+                        <li>Dino artwork adds personality and charm</li>
+                        <li>Three grid sizes create real progression</li>
+                        <li>No timer — play at your own pace</li>
+                        <li>Every shuffle is a fresh challenge</li>
+                        <li>Trains spatial reasoning, not just pattern matching</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <div class="gd-faq" id="faq">
+        <h2 class="gd-faq-h2">Slide Blocks Puzzle Online — FAQ</h2>
+        <p class="gd-faq-sub">Quick answers to the most common questions about Slide Blocks Puzzle.</p>
+        <div class="gd-faq-item"><p class="gd-faq-q">How do you play Slide Blocks Puzzle?</p><p class="gd-faq-a">Click any tile directly next to the empty space and it slides into the gap — each move counts toward your total. Repeat until the scrambled dino picture is fully restored. No timer, no score pressure — just the quiet satisfaction of restoring order one tile at a time.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">What grid sizes are available?</p><p class="gd-faq-a">Three sizes: 3×3 (8 tiles), 4×4 (15 tiles), and 5×5 (24 tiles). Pick your grid size before you start for a different solve experience each time — 3×3 is a quick warm-up, 4×4 is the classic 15-puzzle experience, and 5×5 is a genuine spatial-reasoning challenge that tests even experienced solvers.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">Is Slide Blocks Puzzle really free?</p><p class="gd-faq-a">Completely free with no download, registration, or in-app purchases. Just open your browser and start sliding on any device — desktop, tablet, or phone.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">What is the best strategy for solving sliding puzzles?</p><p class="gd-faq-a">Solve corners first — the four corner tiles anchor the board and everything else falls into position around them. Then work row by row from top to bottom, ignoring completed rows. On larger grids, tackle the last two rows left to right as a unit — systematic placement beats intuition every time, and never make a move that does not advance your sequence.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">Can I play Slide Blocks Puzzle on my phone?</p><p class="gd-faq-a">Yes, Slide Blocks Puzzle works on iOS, Android, and any modern mobile browser. Tap controls feel natural — just tap a tile next to the gap and it slides right in, with no dragging or precision inputs required.</p></div>
+    </div>
+
+    <!-- You May Also Like -->
+    <div class="gd-also">
+        <h2 class="gd-also-h2">More Slide Puzzle Games You May Like</h2>
+        <p class="gd-also-sub">More puzzle games to play after Slide Blocks Puzzle.</p>
+        <div class="gd-also-grid">
+            <a href="../block-crush/index.html" class="gd-also-card">
+                <img src="../../img/block-crush-cover.jpg" alt="Block Crush" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body">
+                    <p class="gd-also-title">Block Crush</p>
+                    <p class="gd-also-desc">Drag and drop colorful blocks onto an 8×8 grid — clear rows and columns to keep the board open.</p>
+                </div>
+            </a>
+            <a href="../block-puzzle-master/index.html" class="gd-also-card">
+                <img src="../../img/block-puzzle-master-cover.jpg" alt="Block Puzzle Master" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body">
+                    <p class="gd-also-title">Block Puzzle Master</p>
+                    <p class="gd-also-desc">Classic block puzzle with wood-tone pieces and a clean grid — no timer, just pure placement strategy.</p>
+                </div>
+            </a>
+            <a href="../1010-color-match/index.html" class="gd-also-card">
+                <img src="../../img/1010-color-match-cover.jpg" alt="1010 Color Match" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body">
+                    <p class="gd-also-title">1010 Color Match</p>
+                    <p class="gd-also-desc">Place colorful blocks and match three same-colored pieces in a row to score — bright, quick, and addictive.</p>
+                </div>
+            </a>
+            <a href="../bricky-blast/index.html" class="gd-also-card">
+                <img src="../../img/bricky-blast-cover.jpg" alt="Bricky Blast" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body">
+                    <p class="gd-also-title">Bricky Blast</p>
+                    <p class="gd-also-desc">A fresh brick-breaking twist with colorful bricks and satisfying blast combos — fast-paced arcade fun.</p>
+                </div>
+            </a>
+            <a href="../../index.html" class="gd-also-card">
+                <img src="../../img/cover-classic.svg" alt="Brick Breaker" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body"><p class="gd-also-title">Brick Breaker</p><p class="gd-also-desc">Switch gears — classic paddle-and-ball arcade action with 9 modes. Same instant-play, totally different challenge.</p></div>
+            </a>
+        </div>
+    </div>
+
+    <p class="gd-footer-msg">Slide Blocks Puzzle is free to play online — no download, no sign-up, no timer. Slide tiles, restore dino pictures, and chase your personal best move count.</p>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../../img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                <p>The best place to play brick breaker online. Free, fast, no download.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Play</h4>
+                <ul><li><a href="../../index.html#play-now">Play Now</a></li><li><a href="../../game/index.html">Full Game</a></li><li><a href="../../index.html#how-to-play">How to Play</a></li><li><a href="../../index.html#faq">FAQ</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="../../privacy/index.html">Privacy</a></li><li><a href="../../blog.html">Blog</a></li></ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&#169; 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p></div>
+    </div>
+</footer>
+
+<script>
+(function(){
+    var fullBtn = document.getElementById('fullBtn');
+    var gameWindow = document.getElementById('gameWindow');
+    if (fullBtn && gameWindow) {
+        fullBtn.addEventListener('click', function(){
+            var el = gameWindow;
+            if (document.fullscreenElement) { document.exitFullscreen(); }
+            else { if (el.requestFullscreen) el.requestFullscreen(); else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); }
+        });
+    }
+})();
+</script>
+<script src="../../js/main.js"></script>
+</body>
+</html>

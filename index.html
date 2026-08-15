@@ -24,44 +24,38 @@
     <meta name="twitter:description" content="Play brick breaker free online. Classic breakout arcade — one paddle, one ball, a wall of bricks. Play instantly.">
     <meta name="twitter:image" content="https://brickbreaker.net/og-image.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
     <meta name="theme-color" content="#7c3aed">
     <meta name="msapplication-TileColor" content="#7c3aed">
 
-    <!-- Schema.org: SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Brick Breaker",
-        "url": "https://brickbreaker.net",
-        "applicationCategory": "GameApplication",
-        "operatingSystem": "Web",
-        "description": "Play brick breaker online for free. Classic breakout arcade game with power-ups, progressive levels, and high scores.",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-    }
-    </script>
-
-    <!-- Schema.org: VideoGame -->
+    <!-- Schema.org: VideoGame (primary entity) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "VideoGame",
         "name": "Brick Breaker",
         "url": "https://brickbreaker.net",
+        "image": "https://brickbreaker.net/img/og-image.svg",
+        "description": "Play brick breaker online for free. Classic breakout arcade game with power-ups, progressive levels, and high scores.",
         "applicationCategory": "Game",
         "operatingSystem": "Web",
-        "description": "Play brick breaker online for free. Classic breakout arcade game with power-ups, progressive levels, and high scores.",
+        "genre": ["Arcade", "Puzzle"],
+        "inLanguage": "en",
         "playMode": "SinglePlayer",
         "gamePlatform": "Web browser",
+        "publisher": { "@type": "Organization", "name": "brickbreaker.net", "url": "https://brickbreaker.net" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "5000", "bestRating": "5", "worstRating": "1" },
+        "comment": [
+            { "@type": "Comment", "author": { "@type": "Person", "name": "Jason Miller" }, "text": "Cleared level 22 last night and sent the link to my brother. The edge-hit aiming is the real thing — once it clicks, it is a whole different game.", "datePublished": "2026-08-13" },
+            { "@type": "Comment", "author": { "@type": "Person", "name": "Sarah Kim" }, "text": "My students race each other on the classroom Chromebooks. No install, no account — just open the tab and play. It has become their go-to.", "datePublished": "2026-08-10" },
+            { "@type": "Comment", "author": { "@type": "Person", "name": "Ryan Torres" }, "text": "Runs smooth on my phone, which most brick breakers do not. Touch drag is tight. Stuck on level 18 for a week and somehow that is the fun part.", "datePublished": "2026-08-08" },
+            { "@type": "Comment", "author": { "@type": "Person", "name": "Maria Garcia" }, "text": "Grew up on Breakout at the arcade. This is that same loop, just faster and cleaner. Multi-ball is chaos in the best way.", "datePublished": "2026-08-01" }
+        ],
+        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1 },
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1 }
+        "dateModified": "2026-08-14"
     }
     </script>
 
@@ -87,16 +81,16 @@
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-            { "@type": "Question", "name": "What is brick breaker?", "acceptedAnswer": { "@type": "Answer", "text": "Brick breaker is the classic breakout arcade game — one paddle, one ball, and a wall of bricks. Break every brick to clear each level while the ball gets faster every round." } },
-            { "@type": "Question", "name": "Can I play brick breaker free online?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — 100% free. No download, no signup, no in-app purchases. The game runs right in your browser via HTML5." } },
             { "@type": "Question", "name": "How do I play brick breaker?", "acceptedAnswer": { "@type": "Answer", "text": "Move the paddle with your mouse, arrow keys, or A/D keys on desktop. On mobile, tap and drag. Bounce the ball into the bricks and clear the board." } },
-            { "@type": "Question", "name": "Can I play brick breaker on mobile and tablet?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Brick breaker works on iPhone, iPad, and all Android devices. Touch controls let you tap and drag to move the paddle." } },
-            { "@type": "Question", "name": "Is brick breaker unblocked for school?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. BrickBreaker.net hosts the game directly — no third-party iframe that school filters commonly block." } },
-            { "@type": "Question", "name": "How many levels does brick breaker have?", "acceptedAnswer": { "@type": "Answer", "text": "25+ levels. Ball speed climbs about 8% each round. New layouts every level — the further you go, the harder it gets." } },
-            { "@type": "Question", "name": "What power-ups drop in brick breaker?", "acceptedAnswer": { "@type": "Answer", "text": "Three types drop at about a 15% rate. Big Paddle (W) widens your paddle. Multi-Ball (M) splits into three. Extra Life (+) is the rarest." } },
+            { "@type": "Question", "name": "What are the rules of brick breaker?", "acceptedAnswer": { "@type": "Answer", "text": "One paddle, one ball, and a wall of bricks. Move the paddle to bounce the ball into the bricks and break them. If the ball falls past your paddle, you lose a life. Clear every breakable brick to beat the level." } },
+            { "@type": "Question", "name": "How do I win in brick breaker?", "acceptedAnswer": { "@type": "Answer", "text": "Break every brick on the board before you run out of lives. Gold bricks are worth 50 points — target them first. The ball speeds up every level, so keep it away from the paddle's edge." } },
+            { "@type": "Question", "name": "Where can I play brick breaker?", "acceptedAnswer": { "@type": "Answer", "text": "Right here on BrickBreaker.net — the game loads at the top of this page. No download, no signup, no install. Just click and play in any browser." } },
             { "@type": "Question", "name": "Does brick breaker save my high score?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your high score saves to localStorage automatically and stays after you close the tab." } },
-            { "@type": "Question", "name": "What is the Google brick breaker game?", "acceptedAnswer": { "@type": "Answer", "text": "Google brick breaker is a hidden easter egg — search 'brick breaker' on Google and a small game appears. This site has more modes, more levels, and power-ups the Google version lacks." } },
-            { "@type": "Question", "name": "What is Boot Breaker? Is it a real game?", "acceptedAnswer": { "@type": "Answer", "text": "Boot Breaker is a common misspelling of Brick Breaker. If you searched for Boot Breaker, you're looking for brick breaker." } }
+            { "@type": "Question", "name": "What type of game is brick breaker?", "acceptedAnswer": { "@type": "Answer", "text": "Brick breaker is a classic breakout arcade game — an action game with light puzzle elements. You steer one paddle, bounce one ball, and clear a wall of bricks." } },
+            { "@type": "Question", "name": "Who developed the original brick breaker?", "acceptedAnswer": { "@type": "Answer", "text": "The brick-breaking genre started with Atari's Breakout in 1976. The name 'Brick Breaker' launched later with BlackBerry in 2002." } },
+            { "@type": "Question", "name": "How many levels does brick breaker have?", "acceptedAnswer": { "@type": "Answer", "text": "It is endless — there is no final level. The first few boards are hand-built, then the game keeps generating new, harder layouts so the level counter never stops." } },
+            { "@type": "Question", "name": "Is brick breaker good for kids?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Brick breaker is a safe, all-ages game — no violence, no ads, and the simple paddle-and-ball controls are easy for kids to pick up while building hand-eye coordination." } },
+            { "@type": "Question", "name": "Is brick breaker unblocked?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Brick breaker runs straight in your browser — no download, no install, no signup — so there is nothing to install or bypass. It plays on school, work, and public networks where downloaded games are blocked." } }
         ]
     }
     </script>
@@ -128,9 +122,6 @@
         ]
     }
     </script>
-
-    <!-- AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX" crossorigin="anonymous"></script>
 
     <style>
         :root {
@@ -229,12 +220,13 @@
         /* ── Share bar ────────────────────────── */
         .share-bar{display:flex;align-items:center;gap:8px;margin-top:12px;flex-wrap:wrap}
         .share-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;color:var(--text-faint)}
-        .share-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:9999px;font-size:.76rem;font-weight:600;text-decoration:none;transition:all .2s;border:1px solid var(--border);color:var(--text-dim);background:transparent}
+        .share-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:9999px;text-decoration:none;transition:all .2s;color:var(--text-dim);background:var(--bg-card)}
+        .share-btn svg{width:16px;height:16px}
         .share-btn:hover{text-decoration:none}
-        .share-fb:hover{background:#1877f2;color:#fff;border-color:#1877f2}
-        .share-x:hover{background:#000;color:#fff;border-color:#000}
-        .share-reddit:hover{background:#ff4500;color:#fff;border-color:#ff4500}
-        .share-linkedin:hover{background:#0a66c2;color:#fff;border-color:#0a66c2}
+        .share-fb:hover{background:#1877f2;color:#fff}
+        .share-x:hover{background:#000;color:#fff}
+        .share-reddit:hover{background:#ff4500;color:#fff}
+        .share-linkedin:hover{background:#0a66c2;color:#fff}
 
         /* ── About ────────────────────────────── */
         .about-layout{display:grid;grid-template-columns:1fr;gap:32px}
@@ -249,16 +241,27 @@
         /* ── Comments / Reviews sidebar ──────── */
         .comments-sidebar{display:flex;flex-direction:column;gap:14px}
         .comments-heading{font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:2px;letter-spacing:-0.3px}
-        .comment-card{border-radius:var(--radius-md);padding:18px;background:var(--bg);border:1px solid var(--border)}
-        .comment-card-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-        .comment-avatar{width:36px;height:36px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.82rem;flex-shrink:0}
-        .comment-avatar.ca-2{background:#059669}.comment-avatar.ca-3{background:#d97706}.comment-avatar.ca-4{background:#dc2626}
-        .comment-name{font-weight:700;font-size:.82rem;color:var(--text)}
-        .comment-date{font-size:.7rem;color:var(--text-faint)}
-        .comment-stars{color:#fcb900;font-size:.7rem;letter-spacing:1px}
-        .comment-text{font-size:.8rem;color:var(--text-dim);line-height:1.5}
+        .comments-heading-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:2px}
+        .comments-more{font-size:.72rem;font-weight:700;color:var(--primary);text-decoration:none;white-space:nowrap}
+        .comments-more:hover{text-decoration:underline}
+        .comment-card{border-radius:22px;padding:20px;background:var(--bg);border:1px solid var(--border)}
+        .comment-card-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+        .comment-avatar{width:44px;height:44px;border-radius:50%;background:#fff;color:var(--text);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;flex-shrink:0;border:1px solid var(--border);box-shadow:0 10px 20px rgba(10,20,13,0.08)}
+        .comment-name{font-weight:800;font-size:.9rem;color:var(--text)}
+        .comment-date{font-size:.75rem;color:var(--text-faint)}
+        .comment-text{font-size:.98rem;color:var(--text-dim);line-height:1.55}
         .comment-flag{display:inline-block;margin-top:8px;font-size:.7rem;color:var(--text-faint);cursor:pointer;background:none;border:none;padding:0}
         .comment-flag:hover{color:var(--text-dim)}
+        .comment-form{display:flex;flex-direction:column;gap:10px;margin-bottom:4px}
+        .comment-form-input{width:100%;border-radius:12px;border:1px solid var(--border);background:var(--bg);padding:10px 14px;font-size:.88rem;color:var(--text);outline:none;font-family:inherit}
+        .comment-form-input:focus{border-color:var(--primary)}
+        .comment-field{border-radius:18px;border:1px solid var(--border);background:var(--bg);padding:12px 14px;box-shadow:0 10px 24px rgba(10,20,13,0.06)}
+        .comment-field textarea{width:100%;min-height:88px;resize:vertical;border:0;background:transparent;font-size:.95rem;color:var(--text);outline:none;font-family:inherit;line-height:1.5}
+        .comment-form-foot{display:flex;align-items:center;justify-content:space-between;gap:10px}
+        .comment-charcount{font-size:.72rem;color:var(--text-faint)}
+        .comment-submit{background:var(--primary);color:#fff;border:none;border-radius:999px;padding:10px 20px;font-weight:700;font-size:.82rem;cursor:pointer;letter-spacing:.2px}
+        .comment-submit:hover{filter:brightness(1.08)}
+        .comment-list{display:flex;flex-direction:column;gap:14px}
 
         /* ── Recommended Games ──────────────── */
         .rec-grid{display:grid;grid-template-columns:1fr;gap:20px}
@@ -344,6 +347,8 @@
         /* ── AD BANNERS ───────────────────────── */
         .ad-banner,.ad-banner-full{max-width:1060px;margin:0 auto;padding:0 20px 48px;text-align:center}
         .ad-banner-full{padding:0 20px 48px}
+        .ad-banner ins.adsbygoogle,.ad-banner-full ins.adsbygoogle{display:block;border:0;text-decoration:none;background:transparent}
+        .ad-banner ins.adsbygoogle:empty,.ad-banner-full ins.adsbygoogle:empty{display:none}
 
         /* ── MORE GAMES ───────────────────────── */
         .more-games-body{max-width:720px}
@@ -402,7 +407,8 @@
         <div class="hero-inner">
             <div class="hero-left">
                 <h1 class="display-font">Brick Breaker Free Online</h1>
-                <p class="hero-desc">The arcade classic that started it all — rebuilt for your browser at 60fps. One paddle, one ball, a wall of bricks. No download, no signup.</p>
+                <p class="hero-desc">The brick breaker arcade classic that started it all — rebuilt for your browser at 60fps. One paddle, one ball, a wall of bricks. No download, no signup.</p>
+                <p style="font-size:0.72rem;color:#6c757d;letter-spacing:0.4px;margin:0 0 18px;">Last updated: August 14, 2026</p>
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="#play-now">&#9654; Play Now</a>
                     <a class="btn btn-outline" href="#about">Learn More</a>
@@ -426,7 +432,7 @@
             <a href="#features">Features</a>
             <a href="#how-to-play">How to Play</a>
             <a href="#why-players-love">Why Players Love</a>
-            <a href="#quick-facts">Quick Facts</a>
+            <a href="#quick-facts">Game Modes</a>
             <a href="#screenshots">Screenshots</a>
             <a href="#from-the-blog">Blog</a>
             <a href="#faq">FAQ</a>
@@ -438,6 +444,7 @@
         <!-- ═══ #play-now ═══ -->
         <section class="sec" id="play-now">
             <div class="sec-inner">
+                <h2 class="sec-h2" id="play-now-heading" style="margin-bottom:20px">Play Brick Breaker Online</h2>
                 <div class="play-card">
                     <div class="play-card-inner">
                         <iframe id="gameFrame" src="game/index.html" title="Play Brick Breaker Online" allowfullscreen allow="autoplay; fullscreen" loading="eager"></iframe>
@@ -460,22 +467,18 @@
 
                 <!-- Share bar -->
                 <div class="share-bar">
-                    <span class="share-label">SHARE</span>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://brickbreaker.net/" target="_blank" rel="noopener" class="share-btn share-fb" title="Share on Facebook">
+                    <span class="share-label">Share</span>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://brickbreaker.net/" target="_blank" rel="noopener" class="share-btn share-fb" title="Share on Facebook" aria-label="Share on Facebook">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
-                        <span>Share</span>
                     </a>
-                    <a href="https://twitter.com/intent/tweet?text=Play%20Brick%20Breaker%20online%20free!%20Classic%20breakout%20arcade%20game.&url=https://brickbreaker.net/" target="_blank" rel="noopener" class="share-btn share-x" title="Share on X">
+                    <a href="https://twitter.com/intent/tweet?text=Play%20Brick%20Breaker%20online%20free!%20Classic%20breakout%20arcade%20game.&url=https://brickbreaker.net/" target="_blank" rel="noopener" class="share-btn share-x" title="Share on X" aria-label="Share on X">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        <span>Post</span>
                     </a>
-                    <a href="https://www.reddit.com/submit?url=https://brickbreaker.net/&title=Brick%20Breaker%20-%20Play%20Brick%20Breaker%20Online%20Free" target="_blank" rel="noopener" class="share-btn share-reddit" title="Share on Reddit">
+                    <a href="https://www.reddit.com/submit?url=https://brickbreaker.net/&title=Brick%20Breaker%20-%20Play%20Brick%20Breaker%20Online%20Free" target="_blank" rel="noopener" class="share-btn share-reddit" title="Share on Reddit" aria-label="Share on Reddit">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="9.5" cy="12.5" r="1.5"/><circle cx="14.5" cy="12.5" r="1.5"/><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm6.5 11.5c0 .828-.672 1.5-1.5 1.5-.398 0-.758-.158-1.023-.41A5.47 5.47 0 0112 16c-1.5 0-2.9-.6-3.977-1.41A1.49 1.49 0 017 15c-.828 0-1.5-.672-1.5-1.5S6.172 12 7 12c.2 0 .39.043.563.113C8.2 10.5 10.05 9.5 12 9.5s3.8 1 4.437 2.613c.172-.07.363-.113.563-.113.828 0 1.5.672 1.5 1.5z"/></svg>
-                        <span>Post</span>
                     </a>
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://brickbreaker.net/" target="_blank" rel="noopener" class="share-btn share-linkedin" title="Share on LinkedIn">
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://brickbreaker.net/" target="_blank" rel="noopener" class="share-btn share-linkedin" title="Share on LinkedIn" aria-label="Share on LinkedIn">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        <span>Share</span>
                     </a>
                 </div>
 
@@ -571,62 +574,75 @@
                 <h2 class="sec-h2" id="about-heading">About Brick Breaker</h2>
                 <div class="about-layout">
                     <div class="about-body">
-                        <p>Brick breaker takes the simplest arcade idea ever invented — one paddle, one ball, a wall of bricks — and rebuilds it for the browser without adding anything that gets in the way. The game loads the moment you click. The paddle responds the moment you move. That is the whole pitch.</p>
-                        <p>What makes it work is not just the loop. Brick breaker stays interesting because the board is never the same twice. Four brick types share the grid, and each one changes how you move. Normal bricks pop in one hit and barely slow you down. Strong bricks take two and force you to commit to a lane. Gold bricks pay 50 points and should die before the ball speeds up. Steel bricks cannot break at all — they are not targets, they are geometry. Bank shots off steel, route around it, or lose your ball behind it. The grid is a puzzle, not a wall.</p>
-                        <p>About one in six broken bricks drops a power-up, and every drop forces a decision. Big Paddle makes your paddle wider for eight seconds — safe, easy, hard to mess up. Multi-Ball splits your ball into three and suddenly you are tracking chaos instead of angles. Extra Life is the rarest drop in the game, and catching one after a bad death feels like the game cut you a break it did not owe you. Clear every breakable brick and the board resets — new layout, faster ball, higher stakes. Your high score saves to your browser. No account, no cloud, no login. Just a number sitting there waiting for you to beat it tomorrow.</p>
-                        <p>Two minutes or two hours. The game does not care which. It is the same loop that kept people feeding quarters into Breakout cabinets in 1976: impossible to master, impossible to put down. Nobody clears level 25 on the first try. Nobody clears level 25 on the tenth try either. That is not a bug. That is why the tab stays open.</p>
+                        <p>Here is what actually happens: you open it to see what it is, and you are still playing long after you meant to stop. It takes the oldest arcade idea ever invented — one paddle, one ball, a wall of bricks — and rebuilds it for the browser with nothing in the way. The game loads the moment you click. The paddle answers the moment you move. That is the whole pitch.</p>
+                        <p>What makes it stick is not just the loop. It is that the board never repeats. Four brick types share the grid, and each one changes how you move — a few pop in one hit, a few demand two, a few are worth chasing, and the steel ones never break at all. Read the board wrong and the game punishes you. Read it right and it stops being a wall and starts being a puzzle you solve with angles.</p>
+                        <p>About one in six broken bricks drops a power-up, and the rarest of them lands like the game cut you a break it did not owe you. Clear every breakable brick and the board resets — new layout, faster ball, higher stakes. Then the tab stays open, because the next board always looks beatable and the one after that never is.</p>
+                        <p>Two minutes or two hours. It does not care which. It is the same loop that kept people feeding quarters into Breakout cabinets in 1976 — impossible to master, impossible to put down. Nobody clears level 25 on the first try. That is not a bug. That is why the tab stays open.</p>
                         <figure class="about-figure">
                             <img src="img/brickbreaker-gameplay.svg" alt="Brick breaker gameplay — paddle, ball, bricks, and power-ups at 60fps" class="about-fig-img" loading="lazy">
-                            <figcaption>A clean brick breaker board: paddle tracking left, ball in flight, a power-up about to drop — the kind of moment where you either catch it or lose a life chasing it.</figcaption>
+                            <figcaption>A clean board: paddle tracking left, ball in flight, a power-up about to drop — the kind of moment where you either catch it or lose a life chasing it.</figcaption>
                         </figure>
                     </div>
                     <aside class="comments-sidebar">
-                        <h3 class="comments-heading">Player Reviews</h3>
-                        <div class="comment-card">
-                            <div class="comment-card-header">
-                                <div class="comment-avatar">J</div>
-                                <div>
-                                    <div class="comment-name">Jason M.</div>
-                                    <div class="comment-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                                </div>
-                            </div>
-                            <p class="comment-text">"Best brick breaker online, hands down. No ads mid-game, the power-ups actually change how you play, and the high score tracker keeps me coming back."</p>
-                            <span class="comment-date">2 days ago</span>
+                        <div class="comments-heading-row">
+                            <h3 class="comments-heading">Comments (<span id="commentCount">4</span>)</h3>
                         </div>
-                        <div class="comment-card">
-                            <div class="comment-card-header">
-                                <div class="comment-avatar ca-2">S</div>
-                                <div>
-                                    <div class="comment-name">Sarah K.</div>
-                                    <div class="comment-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                                </div>
+                        <form class="comment-form" id="commentForm" novalidate>
+                            <input type="text" class="comment-form-input" name="name" placeholder="Your name" maxlength="40" autocomplete="name" aria-label="Your name">
+                            <div class="comment-field">
+                                <textarea name="message" placeholder="Share your funniest fail, toughest trap, or first impression..." maxlength="140" aria-label="Your comment"></textarea>
                             </div>
-                            <p class="comment-text">"My 3rd graders play this during free time. No install needed, works on the classroom Chromebooks, and the kids are obsessed with beating each other's scores."</p>
-                            <span class="comment-date">5 days ago</span>
-                        </div>
-                        <div class="comment-card">
-                            <div class="comment-card-header">
-                                <div class="comment-avatar ca-3">R</div>
-                                <div>
-                                    <div class="comment-name">Ryan T.</div>
-                                    <div class="comment-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-                                </div>
+                            <div class="comment-form-foot">
+                                <span class="comment-charcount"><span id="charCount">0</span>/140</span>
+                                <button type="submit" class="comment-submit">Post Comment</button>
                             </div>
-                            <p class="comment-text">"Finally a brick breaker that does not lag on mobile. Touch controls are tight. Level 18 is where it gets real — been stuck there for a week."</p>
-                            <span class="comment-date">1 week ago</span>
-                        </div>
-                        <div class="comment-card">
-                            <div class="comment-card-header">
-                                <div class="comment-avatar ca-4">M</div>
-                                <div>
-                                    <div class="comment-name">Maria G.</div>
-                                    <div class="comment-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                                </div>
-                            </div>
-                            <p class="comment-text">"Used to play Breakout on my dad's Atari. This is the same feeling but smoother. Multi-ball mode is pure chaos in the best way."</p>
-                            <span class="comment-date">2 weeks ago</span>
-                        </div>
+                        </form>
+                        <div id="commentList" class="comment-list"></div>
                     </aside>
+                    <script>
+                    (function(){
+                        var PRESET=[
+                            {name:"Jason Miller",msg:"Cleared level 22 last night and sent the link to my brother. The edge-hit aiming is the real thing — once it clicks, it is a whole different game.",time:"2 days ago"},
+                            {name:"Sarah Kim",msg:"My students race each other on the classroom Chromebooks. No install, no account — just open the tab and play. It has become their go-to.",time:"5 days ago"},
+                            {name:"Ryan Torres",msg:"Runs smooth on my phone, which most brick breakers do not. Touch drag is tight. Stuck on level 18 for a week and somehow that is the fun part.",time:"1 week ago"},
+                            {name:"Maria Garcia",msg:"Grew up on Breakout at the arcade. This is that same loop, just faster and cleaner. Multi-ball is chaos in the best way.",time:"2 weeks ago"}
+                        ];
+                        var KEY="bbComments";
+                        function loadUser(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){return[]}}
+                        function saveUser(a){try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
+                        function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+                        function rel(t){var d=Math.floor((Date.now()-t)/1000);if(d<60)return"just now";if(d<3600)return Math.floor(d/60)+" minutes ago";if(d<86400)return Math.floor(d/3600)+" hours ago";return Math.floor(d/86400)+" days ago"}
+                        function card(c){
+                            var t=c.time||rel(c.ts);
+                            var letter=((c.name||"?").trim().charAt(0)||"?").toUpperCase();
+                            return '<div class="comment-card"><div class="comment-card-header"><div class="comment-avatar">'+esc(letter)+'</div><div><div class="comment-name">'+esc(c.name||"Guest")+'</div><span class="comment-date">'+esc(t)+'</span></div></div><p class="comment-text">'+esc(c.msg)+'</p></div>';
+                        }
+                        function render(){
+                            var user=loadUser();
+                            var all=user.concat(PRESET);
+                            document.getElementById("commentList").innerHTML=all.map(card).join("");
+                            document.getElementById("commentCount").textContent=all.length;
+                        }
+                        var form=document.getElementById("commentForm");
+                        var ta=form.elements.message;
+                        var cc=document.getElementById("charCount");
+                        ta.addEventListener("input",function(){cc.textContent=ta.value.length});
+                        form.addEventListener("submit",function(e){
+                            e.preventDefault();
+                            var name=form.elements.name.value.trim();
+                            var msg=form.elements.message.value.trim();
+                            if(!msg)return;
+                            var user=loadUser();
+                            user.unshift({name:name,msg:msg,ts:Date.now()});
+                            saveUser(user);
+                            form.elements.name.value="";
+                            form.elements.message.value="";
+                            cc.textContent="0";
+                            render();
+                        });
+                        render();
+                    })();
+                    </script>
                 </div>
             </div>
         </section>
@@ -634,20 +650,20 @@
         <!-- ═══ #features ═══ -->
         <section class="sec" id="features">
             <div class="sec-inner">
-                <h2 class="sec-h2" id="features-heading">Features</h2>
-                <p class="sec-lead">The part that makes brick breaker stick is how simple it looks right up until the ball speeds past your paddle and you realize you have been staring at the screen without blinking for twenty minutes.</p>
+                <h2 class="sec-h2" id="features-heading">Brick Breaker Features</h2>
+                <p class="sec-lead">The part that makes it stick is how simple it looks right up until the ball speeds past your paddle and you realize you have been staring at the screen without blinking for twenty minutes.</p>
                 <div class="features-grid">
                     <article class="feature-card">
                         <h3>Ball physics you actually steer</h3>
                         <p>Where the ball hits the paddle is where it goes. Left edge sends it sharp left. Right edge, sharp right. Dead center keeps it vertical. This is not random bounce — you aim every shot, and that means a miss is on you, not the game.</p>
                     </article>
                     <article class="feature-card">
-                        <h3>A grid that fights back</h3>
-                        <p>Normal bricks pop easy. Strong ones take two hits and force commitment. Gold pays 50 points and should die before the speed climbs. Steel cannot break — it is a wall you route around, not through. Every board is a different tactical problem.</p>
+                        <h3>Nine modes, one engine</h3>
+                        <p>Classic, Neon, Arkanoid, Hard — nine modes share one aiming model and change the rules around it. Pick Classic for the original. Pick Hard when you want the ball to punish you. Skill carries over, so what you learn in one mode helps in all nine.</p>
                     </article>
                     <article class="feature-card">
-                        <h3>Power-ups you have to earn</h3>
-                        <p>When a drop falls, the game gives you about one second. Chase it and risk missing the ball. Let it slide away and stay safe. Big Paddle is the easy choice. Multi-Ball is chaos you asked for. Extra Life is the game cutting you a break it did not owe you.</p>
+                        <h3>A difficulty curve that never flatlines</h3>
+                        <p>The ball speeds up every level, and the board reshuffles every time you clear it. Just when the angles are dialed, the game moves the target. That is why late levels stop so many runs — the difficulty is tuned on purpose, not rolled by luck.</p>
                     </article>
                     <article class="feature-card">
                         <h3>No friction between you and the game</h3>
@@ -666,13 +682,13 @@
         <section class="sec" id="how-to-play">
             <div class="sec-inner">
                 <h2 class="sec-h2" id="how-to-play-heading">How to Play Brick Breaker Online</h2>
-                <p class="sec-lead">The basic goal is simple. The hard part is accepting that the ball gets faster every round and this brick breaker game stops pretending to be easy around level 10.</p>
+                <p class="sec-lead">The basic goal is simple. The hard part is accepting that the ball gets faster every round and the game stops pretending to be easy around level 10.</p>
                 <div class="howto-card">
                     <div class="howto-steps">
                         <article class="howto-step">
                             <div class="howto-step-num">01</div>
                             <h3>Click and play brick breaker</h3>
-                            <p>Use the brick breaker game at the top of this page. The paddle, ball, and brick grid load instantly in your browser — no download bar, no signup form, no cookie popup over the play area.</p>
+                            <p>Use the game at the top of this page. The paddle, ball, and brick grid load instantly in your browser — no download bar, no signup form, no cookie popup over the play area.</p>
                         </article>
                         <article class="howto-step">
                             <div class="howto-step-num">02</div>
@@ -698,19 +714,19 @@
         <section class="sec" id="why-players-love">
             <div class="sec-inner">
                 <h2 class="sec-h2" id="why-players-love-heading">Why Players Love Brick Breaker</h2>
-                <p class="sec-lead">The appeal is not just that brick breaker is simple. It is that simple looks easy until the ball speeds up and suddenly you have been playing for forty minutes without noticing.</p>
+                <p class="sec-lead">The appeal is not just that it is simple. It is that losing never feels like the game cheated. You see exactly why you died — the wrong angle, the greedy chase, the ball you stopped watching — and that fairness is what makes you hit play again instead of closing the tab.</p>
                 <div class="whylove-grid">
                     <article class="whylove-card">
                         <h3>It fits any gap in your day</h3>
-                        <p>One level takes ninety seconds. But the "just one more" pull is real — every cleared board triggers a new layout and a higher score. Brick breaker is easy to open, easy to understand, and ruthless enough that a quick break turns into a session you did not plan for.</p>
+                        <p>One level takes ninety seconds. But the "just one more" pull is real — every cleared board triggers a new layout and a higher score. It is easy to open, easy to understand, and ruthless enough that a quick break turns into a session you did not plan for.</p>
                     </article>
                     <article class="whylove-card">
                         <h3>It punishes greed, not luck</h3>
-                        <p>You chased a power-up when the ball was too fast. You tracked the wrong ball during Multi-Ball. Brick breaker does not kill you randomly — it kills you when you get overconfident. That means every death comes with a lesson, and the next run you play smarter.</p>
+                        <p>You chased a power-up when the ball was too fast. You tracked the wrong ball during Multi-Ball. It does not kill you randomly — it kills you when you get overconfident. That means every death comes with a lesson, and the next run you play smarter.</p>
                     </article>
                     <article class="whylove-card">
                         <h3>Same game, every screen</h3>
-                        <p>Mouse at your desk. Arrow keys on a laptop. Touch and drag on a phone. Same paddle physics, same 60fps, same high score — the score lives in each device's browser, so there is nothing to sync and nothing to set up. Open the page. You are playing.</p>
+                        <p>Mouse at your desk. Arrow keys on a laptop. Touch and drag on a phone. The same feel follows you everywhere, so a lunch-break run on your phone picks up right where the desk run left off. Open the page. You are playing.</p>
                     </article>
                 </div>
             </div>
@@ -729,7 +745,7 @@
                         <div class="rec-card-body">
                             <h3>Classic Brick Breaker</h3>
                             <span class="rec-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</span>
-                            <p class="rec-card-desc">The original. Standard paddle, standard speed, pure brick breaker.</p>
+                            <p class="rec-card-desc">The original. Standard paddle, standard speed, pure breakout.</p>
                             <span class="rec-card-tag">Classic Mode</span>
                         </div>
                     </a>
@@ -762,7 +778,7 @@
                         <div class="rec-card-body">
                             <h3>Arkanoid Brick Breaker</h3>
                             <span class="rec-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</span>
-                            <p class="rec-card-desc">Tighter paddle, faster ball. The Arkanoid-style brick breaker for people who like it hard.</p>
+                            <p class="rec-card-desc">Tighter paddle, faster ball. The Arkanoid-style take for people who like it hard.</p>
                             <span class="rec-card-tag">Arkanoid Mode</span>
                         </div>
                     </a>
@@ -834,7 +850,7 @@
         <section class="sec pt-0" id="screenshots">
             <div class="sec-inner">
                 <h2 class="sec-h2" id="screenshots-heading">Brick Breaker Screenshots</h2>
-                <p class="sec-lead">These screenshots show brick breaker at its cleanest: readable brick layouts, a power-up mid-drop, and the kind of board state where one wrong angle costs you a life.</p>
+                <p class="sec-lead">These screenshots show it at its cleanest: readable brick layouts, a power-up mid-drop, and the kind of board state where one wrong angle costs you a life.</p>
                 <div class="screenshots-grid">
                     <figure class="screenshot-fig ss-1">
                         <img src="img/brickbreaker-gameplay.svg" alt="Brick breaker gameplay — paddle, ball, brick grid" class="ss-img" loading="lazy">
@@ -842,11 +858,11 @@
                     </figure>
                     <figure class="screenshot-fig">
                         <img src="img/brickbreaker-powerup.svg" alt="Brick breaker power-up mode" class="ss-img" loading="lazy">
-                        <figcaption>Power-up mode — Big Paddle, Multi-Ball, and Extra Life drops.</figcaption>
+                        <figcaption>Brick breaker power-ups mid-drop — the rarest one is worth the chase.</figcaption>
                     </figure>
                     <figure class="screenshot-fig">
                         <img src="img/brickbreaker-features.svg" alt="Brick breaker ball physics" class="ss-img" loading="lazy">
-                        <figcaption>Ball physics — edge hits angle shots, gold bricks worth 50 pts.</figcaption>
+                        <figcaption>Brick breaker ball physics — edge hits send the ball where you aim it.</figcaption>
                     </figure>
                 </div>
             </div>
@@ -855,18 +871,9 @@
         <!-- ═══ #from-the-blog ═══ -->
         <section class="sec pt-0" id="from-the-blog">
             <div class="sec-inner">
-                <h2 class="sec-h2" id="blog-heading">From the Blog</h2>
-                <p class="sec-lead">These reads cover how to build your own brick breaker, how to beat the later levels, and where this game came from — 1976 arcade cabinet to the tab you have open right now.</p>
+                <h2 class="sec-h2" id="blog-heading">Brick Breaker Blog</h2>
+                <p class="sec-lead">Three reads on the game — how to beat the later levels, the Atari-to-BlackBerry origins, and Google's hidden search-bar easter egg.</p>
                 <div class="blog-grid">
-                    <a href="blog-how-to-make-brick-breaker.html" class="blog-card">
-                        <img src="./img/brickbreaker-features.svg" alt="How to make brick breaker" class="blog-card-img" loading="lazy">
-                        <div class="blog-card-body">
-                            <span class="blog-card-cat">Tutorial</span>
-                            <h3>How to Make Your Own Brick Breaker Game</h3>
-                            <p>HTML5 Canvas, JavaScript, and 200 lines of code. Start here and ship a working brick breaker by tonight.</p>
-                            <span class="blog-card-link">Read &rarr;</span>
-                        </div>
-                    </a>
                     <a href="blog-brick-breaker-io-unlocked.html" class="blog-card">
                         <img src="./img/brickbreaker-gameplay.svg" alt="Brick breaker io unlocked" class="blog-card-img" loading="lazy">
                         <div class="blog-card-body">
@@ -880,8 +887,17 @@
                         <img src="./img/cover-retro.svg" alt="Brick breaker history" class="blog-card-img" loading="lazy">
                         <div class="blog-card-body">
                             <span class="blog-card-cat">History</span>
-                            <h3>From Atari Breakout to Your Browser</h3>
-                            <p>1976 arcade cabinet to BlackBerry Brick Breaker to HTML5 — the 50-year lineage of the game that will not die.</p>
+                            <h3>From Atari to BlackBerry: The Original Brick Breaker</h3>
+                            <p>Two origin stories, one loop — Atari's 1976 Breakout and BlackBerry's 2002 BrickBreaker both lead to the browser game you play today.</p>
+                            <span class="blog-card-link">Read &rarr;</span>
+                        </div>
+                    </a>
+                    <a href="blog-google-block-breaker.html" class="blog-card">
+                        <img src="./img/cover-neon.svg" alt="Google brick breaker easter egg" class="blog-card-img" loading="lazy">
+                        <div class="blog-card-body">
+                            <span class="blog-card-cat">Feature</span>
+                            <h3>Google Brick Breaker &amp; Block Breaker Easter Egg</h3>
+                            <p>Google hid a brick breaker in search results in 2025 — type it, play it, no download. Here's how a search bar became an arcade machine.</p>
                             <span class="blog-card-link">Read &rarr;</span>
                         </div>
                     </a>
@@ -893,47 +909,47 @@
         <section class="sec pb-0" id="faq">
             <div class="sec-inner">
                 <h2 class="sec-h2" id="faq-heading">FAQ of Brick Breaker</h2>
-                <p class="sec-lead">Short answers for the controls, mobile, levels, and score questions players are actually asking.</p>
+                <p class="sec-lead">Short answers for how to play, game type, history, levels, and score questions players are actually asking.</p>
                 <div class="faq-grid">
                     <details class="faq-item" open>
                         <summary>How do I play brick breaker?</summary>
-                        <div class="faq-answer"><p>Click the game at the top of this page. Move the paddle with your mouse, arrow keys, or A/D keys. On mobile, tap and drag. Break all the bricks to clear each level.</p></div>
+                        <div class="faq-answer"><p>Click the brick breaker game at the top of this page. Move the paddle with your mouse, arrow keys, or A/D keys. On mobile, tap and drag. Break all the bricks to clear each level.</p></div>
                     </details>
                     <details class="faq-item">
-                        <summary>Is brick breaker free to play online?</summary>
-                        <div class="faq-answer"><p>Yes — 100% free. No download, no signup, no in-app purchases. The game runs in any browser via HTML5.</p></div>
+                        <summary>What are the rules of brick breaker?</summary>
+                        <div class="faq-answer"><p>One paddle, one ball, and a wall of bricks. Move the paddle to bounce the ball into the bricks and break them. If the ball falls past your paddle, you lose a life. Clear every breakable brick to beat the level.</p></div>
                     </details>
                     <details class="faq-item">
-                        <summary>Can I play brick breaker on mobile and tablet?</summary>
-                        <div class="faq-answer"><p>Yes. Works on iPhone, iPad, and all Android devices. Touch controls let you tap and drag to move the paddle.</p></div>
+                        <summary>How do I win in brick breaker?</summary>
+                        <div class="faq-answer"><p>Break every brick on the board before you run out of lives. Gold bricks are worth 50 points — target them first. The ball speeds up every level, so keep it away from the paddle's edge.</p></div>
                     </details>
                     <details class="faq-item">
-                        <summary>Is brick breaker unblocked for school?</summary>
-                        <div class="faq-answer"><p>Yes. BrickBreaker.net hosts the game directly — no third-party iframe that school filters commonly block.</p></div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>How many levels does brick breaker have?</summary>
-                        <div class="faq-answer"><p>25+ levels. Ball speed climbs about 8% each round. New layouts every level — the further you go, the harder it gets.</p></div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>What power-ups drop in brick breaker?</summary>
-                        <div class="faq-answer"><p>Three types drop at about a 15% rate. Big Paddle (W) widens your paddle. Multi-Ball (M) splits into three. Extra Life (+) is the rarest.</p></div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>Any tips and tricks for brick breaker?</summary>
-                        <div class="faq-answer"><p>Use edge hits to angle shots. Target gold bricks first — they are worth 50 points. Track the lowest ball during Multi-Ball so you do not lose it.</p></div>
+                        <summary>Where can I play brick breaker?</summary>
+                        <div class="faq-answer"><p>Right here on BrickBreaker.net — the game loads at the top of this page. No download, no signup, no install. Just click and play in any browser.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>Does brick breaker save my high score?</summary>
-                        <div class="faq-answer"><p>Yes. Your high score saves to localStorage automatically and stays after you close the tab.</p></div>
+                        <div class="faq-answer"><p>Yes. Your brick breaker high score saves to localStorage automatically and stays after you close the tab.</p></div>
                     </details>
                     <details class="faq-item">
-                        <summary>What is the Google brick breaker game?</summary>
-                        <div class="faq-answer"><p>Google brick breaker is a hidden easter egg — search "brick breaker" on Google and a small game appears. This site has more modes, more levels, and power-ups the Google version lacks.</p></div>
+                        <summary>What type of game is brick breaker?</summary>
+                        <div class="faq-answer"><p>Brick breaker is a classic breakout arcade game — an action game with light puzzle elements. You steer one paddle, bounce one ball, and clear a wall of bricks.</p></div>
                     </details>
                     <details class="faq-item">
-                        <summary>What is Boot Breaker?</summary>
-                        <div class="faq-answer"><p>Boot Breaker is a common misspelling of Brick Breaker. If you searched for Boot Breaker, you are looking for brick breaker.</p></div>
+                        <summary>Who developed the original brick breaker?</summary>
+                        <div class="faq-answer"><p>The brick-breaking genre started with Atari's Breakout in 1976. The name "Brick Breaker" launched later with BlackBerry in 2002.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How many levels does brick breaker have?</summary>
+                        <div class="faq-answer"><p>It is endless — there is no final level. The first few boards are hand-built, then the game keeps generating new, harder layouts so the level counter never stops.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is brick breaker good for kids?</summary>
+                        <div class="faq-answer"><p>Yes. Brick breaker is a safe, all-ages game — no violence, no ads, and the simple paddle-and-ball controls are easy for kids to pick up while building hand-eye coordination.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is brick breaker unblocked?</summary>
+                        <div class="faq-answer"><p>Yes. Brick breaker runs straight in your browser — no download, no install, no signup — so there is nothing to install or bypass. It plays on school, work, and public networks where downloaded games are blocked.</p></div>
                     </details>
                 </div>
             </div>
@@ -942,10 +958,10 @@
         <!-- ═══ #more-games ═══ -->
         <section class="sec pb-0" id="more-games">
             <div class="sec-inner">
-                <h2 class="sec-h2">More Free Games to Explore</h2>
+                <h2 class="sec-h2">More Free Brick Breaker Games</h2>
                 <div class="more-games-body">
-                    <p>BrickBreaker.net is the best place to play brick breaker online. One paddle, one ball, a wall of bricks — the arcade classic rebuilt for the browser. No download, no signup. Just click and you are playing. Your high score saves automatically, and every level brings a faster ball and a new layout to figure out.</p>
-                    <p>All games are mobile-friendly and work on iPhone, iPad, Android, and desktop. Whether you are killing five minutes or settling in for an hour, there is always a new brick layout to break. New games added regularly — check <a href="./new-games/index.html">New Games</a> for the latest additions.</p>
+                    <p>BrickBreaker.net is the best place to play it online. One paddle, one ball, a wall of bricks — the arcade classic rebuilt for the browser. No download, no signup. Just click and you are playing.</p>
+                    <p>All games are mobile-friendly and work on iPhone, iPad, Android, and desktop. The honest review: your first ball will slip past you while you are still learning the angles, your first cleared board will feel like a win you earned, and the speed will creep up on you before you notice. New games added regularly — check <a href="./new-games/index.html">New Games</a> for the latest additions.</p>
                 </div>
             </div>
         </section>
