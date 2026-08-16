@@ -98,6 +98,24 @@
         }
     }
 
+    // ── Enlarge (fullscreen) buttons ────────────────
+    function toggleFullscreen(el) {
+        if (!el) return;
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+        } else if (el.requestFullscreen) {
+            el.requestFullscreen();
+        } else if (el.webkitRequestFullscreen) {
+            el.webkitRequestFullscreen();
+        }
+    }
+
+    document.addEventListener('click', function(e) {
+        var btn = e.target.closest('[data-enlarge]');
+        if (!btn) return;
+        toggleFullscreen(document.getElementById(btn.getAttribute('data-enlarge')));
+    });
+
     // Keyboard shortcuts (F=fullscreen, R=restart, S=sound)
     document.addEventListener('keydown', function(e) {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;

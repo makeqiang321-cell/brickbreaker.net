@@ -47,12 +47,6 @@
         "gamePlatform": "Web browser",
         "publisher": { "@type": "Organization", "name": "brickbreaker.net", "url": "https://brickbreaker.net" },
         "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "5000", "bestRating": "5", "worstRating": "1" },
-        "comment": [
-            { "@type": "Comment", "author": { "@type": "Person", "name": "Jason Miller" }, "text": "Cleared level 22 last night and sent the link to my brother. The edge-hit aiming is the real thing — once it clicks, it is a whole different game.", "datePublished": "2026-08-13" },
-            { "@type": "Comment", "author": { "@type": "Person", "name": "Sarah Kim" }, "text": "My students race each other on the classroom Chromebooks. No install, no account — just open the tab and play. It has become their go-to.", "datePublished": "2026-08-10" },
-            { "@type": "Comment", "author": { "@type": "Person", "name": "Ryan Torres" }, "text": "Runs smooth on my phone, which most brick breakers do not. Touch drag is tight. Stuck on level 18 for a week and somehow that is the fun part.", "datePublished": "2026-08-08" },
-            { "@type": "Comment", "author": { "@type": "Person", "name": "Maria Garcia" }, "text": "Grew up on Breakout at the arcade. This is that same loop, just faster and cleaner. Multi-ball is chaos in the best way.", "datePublished": "2026-08-01" }
-        ],
         "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1 },
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "dateModified": "2026-08-14"
@@ -181,7 +175,7 @@
         .hero-right{display:flex;align-items:center;justify-content:center}
         .hero-right .card-surface{border-radius:var(--radius-lg);padding:12px}
         @media(min-width:768px){.hero-right .card-surface{padding:16px}}
-        .hero-right .frame-inner{overflow:hidden;border-radius:var(--radius-md);background:#000;box-shadow:0 20px 40px rgba(0,0,0,0.12)}
+        .hero-right .frame-inner{position:relative;overflow:hidden;border-radius:var(--radius-md);background:#000;box-shadow:0 20px 40px rgba(0,0,0,0.12)}
         .hero-right .frame-inner iframe{display:block;width:100%;aspect-ratio:800/600;border:none}
         @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:24px}.hero-right{order:-1}.hero-left{text-align:center}.hero-left .hero-actions{justify-content:center}}
 
@@ -205,8 +199,8 @@
         @media(min-width:768px){.play-card{padding:0}}
         .play-card-inner{position:relative;overflow:hidden;border-radius:var(--radius-md);background:#000}
         .play-card-inner iframe{display:block;width:100%;aspect-ratio:800/600;border:none}
-        .fullscreen-btn{position:absolute;bottom:12px;right:12px;z-index:10;width:40px;height:40px;border:none;border-radius:10px;background:rgba(0,0,0,0.5);color:#fff;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;backdrop-filter:blur(4px)}
-        .fullscreen-btn:hover{background:rgba(124,58,237,0.75);transform:scale(1.08)}
+        .enlarge-btn{position:absolute;bottom:12px;right:12px;z-index:10;width:40px;height:40px;border:none;border-radius:10px;background:rgba(0,0,0,0.55);color:#fff;font-size:1.15rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;backdrop-filter:blur(4px)}
+        .enlarge-btn:hover{background:rgba(124,58,237,0.85);transform:scale(1.08)}
 
         /* ── Rating bar ───────────────────────── */
         .rating-bar{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:20px;padding:16px 24px;border-radius:var(--radius-md);border:1px solid var(--border);background:var(--bg-card)}
@@ -229,8 +223,7 @@
         .share-linkedin:hover{background:#0a66c2;color:#fff}
 
         /* ── About ────────────────────────────── */
-        .about-layout{display:grid;grid-template-columns:1fr;gap:32px}
-        @media(min-width:900px){.about-layout{grid-template-columns:1fr 320px}}
+        .about-layout{display:block}
         .about-body{max-width:720px}
         .about-body p{font-size:.94rem;color:var(--text-dim);line-height:1.7;margin-bottom:18px}
         .about-body p:last-child{margin-bottom:0}
@@ -238,20 +231,25 @@
         .about-fig-img{display:block;width:100%;height:auto}
         .about-figure figcaption{font-size:.8rem;color:var(--text-faint);text-align:center;padding:10px 16px;background:var(--bg-card)}
 
-        /* ── Comments / Reviews sidebar ──────── */
-        .comments-sidebar{display:flex;flex-direction:column;gap:14px}
+        /* ── Comments (bottom) ───────────────── */
+        .comments-wrap{max-width:760px}
         .comments-heading{font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:2px;letter-spacing:-0.3px}
         .comments-heading-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:2px}
         .comments-more{font-size:.72rem;font-weight:700;color:var(--primary);text-decoration:none;white-space:nowrap}
         .comments-more:hover{text-decoration:underline}
         .comment-card{border-radius:22px;padding:20px;background:var(--bg);border:1px solid var(--border)}
         .comment-card-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-        .comment-avatar{width:44px;height:44px;border-radius:50%;background:#fff;color:var(--text);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;flex-shrink:0;border:1px solid var(--border);box-shadow:0 10px 20px rgba(10,20,13,0.08)}
+        .comment-avatar{width:44px;height:44px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;flex-shrink:0;border:1px solid rgba(124,58,237,0.15)}
         .comment-name{font-weight:800;font-size:.9rem;color:var(--text)}
         .comment-date{font-size:.75rem;color:var(--text-faint)}
         .comment-text{font-size:.98rem;color:var(--text-dim);line-height:1.55}
         .comment-flag{display:inline-block;margin-top:8px;font-size:.7rem;color:var(--text-faint);cursor:pointer;background:none;border:none;padding:0}
         .comment-flag:hover{color:var(--text-dim)}
+        .comment-actions{display:flex;align-items:center;gap:18px;margin-top:14px}
+        .comment-action{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:600;color:var(--text-faint);cursor:pointer;background:none;border:none;padding:0;transition:color .15s}
+        .comment-action:hover{color:var(--primary)}
+        .comment-action.liked{color:var(--primary)}
+        .comment-empty{text-align:center;padding:40px 20px;border:1px dashed var(--border);border-radius:var(--radius-lg);color:var(--text-faint);font-size:.9rem;background:var(--bg-card)}
         .comment-form{display:flex;flex-direction:column;gap:10px;margin-bottom:4px}
         .comment-form-input{width:100%;border-radius:12px;border:1px solid var(--border);background:var(--bg);padding:10px 14px;font-size:.88rem;color:var(--text);outline:none;font-family:inherit}
         .comment-form-input:focus{border-color:var(--primary)}
@@ -261,7 +259,8 @@
         .comment-charcount{font-size:.72rem;color:var(--text-faint)}
         .comment-submit{background:var(--primary);color:#fff;border:none;border-radius:999px;padding:10px 20px;font-weight:700;font-size:.82rem;cursor:pointer;letter-spacing:.2px}
         .comment-submit:hover{filter:brightness(1.08)}
-        .comment-list{display:flex;flex-direction:column;gap:14px}
+        .comment-list{display:grid;grid-template-columns:1fr;gap:14px;margin-top:20px}
+        @media(min-width:700px){.comment-list{grid-template-columns:1fr 1fr}}
 
         /* ── Recommended Games ──────────────── */
         .rec-grid{display:grid;grid-template-columns:1fr;gap:20px}
@@ -390,13 +389,13 @@
     <!-- ═══ NAV ═══ -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="./index.html" class="nav-brand"><img src="img/logo.svg" alt="Brick Breaker" class="nav-logo-img" width="168" height="32"></a>
+            <a href="./" class="nav-brand"><img src="img/logo.svg" alt="Brick Breaker" class="nav-logo-img" width="168" height="32"></a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="./index.html" class="active">Home</a></li>
-                <li><a href="./new-games/index.html">New Games</a></li>
-                <li><a href="./hot-games/index.html">Hot Games</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="./about/index.html">About</a></li>
+                <li><a href="./" class="active">Home</a></li>
+                <li><a href="./new-games/">New Games</a></li>
+                <li><a href="./hot-games/">Hot Games</a></li>
+                <li><a href="blog">Blog</a></li>
+                <li><a href="./about/">About</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
         </div>
@@ -417,7 +416,8 @@
             <div class="hero-right">
                 <div class="card-surface">
                     <div class="frame-inner">
-                        <iframe src="game/index.html" title="Play Brick Breaker Online" allowfullscreen allow="autoplay; fullscreen" loading="eager"></iframe>
+                        <iframe id="heroGameFrame" src="game/index.html" title="Play Brick Breaker Online" allowfullscreen allow="autoplay; fullscreen" loading="eager"></iframe>
+                        <button type="button" class="enlarge-btn" data-enlarge="heroGameFrame" title="Enlarge" aria-label="Enlarge game">&#10734;</button>
                     </div>
                 </div>
             </div>
@@ -448,7 +448,7 @@
                 <div class="play-card">
                     <div class="play-card-inner">
                         <iframe id="gameFrame" src="game/index.html" title="Play Brick Breaker Online" allowfullscreen allow="autoplay; fullscreen" loading="eager"></iframe>
-                        <button id="fullscreenBtn" class="fullscreen-btn" title="Fullscreen" aria-label="Toggle fullscreen">&#10734;</button>
+                        <button type="button" id="fullscreenBtn" class="enlarge-btn" data-enlarge="gameFrame" title="Enlarge" aria-label="Enlarge game">&#10734;</button>
                     </div>
                 </div>
 
@@ -487,7 +487,7 @@
                 <h3 style="font-weight:800;font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.1;letter-spacing:-0.5px;color:var(--text);margin:0 0 8px;">Try These New Puzzle Games</h3>
                 <p style="font-size:.85rem;color:var(--text-dim);line-height:1.55;max-width:520px;margin:0 0 18px;">Six puzzle and block games that load the moment you click. No download bar, no signup form, no tutorial popup between you and the game.</p>
                 <div class="rec-grid">
-                    <a href="game/block-crush/index.html" class="rec-card">
+                    <a href="game/block-crush/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/block-crush-cover.jpg" alt="Block Crush" class="rec-card-img" loading="lazy">
                             <span class="rec-card-badge">NEW</span>
@@ -499,7 +499,7 @@
                             <span class="rec-card-tag">Puzzle</span>
                         </div>
                     </a>
-                    <a href="game/1010-color-match/index.html" class="rec-card">
+                    <a href="game/1010-color-match/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/1010-color-match-cover.jpg" alt="1010 Color Match" class="rec-card-img" loading="lazy">
                             <span class="rec-card-badge">NEW</span>
@@ -511,7 +511,7 @@
                             <span class="rec-card-tag">Puzzle</span>
                         </div>
                     </a>
-                    <a href="game/block-puzzle-legend/index.html" class="rec-card">
+                    <a href="game/block-puzzle-legend/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/block-puzzle-legend-cover.jpg" alt="Block Puzzle Legend" class="rec-card-img" loading="lazy">
                             <span class="rec-card-badge">NEW</span>
@@ -523,7 +523,7 @@
                             <span class="rec-card-tag">Puzzle</span>
                         </div>
                     </a>
-                    <a href="game/bricky-blast/index.html" class="rec-card">
+                    <a href="game/bricky-blast/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/bricky-blast-cover.jpg" alt="Bricky Blast" class="rec-card-img" loading="lazy">
                             <span class="rec-card-badge">NEW</span>
@@ -535,7 +535,7 @@
                             <span class="rec-card-tag">Puzzle</span>
                         </div>
                     </a>
-                    <a href="game/block-blast-2048/index.html" class="rec-card">
+                    <a href="game/block-blast-2048/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/block-blast-2048-cover.jpg" alt="Block Blast 2048" class="rec-card-img" loading="lazy">
                             <span class="rec-card-badge">NEW</span>
@@ -547,7 +547,7 @@
                             <span class="rec-card-tag">Merge Puzzle</span>
                         </div>
                     </a>
-                    <a href="game/slide-blocks-puzzle/index.html" class="rec-card">
+                    <a href="game/slide-blocks-puzzle/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/slide-blocks-puzzle-cover.jpg" alt="Slide Blocks Puzzle" class="rec-card-img" loading="lazy">
                             <span class="rec-card-badge">NEW</span>
@@ -583,66 +583,6 @@
                             <figcaption>A clean board: paddle tracking left, ball in flight, a power-up about to drop — the kind of moment where you either catch it or lose a life chasing it.</figcaption>
                         </figure>
                     </div>
-                    <aside class="comments-sidebar">
-                        <div class="comments-heading-row">
-                            <h3 class="comments-heading">Comments (<span id="commentCount">4</span>)</h3>
-                        </div>
-                        <form class="comment-form" id="commentForm" novalidate>
-                            <input type="text" class="comment-form-input" name="name" placeholder="Your name" maxlength="40" autocomplete="name" aria-label="Your name">
-                            <div class="comment-field">
-                                <textarea name="message" placeholder="Share your funniest fail, toughest trap, or first impression..." maxlength="140" aria-label="Your comment"></textarea>
-                            </div>
-                            <div class="comment-form-foot">
-                                <span class="comment-charcount"><span id="charCount">0</span>/140</span>
-                                <button type="submit" class="comment-submit">Post Comment</button>
-                            </div>
-                        </form>
-                        <div id="commentList" class="comment-list"></div>
-                    </aside>
-                    <script>
-                    (function(){
-                        var PRESET=[
-                            {name:"Jason Miller",msg:"Cleared level 22 last night and sent the link to my brother. The edge-hit aiming is the real thing — once it clicks, it is a whole different game.",time:"2 days ago"},
-                            {name:"Sarah Kim",msg:"My students race each other on the classroom Chromebooks. No install, no account — just open the tab and play. It has become their go-to.",time:"5 days ago"},
-                            {name:"Ryan Torres",msg:"Runs smooth on my phone, which most brick breakers do not. Touch drag is tight. Stuck on level 18 for a week and somehow that is the fun part.",time:"1 week ago"},
-                            {name:"Maria Garcia",msg:"Grew up on Breakout at the arcade. This is that same loop, just faster and cleaner. Multi-ball is chaos in the best way.",time:"2 weeks ago"}
-                        ];
-                        var KEY="bbComments";
-                        function loadUser(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){return[]}}
-                        function saveUser(a){try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
-                        function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
-                        function rel(t){var d=Math.floor((Date.now()-t)/1000);if(d<60)return"just now";if(d<3600)return Math.floor(d/60)+" minutes ago";if(d<86400)return Math.floor(d/3600)+" hours ago";return Math.floor(d/86400)+" days ago"}
-                        function card(c){
-                            var t=c.time||rel(c.ts);
-                            var letter=((c.name||"?").trim().charAt(0)||"?").toUpperCase();
-                            return '<div class="comment-card"><div class="comment-card-header"><div class="comment-avatar">'+esc(letter)+'</div><div><div class="comment-name">'+esc(c.name||"Guest")+'</div><span class="comment-date">'+esc(t)+'</span></div></div><p class="comment-text">'+esc(c.msg)+'</p></div>';
-                        }
-                        function render(){
-                            var user=loadUser();
-                            var all=user.concat(PRESET);
-                            document.getElementById("commentList").innerHTML=all.map(card).join("");
-                            document.getElementById("commentCount").textContent=all.length;
-                        }
-                        var form=document.getElementById("commentForm");
-                        var ta=form.elements.message;
-                        var cc=document.getElementById("charCount");
-                        ta.addEventListener("input",function(){cc.textContent=ta.value.length});
-                        form.addEventListener("submit",function(e){
-                            e.preventDefault();
-                            var name=form.elements.name.value.trim();
-                            var msg=form.elements.message.value.trim();
-                            if(!msg)return;
-                            var user=loadUser();
-                            user.unshift({name:name,msg:msg,ts:Date.now()});
-                            saveUser(user);
-                            form.elements.name.value="";
-                            form.elements.message.value="";
-                            cc.textContent="0";
-                            render();
-                        });
-                        render();
-                    })();
-                    </script>
                 </div>
             </div>
         </section>
@@ -738,7 +678,7 @@
                 <h2 class="sec-h2">Brick Breaker Game Modes</h2>
                 <p class="sec-lead">Nine ways to play brick breaker — each mode changes the speed, visuals, or rules. Pick one and jump in.</p>
                 <div class="rec-grid">
-                    <a href="game/classic/index.html" class="rec-card">
+                    <a href="game/classic/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/cover-classic.svg" alt="Classic Brick Breaker" class="rec-card-img" loading="lazy">
                         </div>
@@ -749,7 +689,7 @@
                             <span class="rec-card-tag">Classic Mode</span>
                         </div>
                     </a>
-                    <a href="game/power-up/index.html" class="rec-card">
+                    <a href="game/power-up/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/cover-power-up.svg" alt="Power-Up Brick Breaker" class="rec-card-img" loading="lazy">
                         </div>
@@ -760,7 +700,7 @@
                             <span class="rec-card-tag">Power-Up Mode</span>
                         </div>
                     </a>
-                    <a href="game/neon/index.html" class="rec-card">
+                    <a href="game/neon/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/cover-neon.svg" alt="Neon Brick Breaker" class="rec-card-img" loading="lazy">
                         </div>
@@ -771,7 +711,7 @@
                             <span class="rec-card-tag">Neon Mode</span>
                         </div>
                     </a>
-                    <a href="game/arkanoid/index.html" class="rec-card">
+                    <a href="game/arkanoid/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/cover-arkanoid.svg" alt="Arkanoid Brick Breaker" class="rec-card-img" loading="lazy">
                         </div>
@@ -782,7 +722,7 @@
                             <span class="rec-card-tag">Arkanoid Mode</span>
                         </div>
                     </a>
-                    <a href="game/hard/index.html" class="rec-card">
+                    <a href="game/hard/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/cover-hard.svg" alt="Hard Brick Breaker" class="rec-card-img" loading="lazy">
                         </div>
@@ -793,7 +733,7 @@
                             <span class="rec-card-tag">Hard Mode</span>
                         </div>
                     </a>
-                    <a href="game/precision/index.html" class="rec-card">
+                    <a href="game/precision/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/cover-precision.svg" alt="Precision Brick Breaker" class="rec-card-img" loading="lazy">
                         </div>
@@ -804,7 +744,7 @@
                             <span class="rec-card-tag">Precision Mode</span>
                         </div>
                     </a>
-                    <a href="game/gold/index.html" class="rec-card">
+                    <a href="game/gold/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/cover-gold.svg" alt="Gold Brick Breaker" class="rec-card-img" loading="lazy">
                         </div>
@@ -815,7 +755,7 @@
                             <span class="rec-card-tag">Gold Rush Mode</span>
                         </div>
                     </a>
-                    <a href="game/cosmic/index.html" class="rec-card">
+                    <a href="game/cosmic/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/cover-cosmic.svg" alt="Cosmic Brick Breaker" class="rec-card-img" loading="lazy">
                         </div>
@@ -826,7 +766,7 @@
                             <span class="rec-card-tag">Cosmic Mode</span>
                         </div>
                     </a>
-                    <a href="game/retro/index.html" class="rec-card">
+                    <a href="game/retro/" class="rec-card">
                         <div class="rec-card-img-wrap">
                             <img src="img/cover-retro.svg" alt="Retro Brick Breaker" class="rec-card-img" loading="lazy">
                         </div>
@@ -874,7 +814,7 @@
                 <h2 class="sec-h2" id="blog-heading">Brick Breaker Blog</h2>
                 <p class="sec-lead">Three reads on the game — how to beat the later levels, the Atari-to-BlackBerry origins, and Google's hidden search-bar easter egg.</p>
                 <div class="blog-grid">
-                    <a href="blog-brick-breaker-io-unlocked.html" class="blog-card">
+                    <a href="blog-brick-breaker-io-unlocked" class="blog-card">
                         <img src="./img/brickbreaker-gameplay.svg" alt="Brick breaker io unlocked" class="blog-card-img" loading="lazy">
                         <div class="blog-card-body">
                             <span class="blog-card-cat">Guide</span>
@@ -883,7 +823,7 @@
                             <span class="blog-card-link">Read &rarr;</span>
                         </div>
                     </a>
-                    <a href="blog-brick-breaker-original.html" class="blog-card">
+                    <a href="blog-brick-breaker-original" class="blog-card">
                         <img src="./img/cover-retro.svg" alt="Brick breaker history" class="blog-card-img" loading="lazy">
                         <div class="blog-card-body">
                             <span class="blog-card-cat">History</span>
@@ -892,7 +832,7 @@
                             <span class="blog-card-link">Read &rarr;</span>
                         </div>
                     </a>
-                    <a href="blog-google-block-breaker.html" class="blog-card">
+                    <a href="blog-google-block-breaker" class="blog-card">
                         <img src="./img/cover-neon.svg" alt="Google brick breaker easter egg" class="blog-card-img" loading="lazy">
                         <div class="blog-card-body">
                             <span class="blog-card-cat">Feature</span>
@@ -961,9 +901,94 @@
                 <h2 class="sec-h2">More Free Brick Breaker Games</h2>
                 <div class="more-games-body">
                     <p>BrickBreaker.net is the best place to play it online. One paddle, one ball, a wall of bricks — the arcade classic rebuilt for the browser. No download, no signup. Just click and you are playing.</p>
-                    <p>All games are mobile-friendly and work on iPhone, iPad, Android, and desktop. The honest review: your first ball will slip past you while you are still learning the angles, your first cleared board will feel like a win you earned, and the speed will creep up on you before you notice. New games added regularly — check <a href="./new-games/index.html">New Games</a> for the latest additions.</p>
+                    <p>All games are mobile-friendly and work on iPhone, iPad, Android, and desktop. The honest review: your first ball will slip past you while you are still learning the angles, your first cleared board will feel like a win you earned, and the speed will creep up on you before you notice. New games added regularly — check <a href="./new-games/">New Games</a> for the latest additions.</p>
                 </div>
             </div>
+        </section>
+
+        <!-- ═══ #comments ═══ -->
+        <section class="sec" id="comments">
+            <div class="sec-inner">
+                <h2 class="sec-h2">Comments (<span id="commentCount">0</span>)</h2>
+                <p class="sec-lead">Share your best clear, toughest trap, or first impression — your comment is saved on this device only.</p>
+                <div class="comments-wrap">
+                    <form class="comment-form" id="commentForm" novalidate>
+                        <input type="text" class="comment-form-input" name="name" placeholder="Your name" maxlength="40" autocomplete="name" aria-label="Your name">
+                        <div class="comment-field">
+                            <textarea name="message" placeholder="Share your funniest fail, toughest trap, or first impression..." maxlength="140" aria-label="Your comment"></textarea>
+                        </div>
+                        <div class="comment-form-foot">
+                            <span class="comment-charcount"><span id="charCount">0</span>/140</span>
+                            <button type="submit" class="comment-submit">Post Comment</button>
+                        </div>
+                    </form>
+                    <div id="commentList" class="comment-list"></div>
+                </div>
+            </div>
+            <script>
+            (function(){
+                var PRESET=[];
+                var KEY="bbComments";
+                function loadUser(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){return[]}}
+                function saveUser(a){try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
+                function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+                function rel(t){var d=Math.floor((Date.now()-t)/1000);if(d<60)return"just now";if(d<3600)return Math.floor(d/60)+" minutes ago";if(d<86400)return Math.floor(d/3600)+" hours ago";return Math.floor(d/86400)+" days ago"}
+                function card(c,i){
+                    var t=c.time||rel(c.ts);
+                    var letter=((c.name||"?").trim().charAt(0)||"?").toUpperCase();
+                    var likes=c.likes||0;
+                    var liked=c.liked?' liked':'';
+                    return '<div class="comment-card"><div class="comment-card-header"><div class="comment-avatar">'+esc(letter)+'</div><div><div class="comment-name">'+esc(c.name||"Guest")+'</div><span class="comment-date">'+esc(t)+'</span></div></div><p class="comment-text">'+esc(c.msg)+'</p><div class="comment-actions"><button type="button" class="comment-action like-btn'+liked+'" data-i="'+i+'"><span>♥</span> <span class="like-count">'+likes+'</span></button><button type="button" class="comment-action reply-btn" data-name="'+esc(c.name||"Guest")+'"><span>↩</span> Reply</button></div></div>';
+                }
+                function render(){
+                    var user=loadUser();
+                    var all=user.concat(PRESET);
+                    var list=document.getElementById("commentList");
+                    if(all.length){
+                        list.innerHTML=all.map(card).join("");
+                    }else{
+                        list.innerHTML='<div class="comment-empty">No comments yet — be the first to share how your run went.</div>';
+                    }
+                    document.getElementById("commentCount").textContent=all.length;
+                }
+                var form=document.getElementById("commentForm");
+                var ta=form.elements.message;
+                var cc=document.getElementById("charCount");
+                ta.addEventListener("input",function(){cc.textContent=ta.value.length});
+                form.addEventListener("submit",function(e){
+                    e.preventDefault();
+                    var name=form.elements.name.value.trim();
+                    var msg=form.elements.message.value.trim();
+                    if(!msg)return;
+                    var user=loadUser();
+                    user.unshift({name:name,msg:msg,ts:Date.now(),likes:0,liked:false});
+                    saveUser(user);
+                    form.elements.name.value="";
+                    form.elements.message.value="";
+                    cc.textContent="0";
+                    render();
+                });
+                document.getElementById("commentList").addEventListener("click",function(e){
+                    var like=e.target.closest(".like-btn");
+                    var reply=e.target.closest(".reply-btn");
+                    if(like){
+                        var i=+like.getAttribute("data-i");
+                        var user=loadUser();
+                        var c=user[i];
+                        if(!c)return;
+                        if(c.liked){c.liked=false;c.likes=Math.max(0,(c.likes||0)-1);}else{c.liked=true;c.likes=(c.likes||0)+1;}
+                        saveUser(user);
+                        render();
+                    }else if(reply){
+                        var n=reply.getAttribute("data-name");
+                        ta.value = (n && n!=="Guest") ? "@"+n+" " : "";
+                        ta.focus();
+                        cc.textContent=ta.value.length;
+                    }
+                });
+                render();
+            })();
+            </script>
         </section>
 
     </main>
@@ -980,7 +1005,7 @@
                     <h4>Play</h4>
                     <ul>
                         <li><a href="./#play-now">Play Now</a></li>
-                        <li><a href="./game/index.html">Full Game</a></li>
+                        <li><a href="./game/">Full Game</a></li>
                         <li><a href="./#how-to-play">How to Play</a></li>
                         <li><a href="./#faq">FAQ</a></li>
                     </ul>
@@ -988,10 +1013,10 @@
                 <div class="footer-col">
                     <h4>Info</h4>
                     <ul>
-                        <li><a href="./about/index.html">About</a></li>
-                        <li><a href="./contact/index.html">Contact</a></li>
-                        <li><a href="./privacy/index.html">Privacy</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="./about/">About</a></li>
+                        <li><a href="./contact/">Contact</a></li>
+                        <li><a href="./privacy/">Privacy</a></li>
+                        <li><a href="blog">Blog</a></li>
                     </ul>
                 </div>
             </div>
