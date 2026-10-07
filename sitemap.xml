@@ -32,13 +32,13 @@
   </url>
   <url>
     <loc>https://brickbreaker.net/new-games/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brickbreaker.net/hot-games/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -105,7 +105,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- ═══ Puzzle Games (7) ═══ -->
+  <!-- ═══ Puzzle, Sandbox & Arcade Games (12) ═══ -->
   <url>
     <loc>https://brickbreaker.net/game/block-crush/</loc>
     <lastmod>2026-08-12</lastmod>
@@ -147,6 +147,216 @@
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/burrito-craft/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/burrito-craft-cover.jpg</image:loc>
+      <image:caption>Burrito Craft — a Minecraft-style sandbox game playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/cluster-rush/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/cluster-rush-cover.jpg</image:loc>
+      <image:caption>Cluster Rush — a first-person truck-surfing platformer playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/big-block-blast/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/big-block-blast-cover.jpg</image:loc>
+      <image:caption>Big Block Blast — a 2×2 block-building puzzle playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/balls-bricks-breaker/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/balls-bricks-breaker-cover.jpg</image:loc>
+      <image:caption>Balls Bricks Breaker — a numbered-brick ball-shooter arcade game playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/color-block-jam/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/color-block-jam-cover.jpg</image:loc>
+      <image:caption>Color Block Jam — a sliding color-match puzzle playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/bubble-spinner/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/bubble-spinner-cover.svg</image:loc>
+      <image:caption>Bubble Spinner — a rotating-cluster bubble shooter playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/connect-classic/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/connect-classic-cover.svg</image:loc>
+      <image:caption>Connect Classic — a four-in-a-row board game playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/bubbles-3/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/bubbles-3-cover.svg</image:loc>
+      <image:caption>Bubbles 3 — a match-3 bubble shooter playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/bubble-town/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/bubble-town-cover.svg</image:loc>
+      <image:caption>Bubble Town — a Borb-popping bubble shooter playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/bubble-mouse/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/bubble-mouse-cover.svg</image:loc>
+      <image:caption>Bubble Mouse — a mouse-versus-cats bubble shooter playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/bubble-merge/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/bubble-merge-cover.svg</image:loc>
+      <image:caption>Bubble Merge — a drop-and-merge bubble puzzle playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/donut-clicker/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/donut-clicker-cover.svg</image:loc>
+      <image:caption>Donut Clicker — an idle clicker bakery game playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/ant-flow/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/ant-flow-cover.jpg</image:loc>
+      <image:caption>Ant Flow — a color-matching pixel-art puzzle playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/city-brawl/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/city-brawl-cover.jpg</image:loc>
+      <image:caption>City Brawl — a 3D street-fighting brawler playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/cowboy-safari/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/cowboy-safari-cover.jpg</image:loc>
+      <image:caption>Cowboy Safari — an endless animal-runner playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/flipping-master/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/flipping-master-cover.jpg</image:loc>
+      <image:caption>Flipping Master — a diagonal-flipping arcade runner playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/dancing-beat/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/dancing-beat-cover.jpg</image:loc>
+      <image:caption>Dancing Beat — a music-rhythm maze game playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/merge-infinity/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/merge-infinity-cover.jpg</image:loc>
+      <image:caption>Merge Infinity — a number-connect merge puzzle playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/slope-spooky/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/slope-spooky-cover.jpg</image:loc>
+      <image:caption>Slope Spooky — a haunted rolling-ball endless runner playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/krillion/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/krillion-cover.jpg</image:loc>
+      <image:caption>Krillion — a daily trivia game where rare answers win, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/catdoku/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/catdoku-cover.jpg</image:loc>
+      <image:caption>Catdoku — a cozy cat logic puzzle where cats never touch, playable in the browser</image:caption>
+    </image:image>
   </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->

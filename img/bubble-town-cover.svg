@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="322" viewBox="0 0 400 322">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060015"/>
+      <stop offset="45%" stop-color="#0d0030"/>
+      <stop offset="100%" stop-color="#1a0050"/>
+    </linearGradient>
+    <radialGradient id="pink" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#f9a8d4"/><stop offset="55%" stop-color="#f472b6"/><stop offset="100%" stop-color="#be185d"/>
+    </radialGradient>
+    <radialGradient id="purple" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#c4b5fd"/><stop offset="55%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#6d28d9"/>
+    </radialGradient>
+    <radialGradient id="green" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#6ee7b7"/><stop offset="55%" stop-color="#34d399"/><stop offset="100%" stop-color="#047857"/>
+    </radialGradient>
+    <radialGradient id="yellow" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#fde68a"/><stop offset="55%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#b45309"/>
+    </radialGradient>
+    <radialGradient id="blue" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#93c5fd"/><stop offset="55%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#1d4ed8"/>
+    </radialGradient>
+    <radialGradient id="orange" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#fdba74"/><stop offset="55%" stop-color="#fb923c"/><stop offset="100%" stop-color="#c2410c"/>
+    </radialGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.35"/></filter>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#060015" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#060015" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="322" fill="url(#bg)"/>
+
+  <!-- Borb field -->
+  <g filter="url(#sh)">
+    <circle cx="80" cy="52" r="18" fill="url(#pink)"/>
+    <circle cx="130" cy="52" r="18" fill="url(#blue)"/>
+    <circle cx="180" cy="52" r="18" fill="url(#green)"/>
+    <circle cx="230" cy="52" r="18" fill="url(#yellow)"/>
+    <circle cx="280" cy="52" r="18" fill="url(#purple)"/>
+    <circle cx="330" cy="52" r="18" fill="url(#orange)"/>
+    <circle cx="105" cy="90" r="18" fill="url(#yellow)"/>
+    <circle cx="155" cy="90" r="18" fill="url(#orange)"/>
+    <circle cx="205" cy="90" r="18" fill="url(#pink)"/>
+    <circle cx="255" cy="90" r="18" fill="url(#blue)"/>
+    <circle cx="305" cy="90" r="18" fill="url(#green)"/>
+    <circle cx="80" cy="128" r="18" fill="url(#purple)"/>
+    <circle cx="130" cy="128" r="18" fill="url(#green)"/>
+    <circle cx="180" cy="128" r="18" fill="url(#orange)"/>
+    <circle cx="230" cy="128" r="18" fill="url(#pink)"/>
+    <circle cx="280" cy="128" r="18" fill="url(#yellow)"/>
+    <circle cx="330" cy="128" r="18" fill="url(#blue)"/>
+  </g>
+  <!-- highlights -->
+  <g fill="#ffffff" opacity="0.35">
+    <ellipse cx="174" cy="46" rx="6" ry="4"/>
+    <ellipse cx="224" cy="46" rx="6" ry="4"/>
+    <ellipse cx="199" cy="84" rx="6" ry="4"/>
+    <ellipse cx="174" cy="122" rx="6" ry="4"/>
+    <ellipse cx="274" cy="122" rx="6" ry="4"/>
+  </g>
+
+  <!-- town skyline silhouette -->
+  <g fill="#1b0b3a" stroke="#a78bfa" stroke-width="1.5" opacity="0.9">
+    <rect x="28" y="196" width="54" height="44"/>
+    <polygon points="24,196 55,166 86,196"/>
+    <rect x="96" y="206" width="40" height="34"/>
+    <polygon points="94,206 116,184 138,206"/>
+    <rect x="150" y="192" width="66" height="48"/>
+    <polygon points="146,192 183,158 220,192"/>
+    <rect x="230" y="204" width="44" height="36"/>
+    <polygon points="228,204 252,180 276,204"/>
+    <rect x="290" y="198" width="58" height="42"/>
+    <polygon points="286,198 319,168 352,198"/>
+  </g>
+  <!-- windows -->
+  <g fill="#fbbf24" opacity="0.55">
+    <rect x="42" y="212" width="8" height="8"/>
+    <rect x="62" y="212" width="8" height="8"/>
+    <rect x="160" y="208" width="9" height="9"/>
+    <rect x="186" y="208" width="9" height="9"/>
+    <rect x="302" y="212" width="9" height="9"/>
+    <rect x="326" y="212" width="9" height="9"/>
+  </g>
+
+  <!-- title overlay -->
+  <rect x="0" y="240" width="400" height="82" fill="url(#titleGrad)"/>
+  <text x="200" y="292" text-anchor="middle" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-weight="800" font-size="26" letter-spacing="-0.5">Bubble Town</text>
+</svg>

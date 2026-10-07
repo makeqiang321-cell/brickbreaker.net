@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="322" viewBox="0 0 400 322">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060015"/>
+      <stop offset="45%" stop-color="#0d0030"/>
+      <stop offset="100%" stop-color="#1a0050"/>
+    </linearGradient>
+    <radialGradient id="pink" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#f9a8d4"/><stop offset="55%" stop-color="#f472b6"/><stop offset="100%" stop-color="#be185d"/>
+    </radialGradient>
+    <radialGradient id="purple" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#c4b5fd"/><stop offset="55%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#6d28d9"/>
+    </radialGradient>
+    <radialGradient id="green" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#6ee7b7"/><stop offset="55%" stop-color="#34d399"/><stop offset="100%" stop-color="#047857"/>
+    </radialGradient>
+    <radialGradient id="yellow" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#fde68a"/><stop offset="55%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#b45309"/>
+    </radialGradient>
+    <radialGradient id="blue" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#93c5fd"/><stop offset="55%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#1d4ed8"/>
+    </radialGradient>
+    <radialGradient id="orange" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#fdba74"/><stop offset="55%" stop-color="#fb923c"/><stop offset="100%" stop-color="#c2410c"/>
+    </radialGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.35"/></filter>
+    <linearGradient id="barrel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#060015" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#060015" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="322" fill="url(#bg)"/>
+
+  <!-- faint rotating guide rings -->
+  <circle cx="200" cy="140" r="112" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <circle cx="200" cy="140" r="150" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="3 6"/>
+
+  <!-- bubble cluster: hex rings -->
+  <g filter="url(#sh)">
+    <circle cx="200" cy="140" r="26" fill="url(#pink)"/>
+    <circle cx="200" cy="92" r="26" fill="url(#purple)"/>
+    <circle cx="242" cy="116" r="26" fill="url(#green)"/>
+    <circle cx="242" cy="164" r="26" fill="url(#yellow)"/>
+    <circle cx="200" cy="188" r="26" fill="url(#blue)"/>
+    <circle cx="158" cy="164" r="26" fill="url(#orange)"/>
+    <circle cx="158" cy="116" r="26" fill="url(#blue)"/>
+    <circle cx="200" cy="44" r="26" fill="url(#yellow)"/>
+    <circle cx="284" cy="92" r="26" fill="url(#orange)"/>
+    <circle cx="284" cy="188" r="26" fill="url(#pink)"/>
+    <circle cx="116" cy="92" r="26" fill="url(#green)"/>
+    <circle cx="116" cy="188" r="26" fill="url(#purple)"/>
+  </g>
+
+  <!-- glossy highlights -->
+  <g fill="#ffffff" opacity="0.35">
+    <ellipse cx="192" cy="132" rx="7" ry="5"/>
+    <ellipse cx="192" cy="84" rx="7" ry="5"/>
+    <ellipse cx="234" cy="108" rx="7" ry="5"/>
+    <ellipse cx="234" cy="156" rx="7" ry="5"/>
+    <ellipse cx="192" cy="180" rx="7" ry="5"/>
+    <ellipse cx="150" cy="156" rx="7" ry="5"/>
+    <ellipse cx="150" cy="108" rx="7" ry="5"/>
+  </g>
+
+  <!-- cannon -->
+  <g>
+    <circle cx="200" cy="286" r="20" fill="url(#barrel)"/>
+    <circle cx="200" cy="286" r="12" fill="#0d0030"/>
+    <circle cx="200" cy="286" r="12" fill="url(#green)"/>
+    <ellipse cx="193" cy="280" rx="4" ry="3" fill="#ffffff" opacity="0.4"/>
+    <rect x="193" y="300" width="14" height="10" rx="3" fill="#6d28d9"/>
+  </g>
+
+  <!-- title overlay -->
+  <rect x="0" y="240" width="400" height="82" fill="url(#titleGrad)"/>
+  <text x="200" y="292" text-anchor="middle" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-weight="800" font-size="24" letter-spacing="-0.5">Bubble Spinner</text>
+</svg>

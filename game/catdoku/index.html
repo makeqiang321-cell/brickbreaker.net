@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catdoku — Play Free Online | BrickBreaker</title>
+    <meta name="description" content="Play Catdoku online — the cozy cat logic puzzle. Place one cat per row, column, and region, and clear 100+ levels of pure deduction. Free, no download.">
+    <meta name="keywords" content="catdoku, catdoku game, cat sudoku, cat logic puzzle, cat puzzle game, aloof rule, logic grid puzzle, free puzzle game">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://brickbreaker.net/game/catdoku/">
+    <meta property="og:title" content="Catdoku — Play Free Online | BrickBreaker">
+    <meta property="og:description" content="Play Catdoku online — the cozy cat logic puzzle. Place one cat per row, column, and region, and clear 100+ levels of pure deduction. Free, no download.">
+    <meta property="og:image" content="https://brickbreaker.net/img/catdoku-cover.jpg">
+    <meta property="og:url" content="https://brickbreaker.net/game/catdoku/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BrickBreaker.net">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catdoku — Play Free Online | BrickBreaker">
+    <meta name="twitter:description" content="Play Catdoku online — the cozy cat logic puzzle. Place one cat per row, column, and region, and clear 100+ levels of pure deduction. Free, no download.">
+    <meta name="twitter:image" content="https://brickbreaker.net/img/catdoku-cover.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"VideoGame","name":"Catdoku","description":"Play Catdoku online — the cozy cat logic puzzle. Place one cat per row, column, and region, and clear 100+ levels of pure deduction. Free, no download.","genre":["Puzzle","Logic","Sudoku"],"image":"https://brickbreaker.net/img/catdoku-cover.jpg","url":"https://brickbreaker.net/game/catdoku/","applicationCategory":"Game","operatingSystem":"Web","playMode":"SinglePlayer","gamePlatform":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":1},"author":{"@type":"Organization","name":"BrickBreaker.net"},"publisher":{"@type":"Organization","name":"BrickBreaker.net"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you play Catdoku?","acceptedAnswer":{"@type":"Answer","text":"Catdoku is a cat-themed logic puzzle. Each board is divided into rows, columns, and colored regions, and you place exactly one cat in every row, every column, and every region. The challenge comes from the rule that cats cannot sit next to each other, so every placement eliminates the cells around it."}},{"@type":"Question","name":"What are the rules of Catdoku?","acceptedAnswer":{"@type":"Answer","text":"There are three placement rules in Catdoku: put exactly one cat in each row, exactly one in each column, and exactly one in each colored region. On top of that, cats can never touch each other — not horizontally, vertically, or diagonally. Solve each board by deduction, with no guessing required."}},{"@type":"Question","name":"What is the Aloof Rule in Catdoku?","acceptedAnswer":{"@type":"Answer","text":"The Aloof Rule is Catdoku's name for the no-touching constraint: cats must not be adjacent to each other in any direction, including diagonally. It fits the theme — cats like their space — and it is the key to the puzzle, because placing one cat rules out the eight surrounding cells for every other cat."}},{"@type":"Question","name":"How do you place cats and mark cells in Catdoku?","acceptedAnswer":{"@type":"Answer","text":"Click or tap an empty cell once to mark it with an X, which rules that spot out. Double-click or double-tap a cell to place a cat in it, and click it again to remove a mark or a placement. Use the X marks to track where cats cannot go, then place a cat in the cell that logic forces."}},{"@type":"Question","name":"How many levels does Catdoku have?","acceptedAnswer":{"@type":"Answer","text":"Catdoku has more than 100 handcrafted levels, with some versions offering over 300. The difficulty climbs as the grids grow, from around 8×8 on the easier boards up to 10×10 on the harder ones, plus daily challenges and optional timed levels for extra replay value."}},{"@type":"Question","name":"What happens when you place a cat wrong in Catdoku?","acceptedAnswer":{"@type":"Answer","text":"In versions of Catdoku with a mistake system, a wrong placement costs you one of your lives — shown as fish — and running out ends the attempt, so it pays to be sure before you commit. You can also use in-game hints when you get stuck on a board."}},{"@type":"Question","name":"Can you play Catdoku on your phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. Catdoku is an HTML5 browser game that runs on desktop, tablet, and mobile, with tap controls that suit touch screens. There is no download, install, or account needed — just open it and start placing cats."}}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://brickbreaker.net/"},{"@type":"ListItem","position":2,"name":"Hot Games","item":"https://brickbreaker.net/hot-games/"},{"@type":"ListItem","position":3,"name":"Catdoku","item":"https://brickbreaker.net/game/catdoku/"}]}
+    </script>
+
+    <style>
+        .gd-page { padding: 90px 0 0; }
+        .gd-breadcrumb { font-size: 0.78rem; color: var(--text-faint); padding: 16px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .gd-breadcrumb a:hover { text-decoration: underline; }
+
+        /* Section Nav */
+        .gd-nav { position: sticky; top: 56px; z-index: 40; border-bottom: 1px solid var(--border); background: var(--bg); padding: 10px 0; }
+        .gd-nav-inner { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; gap: 8px; overflow-x: auto; }
+        .gd-nav a { white-space: nowrap; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); padding: 7px 16px; font-size: 0.78rem; font-weight: 700; color: var(--text); text-decoration: none; transition: border-color .2s,background .2s; }
+        .gd-nav a:hover { border-color: var(--primary); background: rgba(124,58,237,.08); }
+
+        /* Play Section */
+        .gd-play { padding: 24px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-play-card { overflow: hidden; border-radius: 24px; border: 1px solid rgba(255,255,255,.06); background: linear-gradient(180deg,#0a0020,#100030); padding: 16px; box-shadow: 0 20px 44px rgba(0,0,0,.3); }
+        .gd-play-frame { position: relative; overflow: hidden; background: #000; border-radius: 16px; }
+        .gd-play-frame iframe { width: 100%; height: 44vh; min-height: 340px; border: none; display: block; }
+        .gd-play-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; padding: 12px 16px; border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); }
+        .gd-play-score { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+        .gd-play-score-label { font-size: .68rem; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; color: var(--text); }
+        .gd-stars { color: #fcb900; font-size: 1rem; }
+        .gd-rating { font-weight: 700; color: var(--text); font-size: .82rem; }
+        .gd-rating-count { font-size: .72rem; color: var(--text-faint); }
+        .gd-play-actions { display: flex; gap: 8px; }
+        .gd-btn-full { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text); font-size: .78rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: border-color .2s; }
+        .gd-btn-full:hover { border-color: var(--primary); }
+        .gd-btn-play { display: inline-flex; align-items: center; gap: 6px; padding: 9px 22px; border-radius: 999px; background: linear-gradient(180deg,#8b5cf6,#7c3aed); color: #fff; font-size: .78rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: filter .2s; border: none; }
+        .gd-btn-play:hover { filter: brightness(1.15); }
+
+        /* Game Info */
+        .gd-info { padding: 12px 24px 0; max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+        .gd-info-card { border-radius: 16px; border: 1px solid var(--border); background: var(--bg-card); padding: 12px 18px; }
+        .gd-info-card .gd-byline { font-size: .7rem; color: var(--text-faint); margin-top: 2px; }
+        .gd-share-row { display: flex; gap: 8px; margin-left: auto; }
+        .gd-btn-share { display: inline-flex; align-items: center; gap: 5px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-dim); font-size: .72rem; font-weight: 600; cursor: pointer; transition: border-color .2s; }
+        .gd-btn-share:hover { border-color: var(--primary); color: var(--text); }
+
+        /* Hero Guide */
+        .gd-hero { padding: 28px 24px 0; max-width: 1120px; margin: 0 auto; }
+        .gd-hero-card { border-radius: 24px; border: 1px solid rgba(124,58,237,.18); background: linear-gradient(135deg,rgba(124,58,237,.1),rgba(167,139,250,.03)); padding: 32px 30px; }
+        .gd-hero-tag { font-size: .58rem; font-weight: 800; letter-spacing: 2.4px; text-transform: uppercase; color: var(--primary); margin: 0 0 8px; }
+        .gd-hero-h1 { font-weight: 800; font-size: clamp(1.6rem,3.2vw,2.4rem); line-height: .98; letter-spacing: -.6px; color: var(--text); margin: 0 0 10px; max-width: 22ch; }
+        .gd-hero-desc { font-size: .88rem; color: var(--text-dim); line-height: 1.65; max-width: 560px; margin: 0; }
+        .gd-hero-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; background: var(--primary); color: #fff; border: none; border-radius: 999px; padding: 10px 22px; font-size: .84rem; font-weight: 700; text-decoration: none; transition: filter .2s; }
+        .gd-hero-cta:hover { filter: brightness(1.15); }
+
+        /* Guide Sections */
+        .gd-section { padding: 32px 24px; }
+        .gd-section-inner { max-width: 1120px; margin: 0 auto; display: grid; gap: 24px; grid-template-columns: 1.05fr .95fr; }
+        .gd-article { border-radius: 22px; border: 1px solid var(--border); background: var(--bg-card); padding: 26px 28px; }
+        .gd-article-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); line-height: 1; color: var(--text); margin: 0 0 8px; }
+        .gd-article-sub { font-size: .84rem; color: var(--text-faint); margin: 0 0 14px; }
+        .gd-article-body { font-size: 1rem; color: var(--text-dim); line-height: 1.7; }
+        .gd-article-body p { margin: 0 0 13px; }
+        .gd-article-body ul { padding-left: 18px; margin: 8px 0 16px; }
+        .gd-article-body li { margin-bottom: 6px; }
+        .gd-article-body li::marker { color: var(--primary); }
+
+        .gd-sidebar { display: flex; flex-direction: column; gap: 16px; }
+        .gd-sb-card { border-radius: 22px; border: 1px solid var(--border); background: var(--bg-card); padding: 22px 24px; }
+        .gd-sb-card h3 { font-weight: 800; font-size: 1.05rem; color: var(--text); margin: 0 0 12px; }
+        .gd-sb-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 7px; }
+        .gd-sb-list li { border-radius: 12px; border: 1px solid var(--border); background: rgba(124,58,237,.03); padding: 10px 14px; font-size: .84rem; font-weight: 600; color: var(--text-dim); }
+
+        /* Screenshots */
+        .gd-shots { padding: 0 24px 32px; max-width: 1120px; margin: 0 auto; }
+        .gd-shots-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-shots-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-shots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+        .gd-shot { border-radius: 20px; border: 1px solid var(--border); background: var(--bg-card); overflow: hidden; }
+        .gd-shot img { width: 100%; min-height: 200px; object-fit: cover; display: block; }
+        .gd-shot figcaption { padding: 12px 16px; font-size: .76rem; color: var(--text-faint); line-height: 1.5; }
+
+        /* FAQ */
+        .gd-faq { padding: 0 24px 48px; max-width: 1120px; margin: 0 auto; }
+        .gd-faq-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-faq-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-faq-item { border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); padding: 18px 22px; margin-bottom: 10px; }
+        .gd-faq-q { font-size: .85rem; font-weight: 700; color: var(--text); margin: 0 0 6px; }
+        .gd-faq-a { font-size: .8rem; color: var(--text-dim); line-height: 1.6; margin: 0; }
+
+        .gd-footer-msg { padding: 0 24px 20px; max-width: 1120px; margin: 0 auto; font-size: .76rem; color: var(--text-faint); text-align: center; }
+
+        /* You May Also Like */
+        .gd-also { padding: 0 24px 48px; max-width: 1120px; margin: 0 auto; }
+        .gd-also-h2 { font-weight: 800; font-size: clamp(1.35rem,2.4vw,1.8rem); color: var(--text); margin: 0 0 4px; }
+        .gd-also-sub { font-size: .82rem; color: var(--text-faint); margin: 0 0 18px; }
+        .gd-also-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+        .gd-also-card { display: block; border-radius: 18px; border: 1px solid var(--border); background: var(--bg-card); overflow: hidden; text-decoration: none; color: inherit; transition: border-color .2s, transform .2s, box-shadow .2s; }
+        .gd-also-card:hover { border-color: rgba(124,58,237,.4); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(124,58,237,.1); }
+        .gd-also-img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; }
+        .gd-also-body { padding: 14px 16px; }
+        .gd-also-title { font-size: .82rem; font-weight: 800; color: var(--text); margin: 0 0 4px; }
+        .gd-also-desc { font-size: .72rem; color: var(--text-faint); line-height: 1.5; margin: 0; }
+
+        @media (max-width: 768px) {
+            .gd-section-inner { grid-template-columns: 1fr; }
+            .gd-play-frame iframe { height: 320px; min-height: 280px; }
+            .gd-hero-card { padding: 22px 18px; }
+            .gd-info { flex-direction: column; align-items: flex-start; }
+            .gd-share-row { margin-left: 0; }
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="../../" class="nav-brand"><img src="../../img/logo.svg" alt="Brickbreaker" class="nav-logo-img" width="210" height="40"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../../">HOME</a></li>
+            <li><a href="../../new-games/">NEW GAMES</a></li>
+            <li><a href="../../hot-games/">HOT GAMES</a></li>
+            <li><a href="../../blog">BLOG</a></li>
+            <li><a href="../../about/">ABOUT</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<main class="gd-page">
+
+    <!-- Breadcrumb -->
+    <div class="gd-breadcrumb"><a href="../../">Home</a> / <a href="../../hot-games/">Hot Games</a> / <strong>Catdoku</strong></div>
+
+    <!-- Section Nav -->
+    <nav class="gd-nav">
+        <div class="gd-nav-inner">
+            <a href="#play">Play</a>
+            <a href="#overview">Overview</a>
+            <a href="#how-to-play">How to Play</a>
+            <a href="#strategy">Strategy</a>
+            <a href="#why">Why Still Played</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Play Section -->
+    <section class="gd-play" id="play">
+        <div class="gd-play-card">
+            <div class="gd-play-frame" id="gameWindow">
+                <iframe src="https://games.azgames.io/catdoku/" title="Catdoku Cat Logic Puzzle" allow="autoplay; fullscreen" loading="eager" sandbox="allow-scripts allow-same-origin"></iframe>
+            </div>
+            <div class="gd-play-bar">
+                <div class="gd-play-score">
+                    <span class="gd-play-score-label">Player Score</span>
+                    <span class="gd-stars">★★★★★</span>
+                    <span class="gd-rating">4.6/5</span>
+                    <span class="gd-rating-count">Based on 780+ ratings</span>
+                </div>
+                <div class="gd-play-actions">
+                    <a href="https://azgames.io/catdoku" target="_blank" rel="noopener noreferrer" class="gd-btn-play">▶ Play Fullscreen</a>
+                    <button class="gd-btn-full" id="fullBtn" title="Toggle fullscreen">⛶</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Info -->
+    <div class="gd-info">
+        <div class="gd-info-card">
+            <p class="gd-byline" style="font-weight:800;font-size:1.15rem;color:var(--text);margin:0;">Catdoku</p>
+            <p class="gd-byline">Logic • Puzzle • Sudoku</p>
+        </div>
+        <div class="gd-share-row">
+            <button class="gd-btn-share" onclick="navigator.clipboard.writeText('https://brickbreaker.net/game/catdoku/')">📋 Copy link</button>
+        </div>
+    </div>
+
+    <!-- Hero Guide -->
+    <div class="gd-hero">
+        <div class="gd-hero-card">
+            <p class="gd-hero-tag">Catdoku Game Guide</p>
+            <h1 class="gd-hero-h1">Play Catdoku Online</h1>
+            <p class="gd-hero-desc">Catdoku is the cozy cat logic puzzle. Place one cat in every row, column, and colored region without letting them touch, and clear 100+ levels of pure deduction. Free, no download.</p>
+            <a href="#play" class="gd-hero-cta">▼ Play Now</a>
+        </div>
+    </div>
+
+    <!-- Overview + Sidebar -->
+    <section class="gd-section" id="overview">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Play Catdoku Online Free — Full Guide</h2>
+                <p class="gd-article-sub">Catdoku is a cat-themed logic puzzle from ONLYDRK Studio — one cat per row, column, and region, with the aloof "no touching" rule.</p>
+                <div class="gd-article-body">
+                    <p>Catdoku is Sudoku's cozier cousin. Instead of numbers, you are placing cats, and instead of fixed 3×3 boxes, the board is carved into irregular colored regions. The goal is to put exactly one cat in every row, every column, and every colored region — a clean rule set that turns out to hide a satisfying amount of deduction.</p>
+                    <p>What makes it sing is the "Aloof Rule": cats never touch each other, not even diagonally. Every cat you place instantly rules out the eight cells around it, so the board tightens with every move and the next placement gradually becomes forced. It is logic, not luck — every puzzle has a single solution.</p>
+                    <p>The controls are a two-gesture loop. Click or tap a cell once to mark it with an X and rule it out, then double-click or double-tap to place a cat. Those X marks are your working notes, and the trick is filling in enough of them that the remaining cat placements become obvious.</p>
+                    <p>With over 100 handcrafted levels — some versions run past 300 — and grids that grow from about 8×8 up to 10×10, Catdoku scales its challenge nicely. Daily challenges and optional timed levels add replay value, and a mistake system keeps careful players honest by costing a fish for each wrong placement.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card" id="how-to-play">
+                    <h3>How to Play Catdoku</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Place one cat per row, column, and region — and keep them apart.</p>
+                    <ul class="gd-sb-list">
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Scan the board</strong><span style="font-size:.8rem;color:var(--text-faint);">Rows, columns, and colored regions each need one cat.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Mark ruled-out cells</strong><span style="font-size:.8rem;color:var(--text-faint);">Click once to cross out where a cat cannot go.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Place a cat</strong><span style="font-size:.8rem;color:var(--text-faint);">Double-click to place a cat in a forced cell.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Respect the Aloof Rule</strong><span style="font-size:.8rem;color:var(--text-faint);">Cats can't touch, not even diagonally.</span></li>
+                        <li><strong style="display:block;font-size:.9rem;color:var(--text);">Watch your fish</strong><span style="font-size:.8rem;color:var(--text-faint);">Wrong placements cost a life — be sure first.</span></li>
+                    </ul>
+                </div>
+                <div class="gd-sb-card">
+                    <h3>Catdoku Facts &amp; Platforms</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Catdoku is a cat logic puzzle from ONLYDRK Studio, distributed across the Azgames portal network.</p>
+                    <ul class="gd-sb-list">
+                        <li>Type: Cat-themed logic puzzle</li>
+                        <li>Genre: Logic / Puzzle / Sudoku</li>
+                        <li>Developer: ONLYDRK Studio</li>
+                        <li>Controls: Click to mark, double-click to place</li>
+                        <li>Levels: 100+ (up to 10×10 grids)</li>
+                        <li>Platform: Web browser (HTML5)</li>
+                        <li>Rating: 4.6/5 (780+ votes)</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <div class="gd-shots">
+        <h2 class="gd-shots-h2">Catdoku Screenshots</h2>
+        <p class="gd-shots-sub">A quick look at the game — a colorful region board, a placed cat, and the X marks that narrow down the next move.</p>
+        <div class="gd-shots-grid">
+            <figure class="gd-shot">
+                <img src="../../img/catdoku-cover.jpg" alt="Catdoku cat logic puzzle with colored regions and cat pieces" loading="lazy">
+                <figcaption>Catdoku is at its best when the Aloof Rule starts to bite — each cat rules out its eight neighbors, and the board narrows down to the single forced solution.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Watch + Timeline -->
+    <section class="gd-section" id="watch">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Watch Catdoku</h2>
+                <p class="gd-article-sub">A quick visual read on the colored regions, the no-touching rule, and how ruled-out marks reveal the next placement.</p>
+                <figure class="gd-shot" style="margin-top:16px;">
+                    <img src="../../img/catdoku-cover.jpg" alt="Catdoku key art" style="aspect-ratio:16/9;">
+                    <figcaption>Catdoku — visual overview of the region board, the cat pieces, and the X marks that track your deductions.</figcaption>
+                </figure>
+            </article>
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Catdoku Timeline</h2>
+                <div class="gd-article-body" style="margin-top:14px;">
+                    <p>Catdoku is a cat-themed logic puzzle developed by ONLYDRK Studio and distributed through the Azgames portal network, reaching players on zapgames.io, Playgama, QGames, and other free browser-game sites. It took the region-placement puzzle formula — one symbol per row, column, and region — and gave it the "Aloof Rule" so cats never touch, even diagonally. The game ships more than 100 handcrafted levels scaling from roughly 8×8 up to 10×10 grids, plus daily challenges, timed levels, and an optional fish-based lives system, with no download or account required.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Strategy -->
+    <section class="gd-section" id="strategy">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Catdoku Strategy — Deduce, Don't Guess</h2>
+                <p class="gd-article-sub">Catdoku rewards careful deduction, and the fish system punishes careless guesses. Here is how to solve clean.</p>
+                <div class="gd-article-body">
+                    <p>Target the tightest lines first. Rows, columns, and regions that are nearly full leave the fewest options for their cat, so that is where forced placements live. Whenever a line or region is down to one open cell, its cat is locked in — place it without hesitation.</p>
+                    <p>Squeeze the small regions. Every colored region needs exactly one cat, and a region trapped in a corner often overlaps only one usable cell. When you are stuck, scan the smallest regions on the board; one of them will almost always hand you the next move.</p>
+                    <p>Exploit the Aloof Rule hard. Because cats cannot touch diagonally, a single placement eliminates eight cells at once. Treat each placed cat as a ring of ruled-out cells, not just one filled square, and re-check the neighboring lines and regions every time.</p>
+                    <p>Mark everything you can rule out. Tapping X marks onto impossible cells is not optional busywork — it converts the board into a visual map of what remains, and forced moves that an unmarked board hides become obvious once the dead cells are crossed off.</p>
+                    <p>Be sure before you commit. With the fish-based lives system, a wrong placement costs you, so only double-click a cat when the deduction is airtight. When a board feels ambiguous, you have not found the constraint yet — keep eliminating rather than guessing.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card">
+                    <h3>Catdoku Tips &amp; Strategy</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Chase tight lines, squeeze regions, and mark every ruled-out cell.</p>
+                    <ul class="gd-sb-list">
+                        <li>Start with nearly full rows and columns</li>
+                        <li>Find forced cats in small regions</li>
+                        <li>Use the Aloof Rule to rule out eight cells</li>
+                        <li>Mark X on every impossible cell</li>
+                        <li>Never guess — only place a sure cat</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Why Still Played -->
+    <section class="gd-section" id="why">
+        <div class="gd-section-inner">
+            <article class="gd-article">
+                <h2 class="gd-article-h2">Why Catdoku Still Gets Played</h2>
+                <p class="gd-article-sub">Sudoku's logic, dressed in cats, with a rule that keeps every board interesting.</p>
+                <div class="gd-article-body">
+                    <p>The charm is the hook. Catdoku takes a clean region-placement puzzle and wraps it in cats — and the "Aloof Rule," where cats refuse to sit next to each other, gives the game a personality that a plain numbered grid never had. It is a brain game that is genuinely pleasant to look at.</p>
+                    <p>The deduction is the draw. There is no luck in Catdoku; every board has one solution reachable by pure logic, and the no-touching rule means each move cascades into the next. That steady "aha, that one is forced" rhythm is what keeps a player working through level after level.</p>
+                    <p>And the stakes stay just high enough. The fish-based lives system and optional timed levels add a little pressure without turning it into a twitch game, so Catdoku stays calm but never mindless. If you like cozy logic puzzles with real brain-tickling depth, Catdoku is the one to settle in with.</p>
+                </div>
+            </article>
+            <aside class="gd-sidebar">
+                <div class="gd-sb-card">
+                    <h3>Why Players Return to Catdoku</h3>
+                    <p style="font-size:.9rem;color:var(--text-dim);margin:0 0 12px;line-height:1.5;">Catdoku turns region logic into a cozy, no-luck daily challenge.</p>
+                    <ul class="gd-sb-list">
+                        <li>Charming cat theme and Aloof Rule</li>
+                        <li>Pure deduction — no guessing required</li>
+                        <li>100+ levels scaling up to 10×10</li>
+                        <li>Daily challenges and timed levels</li>
+                        <li>Fish lives add just enough tension</li>
+                        <li>Free, no download, plays everywhere</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <div class="gd-faq" id="faq">
+        <h2 class="gd-faq-h2">Catdoku Online — FAQ</h2>
+        <p class="gd-faq-sub">How to play, the rules, the Aloof Rule, placing cats, level count, wrong placements, and mobile — the quick version.</p>
+        <div class="gd-faq-item"><p class="gd-faq-q">How do you play Catdoku?</p><p class="gd-faq-a">Catdoku is a cat-themed logic puzzle. Each board is divided into rows, columns, and colored regions, and you place exactly one cat in every row, every column, and every region. The challenge comes from the rule that cats cannot sit next to each other, so every placement eliminates the cells around it.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">What are the rules of Catdoku?</p><p class="gd-faq-a">There are three placement rules in Catdoku: put exactly one cat in each row, exactly one in each column, and exactly one in each colored region. On top of that, cats can never touch each other — not horizontally, vertically, or diagonally. Solve each board by deduction, with no guessing required.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">What is the Aloof Rule in Catdoku?</p><p class="gd-faq-a">The Aloof Rule is Catdoku's name for the no-touching constraint: cats must not be adjacent to each other in any direction, including diagonally. It fits the theme — cats like their space — and it is the key to the puzzle, because placing one cat rules out the eight surrounding cells for every other cat.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">How do you place cats and mark cells in Catdoku?</p><p class="gd-faq-a">Click or tap an empty cell once to mark it with an X, which rules that spot out. Double-click or double-tap a cell to place a cat in it, and click it again to remove a mark or a placement. Use the X marks to track where cats cannot go, then place a cat in the cell that logic forces.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">How many levels does Catdoku have?</p><p class="gd-faq-a">Catdoku has more than 100 handcrafted levels, with some versions offering over 300. The difficulty climbs as the grids grow, from around 8×8 on the easier boards up to 10×10 on the harder ones, plus daily challenges and optional timed levels for extra replay value.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">What happens when you place a cat wrong in Catdoku?</p><p class="gd-faq-a">In versions of Catdoku with a mistake system, a wrong placement costs you one of your lives — shown as fish — and running out ends the attempt, so it pays to be sure before you commit. You can also use in-game hints when you get stuck on a board.</p></div>
+        <div class="gd-faq-item"><p class="gd-faq-q">Can you play Catdoku on your phone?</p><p class="gd-faq-a">Yes. Catdoku is an HTML5 browser game that runs on desktop, tablet, and mobile, with tap controls that suit touch screens. There is no download, install, or account needed — just open it and start placing cats.</p></div>
+    </div>
+
+    <!-- You May Also Like -->
+    <div class="gd-also">
+        <h2 class="gd-also-h2">More Logic &amp; Puzzle Games You May Like</h2>
+        <p class="gd-also-sub">More browser games with the same calm, one-more-board logic energy.</p>
+        <div class="gd-also-grid">
+            <a href="../krillion/" class="gd-also-card">
+                <img src="../../img/krillion-cover.jpg" alt="Krillion" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body"><p class="gd-also-title">Krillion</p><p class="gd-also-desc">A daily trivia game where rare answers win — 7 prompts, 25 seconds each, and obscurity sinks you toward the Trench.</p></div>
+            </a>
+            <a href="../block-crush/" class="gd-also-card">
+                <img src="../../img/block-crush-cover.jpg" alt="Block Crush" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body"><p class="gd-also-title">Block Crush</p><p class="gd-also-desc">A tap-to-clear block puzzle — match and pop groups of same-color blocks before the board fills up.</p></div>
+            </a>
+            <a href="../slide-blocks-puzzle/" class="gd-also-card">
+                <img src="../../img/slide-blocks-puzzle-cover.jpg" alt="Slide Blocks Puzzle" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body"><p class="gd-also-title">Slide Blocks Puzzle</p><p class="gd-also-desc">A slide-the-blocks brain teaser — shift tiles into place to clear each level with the fewest moves.</p></div>
+            </a>
+            <a href="../merge-infinity/" class="gd-also-card">
+                <img src="../../img/merge-infinity-cover.jpg" alt="Merge Infinity" class="gd-also-img" loading="lazy">
+                <div class="gd-also-body"><p class="gd-also-title">Merge Infinity</p><p class="gd-also-desc">A 2048-style number-connect merge puzzle — draw lines through matching numbers and chain them into huge multiples.</p></div>
+            </a>
+        </div>
+    </div>
+
+    <p class="gd-footer-msg">Catdoku is free to play online — no download, no sign-up. Place the cats, honor the Aloof Rule, and solve every board by logic.</p>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../../img/logo.svg" alt="Brickbreaker" class="footer-logo-img" width="210" height="40" style="margin-bottom:10px;">
+                <p>The best place to play brick breaker online. Free, fast, no download.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Play</h4>
+                <ul><li><a href="../../#play-now">Play Now</a></li><li><a href="../../game/">Full Game</a></li><li><a href="../../#how-to-play">How to Play</a></li><li><a href="../../#faq">FAQ</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul><li><a href="../../about/">About</a></li><li><a href="../../contact/">Contact</a></li><li><a href="../../privacy/">Privacy</a></li><li><a href="../../blog">Blog</a></li></ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 BRICKBREAKER.NET — PLAY BRICK BREAKER ONLINE FREE</p></div>
+    </div>
+</footer>
+
+<script>
+(function(){
+    var fullBtn = document.getElementById('fullBtn');
+    var gameWindow = document.getElementById('gameWindow');
+    if (fullBtn && gameWindow) {
+        fullBtn.addEventListener('click', function(){
+            var el = gameWindow;
+            if (document.fullscreenElement) { document.exitFullscreen(); }
+            else { if (el.requestFullscreen) el.requestFullscreen(); else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); }
+        });
+    }
+})();
+</script>
+<script src="../../js/main.js"></script>
+</body>
+</html>
