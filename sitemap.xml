@@ -105,7 +105,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- ═══ Puzzle, Sandbox & Arcade Games (12) ═══ -->
+  <!-- ═══ Puzzle, Sandbox & Arcade Games (42) ═══ -->
   <url>
     <loc>https://brickbreaker.net/game/block-crush/</loc>
     <lastmod>2026-08-12</lastmod>
@@ -356,6 +356,146 @@
     <image:image>
       <image:loc>https://brickbreaker.net/img/catdoku-cover.jpg</image:loc>
       <image:caption>Catdoku — a cozy cat logic puzzle where cats never touch, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/bubble-storm/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/bubble-storm-cover.jpg</image:loc>
+      <image:caption>Bubble Storm — a 360° bubble shooter where bubbles close in from every direction, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/extreme-run-3d/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/extreme-run-3d-cover.jpg</image:loc>
+      <image:caption>Extreme Run 3D — a neon-ball 3D obstacle runner with 44 levels across four difficulty tiers, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/boxing-random/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/boxing-random-cover.jpg</image:loc>
+      <image:caption>Boxing Random — a ragdoll-physics boxing game with one-button controls and random modifiers, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/time-shooter/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/time-shooter-cover.jpg</image:loc>
+      <image:caption>Time Shooter — a first-person shooter where time only moves when you move, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/eggy-car/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/eggy-car-cover.jpg</image:loc>
+      <image:caption>Eggy Car — a physics driving game where you carry a fragile egg across hilly terrain, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/lows-adventure-2/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/lows-adventure-2-cover.jpg</image:loc>
+      <image:caption>Low's Adventure 2 — a retro 2D platformer with 31 levels and a boss, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/clash-of-vikings/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/clash-of-vikings-cover.jpg</image:loc>
+      <image:caption>Clash of Vikings — a real-time Viking card strategy game, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/fnaf-shooter/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/fnaf-shooter-cover.jpg</image:loc>
+      <image:caption>FNAF Shooter — a first-person shooter against animatronics, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/snow-rider-3d/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/snow-rider-3d-cover.jpg</image:loc>
+      <image:caption>Snow Rider 3D — a Christmas downhill sledding game, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/top-speed-3d/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/top-speed-3d-cover.jpg</image:loc>
+      <image:caption>Top Speed 3D — a highway traffic racing game, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/paper-flight-2/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/paper-flight-2-cover.jpg</image:loc>
+      <image:caption>Paper Flight 2 — a paper-airplane distance game, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/wacky-walk/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/wacky-walk-cover.jpg</image:loc>
+      <image:caption>Wacky Walk — a physics stilt-walking game, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/deer-adventure/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/deer-adventure-cover.jpg</image:loc>
+      <image:caption>Deer Adventure — a 3D physics sandbox game, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/ramp-xtreme/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/ramp-xtreme-cover.jpg</image:loc>
+      <image:caption>Ramp Xtreme — a 3D motorcycle stunt game on floating sky ramps, playable in the browser</image:caption>
     </image:image>
   </url>
 
