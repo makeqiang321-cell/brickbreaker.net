@@ -688,6 +688,16 @@
       <image:caption>Tung Sahur Clicker — a meme idle clicker where you click the wooden warrior Tung Tung Tung Sahur and trigger the 2x limelight multiplier, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/rocket-fortress/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/rocket-fortress-cover.jpg</image:loc>
+      <image:caption>Rocket Fortress — an explosive clicker RPG where you defend a fortress with holy missiles and destroy portals, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
