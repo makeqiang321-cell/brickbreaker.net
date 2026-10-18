@@ -798,6 +798,16 @@
       <image:caption>Wheelie Party — a 2D driving-balance game where you hold one wheelie down a sunlit highway, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/forest-mouse/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/forest-mouse-cover.jpg</image:loc>
+      <image:caption>Forest Mouse — an animal life-sim RPG where you forage, build a nest, and dodge the household cat as a tiny forest mouse, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
