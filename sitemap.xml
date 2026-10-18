@@ -528,6 +528,16 @@
       <image:caption>Bat Smash — a one-button baseball bat-smashing game with upgrades and skins, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/astro-robot-clicker/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/astro-robot-clicker-cover.jpg</image:loc>
+      <image:caption>Astro Robot Clicker Game — a space-themed idle clicker with tap, upgrade, and Ascension mechanics, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
