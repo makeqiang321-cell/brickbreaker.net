@@ -548,6 +548,16 @@
       <image:caption>Long Leg Master — a QWOP-style physics walking game with coin-collectible skins, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/ball-orbit/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/ball-orbit-cover.jpg</image:loc>
+      <image:caption>Ball Orbit — a baseball launch game with a timing power bar and distance upgrades, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
