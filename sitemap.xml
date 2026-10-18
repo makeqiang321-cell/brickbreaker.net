@@ -608,6 +608,16 @@
       <image:caption>Crazy Mouse Battle — an arena survival brawler where you outlast rival mice, ram them first to score, and dodge the electric fence, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/madness-lab/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/madness-lab-cover.jpg</image:loc>
+      <image:caption>Madness Lab — an arcade challenge where Doctor Doom's hybrid minions face crazy mini-tests from ghost hunts to deadly traps, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
