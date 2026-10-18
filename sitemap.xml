@@ -558,6 +558,16 @@
       <image:caption>Ball Orbit — a baseball launch game with a timing power bar and distance upgrades, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/crazy-bull-city/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/crazy-bull-city-cover.jpg</image:loc>
+      <image:caption>Crazy Bull City — a 3D bull rampage simulator where you smash cars and buildings while dodging SWAT teams, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
