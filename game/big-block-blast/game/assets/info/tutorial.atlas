@@ -1,0 +1,48 @@
+
+tutorial.png
+size: 1024, 512
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+tutorial_2
+  rotate: false
+  xy: 468, 239
+  size: 108, 108
+  orig: 108, 108
+  offset: 0, 0
+  index: -1
+tutorial_3
+  rotate: false
+  xy: 587, 358
+  size: 108, 108
+  orig: 108, 108
+  offset: 0, 0
+  index: -1
+tutorial_4
+  rotate: false
+  xy: 468, 129
+  size: 108, 108
+  orig: 108, 108
+  offset: 0, 0
+  index: -1
+tutorial_5
+  rotate: false
+  xy: 697, 358
+  size: 108, 108
+  orig: 108, 108
+  offset: 0, 0
+  index: -1
+tutorial_bg
+  rotate: false
+  xy: 2, 2
+  size: 464, 464
+  orig: 464, 464
+  offset: 0, 0
+  index: -1
+tutorial_glow_1
+  rotate: false
+  xy: 468, 349
+  size: 117, 117
+  orig: 117, 117
+  offset: 0, 0
+  index: -1

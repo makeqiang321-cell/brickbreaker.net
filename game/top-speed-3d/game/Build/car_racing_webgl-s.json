@@ -1,0 +1,10 @@
+{
+"TOTAL_MEMORY": 536870912,
+"dataUrl": "car_racing_webgl-s.data.unityweb",
+"asmCodeUrl": "car_racing_webgl-s.asm.code.unityweb",
+"asmMemoryUrl": "car_racing_webgl-s.asm.memory.unityweb",
+"asmFrameworkUrl": "car_racing_webgl-s.asm.framework.unityweb",
+"backgroundUrl": "car_racing_webgl-s.jpg",
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF"
+}

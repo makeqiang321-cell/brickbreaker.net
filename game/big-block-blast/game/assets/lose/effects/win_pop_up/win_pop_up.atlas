@@ -1,0 +1,27 @@
+
+win_pop_up.png
+size: 1545, 933
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+glow_2
+  rotate: true
+  xy: 981, 368
+  size: 563, 562
+  orig: 565, 565
+  offset: 1, 1
+  index: -1
+glow_3
+  rotate: false
+  xy: 981, 126
+  size: 241, 240
+  orig: 243, 242
+  offset: 1, 1
+  index: -1
+glow_4
+  rotate: false
+  xy: 2, 2
+  size: 977, 929
+  orig: 1011, 1010
+  offset: 15, 43
+  index: -1

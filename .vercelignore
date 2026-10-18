@@ -1,0 +1,23 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+
+# Scratch / test files (not for production)
+faq-test.html
+index-rich-test.html
+temp_structure.txt
+supabase-setup.sql
+
+# Junk / temp
+.antflow-check.png
+.antflow-view.jpg
+.gm.html
+bg-boxing.html
+br-embed.html
+gd-exr.html
+gd-boxing.json
+tmp-src.html
+tmp-ts.html
+ts-embed.html

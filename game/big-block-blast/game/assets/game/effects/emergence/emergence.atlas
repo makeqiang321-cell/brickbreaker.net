@@ -1,0 +1,41 @@
+
+emergence.png
+size: 512, 512
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+C_Glow
+  rotate: false
+  xy: 2, 78
+  size: 254, 254
+  orig: 254, 254
+  offset: 0, 0
+  index: -1
+Triangle_1
+  rotate: false
+  xy: 2, 2
+  size: 33, 33
+  orig: 33, 33
+  offset: 0, 0
+  index: -1
+Triangle_2
+  rotate: false
+  xy: 43, 43
+  size: 33, 33
+  orig: 33, 33
+  offset: 0, 0
+  index: -1
+square_1
+  rotate: false
+  xy: 2, 37
+  size: 39, 39
+  orig: 39, 39
+  offset: 0, 0
+  index: -1
+square_2
+  rotate: false
+  xy: 258, 293
+  size: 39, 39
+  orig: 39, 39
+  offset: 0, 0
+  index: -1

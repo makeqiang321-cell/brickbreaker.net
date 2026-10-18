@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="viewport-fit=cover, user-scalable=no, initial-scale=1.0, width=device-width">
+    <title>Big Block Blast</title>
+    <link href="css/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/aeria_ymenu.css" type="text/css" />
+    <script>
+    (function(){
+      // Self-hosted: msstart/azerion ad SDKs stripped. Shim the two globals the
+      // game reads so analytics/ads are safe no-ops, and rewarded ads resolve as
+      // "watched" instantly so Continue/Revive works with no ad.
+      var done = function(){ return Promise.resolve(true); };
+      var ready = function(){ return Promise.resolve(); };
+      function proxy(){
+        var f = function(){ return undefined; };
+        return new Proxy(f, {
+          get: function(t, k){
+            if (k === "then" || k === "catch" || k === "finally" || typeof k === "symbol") return undefined;
+            return proxy();
+          },
+          apply: function(){ return undefined; }
+        });
+      }
+      function wrap(){
+        return new Proxy({
+          init: function(){}, onLoadStart: ready, onLoadComplete: ready,
+          isAdProviderLoaded: function(){ return true; }, isAdPlaying: function(){ return false; },
+          showRewardedAd: done, showInterstitialAd: done, showAd: done,
+          addListeners: function(){}
+        }, {
+          get: function(t, k){ return (k in t) ? t[k] : proxy(); }
+        });
+      }
+      window._azerionIntegrationSDK = wrap();
+      window._azerionIntegration = wrap();
+    })();
+    </script>
+  </head>
+  <body>
+    <div id="loader">Loading ...</div>
+    <script src="big-block-blast-1.0.17.js"></script>
+  </body>
+</html>

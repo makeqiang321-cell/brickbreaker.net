@@ -1,0 +1,394 @@
+{
+	"bundles": [
+		{
+			"name": "PreloaderResourcesPackage",
+			"assets": [
+				{
+					"name": "assets/preloader/MPLUS1p-Bold.ttf",
+					"srcs": "assets/preloader/MPLUS1p-Bold.ttf"
+				},
+				{
+					"name": "assets/preloader/background.png",
+					"srcs": "assets/preloader/background.png"
+				},
+				{
+					"name": "assets/preloader/effect/Triangle_1.png",
+					"srcs": "assets/preloader/effect/Triangle_1.png"
+				},
+				{
+					"name": "assets/preloader/effect/Triangle_2.png",
+					"srcs": "assets/preloader/effect/Triangle_2.png"
+				},
+				{
+					"name": "assets/preloader/effect/emitter.json",
+					"srcs": "assets/preloader/effect/emitter.json"
+				},
+				{
+					"name": "assets/preloader/field.png",
+					"srcs": "assets/preloader/field.png"
+				},
+				{
+					"name": "assets/preloader/fill.png",
+					"srcs": "assets/preloader/fill.png"
+				},
+				{
+					"name": "assets/preloader/logo.png",
+					"srcs": "assets/preloader/logo.png"
+				}
+			]
+		},
+		{
+			"name": "GameUIResourcesPackage",
+			"assets": [
+				{
+					"name": "assets/game/ad_play_btn.png",
+					"srcs": "assets/game/ad_play_btn.png"
+				},
+				{
+					"name": "assets/game/arrows.png",
+					"srcs": "assets/game/arrows.png"
+				},
+				{
+					"name": "assets/game/blue_bottom_left.png",
+					"srcs": "assets/game/blue_bottom_left.png"
+				},
+				{
+					"name": "assets/game/blue_bottom_right.png",
+					"srcs": "assets/game/blue_bottom_right.png"
+				},
+				{
+					"name": "assets/game/blue_top_left.png",
+					"srcs": "assets/game/blue_top_left.png"
+				},
+				{
+					"name": "assets/game/blue_top_right.png",
+					"srcs": "assets/game/blue_top_right.png"
+				},
+				{
+					"name": "assets/game/cell.png",
+					"srcs": "assets/game/cell.png"
+				},
+				{
+					"name": "assets/game/deckfield.png",
+					"srcs": "assets/game/deckfield.png"
+				},
+				{
+					"name": "assets/game/effects/emergence/emergence.atlas",
+					"srcs": "assets/game/effects/emergence/emergence.atlas"
+				},
+				{
+					"name": "assets/game/effects/emergence/emergence.json",
+					"srcs": "assets/game/effects/emergence/emergence.json"
+				},
+				{
+					"name": "assets/game/effects/emergence/emergence.png",
+					"srcs": "assets/game/effects/emergence/emergence.png"
+				},
+				{
+					"name": "assets/game/effects/explosion/explosion.atlas",
+					"srcs": "assets/game/effects/explosion/explosion.atlas"
+				},
+				{
+					"name": "assets/game/effects/explosion/explosion.json",
+					"srcs": "assets/game/effects/explosion/explosion.json"
+				},
+				{
+					"name": "assets/game/effects/explosion/explosion.png",
+					"srcs": "assets/game/effects/explosion/explosion.png"
+				},
+				{
+					"name": "assets/game/effects/loss/loss.atlas",
+					"srcs": "assets/game/effects/loss/loss.atlas"
+				},
+				{
+					"name": "assets/game/effects/loss/loss.json",
+					"srcs": "assets/game/effects/loss/loss.json"
+				},
+				{
+					"name": "assets/game/effects/loss/loss.png",
+					"srcs": "assets/game/effects/loss/loss.png"
+				},
+				{
+					"name": "assets/game/effects/ultimate/ultimate_figure_effect.atlas",
+					"srcs": "assets/game/effects/ultimate/ultimate_figure_effect.atlas"
+				},
+				{
+					"name": "assets/game/effects/ultimate/ultimate_figure_effect.json",
+					"srcs": "assets/game/effects/ultimate/ultimate_figure_effect.json"
+				},
+				{
+					"name": "assets/game/effects/ultimate/ultimate_figure_effect.png",
+					"srcs": "assets/game/effects/ultimate/ultimate_figure_effect.png"
+				},
+				{
+					"name": "assets/game/gamefield.png",
+					"srcs": "assets/game/gamefield.png"
+				},
+				{
+					"name": "assets/game/green_bottom_left.png",
+					"srcs": "assets/game/green_bottom_left.png"
+				},
+				{
+					"name": "assets/game/green_bottom_right.png",
+					"srcs": "assets/game/green_bottom_right.png"
+				},
+				{
+					"name": "assets/game/green_top_left.png",
+					"srcs": "assets/game/green_top_left.png"
+				},
+				{
+					"name": "assets/game/green_top_right.png",
+					"srcs": "assets/game/green_top_right.png"
+				},
+				{
+					"name": "assets/game/infoUI.png",
+					"srcs": "assets/game/infoUI.png"
+				},
+				{
+					"name": "assets/game/orange_bottom_left.png",
+					"srcs": "assets/game/orange_bottom_left.png"
+				},
+				{
+					"name": "assets/game/orange_bottom_right.png",
+					"srcs": "assets/game/orange_bottom_right.png"
+				},
+				{
+					"name": "assets/game/orange_top_left.png",
+					"srcs": "assets/game/orange_top_left.png"
+				},
+				{
+					"name": "assets/game/orange_top_right.png",
+					"srcs": "assets/game/orange_top_right.png"
+				},
+				{
+					"name": "assets/game/play_ad.png",
+					"srcs": "assets/game/play_ad.png"
+				},
+				{
+					"name": "assets/game/purple_bottom_left.png",
+					"srcs": "assets/game/purple_bottom_left.png"
+				},
+				{
+					"name": "assets/game/purple_bottom_right.png",
+					"srcs": "assets/game/purple_bottom_right.png"
+				},
+				{
+					"name": "assets/game/purple_top_left.png",
+					"srcs": "assets/game/purple_top_left.png"
+				},
+				{
+					"name": "assets/game/purple_top_right.png",
+					"srcs": "assets/game/purple_top_right.png"
+				},
+				{
+					"name": "assets/game/red_bottom_left.png",
+					"srcs": "assets/game/red_bottom_left.png"
+				},
+				{
+					"name": "assets/game/red_bottom_right.png",
+					"srcs": "assets/game/red_bottom_right.png"
+				},
+				{
+					"name": "assets/game/red_top_left.png",
+					"srcs": "assets/game/red_top_left.png"
+				},
+				{
+					"name": "assets/game/red_top_right.png",
+					"srcs": "assets/game/red_top_right.png"
+				},
+				{
+					"name": "assets/game/settingsUI.png",
+					"srcs": "assets/game/settingsUI.png"
+				},
+				{
+					"name": "assets/game/shuffle_btn_bg.png",
+					"srcs": "assets/game/shuffle_btn_bg.png"
+				},
+				{
+					"name": "assets/game/special_slot_bg.png",
+					"srcs": "assets/game/special_slot_bg.png"
+				},
+				{
+					"name": "assets/game/yellow_bottom_left.png",
+					"srcs": "assets/game/yellow_bottom_left.png"
+				},
+				{
+					"name": "assets/game/yellow_bottom_right.png",
+					"srcs": "assets/game/yellow_bottom_right.png"
+				},
+				{
+					"name": "assets/game/yellow_top_left.png",
+					"srcs": "assets/game/yellow_top_left.png"
+				},
+				{
+					"name": "assets/game/yellow_top_right.png",
+					"srcs": "assets/game/yellow_top_right.png"
+				}
+			]
+		},
+		{
+			"name": "CommonUIResourcesPackage",
+			"assets": [
+				{
+					"name": "assets/common/close_button.png",
+					"srcs": "assets/common/close_button.png"
+				},
+				{
+					"name": "assets/common/green_button.png",
+					"srcs": "assets/common/green_button.png"
+				},
+				{
+					"name": "assets/common/root.png",
+					"srcs": "assets/common/root.png"
+				}
+			]
+		},
+		{
+			"name": "InfoResourcesPackage",
+			"assets": [
+				{
+					"name": "assets/info/actived_dot.png",
+					"srcs": "assets/info/actived_dot.png"
+				},
+				{
+					"name": "assets/info/arrow_left.png",
+					"srcs": "assets/info/arrow_left.png"
+				},
+				{
+					"name": "assets/info/arrow_right.png",
+					"srcs": "assets/info/arrow_right.png"
+				},
+				{
+					"name": "assets/info/dot.png",
+					"srcs": "assets/info/dot.png"
+				},
+				{
+					"name": "assets/info/one_color.png",
+					"srcs": "assets/info/one_color.png"
+				},
+				{
+					"name": "assets/info/spec_block.png",
+					"srcs": "assets/info/spec_block.png"
+				},
+				{
+					"name": "assets/info/tutorial.atlas",
+					"srcs": "assets/info/tutorial.atlas"
+				},
+				{
+					"name": "assets/info/tutorial.json",
+					"srcs": "assets/info/tutorial.json"
+				},
+				{
+					"name": "assets/info/tutorial.png",
+					"srcs": "assets/info/tutorial.png"
+				}
+			]
+		},
+		{
+			"name": "SettingsResourcesPackage",
+			"assets": [
+				{
+					"name": "assets/settings/english.png",
+					"srcs": "assets/settings/english.png"
+				},
+				{
+					"name": "assets/settings/france.png",
+					"srcs": "assets/settings/france.png"
+				},
+				{
+					"name": "assets/settings/germany.png",
+					"srcs": "assets/settings/germany.png"
+				},
+				{
+					"name": "assets/settings/italy.png",
+					"srcs": "assets/settings/italy.png"
+				},
+				{
+					"name": "assets/settings/japan.png",
+					"srcs": "assets/settings/japan.png"
+				},
+				{
+					"name": "assets/settings/retry_button.png",
+					"srcs": "assets/settings/retry_button.png"
+				},
+				{
+					"name": "assets/settings/retry_icon.png",
+					"srcs": "assets/settings/retry_icon.png"
+				},
+				{
+					"name": "assets/settings/shine.png",
+					"srcs": "assets/settings/shine.png"
+				},
+				{
+					"name": "assets/settings/spain.png",
+					"srcs": "assets/settings/spain.png"
+				},
+				{
+					"name": "assets/settings/toggle_off.png",
+					"srcs": "assets/settings/toggle_off.png"
+				},
+				{
+					"name": "assets/settings/toggle_on.png",
+					"srcs": "assets/settings/toggle_on.png"
+				}
+			]
+		},
+		{
+			"name": "LoseSceneResourcesPackage",
+			"assets": [
+				{
+					"name": "assets/lose/best_score_bg_1pxW.png",
+					"srcs": "assets/lose/best_score_bg_1pxW.png"
+				},
+				{
+					"name": "assets/lose/continue_button.png",
+					"srcs": "assets/lose/continue_button.png"
+				},
+				{
+					"name": "assets/lose/effects/emitter/Triangle_1.png",
+					"srcs": "assets/lose/effects/emitter/Triangle_1.png"
+				},
+				{
+					"name": "assets/lose/effects/emitter/Triangle_2.png",
+					"srcs": "assets/lose/effects/emitter/Triangle_2.png"
+				},
+				{
+					"name": "assets/lose/effects/emitter/emitter.json",
+					"srcs": "assets/lose/effects/emitter/emitter.json"
+				},
+				{
+					"name": "assets/lose/effects/win_pop_up/win_pop_up.atlas",
+					"srcs": "assets/lose/effects/win_pop_up/win_pop_up.atlas"
+				},
+				{
+					"name": "assets/lose/effects/win_pop_up/win_pop_up.json",
+					"srcs": "assets/lose/effects/win_pop_up/win_pop_up.json"
+				},
+				{
+					"name": "assets/lose/effects/win_pop_up/win_pop_up.png",
+					"srcs": "assets/lose/effects/win_pop_up/win_pop_up.png"
+				},
+				{
+					"name": "assets/lose/game_over_bg_1pxW.png",
+					"srcs": "assets/lose/game_over_bg_1pxW.png"
+				},
+				{
+					"name": "assets/lose/icon_revive.png",
+					"srcs": "assets/lose/icon_revive.png"
+				},
+				{
+					"name": "assets/lose/icon_revive_small.png",
+					"srcs": "assets/lose/icon_revive_small.png"
+				},
+				{
+					"name": "assets/lose/restart_button.png",
+					"srcs": "assets/lose/restart_button.png"
+				},
+				{
+					"name": "assets/lose/restart_icon.png",
+					"srcs": "assets/lose/restart_icon.png"
+				}
+			]
+		}
+	]
+}
