@@ -818,6 +818,26 @@
       <image:caption>Jetski Race — a high-speed water racing game where you dodge obstacles, nail flips, and finish first, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/goo-goo-gaga-clicker/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/goo-goo-gaga-clicker-cover.jpg</image:loc>
+      <image:caption>Goo Goo Gaga Clicker — a Christmas meme idle clicker where you tap a Santa creature for points and unlock characters, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/labubu-clicker/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/labubu-clicker-cover.jpg</image:loc>
+      <image:caption>Labubu Clicker — a cute idle clicker where you tap Labubu for coins and tear blind boxes, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
