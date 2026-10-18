@@ -598,6 +598,16 @@
       <image:caption>Car Chaos — a physics-based 1v1 car brawler where you smash your rival in hazard-filled arenas and land 5 head hits to win, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/crazy-mouse-battle/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/crazy-mouse-battle-cover.jpg</image:loc>
+      <image:caption>Crazy Mouse Battle — an arena survival brawler where you outlast rival mice, ram them first to score, and dodge the electric fence, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
