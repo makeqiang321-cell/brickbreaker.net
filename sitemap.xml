@@ -883,6 +883,17 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://brickbreaker.net/game/lizard-clicker/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/lizard-clicker-cover.jpg</image:loc>
+      <image:caption>Lizard Lizard Clicker — an idle clicker where you tap to spawn lizards and build a reptilian army, playable in the browser</image:caption>
+    </image:image>
+  </url>
+
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
     <loc>https://brickbreaker.net/blog-arkanoid</loc>
