@@ -678,6 +678,16 @@
       <image:caption>Stickman Slash — an action game where a stickman knight slashes through waves of shadow warriors and defeats bosses, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/tung-sahur-clicker/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/tung-sahur-clicker-cover.jpg</image:loc>
+      <image:caption>Tung Sahur Clicker — a meme idle clicker where you click the wooden warrior Tung Tung Tung Sahur and trigger the 2x limelight multiplier, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
