@@ -588,6 +588,16 @@
       <image:caption>Planet Buster — an idle planet-destruction clicker where you bombard planets through six layers and spend coins on upgrades, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/car-chaos/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/car-chaos-cover.jpg</image:loc>
+      <image:caption>Car Chaos — a physics-based 1v1 car brawler where you smash your rival in hazard-filled arenas and land 5 head hits to win, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
