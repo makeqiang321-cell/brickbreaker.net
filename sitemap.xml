@@ -698,6 +698,26 @@
       <image:caption>Rocket Fortress — an explosive clicker RPG where you defend a fortress with holy missiles and destroy portals, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/bounce-up/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/bounce-up-cover.jpg</image:loc>
+      <image:caption>Bounce Up — a one-button timing arcade game where you bounce a ball across shifting platforms and hit red buttons, playable in the browser</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://brickbreaker.net/game/rob-a-car/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/rob-a-car-cover.jpg</image:loc>
+      <image:caption>Rob a Car — a city simulation where you buy vehicles, steal cars from rival garages, and defend your collection, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
