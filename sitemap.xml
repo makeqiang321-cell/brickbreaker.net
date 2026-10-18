@@ -748,6 +748,16 @@
       <image:caption>Tap Road Beat — a neon rhythm arcade game where you click to switch lanes and guide a ball past obstacles to the beat, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/bow-battle/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/bow-battle-cover.jpg</image:loc>
+      <image:caption>Bow Battle — a physics archery duel where you drag to aim and release to fire, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
