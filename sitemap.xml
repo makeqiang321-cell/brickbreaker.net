@@ -498,6 +498,16 @@
       <image:caption>Ramp Xtreme — a 3D motorcycle stunt game on floating sky ramps, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/summer-rider-3d/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/summer-rider-3d-cover.jpg</image:loc>
+      <image:caption>Summer Rider 3D — a tropical water racing game on a surfboard or jet-ski, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
