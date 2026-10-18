@@ -778,6 +778,16 @@
       <image:caption>Chicken Jockey Clicker — a Minecraft-inspired idle clicker where baby zombies ride chickens for coins, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/street-wheelie/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/street-wheelie-cover.jpg</image:loc>
+      <image:caption>Street Wheelie — a physics stunt-bike game where you balance the longest wheelie through an endless 3D city, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
