@@ -518,6 +518,16 @@
       <image:caption>Snow Road 3D — an endless downhill sledding game with gift-box unlocks, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/bat-smash/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/bat-smash-cover.jpg</image:loc>
+      <image:caption>Bat Smash — a one-button baseball bat-smashing game with upgrades and skins, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
