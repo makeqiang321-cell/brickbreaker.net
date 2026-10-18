@@ -905,6 +905,17 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://brickbreaker.net/game/smash-karts/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/smash-karts-cover.jpg</image:loc>
+      <image:caption>Smash Karts — a 3D multiplayer kart battle arena where you drive, grab weapons, and blast rivals, playable in the browser</image:caption>
+    </image:image>
+  </url>
+
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
     <loc>https://brickbreaker.net/blog-arkanoid</loc>
