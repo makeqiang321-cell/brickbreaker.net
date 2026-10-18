@@ -788,6 +788,16 @@
       <image:caption>Street Wheelie — a physics stunt-bike game where you balance the longest wheelie through an endless 3D city, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/wheelie-party/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/wheelie-party-cover.jpg</image:loc>
+      <image:caption>Wheelie Party — a 2D driving-balance game where you hold one wheelie down a sunlit highway, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
