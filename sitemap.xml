@@ -538,6 +538,16 @@
       <image:caption>Astro Robot Clicker Game — a space-themed idle clicker with tap, upgrade, and Ascension mechanics, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/long-leg-master/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/long-leg-master-cover.jpg</image:loc>
+      <image:caption>Long Leg Master — a QWOP-style physics walking game with coin-collectible skins, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
