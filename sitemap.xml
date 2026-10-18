@@ -758,6 +758,16 @@
       <image:caption>Bow Battle — a physics archery duel where you drag to aim and release to fire, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/gun-mayhem-3/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/gun-mayhem-3-cover.jpg</image:loc>
+      <image:caption>Gun Mayhem 3 — a 2D arena shooter where you knock rivals off platforms with guns and bombs, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
