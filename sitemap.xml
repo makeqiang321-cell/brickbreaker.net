@@ -668,6 +668,16 @@
       <image:caption>Flamy Dash — a fiery one-button swinging game where you hook a glowing fireball to the ceiling and dodge walls to keep the flame alive, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/stickman-slash/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/stickman-slash-cover.jpg</image:loc>
+      <image:caption>Stickman Slash — an action game where a stickman knight slashes through waves of shadow warriors and defeats bosses, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
