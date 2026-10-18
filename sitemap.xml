@@ -872,6 +872,17 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://brickbreaker.net/game/orbit-beats/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/orbit-beats-cover.jpg</image:loc>
+      <image:caption>Orbit Beats — a one-button rhythm arcade game where you guide two orbiting planets in sync with the music, playable in the browser</image:caption>
+    </image:image>
+  </url>
+
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
     <loc>https://brickbreaker.net/blog-arkanoid</loc>
