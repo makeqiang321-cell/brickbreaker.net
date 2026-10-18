@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="theme/game.css">
+	<title>Dunk Clash</title>
+	<meta name="description" content="Dunk Clash is a fast-paced 1v1 basketball game focused on short matches, shot timing, dunks, steals, blocks, and energy management."/>
+	<style type="text/css">
+		.jss1:before {
+			top: 0;
+			width: 100%;
+			filter: blur(16px);
+			height: 100%;
+			content: "";
+			display: block;
+			opacity: .5;
+			z-index: 0;
+			position: absolute;
+			background-size: cover;
+			background-image: url("loading.png")
+		}
+	</style>
+</head>
+<body>
+<div id="unity-container" style="display: none;">
+	<canvas id="unity-canvas"></canvas>
+</div>
+<div id="loadingBlock" style="">
+	<div class="jss31 jss34 jss1">
+	<div style="position: absolute; font-family: Arial, Helvetica, sans-serif;	bottom: 10px; right: 10px; font-size: 18px; color: #ffffff; opacity: 0.5;">25122702</div>
+		<div class="spinner"></div>
+		<div class="jss31 jss34 jss48" style="flex: 1 1 0%;">
+			<div class="jss32">
+				<div class="jss7 jss9 jss20 jss3">
+					<div class="jss125">
+						<div class="jss123">
+						 <img src="logo.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="jss31 jss34" style="flex: 3 1 0%;">
+			<div class="jss32">
+				<div class="jss31 jss34 jss39 jss50 gameloader">
+					<div class="jss32">
+						<div class="gameloader-game-name">Dunk Clash</div>
+					</div>
+					<div class="jss32">
+						<div class="jss32 gameloader-logo">
+							<img id="game-logo" src="loading.png">
+						</div>
+					</div>
+					<div class="jss32">
+						<div>
+							<div class="gameloader-progressbar">
+								<div class="gameloader-progressbar-progress" id="progress_fill"
+										 style="width: 0%;"></div>
+							</div>
+							<div class="gameloader-progress-info">Game Loading...</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<script>
+		// gmsdkv1/firebase ad SDK stripped. Set the globals the game's Unity plugin
+		// expects and fire the SDK-ready signal so it doesn't wait on a removed SDK.
+		window.GMSOFT_SDKTYPE = "gm";
+		window.GMSOFT_OPTIONS = {};
+		window.GMSOFT_GAME_INFO = {};
+		window.GMSOFT_ADS_INFO = { enable: false };
+		window.GMSOFT_SIGNED = {};
+		window.GMSOFT_READY = true;
+		(function(){ var n = 0; var t = setInterval(function(){
+			document.dispatchEvent(new CustomEvent("gmsoftSdkReady"));
+			if (++n >= 10) clearInterval(t);
+		}, 800); })();
+		var config = {
+			dataUrl: "Build/dunk-clash-v25122702.data.unityweb",
+			frameworkUrl: "Build/dunk-clash-v25122702.framework.js.unityweb",
+			codeUrl: "Build/dunk-clash-v25122702.wasm.unityweb",
+			streamingAssetsUrl: "StreamingAssets",
+			companyName: "azgames.io",
+			productName: "Dunk Clash",
+			productVersion: "25122702"
+		};
+		var progressElement = document.getElementById('progress_fill');
+		var container = document.getElementById("unity-container");
+		var canvas = document.getElementById("unity-canvas");
+		var loadingBar = document.querySelector("#loadingBlock");
+		var progress_text = document.querySelector(".gameloader-progress-info");
+		var script = document.createElement("script");
+		script.src = "Build/dunk-clash-v25122702.loader.js";
+		script.onload = () => {
+			createUnityInstance(canvas, config, (progress) => {
+				progressElement.style.width = 100 * progress + "%";
+				if (progress >= 0.99) {
+					progress_text.innerText = "Game Loading ...";
+				}
+			}).then((unityInstance) => {
+				window.unityInstance = unityInstance;
+				setTimeout(function() {
+					loadingBar.style.display = "none";
+					window.focus();
+				}, 2000);
+				container.style.display = "block";
+			}).catch((message) => {
+				alert(message);
+			});
+		};
+		document.body.appendChild(script);
+	</script>
+</body>
+</html>

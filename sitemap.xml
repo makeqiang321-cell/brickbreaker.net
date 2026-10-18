@@ -568,6 +568,16 @@
       <image:caption>Crazy Bull City — a 3D bull rampage simulator where you smash cars and buildings while dodging SWAT teams, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/dunk-clash/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/dunk-clash-cover.jpg</image:loc>
+      <image:caption>Dunk Clash — a fast 1v1 basketball game of dunks, steals, blocks, and shot timing, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
