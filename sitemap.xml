@@ -628,6 +628,16 @@
       <image:caption>Rob Brainrot 2 — a Roblox-style simulation where you collect, buy, and steal meme Brainrot characters to build and defend your base, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/tube-fight/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/tube-fight-cover.jpg</image:loc>
+      <image:caption>Tube Fight — a chaotic ragdoll arena fighter where parody YouTubers brawl with oversized weapons in tube arenas, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
