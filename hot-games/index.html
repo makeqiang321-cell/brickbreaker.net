@@ -163,6 +163,33 @@
             .hot-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
         }
 
+        /* ── PAGINATION ─────────────────────── */
+        .hot-pager {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 32px;
+        }
+        .hot-pager button {
+            min-width: 44px;
+            height: 44px;
+            padding: 0 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text);
+            font-size: 0.86rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: border-color .15s, background .15s, color .15s;
+        }
+        .hot-pager button:hover:not(:disabled) { border-color: rgba(124,58,237,.5); }
+        .hot-pager button:disabled { opacity: .35; cursor: default; }
+        .hot-pager button.is-active { background: var(--primary); border-color: var(--primary); color: #fff; }
+        .hot-pager-info { margin: 10px 0 0; text-align: center; font-size: .78rem; color: var(--text-faint); }
+
         /* ── GAME CARD ───────────────────────── */
         .hot-card {
             display: flex;
@@ -1237,6 +1264,9 @@
             </a>
 
         </div>
+
+        <nav class="hot-pager" id="hotPager" aria-label="Game page navigation"></nav>
+        <p class="hot-pager-info" id="hotPagerInfo"></p>
     </div>
 </main>
 
@@ -1296,5 +1326,65 @@
 </footer>
 
 <script src="../js/main.js"></script>
+<script>
+(function () {
+    var grid = document.querySelector('.hot-grid');
+    var pager = document.getElementById('hotPager');
+    var info = document.getElementById('hotPagerInfo');
+    if (!grid || !pager) return;
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('a.hot-card'));
+    var PER = 20;
+    var total = Math.ceil(cards.length / PER);
+    if (total <= 1) return;
+    var current = 1;
+
+    function render() {
+        cards.forEach(function (c, i) {
+            c.style.display = (Math.floor(i / PER) + 1 === current) ? '' : 'none';
+        });
+        var from = (current - 1) * PER + 1;
+        var to = Math.min(current * PER, cards.length);
+        info.textContent = 'Showing ' + from + '–' + to + ' of ' + cards.length + ' games';
+        var btns = pager.querySelectorAll('button');
+        for (var k = 0; k < btns.length; k++) {
+            var b = btns[k];
+            if (b.hasAttribute('data-page')) {
+                b.classList.toggle('is-active', Number(b.getAttribute('data-page')) === current);
+            } else if (b.id === 'pgPrev') {
+                b.disabled = current === 1;
+            } else if (b.id === 'pgNext') {
+                b.disabled = current === total;
+            }
+        }
+    }
+
+    function mk(label, id, page) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = label;
+        if (id) b.id = id;
+        if (page) b.setAttribute('data-page', page);
+        return b;
+    }
+
+    var prev = mk('← Prev', 'pgPrev');
+    prev.addEventListener('click', function () { if (current > 1) { current--; render(); } });
+    pager.appendChild(prev);
+
+    for (var n = 1; n <= total; n++) {
+        (function (pg) {
+            var b = mk(String(pg), null, pg);
+            b.addEventListener('click', function () { current = pg; render(); });
+            pager.appendChild(b);
+        })(n);
+    }
+
+    var next = mk('Next →', 'pgNext');
+    next.addEventListener('click', function () { if (current < total) { current++; render(); } });
+    pager.appendChild(next);
+
+    render();
+})();
+</script>
 </body>
 </html>
