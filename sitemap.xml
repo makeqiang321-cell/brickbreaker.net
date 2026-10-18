@@ -618,6 +618,16 @@
       <image:caption>Madness Lab — an arcade challenge where Doctor Doom's hybrid minions face crazy mini-tests from ghost hunts to deadly traps, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/rob-brainrot-2/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/rob-brainrot-2-cover.jpg</image:loc>
+      <image:caption>Rob Brainrot 2 — a Roblox-style simulation where you collect, buy, and steal meme Brainrot characters to build and defend your base, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
