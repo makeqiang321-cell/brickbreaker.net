@@ -658,6 +658,16 @@
       <image:caption>Perfect Orbit — a golf-themed arcade game where you time the perfect shot and launch your ball through cosmic courses, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/flamy-dash/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/flamy-dash-cover.jpg</image:loc>
+      <image:caption>Flamy Dash — a fiery one-button swinging game where you hook a glowing fireball to the ceiling and dodge walls to keep the flame alive, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
