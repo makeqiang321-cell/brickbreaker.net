@@ -578,6 +578,16 @@
       <image:caption>Dunk Clash — a fast 1v1 basketball game of dunks, steals, blocks, and shot timing, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/planet-buster/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/planet-buster-cover.jpg</image:loc>
+      <image:caption>Planet Buster — an idle planet-destruction clicker where you bombard planets through six layers and spend coins on upgrades, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
