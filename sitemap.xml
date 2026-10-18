@@ -638,6 +638,16 @@
       <image:caption>Tube Fight — a chaotic ragdoll arena fighter where parody YouTubers brawl with oversized weapons in tube arenas, playable in the browser</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/icy-dash/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/icy-dash-cover.jpg</image:loc>
+      <image:caption>Icy Dash — a high-speed snowboard racing game where you dodge obstacles, land flips, and collect coins to upgrade your rider, playable in the browser</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
