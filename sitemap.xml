@@ -32,13 +32,13 @@
   </url>
   <url>
     <loc>https://brickbreaker.net/new-games/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brickbreaker.net/hot-games/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -896,7 +896,7 @@
 
   <url>
     <loc>https://brickbreaker.net/game/slide-down/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -907,7 +907,7 @@
 
   <url>
     <loc>https://brickbreaker.net/game/smash-karts/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
