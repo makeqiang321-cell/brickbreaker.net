@@ -1037,6 +1037,17 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://brickbreaker.net/game/funny-shooter/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/funny-shooter-cover.jpg</image:loc>
+      <image:caption>Funny Shooter — a wave-survival FPS where you gun down absurd enemies and buy better weapons, playable in the browser</image:caption>
+    </image:image>
+  </url>
+
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
     <loc>https://brickbreaker.net/blog-arkanoid</loc>
