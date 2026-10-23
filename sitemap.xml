@@ -1004,6 +1004,17 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://brickbreaker.net/game/granny-horror-3/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/granny-horror-3-cover.jpg</image:loc>
+      <image:caption>Granny Horror 3 — a first-person survival horror escape game where you search a mansion and outrun Granny, Grandpa, and Slendrina, playable in the browser</image:caption>
+    </image:image>
+  </url>
+
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
     <loc>https://brickbreaker.net/blog-arkanoid</loc>
