@@ -982,6 +982,28 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://brickbreaker.net/game/golf-hit/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/golf-hit-cover.jpg</image:loc>
+      <image:caption>Golf Hit — a one-touch space golf game where you time your swing to launch a ball from Earth toward Mars, playable in the browser</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://brickbreaker.net/game/ping-pong-go/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/ping-pong-go-cover.jpg</image:loc>
+      <image:caption>Ping Pong Go! — a 3D table tennis game where you drag to hit and swipe for power and spin, playable in the browser</image:caption>
+    </image:image>
+  </url>
+
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
     <loc>https://brickbreaker.net/blog-arkanoid</loc>
