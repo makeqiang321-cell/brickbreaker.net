@@ -1015,6 +1015,17 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://brickbreaker.net/game/baseball-bros/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/baseball-bros-cover.jpg</image:loc>
+      <image:caption>Baseball Bros — a 1v1 arcade baseball game where you time your swing and mix your pitches, playable in the browser</image:caption>
+    </image:image>
+  </url>
+
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
     <loc>https://brickbreaker.net/blog-arkanoid</loc>
