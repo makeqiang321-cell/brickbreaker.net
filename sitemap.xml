@@ -960,6 +960,28 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://brickbreaker.net/game/monkey-mart/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/monkey-mart-cover.jpg</image:loc>
+      <image:caption>Monkey Mart — a supermarket management game where you plant, harvest, stock shelves, and serve customers to unlock new aisles, playable in the browser</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://brickbreaker.net/game/steal-an-egg/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/steal-an-egg-cover.jpg</image:loc>
+      <image:caption>Steal An Egg — an egg-hatching economy game where you buy mystery eggs, hatch them into coin-generating characters, and steal eggs from rivals, playable in the browser</image:caption>
+    </image:image>
+  </url>
+
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
     <loc>https://brickbreaker.net/blog-arkanoid</loc>
