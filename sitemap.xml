@@ -1068,6 +1068,16 @@
       <image:caption>PokeBonk — a 3D Pokémon survivors game where you pick a starter, survive the Kanto horde, and evolve mid-run, playable for free</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/oxy-arena/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/oxy-arena-cover.jpg</image:loc>
+      <image:caption>Oxy Arena — a blocky multiplayer FPS with Deathmatch, 4v4 team battles, and a solo zombie mode, playable for free</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
