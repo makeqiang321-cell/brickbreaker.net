@@ -1128,6 +1128,16 @@
       <image:caption>Dirtbound — a 3D browser rally racing game with procedural dirt tracks and real physics, playable for free</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/clueffy/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/clueffy-cover.jpg</image:loc>
+      <image:caption>Clueffy — a daily word and trivia puzzle where the rarest real answer wins, playable for free</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
