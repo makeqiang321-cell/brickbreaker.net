@@ -1118,6 +1118,16 @@
       <image:caption>Relic Putt — a browser mini golf game where the relic matters as much as the swing, playable for free</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/dirtbound/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/dirtbound-cover.jpg</image:loc>
+      <image:caption>Dirtbound — a 3D browser rally racing game with procedural dirt tracks and real physics, playable for free</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
