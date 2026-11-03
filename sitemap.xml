@@ -1088,6 +1088,16 @@
       <image:caption>Guess the Clash Royale Card — a daily Clash Royale card-guessing game with stat clues, pixel art, emoji, and Higher or Lower, playable for free</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/neon-brick-breaker-deluxe/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/neon-brick-breaker-deluxe-cover.jpg</image:loc>
+      <image:caption>Neon Brick Breaker Deluxe — a neon arcade brick breaker with 13 levels and five power-ups, playable for free</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
