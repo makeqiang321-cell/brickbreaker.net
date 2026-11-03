@@ -1098,6 +1098,16 @@
       <image:caption>Neon Brick Breaker Deluxe — a neon arcade brick breaker with 13 levels and five power-ups, playable for free</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/aetherium-bastion/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/aetherium-bastion-cover.jpg</image:loc>
+      <image:caption>Aetherium Bastion 3D — a third-person 4v4 arena brawler with five heroes, playable for free</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
