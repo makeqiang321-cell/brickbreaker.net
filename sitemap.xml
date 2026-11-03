@@ -1108,6 +1108,16 @@
       <image:caption>Aetherium Bastion 3D — a third-person 4v4 arena brawler with five heroes, playable for free</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://brickbreaker.net/game/relic-putt/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://brickbreaker.net/img/relic-putt-cover.jpg</image:loc>
+      <image:caption>Relic Putt — a browser mini golf game where the relic matters as much as the swing, playable for free</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
