@@ -5,45 +5,45 @@
 
   <!-- ═══ Homepage ═══ -->
   <url>
-    <loc>https://brickbreaker.net/</loc>
+    <loc>https://www.brickbreaker.net/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/brickbreaker-gameplay.svg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/brickbreaker-gameplay.svg</image:loc>
       <image:caption>Brick breaker gameplay — paddle, ball, brick grid, and power-ups at 60fps</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/brickbreaker-powerup.svg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/brickbreaker-powerup.svg</image:loc>
       <image:caption>Brick breaker power-up mode — Big Paddle, Multi-Ball, and Extra Life drops</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/brickbreaker-features.svg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/brickbreaker-features.svg</image:loc>
       <image:caption>Brick breaker ball physics — edge hits angle shots, gold bricks worth 50 pts</image:caption>
     </image:image>
   </url>
 
   <!-- ═══ Core Pages ═══ -->
   <url>
-    <loc>https://brickbreaker.net/blog</loc>
+    <loc>https://www.brickbreaker.net/blog</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/new-games/</loc>
+    <loc>https://www.brickbreaker.net/new-games/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/hot-games/</loc>
+    <loc>https://www.brickbreaker.net/hot-games/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/</loc>
+    <loc>https://www.brickbreaker.net/game/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -51,55 +51,55 @@
 
   <!-- ═══ Game Modes (9) ═══ -->
   <url>
-    <loc>https://brickbreaker.net/game/classic/</loc>
+    <loc>https://www.brickbreaker.net/game/classic/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/power-up/</loc>
+    <loc>https://www.brickbreaker.net/game/power-up/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/neon/</loc>
+    <loc>https://www.brickbreaker.net/game/neon/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/arkanoid/</loc>
+    <loc>https://www.brickbreaker.net/game/arkanoid/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/hard/</loc>
+    <loc>https://www.brickbreaker.net/game/hard/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/precision/</loc>
+    <loc>https://www.brickbreaker.net/game/precision/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/gold/</loc>
+    <loc>https://www.brickbreaker.net/game/gold/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/cosmic/</loc>
+    <loc>https://www.brickbreaker.net/game/cosmic/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/retro/</loc>
+    <loc>https://www.brickbreaker.net/game/retro/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -107,1083 +107,1083 @@
 
   <!-- ═══ Puzzle, Sandbox & Arcade Games (42) ═══ -->
   <url>
-    <loc>https://brickbreaker.net/game/block-crush/</loc>
+    <loc>https://www.brickbreaker.net/game/block-crush/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/1010-color-match/</loc>
+    <loc>https://www.brickbreaker.net/game/1010-color-match/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/block-puzzle-legend/</loc>
+    <loc>https://www.brickbreaker.net/game/block-puzzle-legend/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/bricky-blast/</loc>
+    <loc>https://www.brickbreaker.net/game/bricky-blast/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/block-blast-2048/</loc>
+    <loc>https://www.brickbreaker.net/game/block-blast-2048/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/slide-blocks-puzzle/</loc>
+    <loc>https://www.brickbreaker.net/game/slide-blocks-puzzle/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/block-puzzle-master/</loc>
+    <loc>https://www.brickbreaker.net/game/block-puzzle-master/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/burrito-craft/</loc>
+    <loc>https://www.brickbreaker.net/game/burrito-craft/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/burrito-craft-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/burrito-craft-cover.jpg</image:loc>
       <image:caption>Burrito Craft — a Minecraft-style sandbox game playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/cluster-rush/</loc>
+    <loc>https://www.brickbreaker.net/game/cluster-rush/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/cluster-rush-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/cluster-rush-cover.jpg</image:loc>
       <image:caption>Cluster Rush — a first-person truck-surfing platformer playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/big-block-blast/</loc>
+    <loc>https://www.brickbreaker.net/game/big-block-blast/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/big-block-blast-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/big-block-blast-cover.jpg</image:loc>
       <image:caption>Big Block Blast — a 2×2 block-building puzzle playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/balls-bricks-breaker/</loc>
+    <loc>https://www.brickbreaker.net/game/balls-bricks-breaker/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/balls-bricks-breaker-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/balls-bricks-breaker-cover.jpg</image:loc>
       <image:caption>Balls Bricks Breaker — a numbered-brick ball-shooter arcade game playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/color-block-jam/</loc>
+    <loc>https://www.brickbreaker.net/game/color-block-jam/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/color-block-jam-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/color-block-jam-cover.jpg</image:loc>
       <image:caption>Color Block Jam — a sliding color-match puzzle playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/bubble-spinner/</loc>
+    <loc>https://www.brickbreaker.net/game/bubble-spinner/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/bubble-spinner-cover.svg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/bubble-spinner-cover.svg</image:loc>
       <image:caption>Bubble Spinner — a rotating-cluster bubble shooter playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/connect-classic/</loc>
+    <loc>https://www.brickbreaker.net/game/connect-classic/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/connect-classic-cover.svg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/connect-classic-cover.svg</image:loc>
       <image:caption>Connect Classic — a four-in-a-row board game playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/bubbles-3/</loc>
+    <loc>https://www.brickbreaker.net/game/bubbles-3/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/bubbles-3-cover.svg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/bubbles-3-cover.svg</image:loc>
       <image:caption>Bubbles 3 — a match-3 bubble shooter playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/bubble-town/</loc>
+    <loc>https://www.brickbreaker.net/game/bubble-town/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/bubble-town-cover.svg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/bubble-town-cover.svg</image:loc>
       <image:caption>Bubble Town — a Borb-popping bubble shooter playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/bubble-mouse/</loc>
+    <loc>https://www.brickbreaker.net/game/bubble-mouse/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/bubble-mouse-cover.svg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/bubble-mouse-cover.svg</image:loc>
       <image:caption>Bubble Mouse — a mouse-versus-cats bubble shooter playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/bubble-merge/</loc>
+    <loc>https://www.brickbreaker.net/game/bubble-merge/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/bubble-merge-cover.svg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/bubble-merge-cover.svg</image:loc>
       <image:caption>Bubble Merge — a drop-and-merge bubble puzzle playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/donut-clicker/</loc>
+    <loc>https://www.brickbreaker.net/game/donut-clicker/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/donut-clicker-cover.svg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/donut-clicker-cover.svg</image:loc>
       <image:caption>Donut Clicker — an idle clicker bakery game playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/ant-flow/</loc>
+    <loc>https://www.brickbreaker.net/game/ant-flow/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/ant-flow-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/ant-flow-cover.jpg</image:loc>
       <image:caption>Ant Flow — a color-matching pixel-art puzzle playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/city-brawl/</loc>
+    <loc>https://www.brickbreaker.net/game/city-brawl/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/city-brawl-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/city-brawl-cover.jpg</image:loc>
       <image:caption>City Brawl — a 3D street-fighting brawler playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/cowboy-safari/</loc>
+    <loc>https://www.brickbreaker.net/game/cowboy-safari/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/cowboy-safari-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/cowboy-safari-cover.jpg</image:loc>
       <image:caption>Cowboy Safari — an endless animal-runner playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/flipping-master/</loc>
+    <loc>https://www.brickbreaker.net/game/flipping-master/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/flipping-master-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/flipping-master-cover.jpg</image:loc>
       <image:caption>Flipping Master — a diagonal-flipping arcade runner playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/dancing-beat/</loc>
+    <loc>https://www.brickbreaker.net/game/dancing-beat/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/dancing-beat-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/dancing-beat-cover.jpg</image:loc>
       <image:caption>Dancing Beat — a music-rhythm maze game playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/merge-infinity/</loc>
+    <loc>https://www.brickbreaker.net/game/merge-infinity/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/merge-infinity-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/merge-infinity-cover.jpg</image:loc>
       <image:caption>Merge Infinity — a number-connect merge puzzle playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/slope-spooky/</loc>
+    <loc>https://www.brickbreaker.net/game/slope-spooky/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/slope-spooky-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/slope-spooky-cover.jpg</image:loc>
       <image:caption>Slope Spooky — a haunted rolling-ball endless runner playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/krillion/</loc>
+    <loc>https://www.brickbreaker.net/game/krillion/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/krillion-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/krillion-cover.jpg</image:loc>
       <image:caption>Krillion — a daily trivia game where rare answers win, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/catdoku/</loc>
+    <loc>https://www.brickbreaker.net/game/catdoku/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/catdoku-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/catdoku-cover.jpg</image:loc>
       <image:caption>Catdoku — a cozy cat logic puzzle where cats never touch, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/bubble-storm/</loc>
+    <loc>https://www.brickbreaker.net/game/bubble-storm/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/bubble-storm-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/bubble-storm-cover.jpg</image:loc>
       <image:caption>Bubble Storm — a 360° bubble shooter where bubbles close in from every direction, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/extreme-run-3d/</loc>
+    <loc>https://www.brickbreaker.net/game/extreme-run-3d/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/extreme-run-3d-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/extreme-run-3d-cover.jpg</image:loc>
       <image:caption>Extreme Run 3D — a neon-ball 3D obstacle runner with 44 levels across four difficulty tiers, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/boxing-random/</loc>
+    <loc>https://www.brickbreaker.net/game/boxing-random/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/boxing-random-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/boxing-random-cover.jpg</image:loc>
       <image:caption>Boxing Random — a ragdoll-physics boxing game with one-button controls and random modifiers, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/time-shooter/</loc>
+    <loc>https://www.brickbreaker.net/game/time-shooter/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/time-shooter-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/time-shooter-cover.jpg</image:loc>
       <image:caption>Time Shooter — a first-person shooter where time only moves when you move, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/eggy-car/</loc>
+    <loc>https://www.brickbreaker.net/game/eggy-car/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/eggy-car-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/eggy-car-cover.jpg</image:loc>
       <image:caption>Eggy Car — a physics driving game where you carry a fragile egg across hilly terrain, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/lows-adventure-2/</loc>
+    <loc>https://www.brickbreaker.net/game/lows-adventure-2/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/lows-adventure-2-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/lows-adventure-2-cover.jpg</image:loc>
       <image:caption>Low's Adventure 2 — a retro 2D platformer with 31 levels and a boss, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/clash-of-vikings/</loc>
+    <loc>https://www.brickbreaker.net/game/clash-of-vikings/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/clash-of-vikings-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/clash-of-vikings-cover.jpg</image:loc>
       <image:caption>Clash of Vikings — a real-time Viking card strategy game, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/fnaf-shooter/</loc>
+    <loc>https://www.brickbreaker.net/game/fnaf-shooter/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/fnaf-shooter-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/fnaf-shooter-cover.jpg</image:loc>
       <image:caption>FNAF Shooter — a first-person shooter against animatronics, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/snow-rider-3d/</loc>
+    <loc>https://www.brickbreaker.net/game/snow-rider-3d/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/snow-rider-3d-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/snow-rider-3d-cover.jpg</image:loc>
       <image:caption>Snow Rider 3D — a Christmas downhill sledding game, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/top-speed-3d/</loc>
+    <loc>https://www.brickbreaker.net/game/top-speed-3d/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/top-speed-3d-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/top-speed-3d-cover.jpg</image:loc>
       <image:caption>Top Speed 3D — a highway traffic racing game, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/paper-flight-2/</loc>
+    <loc>https://www.brickbreaker.net/game/paper-flight-2/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/paper-flight-2-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/paper-flight-2-cover.jpg</image:loc>
       <image:caption>Paper Flight 2 — a paper-airplane distance game, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/wacky-walk/</loc>
+    <loc>https://www.brickbreaker.net/game/wacky-walk/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/wacky-walk-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/wacky-walk-cover.jpg</image:loc>
       <image:caption>Wacky Walk — a physics stilt-walking game, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/deer-adventure/</loc>
+    <loc>https://www.brickbreaker.net/game/deer-adventure/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/deer-adventure-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/deer-adventure-cover.jpg</image:loc>
       <image:caption>Deer Adventure — a 3D physics sandbox game, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/ramp-xtreme/</loc>
+    <loc>https://www.brickbreaker.net/game/ramp-xtreme/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/ramp-xtreme-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/ramp-xtreme-cover.jpg</image:loc>
       <image:caption>Ramp Xtreme — a 3D motorcycle stunt game on floating sky ramps, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/summer-rider-3d/</loc>
+    <loc>https://www.brickbreaker.net/game/summer-rider-3d/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/summer-rider-3d-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/summer-rider-3d-cover.jpg</image:loc>
       <image:caption>Summer Rider 3D — a tropical water racing game on a surfboard or jet-ski, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/snow-road-3d/</loc>
+    <loc>https://www.brickbreaker.net/game/snow-road-3d/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/snow-road-3d-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/snow-road-3d-cover.jpg</image:loc>
       <image:caption>Snow Road 3D — an endless downhill sledding game with gift-box unlocks, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/bat-smash/</loc>
+    <loc>https://www.brickbreaker.net/game/bat-smash/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/bat-smash-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/bat-smash-cover.jpg</image:loc>
       <image:caption>Bat Smash — a one-button baseball bat-smashing game with upgrades and skins, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/astro-robot-clicker/</loc>
+    <loc>https://www.brickbreaker.net/game/astro-robot-clicker/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/astro-robot-clicker-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/astro-robot-clicker-cover.jpg</image:loc>
       <image:caption>Astro Robot Clicker Game — a space-themed idle clicker with tap, upgrade, and Ascension mechanics, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/long-leg-master/</loc>
+    <loc>https://www.brickbreaker.net/game/long-leg-master/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/long-leg-master-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/long-leg-master-cover.jpg</image:loc>
       <image:caption>Long Leg Master — a QWOP-style physics walking game with coin-collectible skins, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/ball-orbit/</loc>
+    <loc>https://www.brickbreaker.net/game/ball-orbit/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/ball-orbit-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/ball-orbit-cover.jpg</image:loc>
       <image:caption>Ball Orbit — a baseball launch game with a timing power bar and distance upgrades, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/crazy-bull-city/</loc>
+    <loc>https://www.brickbreaker.net/game/crazy-bull-city/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/crazy-bull-city-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/crazy-bull-city-cover.jpg</image:loc>
       <image:caption>Crazy Bull City — a 3D bull rampage simulator where you smash cars and buildings while dodging SWAT teams, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/dunk-clash/</loc>
+    <loc>https://www.brickbreaker.net/game/dunk-clash/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/dunk-clash-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/dunk-clash-cover.jpg</image:loc>
       <image:caption>Dunk Clash — a fast 1v1 basketball game of dunks, steals, blocks, and shot timing, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/planet-buster/</loc>
+    <loc>https://www.brickbreaker.net/game/planet-buster/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/planet-buster-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/planet-buster-cover.jpg</image:loc>
       <image:caption>Planet Buster — an idle planet-destruction clicker where you bombard planets through six layers and spend coins on upgrades, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/car-chaos/</loc>
+    <loc>https://www.brickbreaker.net/game/car-chaos/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/car-chaos-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/car-chaos-cover.jpg</image:loc>
       <image:caption>Car Chaos — a physics-based 1v1 car brawler where you smash your rival in hazard-filled arenas and land 5 head hits to win, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/crazy-mouse-battle/</loc>
+    <loc>https://www.brickbreaker.net/game/crazy-mouse-battle/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/crazy-mouse-battle-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/crazy-mouse-battle-cover.jpg</image:loc>
       <image:caption>Crazy Mouse Battle — an arena survival brawler where you outlast rival mice, ram them first to score, and dodge the electric fence, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/madness-lab/</loc>
+    <loc>https://www.brickbreaker.net/game/madness-lab/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/madness-lab-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/madness-lab-cover.jpg</image:loc>
       <image:caption>Madness Lab — an arcade challenge where Doctor Doom's hybrid minions face crazy mini-tests from ghost hunts to deadly traps, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/rob-brainrot-2/</loc>
+    <loc>https://www.brickbreaker.net/game/rob-brainrot-2/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/rob-brainrot-2-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/rob-brainrot-2-cover.jpg</image:loc>
       <image:caption>Rob Brainrot 2 — a Roblox-style simulation where you collect, buy, and steal meme Brainrot characters to build and defend your base, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/tube-fight/</loc>
+    <loc>https://www.brickbreaker.net/game/tube-fight/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/tube-fight-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/tube-fight-cover.jpg</image:loc>
       <image:caption>Tube Fight — a chaotic ragdoll arena fighter where parody YouTubers brawl with oversized weapons in tube arenas, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/icy-dash/</loc>
+    <loc>https://www.brickbreaker.net/game/icy-dash/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/icy-dash-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/icy-dash-cover.jpg</image:loc>
       <image:caption>Icy Dash — a high-speed snowboard racing game where you dodge obstacles, land flips, and collect coins to upgrade your rider, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/perfect-orbit/</loc>
+    <loc>https://www.brickbreaker.net/game/perfect-orbit/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/perfect-orbit-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/perfect-orbit-cover.jpg</image:loc>
       <image:caption>Perfect Orbit — a golf-themed arcade game where you time the perfect shot and launch your ball through cosmic courses, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/flamy-dash/</loc>
+    <loc>https://www.brickbreaker.net/game/flamy-dash/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/flamy-dash-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/flamy-dash-cover.jpg</image:loc>
       <image:caption>Flamy Dash — a fiery one-button swinging game where you hook a glowing fireball to the ceiling and dodge walls to keep the flame alive, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/stickman-slash/</loc>
+    <loc>https://www.brickbreaker.net/game/stickman-slash/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/stickman-slash-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/stickman-slash-cover.jpg</image:loc>
       <image:caption>Stickman Slash — an action game where a stickman knight slashes through waves of shadow warriors and defeats bosses, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/tung-sahur-clicker/</loc>
+    <loc>https://www.brickbreaker.net/game/tung-sahur-clicker/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/tung-sahur-clicker-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/tung-sahur-clicker-cover.jpg</image:loc>
       <image:caption>Tung Sahur Clicker — a meme idle clicker where you click the wooden warrior Tung Tung Tung Sahur and trigger the 2x limelight multiplier, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/rocket-fortress/</loc>
+    <loc>https://www.brickbreaker.net/game/rocket-fortress/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/rocket-fortress-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/rocket-fortress-cover.jpg</image:loc>
       <image:caption>Rocket Fortress — an explosive clicker RPG where you defend a fortress with holy missiles and destroy portals, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/bounce-up/</loc>
+    <loc>https://www.brickbreaker.net/game/bounce-up/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/bounce-up-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/bounce-up-cover.jpg</image:loc>
       <image:caption>Bounce Up — a one-button timing arcade game where you bounce a ball across shifting platforms and hit red buttons, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/rob-a-car/</loc>
+    <loc>https://www.brickbreaker.net/game/rob-a-car/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/rob-a-car-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/rob-a-car-cover.jpg</image:loc>
       <image:caption>Rob a Car — a city simulation where you buy vehicles, steal cars from rival garages, and defend your collection, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/cheat-or-repeat/</loc>
+    <loc>https://www.brickbreaker.net/game/cheat-or-repeat/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/cheat-or-repeat-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/cheat-or-repeat-cover.jpg</image:loc>
       <image:caption>Cheat or Repeat — a classroom stealth survival game where a student cheats on a test and dodges the teacher, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/track-dash/</loc>
+    <loc>https://www.brickbreaker.net/game/track-dash/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/track-dash-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/track-dash-cover.jpg</image:loc>
       <image:caption>Track Dash — a one-button physics runner where you hold to build momentum and release to launch a train across gaps, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/tap-road-beat/</loc>
+    <loc>https://www.brickbreaker.net/game/tap-road-beat/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/tap-road-beat-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/tap-road-beat-cover.jpg</image:loc>
       <image:caption>Tap Road Beat — a neon rhythm arcade game where you click to switch lanes and guide a ball past obstacles to the beat, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/bow-battle/</loc>
+    <loc>https://www.brickbreaker.net/game/bow-battle/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/bow-battle-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/bow-battle-cover.jpg</image:loc>
       <image:caption>Bow Battle — a physics archery duel where you drag to aim and release to fire, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/gun-mayhem-3/</loc>
+    <loc>https://www.brickbreaker.net/game/gun-mayhem-3/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/gun-mayhem-3-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/gun-mayhem-3-cover.jpg</image:loc>
       <image:caption>Gun Mayhem 3 — a 2D arena shooter where you knock rivals off platforms with guns and bombs, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/chicken-jockey-clicker/</loc>
+    <loc>https://www.brickbreaker.net/game/chicken-jockey-clicker/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/chicken-jockey-clicker-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/chicken-jockey-clicker-cover.jpg</image:loc>
       <image:caption>Chicken Jockey Clicker — a Minecraft-inspired idle clicker where baby zombies ride chickens for coins, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/street-wheelie/</loc>
+    <loc>https://www.brickbreaker.net/game/street-wheelie/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/street-wheelie-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/street-wheelie-cover.jpg</image:loc>
       <image:caption>Street Wheelie — a physics stunt-bike game where you balance the longest wheelie through an endless 3D city, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/wheelie-party/</loc>
+    <loc>https://www.brickbreaker.net/game/wheelie-party/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/wheelie-party-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/wheelie-party-cover.jpg</image:loc>
       <image:caption>Wheelie Party — a 2D driving-balance game where you hold one wheelie down a sunlit highway, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/forest-mouse/</loc>
+    <loc>https://www.brickbreaker.net/game/forest-mouse/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/forest-mouse-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/forest-mouse-cover.jpg</image:loc>
       <image:caption>Forest Mouse — an animal life-sim RPG where you forage, build a nest, and dodge the household cat as a tiny forest mouse, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/jetski-race/</loc>
+    <loc>https://www.brickbreaker.net/game/jetski-race/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/jetski-race-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/jetski-race-cover.jpg</image:loc>
       <image:caption>Jetski Race — a high-speed water racing game where you dodge obstacles, nail flips, and finish first, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/goo-goo-gaga-clicker/</loc>
+    <loc>https://www.brickbreaker.net/game/goo-goo-gaga-clicker/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/goo-goo-gaga-clicker-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/goo-goo-gaga-clicker-cover.jpg</image:loc>
       <image:caption>Goo Goo Gaga Clicker — a Christmas meme idle clicker where you tap a Santa creature for points and unlock characters, playable in the browser</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/labubu-clicker/</loc>
+    <loc>https://www.brickbreaker.net/game/labubu-clicker/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/labubu-clicker-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/labubu-clicker-cover.jpg</image:loc>
       <image:caption>Labubu Clicker — a cute idle clicker where you tap Labubu for coins and tear blind boxes, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/neon-leap/</loc>
+    <loc>https://www.brickbreaker.net/game/neon-leap/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/neon-leap-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/neon-leap-cover.jpg</image:loc>
       <image:caption>Neon Leap — a neon stickman platformer where you leap across glowing shapes and light up every platform, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/wave-rider/</loc>
+    <loc>https://www.brickbreaker.net/game/wave-rider/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/wave-rider-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/wave-rider-cover.jpg</image:loc>
       <image:caption>Wave Rider — an arcade surfing game where you glide across waves and dodge endless hazards, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/city-escape-2/</loc>
+    <loc>https://www.brickbreaker.net/game/city-escape-2/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/city-escape-2-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/city-escape-2-cover.jpg</image:loc>
       <image:caption>City Escape 2 — a stickman parkour runner where you flee the police across city rooftops, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/orbit-beats/</loc>
+    <loc>https://www.brickbreaker.net/game/orbit-beats/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/orbit-beats-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/orbit-beats-cover.jpg</image:loc>
       <image:caption>Orbit Beats — a one-button rhythm arcade game where you guide two orbiting planets in sync with the music, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/lizard-clicker/</loc>
+    <loc>https://www.brickbreaker.net/game/lizard-clicker/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/lizard-clicker-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/lizard-clicker-cover.jpg</image:loc>
       <image:caption>Lizard Lizard Clicker — an idle clicker where you tap to spawn lizards and build a reptilian army, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/slide-down/</loc>
+    <loc>https://www.brickbreaker.net/game/slide-down/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/slide-down-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/slide-down-cover.jpg</image:loc>
       <image:caption>Slide Down — an endless downhill ball-roller where you steer a neon ball down the rooftops and dodge red blocks, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/smash-karts/</loc>
+    <loc>https://www.brickbreaker.net/game/smash-karts/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/smash-karts-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/smash-karts-cover.jpg</image:loc>
       <image:caption>Smash Karts — a 3D multiplayer kart battle arena where you drive, grab weapons, and blast rivals, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/lolbeans/</loc>
+    <loc>https://www.brickbreaker.net/game/lolbeans/</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/lolbeans-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/lolbeans-cover.jpg</image:loc>
       <image:caption>LOLBeans.io — a jelly bean obstacle-course battle royale where you race up to 30 beans to win the crown, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/bloons-td-4/</loc>
+    <loc>https://www.brickbreaker.net/game/bloons-td-4/</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/bloons-td-4-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/bloons-td-4-cover.jpg</image:loc>
       <image:caption>Bloons Tower Defense 4 — a monkey tower defense game where you place towers along the track and pop waves of bloons, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/vex-2/</loc>
+    <loc>https://www.brickbreaker.net/game/vex-2/</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/vex-2-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/vex-2-cover.jpg</image:loc>
       <image:caption>Vex 2 — a stickman platformer where you wall-jump and slide through 11 acts of spikes, saws, and moving platforms, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/fish-it-online/</loc>
+    <loc>https://www.brickbreaker.net/game/fish-it-online/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/fish-it-online-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/fish-it-online-cover.jpg</image:loc>
       <image:caption>Fish It Online — a 3D fishing simulator where you cast, reel in 30+ fish species, and upgrade rods, baits, and boats, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/monkey-mart/</loc>
+    <loc>https://www.brickbreaker.net/game/monkey-mart/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/monkey-mart-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/monkey-mart-cover.jpg</image:loc>
       <image:caption>Monkey Mart — a supermarket management game where you plant, harvest, stock shelves, and serve customers to unlock new aisles, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/steal-an-egg/</loc>
+    <loc>https://www.brickbreaker.net/game/steal-an-egg/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/steal-an-egg-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/steal-an-egg-cover.jpg</image:loc>
       <image:caption>Steal An Egg — an egg-hatching economy game where you buy mystery eggs, hatch them into coin-generating characters, and steal eggs from rivals, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/golf-hit/</loc>
+    <loc>https://www.brickbreaker.net/game/golf-hit/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/golf-hit-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/golf-hit-cover.jpg</image:loc>
       <image:caption>Golf Hit — a one-touch space golf game where you time your swing to launch a ball from Earth toward Mars, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/ping-pong-go/</loc>
+    <loc>https://www.brickbreaker.net/game/ping-pong-go/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/ping-pong-go-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/ping-pong-go-cover.jpg</image:loc>
       <image:caption>Ping Pong Go! — a 3D table tennis game where you drag to hit and swipe for power and spin, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/granny-horror-3/</loc>
+    <loc>https://www.brickbreaker.net/game/granny-horror-3/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/granny-horror-3-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/granny-horror-3-cover.jpg</image:loc>
       <image:caption>Granny Horror 3 — a first-person survival horror escape game where you search a mansion and outrun Granny, Grandpa, and Slendrina, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/baseball-bros/</loc>
+    <loc>https://www.brickbreaker.net/game/baseball-bros/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/baseball-bros-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/baseball-bros-cover.jpg</image:loc>
       <image:caption>Baseball Bros — a 1v1 arcade baseball game where you time your swing and mix your pitches, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/mr-flip/</loc>
+    <loc>https://www.brickbreaker.net/game/mr-flip/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/mr-flip-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/mr-flip-cover.jpg</image:loc>
       <image:caption>Mr Flip — a 3D ragdoll backflip game where you hold to charge and release to flip, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/funny-shooter/</loc>
+    <loc>https://www.brickbreaker.net/game/funny-shooter/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/funny-shooter-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/funny-shooter-cover.jpg</image:loc>
       <image:caption>Funny Shooter — a wave-survival FPS where you gun down absurd enemies and buy better weapons, playable in the browser</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://brickbreaker.net/game/buildnow-gg/</loc>
+    <loc>https://www.brickbreaker.net/game/buildnow-gg/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/buildnow-gg-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/buildnow-gg-cover.jpg</image:loc>
       <image:caption>BuildNow GG — a browser building shooter where you build walls, ramps, and floors while shooting opponents, playable for free</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/pokebonk/</loc>
+    <loc>https://www.brickbreaker.net/game/pokebonk/</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/pokebonk-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/pokebonk-cover.jpg</image:loc>
       <image:caption>PokeBonk — a 3D Pokémon survivors game where you pick a starter, survive the Kanto horde, and evolve mid-run, playable for free</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/oxy-arena/</loc>
+    <loc>https://www.brickbreaker.net/game/oxy-arena/</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/oxy-arena-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/oxy-arena-cover.jpg</image:loc>
       <image:caption>Oxy Arena — a blocky multiplayer FPS with Deathmatch, 4v4 team battles, and a solo zombie mode, playable for free</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/clash-royale-dle/</loc>
+    <loc>https://www.brickbreaker.net/game/clash-royale-dle/</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/clash-royale-dle-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/clash-royale-dle-cover.jpg</image:loc>
       <image:caption>Guess the Clash Royale Card — a daily Clash Royale card-guessing game with stat clues, pixel art, emoji, and Higher or Lower, playable for free</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/neon-brick-breaker-deluxe/</loc>
+    <loc>https://www.brickbreaker.net/game/neon-brick-breaker-deluxe/</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/neon-brick-breaker-deluxe-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/neon-brick-breaker-deluxe-cover.jpg</image:loc>
       <image:caption>Neon Brick Breaker Deluxe — a neon arcade brick breaker with 13 levels and five power-ups, playable for free</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/aetherium-bastion/</loc>
+    <loc>https://www.brickbreaker.net/game/aetherium-bastion/</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/aetherium-bastion-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/aetherium-bastion-cover.jpg</image:loc>
       <image:caption>Aetherium Bastion 3D — a third-person 4v4 arena brawler with five heroes, playable for free</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/relic-putt/</loc>
+    <loc>https://www.brickbreaker.net/game/relic-putt/</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/relic-putt-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/relic-putt-cover.jpg</image:loc>
       <image:caption>Relic Putt — a browser mini golf game where the relic matters as much as the swing, playable for free</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/dirtbound/</loc>
+    <loc>https://www.brickbreaker.net/game/dirtbound/</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/dirtbound-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/dirtbound-cover.jpg</image:loc>
       <image:caption>Dirtbound — a 3D browser rally racing game with procedural dirt tracks and real physics, playable for free</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://brickbreaker.net/game/clueffy/</loc>
+    <loc>https://www.brickbreaker.net/game/clueffy/</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://brickbreaker.net/img/clueffy-cover.jpg</image:loc>
+      <image:loc>https://www.brickbreaker.net/img/clueffy-cover.jpg</image:loc>
       <image:caption>Clueffy — a daily word and trivia puzzle where the rarest real answer wins, playable for free</image:caption>
     </image:image>
   </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
-    <loc>https://brickbreaker.net/blog-arkanoid</loc>
+    <loc>https://www.brickbreaker.net/blog-arkanoid</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/blog-blackberry-brick-breaker</loc>
+    <loc>https://www.brickbreaker.net/blog-blackberry-brick-breaker</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/blog-brick-breaker-io-unlocked</loc>
+    <loc>https://www.brickbreaker.net/blog-brick-breaker-io-unlocked</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/blog-brick-breaker-original</loc>
+    <loc>https://www.brickbreaker.net/blog-brick-breaker-original</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/blog-brick-breaker-unblocked</loc>
+    <loc>https://www.brickbreaker.net/blog-brick-breaker-unblocked</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/blog-google-block-breaker</loc>
+    <loc>https://www.brickbreaker.net/blog-google-block-breaker</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/blog-old-brick-breaker</loc>
+    <loc>https://www.brickbreaker.net/blog-old-brick-breaker</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/blog-retro-brick-breaker</loc>
+    <loc>https://www.brickbreaker.net/blog-retro-brick-breaker</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1191,19 +1191,19 @@
 
   <!-- ═══ Utility Pages ═══ -->
   <url>
-    <loc>https://brickbreaker.net/about/</loc>
+    <loc>https://www.brickbreaker.net/about/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/contact/</loc>
+    <loc>https://www.brickbreaker.net/contact/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brickbreaker.net/privacy/</loc>
+    <loc>https://www.brickbreaker.net/privacy/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

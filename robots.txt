@@ -34,7 +34,7 @@ Disallow: /index-rich-test
 Disallow: /og-image
 
 # Sitemap
-Sitemap: https://brickbreaker.net/sitemap.xml
+Sitemap: https://www.brickbreaker.net/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
