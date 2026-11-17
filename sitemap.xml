@@ -1158,6 +1158,16 @@
       <image:caption>Chirpy Sky — a tap-to-fly arcade game where you flap a bird through pipe gaps, playable for free</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.brickbreaker.net/game/block-blast/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.brickbreaker.net/img/block-blast-cover.jpg</image:loc>
+      <image:caption>Block Blast — an 8×8 block puzzle game where you clear rows and columns, playable for free</image:caption>
+    </image:image>
+  </url>
 
   <!-- ═══ Blog Posts (8) ═══ -->
   <url>
